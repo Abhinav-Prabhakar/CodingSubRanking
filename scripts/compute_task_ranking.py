@@ -24,7 +24,12 @@ def get_annual_pricing(plan_id: str, price_usd: float):
     if plan_id in ANNUAL_DISCOUNT_RULES:
         rule = ANNUAL_DISCOUNT_RULES[plan_id]
         return rule["annual_usd"], rule["effective_monthly_usd"], rule["discount_pct"]
-    # GLM Coding Plans: 20% discount on continuous monthly / annual commitment for new-customer tiers
+    # GLM Global USD Coding Plans: 30% discount on annual billing ($80 -> $56/mo for Pro, $18 -> $12.60 for Lite, $168 -> $117.60 for Max)
+    if plan_id.startswith("glm_coding_") and "_global_" in plan_id:
+        eff_m = price_usd * 0.7  # 30% discount
+        ann_usd = eff_m * 12.0
+        return ann_usd, eff_m, 30.0
+    # GLM CN Coding Plans: 20% discount on continuous monthly / annual commitment for new-customer tiers
     if plan_id.startswith("glm_coding_") and "_new_" in plan_id:
         eff_m = price_usd * 0.8
         ann_usd = eff_m * 12.0
@@ -186,7 +191,7 @@ def compute_task_rankings():
                 "metric": "Output token consumption (median output tokens / task)",
                 "default_reasoning_tier": "Medium / nearest available",
                 "reference_data": "FeiZhuLulu/real-api-pricing",
-                "annual_pricing_rules": "12x monthly default; Claude Pro ($200/yr), SuperGrok ($300/yr), Ollama Pro ($200/yr), GLM new plans (20% off)",
+                "annual_pricing_rules": "12x monthly default; Claude Pro ($200/yr), SuperGrok ($300/yr), Ollama Pro ($200/yr), GLM Global USD ($56/mo Pro, 30% off annual), GLM CN new plans (20% off)",
                 "total_benchmarked_plans": len(benchmarked_points),
                 "total_unbenchmarked_plans": len(unbenchmarked_points)
             },

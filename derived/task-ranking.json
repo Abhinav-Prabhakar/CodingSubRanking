@@ -4,8 +4,8 @@
     "metric": "Output token consumption (median output tokens / task)",
     "default_reasoning_tier": "Medium / nearest available",
     "reference_data": "FeiZhuLulu/real-api-pricing",
-    "annual_pricing_rules": "12x monthly default; Claude Pro ($200/yr), SuperGrok ($300/yr), Ollama Pro ($200/yr), GLM new plans (20% off)",
-    "total_benchmarked_plans": 112,
+    "annual_pricing_rules": "12x monthly default; Claude Pro ($200/yr), SuperGrok ($300/yr), Ollama Pro ($200/yr), GLM Global USD ($56/mo Pro, 30% off annual), GLM CN new plans (20% off)",
+    "total_benchmarked_plans": 130,
     "total_unbenchmarked_plans": 84
   },
   "rankings": [
@@ -352,7 +352,7 @@
       "cost_per_task_annual_usd": 0.000111,
       "tasks_per_dollar_annual": 9021.2,
       "raw_usd_per_mtok": 0.014,
-      "raw_token_rank": 75,
+      "raw_token_rank": 79,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -404,8 +404,8 @@
         }
       },
       "task_rank": 5,
-      "cohort_raw_rank": 34,
-      "rank_delta": 29,
+      "cohort_raw_rank": 38,
+      "rank_delta": 33,
       "annual_task_rank": 5,
       "annual_rank_shift": 0
     },
@@ -432,7 +432,7 @@
       "cost_per_task_annual_usd": 0.000148,
       "tasks_per_dollar_annual": 6765.6,
       "raw_usd_per_mtok": 0.01867,
-      "raw_token_rank": 88,
+      "raw_token_rank": 93,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json",
@@ -484,8 +484,8 @@
         }
       },
       "task_rank": 6,
-      "cohort_raw_rank": 45,
-      "rank_delta": 39,
+      "cohort_raw_rank": 50,
+      "rank_delta": 44,
       "annual_task_rank": 6,
       "annual_rank_shift": 0
     },
@@ -512,7 +512,7 @@
       "cost_per_task_annual_usd": 0.000191,
       "tasks_per_dollar_annual": 5244.0,
       "raw_usd_per_mtok": 0.01665,
-      "raw_token_rank": 82,
+      "raw_token_rank": 87,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "由同套餐 gpt-5.6-sol 6.16 亿 × 1.95",
@@ -564,8 +564,8 @@
         }
       },
       "task_rank": 7,
-      "cohort_raw_rank": 39,
-      "rank_delta": 32,
+      "cohort_raw_rank": 44,
+      "rank_delta": 37,
       "annual_task_rank": 7,
       "annual_rank_shift": 0
     },
@@ -592,7 +592,7 @@
       "cost_per_task_annual_usd": 0.000191,
       "tasks_per_dollar_annual": 5244.0,
       "raw_usd_per_mtok": 0.01665,
-      "raw_token_rank": 83,
+      "raw_token_rank": 88,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "由同套餐 gpt-5.6-sol 30.8 亿 × 1.95",
@@ -644,8 +644,8 @@
         }
       },
       "task_rank": 8,
-      "cohort_raw_rank": 40,
-      "rank_delta": 32,
+      "cohort_raw_rank": 45,
+      "rank_delta": 37,
       "annual_task_rank": 8,
       "annual_rank_shift": 0
     },
@@ -1044,7 +1044,7 @@
       "cost_per_task_annual_usd": 0.000286,
       "tasks_per_dollar_annual": 3491.1,
       "raw_usd_per_mtok": 0.01623,
-      "raw_token_rank": 80,
+      "raw_token_rank": 85,
       "confidence": "high",
       "chart_tier": "main",
       "source": "Plus × 官方 20x",
@@ -1096,8 +1096,8 @@
         }
       },
       "task_rank": 15,
-      "cohort_raw_rank": 38,
-      "rank_delta": 23,
+      "cohort_raw_rank": 43,
+      "rank_delta": 28,
       "annual_task_rank": 15,
       "annual_rank_shift": 0
     },
@@ -1256,7 +1256,7 @@
       "cost_per_task_annual_usd": 0.00039,
       "tasks_per_dollar_annual": 2564.3,
       "raw_usd_per_mtok": 0.02081,
-      "raw_token_rank": 92,
+      "raw_token_rank": 100,
       "confidence": "medium",
       "chart_tier": "main",
       "source": "由同套餐 gpt-5.6-sol 123.2 亿 × 0.78",
@@ -1299,8 +1299,8 @@
         }
       },
       "task_rank": 19,
-      "cohort_raw_rank": 49,
-      "rank_delta": 30,
+      "cohort_raw_rank": 57,
+      "rank_delta": 38,
       "annual_task_rank": 20,
       "annual_rank_shift": -1
     },
@@ -1327,7 +1327,7 @@
       "cost_per_task_annual_usd": 0.000426,
       "tasks_per_dollar_annual": 2347.8,
       "raw_usd_per_mtok": 0.01274,
-      "raw_token_rank": 67,
+      "raw_token_rank": 70,
       "confidence": "medium",
       "chart_tier": "main",
       "source": "Zenn skipbit实测+用户永久口径；claude-adoption-round6-2026-09-06.json",
@@ -1379,8 +1379,8 @@
         }
       },
       "task_rank": 20,
-      "cohort_raw_rank": 29,
-      "rank_delta": 9,
+      "cohort_raw_rank": 32,
+      "rank_delta": 12,
       "annual_task_rank": 22,
       "annual_rank_shift": -2
     },
@@ -1407,7 +1407,7 @@
       "cost_per_task_annual_usd": 0.000426,
       "tasks_per_dollar_annual": 2347.8,
       "raw_usd_per_mtok": 0.01274,
-      "raw_token_rank": 68,
+      "raw_token_rank": 71,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "用户明确20x周池仅为5x的2倍；claude-adoption-round6-2026-09-06.json",
@@ -1459,8 +1459,8 @@
         }
       },
       "task_rank": 21,
-      "cohort_raw_rank": 30,
-      "rank_delta": 9,
+      "cohort_raw_rank": 33,
+      "rank_delta": 12,
       "annual_task_rank": 23,
       "annual_rank_shift": -2
     },
@@ -1487,7 +1487,7 @@
       "cost_per_task_annual_usd": 0.000385,
       "tasks_per_dollar_annual": 2599.9,
       "raw_usd_per_mtok": 0.01259,
-      "raw_token_rank": 66,
+      "raw_token_rank": 69,
       "confidence": "medium",
       "chart_tier": "main",
       "source": "awesome-coding-plan 实测",
@@ -1539,8 +1539,8 @@
         }
       },
       "task_rank": 22,
-      "cohort_raw_rank": 28,
-      "rank_delta": 6,
+      "cohort_raw_rank": 31,
+      "rank_delta": 9,
       "annual_task_rank": 19,
       "annual_rank_shift": 3
     },
@@ -1567,7 +1567,7 @@
       "cost_per_task_annual_usd": 0.000467,
       "tasks_per_dollar_annual": 2142.0,
       "raw_usd_per_mtok": 0.01274,
-      "raw_token_rank": 69,
+      "raw_token_rank": 72,
       "confidence": "low",
       "chart_tier": "full",
       "source": "由同套餐 claude-opus-5 157 亿 × 1.0",
@@ -1619,10 +1619,10 @@
         }
       },
       "task_rank": 23,
-      "cohort_raw_rank": 31,
-      "rank_delta": 8,
-      "annual_task_rank": 24,
-      "annual_rank_shift": -1
+      "cohort_raw_rank": 34,
+      "rank_delta": 11,
+      "annual_task_rank": 25,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "ollama_pro",
@@ -1709,8 +1709,8 @@
       "task_rank": 25,
       "cohort_raw_rank": 8,
       "rank_delta": -17,
-      "annual_task_rank": 26,
-      "annual_rank_shift": -1
+      "annual_task_rank": 27,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_lite_cn_old_mid",
@@ -1753,8 +1753,8 @@
       "task_rank": 26,
       "cohort_raw_rank": 15,
       "rank_delta": -11,
-      "annual_task_rank": 27,
-      "annual_rank_shift": -1
+      "annual_task_rank": 29,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "glm_coding_max_cn_old_peak",
@@ -1797,8 +1797,8 @@
       "task_rank": 27,
       "cohort_raw_rank": 16,
       "rank_delta": -11,
-      "annual_task_rank": 28,
-      "annual_rank_shift": -1
+      "annual_task_rank": 30,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "chatgpt_plus",
@@ -1823,7 +1823,7 @@
       "cost_per_task_annual_usd": 0.000573,
       "tasks_per_dollar_annual": 1745.5,
       "raw_usd_per_mtok": 0.03247,
-      "raw_token_rank": 114,
+      "raw_token_rank": 125,
       "confidence": "medium",
       "chart_tier": "main",
       "source": "awesome-coding-plan 2026-07-30 实测",
@@ -1875,10 +1875,10 @@
         }
       },
       "task_rank": 28,
-      "cohort_raw_rank": 63,
-      "rank_delta": 35,
-      "annual_task_rank": 30,
-      "annual_rank_shift": -2
+      "cohort_raw_rank": 74,
+      "rank_delta": 46,
+      "annual_task_rank": 32,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -1903,7 +1903,7 @@
       "cost_per_task_annual_usd": 0.000573,
       "tasks_per_dollar_annual": 1745.5,
       "raw_usd_per_mtok": 0.03247,
-      "raw_token_rank": 115,
+      "raw_token_rank": 126,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "Plus × 官方 5x",
@@ -1955,10 +1955,10 @@
         }
       },
       "task_rank": 29,
-      "cohort_raw_rank": 64,
-      "rank_delta": 35,
-      "annual_task_rank": 31,
-      "annual_rank_shift": -2
+      "cohort_raw_rank": 75,
+      "rank_delta": 46,
+      "annual_task_rank": 33,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "command_code_goat",
@@ -2001,8 +2001,8 @@
       "task_rank": 30,
       "cohort_raw_rank": 18,
       "rank_delta": -12,
-      "annual_task_rank": 32,
-      "annual_rank_shift": -2
+      "annual_task_rank": 34,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "glm_coding_max_cn_new_offpeak",
@@ -2045,8 +2045,52 @@
       "task_rank": 31,
       "cohort_raw_rank": 20,
       "rank_delta": -11,
-      "annual_task_rank": 25,
-      "annual_rank_shift": 6
+      "annual_task_rank": 26,
+      "annual_rank_shift": 5
+    },
+    {
+      "plan_id": "glm_coding_max_global_offpeak",
+      "plan_name": "GLM Coding Max ($168) 闲时",
+      "billing": "subscription",
+      "price": 168.0,
+      "currency": "USD",
+      "price_usd": 168.0,
+      "annual_fee_usd": 1411.2,
+      "effective_monthly_fee_usd": 117.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3-flash",
+      "benchmarked_model_name": "GLM-5.3 Flash",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 63.4,
+      "output_tokens_per_task": 67491,
+      "monthly_tokens": 17965000000,
+      "monthly_tasks": 266183.6,
+      "cost_per_task_usd": 0.000631,
+      "tasks_per_dollar": 1584.4,
+      "cost_per_task_annual_usd": 0.000442,
+      "tasks_per_dollar_annual": 2263.5,
+      "raw_usd_per_mtok": 0.00935,
+      "raw_token_rank": 45,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 67491,
+          "score_pct": 63.4,
+          "monthly_tasks": 266183.6,
+          "cost_per_task_usd": 0.000631,
+          "tasks_per_dollar": 1584.4,
+          "cost_per_task_annual_usd": 0.000442,
+          "tasks_per_dollar_annual": 2263.5
+        }
+      },
+      "task_rank": 32,
+      "cohort_raw_rank": 21,
+      "rank_delta": -11,
+      "annual_task_rank": 24,
+      "annual_rank_shift": 8
     },
     {
       "plan_id": "glm_coding_pro_cn_old_offpeak",
@@ -2086,11 +2130,11 @@
           "tasks_per_dollar_annual": 1541.8
         }
       },
-      "task_rank": 32,
+      "task_rank": 33,
       "cohort_raw_rank": 19,
-      "rank_delta": -13,
-      "annual_task_rank": 35,
-      "annual_rank_shift": -3
+      "rank_delta": -14,
+      "annual_task_rank": 38,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "glm_coding_pro_cn_new_offpeak",
@@ -2115,7 +2159,7 @@
       "cost_per_task_annual_usd": 0.000557,
       "tasks_per_dollar_annual": 1796.6,
       "raw_usd_per_mtok": 0.01031,
-      "raw_token_rank": 48,
+      "raw_token_rank": 49,
       "confidence": "high",
       "chart_tier": "main",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -2130,11 +2174,55 @@
           "tasks_per_dollar_annual": 1796.6
         }
       },
-      "task_rank": 33,
-      "cohort_raw_rank": 21,
+      "task_rank": 34,
+      "cohort_raw_rank": 22,
       "rank_delta": -12,
-      "annual_task_rank": 29,
-      "annual_rank_shift": 4
+      "annual_task_rank": 31,
+      "annual_rank_shift": 3
+    },
+    {
+      "plan_id": "glm_coding_pro_global_offpeak",
+      "plan_name": "GLM Coding Pro ($80) 闲时",
+      "billing": "subscription",
+      "price": 80.0,
+      "currency": "USD",
+      "price_usd": 80.0,
+      "annual_fee_usd": 672.0,
+      "effective_monthly_fee_usd": 56.0,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3-flash",
+      "benchmarked_model_name": "GLM-5.3 Flash",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 63.4,
+      "output_tokens_per_task": 67491,
+      "monthly_tokens": 7699000000,
+      "monthly_tasks": 114074.5,
+      "cost_per_task_usd": 0.000701,
+      "tasks_per_dollar": 1425.9,
+      "cost_per_task_annual_usd": 0.000491,
+      "tasks_per_dollar_annual": 2037.0,
+      "raw_usd_per_mtok": 0.01039,
+      "raw_token_rank": 51,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 67491,
+          "score_pct": 63.4,
+          "monthly_tasks": 114074.5,
+          "cost_per_task_usd": 0.000701,
+          "tasks_per_dollar": 1425.9,
+          "cost_per_task_annual_usd": 0.000491,
+          "tasks_per_dollar_annual": 2037.0
+        }
+      },
+      "task_rank": 35,
+      "cohort_raw_rank": 23,
+      "rank_delta": -12,
+      "annual_task_rank": 28,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "glm_coding_lite_cn_old_peak",
@@ -2159,7 +2247,7 @@
       "cost_per_task_annual_usd": 0.00076,
       "tasks_per_dollar_annual": 1315.7,
       "raw_usd_per_mtok": 0.01126,
-      "raw_token_rank": 52,
+      "raw_token_rank": 54,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -2174,11 +2262,11 @@
           "tasks_per_dollar_annual": 1315.7
         }
       },
-      "task_rank": 34,
-      "cohort_raw_rank": 22,
+      "task_rank": 36,
+      "cohort_raw_rank": 24,
       "rank_delta": -12,
-      "annual_task_rank": 38,
-      "annual_rank_shift": -4
+      "annual_task_rank": 43,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "ollama_pro",
@@ -2203,7 +2291,7 @@
       "cost_per_task_annual_usd": 0.000642,
       "tasks_per_dollar_annual": 1558.5,
       "raw_usd_per_mtok": 0.01141,
-      "raw_token_rank": 55,
+      "raw_token_rank": 57,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -2218,11 +2306,11 @@
           "tasks_per_dollar_annual": 1558.5
         }
       },
-      "task_rank": 35,
-      "cohort_raw_rank": 23,
+      "task_rank": 37,
+      "cohort_raw_rank": 25,
       "rank_delta": -12,
-      "annual_task_rank": 34,
-      "annual_rank_shift": 1
+      "annual_task_rank": 37,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "ollama_max",
@@ -2247,7 +2335,7 @@
       "cost_per_task_annual_usd": 0.00077,
       "tasks_per_dollar_annual": 1298.8,
       "raw_usd_per_mtok": 0.01141,
-      "raw_token_rank": 56,
+      "raw_token_rank": 58,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -2262,11 +2350,11 @@
           "tasks_per_dollar_annual": 1298.8
         }
       },
-      "task_rank": 36,
-      "cohort_raw_rank": 24,
+      "task_rank": 38,
+      "cohort_raw_rank": 26,
       "rank_delta": -12,
-      "annual_task_rank": 39,
-      "annual_rank_shift": -3
+      "annual_task_rank": 44,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "chatgpt_plus",
@@ -2291,7 +2379,7 @@
       "cost_per_task_annual_usd": 0.00078,
       "tasks_per_dollar_annual": 1282.2,
       "raw_usd_per_mtok": 0.04162,
-      "raw_token_rank": 124,
+      "raw_token_rank": 136,
       "confidence": "medium",
       "chart_tier": "main",
       "source": "由同套餐 gpt-5.6-sol 6.16 亿 × 0.78",
@@ -2333,11 +2421,11 @@
           "tasks_per_dollar_annual": 540.0
         }
       },
-      "task_rank": 37,
-      "cohort_raw_rank": 70,
-      "rank_delta": 33,
-      "annual_task_rank": 40,
-      "annual_rank_shift": -3
+      "task_rank": 39,
+      "cohort_raw_rank": 82,
+      "rank_delta": 43,
+      "annual_task_rank": 45,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -2362,7 +2450,7 @@
       "cost_per_task_annual_usd": 0.00078,
       "tasks_per_dollar_annual": 1282.2,
       "raw_usd_per_mtok": 0.04163,
-      "raw_token_rank": 125,
+      "raw_token_rank": 137,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "由同套餐 gpt-5.6-sol 30.8 亿 × 0.78",
@@ -2404,11 +2492,11 @@
           "tasks_per_dollar_annual": 540.0
         }
       },
-      "task_rank": 38,
-      "cohort_raw_rank": 71,
-      "rank_delta": 33,
-      "annual_task_rank": 41,
-      "annual_rank_shift": -3
+      "task_rank": 40,
+      "cohort_raw_rank": 83,
+      "rank_delta": 43,
+      "annual_task_rank": 46,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "glm_coding_max_cn_new_mid",
@@ -2433,7 +2521,7 @@
       "cost_per_task_annual_usd": 0.000637,
       "tasks_per_dollar_annual": 1569.1,
       "raw_usd_per_mtok": 0.0118,
-      "raw_token_rank": 63,
+      "raw_token_rank": 65,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -2448,11 +2536,55 @@
           "tasks_per_dollar_annual": 1569.1
         }
       },
-      "task_rank": 39,
-      "cohort_raw_rank": 27,
+      "task_rank": 41,
+      "cohort_raw_rank": 29,
       "rank_delta": -12,
-      "annual_task_rank": 33,
-      "annual_rank_shift": 6
+      "annual_task_rank": 36,
+      "annual_rank_shift": 5
+    },
+    {
+      "plan_id": "glm_coding_max_global_mid",
+      "plan_name": "GLM Coding Max ($168) 中间值",
+      "billing": "subscription",
+      "price": 168.0,
+      "currency": "USD",
+      "price_usd": 168.0,
+      "annual_fee_usd": 1411.2,
+      "effective_monthly_fee_usd": 117.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3-flash",
+      "benchmarked_model_name": "GLM-5.3 Flash",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 63.4,
+      "output_tokens_per_task": 67491,
+      "monthly_tokens": 13473000000,
+      "monthly_tasks": 199626.6,
+      "cost_per_task_usd": 0.000842,
+      "tasks_per_dollar": 1188.3,
+      "cost_per_task_annual_usd": 0.000589,
+      "tasks_per_dollar_annual": 1697.5,
+      "raw_usd_per_mtok": 0.01247,
+      "raw_token_rank": 68,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 67491,
+          "score_pct": 63.4,
+          "monthly_tasks": 199626.6,
+          "cost_per_task_usd": 0.000842,
+          "tasks_per_dollar": 1188.3,
+          "cost_per_task_annual_usd": 0.000589,
+          "tasks_per_dollar_annual": 1697.5
+        }
+      },
+      "task_rank": 42,
+      "cohort_raw_rank": 30,
+      "rank_delta": -12,
+      "annual_task_rank": 35,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "glm_coding_pro_cn_old_mid",
@@ -2477,7 +2609,7 @@
       "cost_per_task_annual_usd": 0.000865,
       "tasks_per_dollar_annual": 1156.3,
       "raw_usd_per_mtok": 0.01154,
-      "raw_token_rank": 60,
+      "raw_token_rank": 62,
       "confidence": "high",
       "chart_tier": "main",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -2492,11 +2624,11 @@
           "tasks_per_dollar_annual": 1156.3
         }
       },
-      "task_rank": 40,
-      "cohort_raw_rank": 25,
-      "rank_delta": -15,
-      "annual_task_rank": 42,
-      "annual_rank_shift": -2
+      "task_rank": 43,
+      "cohort_raw_rank": 27,
+      "rank_delta": -16,
+      "annual_task_rank": 47,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "glm_coding_max_cn_old_offpeak",
@@ -2521,7 +2653,7 @@
       "cost_per_task_annual_usd": 0.000875,
       "tasks_per_dollar_annual": 1142.7,
       "raw_usd_per_mtok": 0.01168,
-      "raw_token_rank": 62,
+      "raw_token_rank": 64,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -2536,11 +2668,11 @@
           "tasks_per_dollar_annual": 1142.7
         }
       },
-      "task_rank": 41,
-      "cohort_raw_rank": 26,
-      "rank_delta": -15,
-      "annual_task_rank": 43,
-      "annual_rank_shift": -2
+      "task_rank": 44,
+      "cohort_raw_rank": 28,
+      "rank_delta": -16,
+      "annual_task_rank": 48,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "cursor_ultra",
@@ -2565,7 +2697,7 @@
       "cost_per_task_annual_usd": 0.000885,
       "tasks_per_dollar_annual": 1129.5,
       "raw_usd_per_mtok": 0.02585,
-      "raw_token_rank": 104,
+      "raw_token_rank": 112,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "由同套餐 grok-4.6 77.37 亿 × 1.0",
@@ -2580,11 +2712,11 @@
           "tasks_per_dollar_annual": 1129.5
         }
       },
-      "task_rank": 42,
-      "cohort_raw_rank": 56,
-      "rank_delta": 14,
-      "annual_task_rank": 44,
-      "annual_rank_shift": -2
+      "task_rank": 45,
+      "cohort_raw_rank": 64,
+      "rank_delta": 19,
+      "annual_task_rank": 51,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "glm_coding_lite_cn_new_offpeak",
@@ -2609,7 +2741,7 @@
       "cost_per_task_annual_usd": 0.000733,
       "tasks_per_dollar_annual": 1364.9,
       "raw_usd_per_mtok": 0.01357,
-      "raw_token_rank": 73,
+      "raw_token_rank": 76,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -2624,11 +2756,11 @@
           "tasks_per_dollar_annual": 1364.9
         }
       },
-      "task_rank": 43,
-      "cohort_raw_rank": 32,
+      "task_rank": 46,
+      "cohort_raw_rank": 35,
       "rank_delta": -11,
-      "annual_task_rank": 36,
-      "annual_rank_shift": 7
+      "annual_task_rank": 41,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "glm_coding_pro_cn_new_mid",
@@ -2653,7 +2785,7 @@
       "cost_per_task_annual_usd": 0.000742,
       "tasks_per_dollar_annual": 1347.4,
       "raw_usd_per_mtok": 0.01375,
-      "raw_token_rank": 74,
+      "raw_token_rank": 77,
       "confidence": "high",
       "chart_tier": "main",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -2668,11 +2800,99 @@
           "tasks_per_dollar_annual": 1347.4
         }
       },
-      "task_rank": 44,
-      "cohort_raw_rank": 33,
+      "task_rank": 47,
+      "cohort_raw_rank": 36,
       "rank_delta": -11,
-      "annual_task_rank": 37,
-      "annual_rank_shift": 7
+      "annual_task_rank": 42,
+      "annual_rank_shift": 5
+    },
+    {
+      "plan_id": "glm_coding_pro_global_mid",
+      "plan_name": "GLM Coding Pro ($80) 中间值",
+      "billing": "subscription",
+      "price": 80.0,
+      "currency": "USD",
+      "price_usd": 80.0,
+      "annual_fee_usd": 672.0,
+      "effective_monthly_fee_usd": 56.0,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3-flash",
+      "benchmarked_model_name": "GLM-5.3 Flash",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 63.4,
+      "output_tokens_per_task": 67491,
+      "monthly_tokens": 5774000000,
+      "monthly_tasks": 85552.1,
+      "cost_per_task_usd": 0.000935,
+      "tasks_per_dollar": 1069.4,
+      "cost_per_task_annual_usd": 0.000655,
+      "tasks_per_dollar_annual": 1527.7,
+      "raw_usd_per_mtok": 0.01386,
+      "raw_token_rank": 78,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 67491,
+          "score_pct": 63.4,
+          "monthly_tasks": 85552.1,
+          "cost_per_task_usd": 0.000935,
+          "tasks_per_dollar": 1069.4,
+          "cost_per_task_annual_usd": 0.000655,
+          "tasks_per_dollar_annual": 1527.7
+        }
+      },
+      "task_rank": 48,
+      "cohort_raw_rank": 37,
+      "rank_delta": -11,
+      "annual_task_rank": 39,
+      "annual_rank_shift": 9
+    },
+    {
+      "plan_id": "glm_coding_lite_global_offpeak",
+      "plan_name": "GLM Coding Lite ($18) 闲时",
+      "billing": "subscription",
+      "price": 18.0,
+      "currency": "USD",
+      "price_usd": 18.0,
+      "annual_fee_usd": 151.2,
+      "effective_monthly_fee_usd": 12.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3-flash",
+      "benchmarked_model_name": "GLM-5.3 Flash",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 63.4,
+      "output_tokens_per_task": 67491,
+      "monthly_tokens": 1283000000,
+      "monthly_tasks": 19009.9,
+      "cost_per_task_usd": 0.000947,
+      "tasks_per_dollar": 1056.1,
+      "cost_per_task_annual_usd": 0.000663,
+      "tasks_per_dollar_annual": 1508.7,
+      "raw_usd_per_mtok": 0.01403,
+      "raw_token_rank": 80,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 67491,
+          "score_pct": 63.4,
+          "monthly_tasks": 19009.9,
+          "cost_per_task_usd": 0.000947,
+          "tasks_per_dollar": 1056.1,
+          "cost_per_task_annual_usd": 0.000663,
+          "tasks_per_dollar_annual": 1508.7
+        }
+      },
+      "task_rank": 49,
+      "cohort_raw_rank": 39,
+      "rank_delta": -10,
+      "annual_task_rank": 40,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "kimi_allegretto_cn",
@@ -2697,7 +2917,7 @@
       "cost_per_task_annual_usd": 0.001012,
       "tasks_per_dollar_annual": 988.0,
       "raw_usd_per_mtok": 0.01872,
-      "raw_token_rank": 89,
+      "raw_token_rank": 96,
       "confidence": "medium",
       "chart_tier": "main",
       "source": "V2EX纯K2.7面板 11913113/0.76%=15.68亿；kimi-k27-round7-2026-09-08.json；kimi-k27-adoption-round8-2026-09-08.json",
@@ -2712,11 +2932,11 @@
           "tasks_per_dollar_annual": 988.0
         }
       },
-      "task_rank": 45,
-      "cohort_raw_rank": 46,
-      "rank_delta": 1,
-      "annual_task_rank": 47,
-      "annual_rank_shift": -2
+      "task_rank": 50,
+      "cohort_raw_rank": 53,
+      "rank_delta": 3,
+      "annual_task_rank": 55,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "glm_coding_max_cn_old_mid",
@@ -2741,7 +2961,7 @@
       "cost_per_task_annual_usd": 0.001167,
       "tasks_per_dollar_annual": 857.1,
       "raw_usd_per_mtok": 0.01557,
-      "raw_token_rank": 79,
+      "raw_token_rank": 84,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -2756,11 +2976,11 @@
           "tasks_per_dollar_annual": 857.1
         }
       },
-      "task_rank": 46,
-      "cohort_raw_rank": 37,
+      "task_rank": 51,
+      "cohort_raw_rank": 42,
       "rank_delta": -9,
-      "annual_task_rank": 49,
-      "annual_rank_shift": -3
+      "annual_task_rank": 57,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "kimi_allegro_cn",
@@ -2785,7 +3005,7 @@
       "cost_per_task_annual_usd": 0.001185,
       "tasks_per_dollar_annual": 843.9,
       "raw_usd_per_mtok": 0.02192,
-      "raw_token_rank": 94,
+      "raw_token_rank": 102,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "199档×官方60/20；kimi-k27-adoption-round8-2026-09-08.json",
@@ -2800,11 +3020,11 @@
           "tasks_per_dollar_annual": 843.9
         }
       },
-      "task_rank": 47,
-      "cohort_raw_rank": 51,
-      "rank_delta": 4,
-      "annual_task_rank": 50,
-      "annual_rank_shift": -3
+      "task_rank": 52,
+      "cohort_raw_rank": 59,
+      "rank_delta": 7,
+      "annual_task_rank": 58,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "glm_coding_max_cn_new_peak",
@@ -2829,7 +3049,7 @@
       "cost_per_task_annual_usd": 0.000956,
       "tasks_per_dollar_annual": 1046.1,
       "raw_usd_per_mtok": 0.01771,
-      "raw_token_rank": 86,
+      "raw_token_rank": 91,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -2844,11 +3064,11 @@
           "tasks_per_dollar_annual": 1046.1
         }
       },
-      "task_rank": 48,
-      "cohort_raw_rank": 43,
+      "task_rank": 53,
+      "cohort_raw_rank": 48,
       "rank_delta": -5,
-      "annual_task_rank": 45,
-      "annual_rank_shift": 3
+      "annual_task_rank": 52,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "glm_coding_lite_cn_new_mid",
@@ -2873,7 +3093,7 @@
       "cost_per_task_annual_usd": 0.000977,
       "tasks_per_dollar_annual": 1023.4,
       "raw_usd_per_mtok": 0.0181,
-      "raw_token_rank": 87,
+      "raw_token_rank": 92,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -2888,11 +3108,11 @@
           "tasks_per_dollar_annual": 1023.4
         }
       },
-      "task_rank": 49,
-      "cohort_raw_rank": 44,
+      "task_rank": 54,
+      "cohort_raw_rank": 49,
       "rank_delta": -5,
-      "annual_task_rank": 46,
-      "annual_rank_shift": 3
+      "annual_task_rank": 53,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "cursor_ultra",
@@ -2917,7 +3137,7 @@
       "cost_per_task_annual_usd": 0.001256,
       "tasks_per_dollar_annual": 796.2,
       "raw_usd_per_mtok": 0.02585,
-      "raw_token_rank": 103,
+      "raw_token_rank": 111,
       "confidence": "medium",
       "chart_tier": "main",
       "source": "两张调整后个人Ultra标准主行中间值；cursor-adoption-round8-2026-09-06.json",
@@ -2959,11 +3179,99 @@
           "tasks_per_dollar_annual": 542.7
         }
       },
-      "task_rank": 50,
-      "cohort_raw_rank": 57,
-      "rank_delta": 7,
-      "annual_task_rank": 52,
-      "annual_rank_shift": -2
+      "task_rank": 55,
+      "cohort_raw_rank": 65,
+      "rank_delta": 10,
+      "annual_task_rank": 60,
+      "annual_rank_shift": -5
+    },
+    {
+      "plan_id": "glm_coding_max_global_peak",
+      "plan_name": "GLM Coding Max ($168) 忙时",
+      "billing": "subscription",
+      "price": 168.0,
+      "currency": "USD",
+      "price_usd": 168.0,
+      "annual_fee_usd": 1411.2,
+      "effective_monthly_fee_usd": 117.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3-flash",
+      "benchmarked_model_name": "GLM-5.3 Flash",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 63.4,
+      "output_tokens_per_task": 67491,
+      "monthly_tokens": 8982000000,
+      "monthly_tasks": 133084.4,
+      "cost_per_task_usd": 0.001262,
+      "tasks_per_dollar": 792.2,
+      "cost_per_task_annual_usd": 0.000884,
+      "tasks_per_dollar_annual": 1131.7,
+      "raw_usd_per_mtok": 0.0187,
+      "raw_token_rank": 94,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 67491,
+          "score_pct": 63.4,
+          "monthly_tasks": 133084.4,
+          "cost_per_task_usd": 0.001262,
+          "tasks_per_dollar": 792.2,
+          "cost_per_task_annual_usd": 0.000884,
+          "tasks_per_dollar_annual": 1131.7
+        }
+      },
+      "task_rank": 56,
+      "cohort_raw_rank": 51,
+      "rank_delta": -5,
+      "annual_task_rank": 49,
+      "annual_rank_shift": 7
+    },
+    {
+      "plan_id": "glm_coding_lite_global_mid",
+      "plan_name": "GLM Coding Lite ($18) 中间值",
+      "billing": "subscription",
+      "price": 18.0,
+      "currency": "USD",
+      "price_usd": 18.0,
+      "annual_fee_usd": 151.2,
+      "effective_monthly_fee_usd": 12.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3-flash",
+      "benchmarked_model_name": "GLM-5.3 Flash",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 63.4,
+      "output_tokens_per_task": 67491,
+      "monthly_tokens": 962000000,
+      "monthly_tasks": 14253.8,
+      "cost_per_task_usd": 0.001263,
+      "tasks_per_dollar": 791.9,
+      "cost_per_task_annual_usd": 0.000884,
+      "tasks_per_dollar_annual": 1131.3,
+      "raw_usd_per_mtok": 0.01871,
+      "raw_token_rank": 95,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 67491,
+          "score_pct": 63.4,
+          "monthly_tasks": 14253.8,
+          "cost_per_task_usd": 0.001263,
+          "tasks_per_dollar": 791.9,
+          "cost_per_task_annual_usd": 0.000884,
+          "tasks_per_dollar_annual": 1131.3
+        }
+      },
+      "task_rank": 57,
+      "cohort_raw_rank": 52,
+      "rank_delta": -5,
+      "annual_task_rank": 50,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "glm_coding_lite_cn_old_offpeak",
@@ -2988,7 +3296,7 @@
       "cost_per_task_annual_usd": 0.001281,
       "tasks_per_dollar_annual": 780.6,
       "raw_usd_per_mtok": 0.01709,
-      "raw_token_rank": 84,
+      "raw_token_rank": 89,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -3003,11 +3311,11 @@
           "tasks_per_dollar_annual": 780.6
         }
       },
-      "task_rank": 51,
-      "cohort_raw_rank": 41,
-      "rank_delta": -10,
-      "annual_task_rank": 53,
-      "annual_rank_shift": -2
+      "task_rank": 58,
+      "cohort_raw_rank": 46,
+      "rank_delta": -12,
+      "annual_task_rank": 61,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "glm_coding_pro_cn_old_peak",
@@ -3032,7 +3340,7 @@
       "cost_per_task_annual_usd": 0.001297,
       "tasks_per_dollar_annual": 770.9,
       "raw_usd_per_mtok": 0.01731,
-      "raw_token_rank": 85,
+      "raw_token_rank": 90,
       "confidence": "high",
       "chart_tier": "main",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -3047,11 +3355,11 @@
           "tasks_per_dollar_annual": 770.9
         }
       },
-      "task_rank": 52,
-      "cohort_raw_rank": 42,
-      "rank_delta": -10,
-      "annual_task_rank": 54,
-      "annual_rank_shift": -2
+      "task_rank": 59,
+      "cohort_raw_rank": 47,
+      "rank_delta": -12,
+      "annual_task_rank": 62,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "glm_coding_pro_cn_new_peak",
@@ -3076,7 +3384,7 @@
       "cost_per_task_annual_usd": 0.001113,
       "tasks_per_dollar_annual": 898.4,
       "raw_usd_per_mtok": 0.02061,
-      "raw_token_rank": 91,
+      "raw_token_rank": 98,
       "confidence": "high",
       "chart_tier": "main",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -3091,11 +3399,55 @@
           "tasks_per_dollar_annual": 898.4
         }
       },
-      "task_rank": 53,
-      "cohort_raw_rank": 48,
+      "task_rank": 60,
+      "cohort_raw_rank": 55,
       "rank_delta": -5,
-      "annual_task_rank": 48,
-      "annual_rank_shift": 5
+      "annual_task_rank": 56,
+      "annual_rank_shift": 4
+    },
+    {
+      "plan_id": "glm_coding_pro_global_peak",
+      "plan_name": "GLM Coding Pro ($80) 忙时",
+      "billing": "subscription",
+      "price": 80.0,
+      "currency": "USD",
+      "price_usd": 80.0,
+      "annual_fee_usd": 672.0,
+      "effective_monthly_fee_usd": 56.0,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3-flash",
+      "benchmarked_model_name": "GLM-5.3 Flash",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 63.4,
+      "output_tokens_per_task": 67491,
+      "monthly_tokens": 3850000000,
+      "monthly_tasks": 57044.6,
+      "cost_per_task_usd": 0.001402,
+      "tasks_per_dollar": 713.1,
+      "cost_per_task_annual_usd": 0.000982,
+      "tasks_per_dollar_annual": 1018.7,
+      "raw_usd_per_mtok": 0.02078,
+      "raw_token_rank": 99,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 67491,
+          "score_pct": 63.4,
+          "monthly_tasks": 57044.6,
+          "cost_per_task_usd": 0.001402,
+          "tasks_per_dollar": 713.1,
+          "cost_per_task_annual_usd": 0.000982,
+          "tasks_per_dollar_annual": 1018.7
+        }
+      },
+      "task_rank": 61,
+      "cohort_raw_rank": 56,
+      "rank_delta": -5,
+      "annual_task_rank": 54,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "cursor_pro_plus",
@@ -3120,7 +3472,7 @@
       "cost_per_task_annual_usd": 0.001413,
       "tasks_per_dollar_annual": 707.7,
       "raw_usd_per_mtok": 0.02908,
-      "raw_token_rank": 110,
+      "raw_token_rank": 120,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "round3面板Pro+池约$800；按Ultra池$3000等比；cursor-adoption-round8-2026-09-06.json",
@@ -3162,11 +3514,11 @@
           "tasks_per_dollar_annual": 482.4
         }
       },
-      "task_rank": 54,
-      "cohort_raw_rank": 61,
-      "rank_delta": 7,
-      "annual_task_rank": 55,
-      "annual_rank_shift": -1
+      "task_rank": 62,
+      "cohort_raw_rank": 71,
+      "rank_delta": 9,
+      "annual_task_rank": 64,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "ollama_pro",
@@ -3191,7 +3543,7 @@
       "cost_per_task_annual_usd": 0.001197,
       "tasks_per_dollar_annual": 835.5,
       "raw_usd_per_mtok": 0.01419,
-      "raw_token_rank": 76,
+      "raw_token_rank": 81,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -3206,10 +3558,10 @@
           "tasks_per_dollar_annual": 835.5
         }
       },
-      "task_rank": 55,
-      "cohort_raw_rank": 35,
-      "rank_delta": -20,
-      "annual_task_rank": 51,
+      "task_rank": 63,
+      "cohort_raw_rank": 40,
+      "rank_delta": -23,
+      "annual_task_rank": 59,
       "annual_rank_shift": 4
     },
     {
@@ -3235,7 +3587,7 @@
       "cost_per_task_annual_usd": 0.001436,
       "tasks_per_dollar_annual": 696.3,
       "raw_usd_per_mtok": 0.01419,
-      "raw_token_rank": 77,
+      "raw_token_rank": 82,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -3250,11 +3602,11 @@
           "tasks_per_dollar_annual": 696.3
         }
       },
-      "task_rank": 56,
-      "cohort_raw_rank": 36,
-      "rank_delta": -20,
-      "annual_task_rank": 56,
-      "annual_rank_shift": 0
+      "task_rank": 64,
+      "cohort_raw_rank": 41,
+      "rank_delta": -23,
+      "annual_task_rank": 65,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "kimi_allegretto_cn",
@@ -3279,7 +3631,7 @@
       "cost_per_task_annual_usd": 0.001525,
       "tasks_per_dollar_annual": 655.6,
       "raw_usd_per_mtok": 0.02023,
-      "raw_token_rank": 90,
+      "raw_token_rank": 97,
       "confidence": "medium",
       "chart_tier": "main",
       "source": "本机ccusage 243739068/84%反推周额度×Kimi月池5倍；kimi-adoption-round6-2026-09-08.json",
@@ -3294,11 +3646,11 @@
           "tasks_per_dollar_annual": 655.6
         }
       },
-      "task_rank": 57,
-      "cohort_raw_rank": 47,
-      "rank_delta": -10,
-      "annual_task_rank": 58,
-      "annual_rank_shift": -1
+      "task_rank": 65,
+      "cohort_raw_rank": 54,
+      "rank_delta": -11,
+      "annual_task_rank": 68,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "opencode_go",
@@ -3323,7 +3675,7 @@
       "cost_per_task_annual_usd": 0.00154,
       "tasks_per_dollar_annual": 649.4,
       "raw_usd_per_mtok": 0.02282,
-      "raw_token_rank": 97,
+      "raw_token_rank": 105,
       "confidence": "medium",
       "chart_tier": "main",
       "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json",
@@ -3338,11 +3690,11 @@
           "tasks_per_dollar_annual": 649.4
         }
       },
-      "task_rank": 58,
-      "cohort_raw_rank": 53,
+      "task_rank": 66,
+      "cohort_raw_rank": 61,
       "rank_delta": -5,
-      "annual_task_rank": 59,
-      "annual_rank_shift": -1
+      "annual_task_rank": 69,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "glm_coding_lite_cn_old_mid",
@@ -3367,7 +3719,7 @@
       "cost_per_task_annual_usd": 0.001709,
       "tasks_per_dollar_annual": 585.0,
       "raw_usd_per_mtok": 0.0228,
-      "raw_token_rank": 96,
+      "raw_token_rank": 104,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -3382,11 +3734,11 @@
           "tasks_per_dollar_annual": 585.0
         }
       },
-      "task_rank": 59,
-      "cohort_raw_rank": 52,
+      "task_rank": 67,
+      "cohort_raw_rank": 60,
       "rank_delta": -7,
-      "annual_task_rank": 62,
-      "annual_rank_shift": -3
+      "annual_task_rank": 73,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "glm_coding_max_cn_old_peak",
@@ -3411,7 +3763,7 @@
       "cost_per_task_annual_usd": 0.00175,
       "tasks_per_dollar_annual": 571.3,
       "raw_usd_per_mtok": 0.02335,
-      "raw_token_rank": 100,
+      "raw_token_rank": 108,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -3426,11 +3778,11 @@
           "tasks_per_dollar_annual": 571.3
         }
       },
-      "task_rank": 60,
-      "cohort_raw_rank": 54,
+      "task_rank": 68,
+      "cohort_raw_rank": 62,
       "rank_delta": -6,
-      "annual_task_rank": 63,
-      "annual_rank_shift": -3
+      "annual_task_rank": 74,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "command_code_goat",
@@ -3455,7 +3807,7 @@
       "cost_per_task_annual_usd": 0.001765,
       "tasks_per_dollar_annual": 566.7,
       "raw_usd_per_mtok": 0.1,
-      "raw_token_rank": 162,
+      "raw_token_rank": 180,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -3506,11 +3858,11 @@
           "tasks_per_dollar_annual": 170.1
         }
       },
-      "task_rank": 61,
-      "cohort_raw_rank": 99,
-      "rank_delta": 38,
-      "annual_task_rank": 64,
-      "annual_rank_shift": -3
+      "task_rank": 69,
+      "cohort_raw_rank": 117,
+      "rank_delta": 48,
+      "annual_task_rank": 75,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "kimi_allegro_cn",
@@ -3535,7 +3887,7 @@
       "cost_per_task_annual_usd": 0.001786,
       "tasks_per_dollar_annual": 560.0,
       "raw_usd_per_mtok": 0.02369,
-      "raw_token_rank": 102,
+      "raw_token_rank": 110,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "199档×官方60/20；kimi-adoption-round6-2026-09-08.json",
@@ -3550,11 +3902,11 @@
           "tasks_per_dollar_annual": 560.0
         }
       },
-      "task_rank": 62,
-      "cohort_raw_rank": 55,
+      "task_rank": 70,
+      "cohort_raw_rank": 63,
       "rank_delta": -7,
-      "annual_task_rank": 65,
-      "annual_rank_shift": -3
+      "annual_task_rank": 76,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "glm_coding_lite_cn_new_peak",
@@ -3579,7 +3931,7 @@
       "cost_per_task_annual_usd": 0.001464,
       "tasks_per_dollar_annual": 683.0,
       "raw_usd_per_mtok": 0.02711,
-      "raw_token_rank": 106,
+      "raw_token_rank": 114,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -3594,11 +3946,55 @@
           "tasks_per_dollar_annual": 683.0
         }
       },
-      "task_rank": 63,
-      "cohort_raw_rank": 59,
+      "task_rank": 71,
+      "cohort_raw_rank": 67,
       "rank_delta": -4,
-      "annual_task_rank": 57,
-      "annual_rank_shift": 6
+      "annual_task_rank": 66,
+      "annual_rank_shift": 5
+    },
+    {
+      "plan_id": "glm_coding_lite_global_peak",
+      "plan_name": "GLM Coding Lite ($18) 忙时",
+      "billing": "subscription",
+      "price": 18.0,
+      "currency": "USD",
+      "price_usd": 18.0,
+      "annual_fee_usd": 151.2,
+      "effective_monthly_fee_usd": 12.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3-flash",
+      "benchmarked_model_name": "GLM-5.3 Flash",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 63.4,
+      "output_tokens_per_task": 67491,
+      "monthly_tokens": 642000000,
+      "monthly_tasks": 9512.4,
+      "cost_per_task_usd": 0.001892,
+      "tasks_per_dollar": 528.5,
+      "cost_per_task_annual_usd": 0.001325,
+      "tasks_per_dollar_annual": 755.0,
+      "raw_usd_per_mtok": 0.02804,
+      "raw_token_rank": 116,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 67491,
+          "score_pct": 63.4,
+          "monthly_tasks": 9512.4,
+          "cost_per_task_usd": 0.001892,
+          "tasks_per_dollar": 528.5,
+          "cost_per_task_annual_usd": 0.001325,
+          "tasks_per_dollar_annual": 755.0
+        }
+      },
+      "task_rank": 72,
+      "cohort_raw_rank": 68,
+      "rank_delta": -4,
+      "annual_task_rank": 63,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "opencode_go",
@@ -3623,7 +4019,7 @@
       "cost_per_task_annual_usd": 0.001979,
       "tasks_per_dollar_annual": 505.2,
       "raw_usd_per_mtok": 0.03662,
-      "raw_token_rank": 120,
+      "raw_token_rank": 131,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json",
@@ -3638,11 +4034,11 @@
           "tasks_per_dollar_annual": 505.2
         }
       },
-      "task_rank": 64,
-      "cohort_raw_rank": 67,
-      "rank_delta": 3,
-      "annual_task_rank": 67,
-      "annual_rank_shift": -3
+      "task_rank": 73,
+      "cohort_raw_rank": 78,
+      "rank_delta": 5,
+      "annual_task_rank": 78,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "command_code_goat",
@@ -3667,7 +4063,7 @@
       "cost_per_task_annual_usd": 0.001979,
       "tasks_per_dollar_annual": 505.2,
       "raw_usd_per_mtok": 0.03662,
-      "raw_token_rank": 121,
+      "raw_token_rank": 132,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -3682,11 +4078,11 @@
           "tasks_per_dollar_annual": 505.2
         }
       },
-      "task_rank": 65,
-      "cohort_raw_rank": 68,
-      "rank_delta": 3,
-      "annual_task_rank": 68,
-      "annual_rank_shift": -3
+      "task_rank": 74,
+      "cohort_raw_rank": 79,
+      "rank_delta": 5,
+      "annual_task_rank": 79,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "glm_coding_max_cn_new_offpeak",
@@ -3711,7 +4107,7 @@
       "cost_per_task_annual_usd": 0.001609,
       "tasks_per_dollar_annual": 621.4,
       "raw_usd_per_mtok": 0.02684,
-      "raw_token_rank": 105,
+      "raw_token_rank": 113,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -3726,11 +4122,11 @@
           "tasks_per_dollar_annual": 621.4
         }
       },
-      "task_rank": 66,
-      "cohort_raw_rank": 58,
-      "rank_delta": -8,
-      "annual_task_rank": 60,
-      "annual_rank_shift": 6
+      "task_rank": 75,
+      "cohort_raw_rank": 66,
+      "rank_delta": -9,
+      "annual_task_rank": 70,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "supergrok_heavy",
@@ -3755,7 +4151,7 @@
       "cost_per_task_annual_usd": 0.002019,
       "tasks_per_dollar_annual": 495.4,
       "raw_usd_per_mtok": 0.05894,
-      "raw_token_rank": 144,
+      "raw_token_rank": 160,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "由同套餐 grok-4.6 50.9 亿 × 1.0",
@@ -3770,11 +4166,11 @@
           "tasks_per_dollar_annual": 495.4
         }
       },
-      "task_rank": 67,
-      "cohort_raw_rank": 83,
-      "rank_delta": 16,
-      "annual_task_rank": 69,
-      "annual_rank_shift": -2
+      "task_rank": 76,
+      "cohort_raw_rank": 99,
+      "rank_delta": 23,
+      "annual_task_rank": 81,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "supergrok",
@@ -3799,7 +4195,7 @@
       "cost_per_task_annual_usd": 0.001682,
       "tasks_per_dollar_annual": 594.5,
       "raw_usd_per_mtok": 0.05894,
-      "raw_token_rank": 145,
+      "raw_token_rank": 161,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "由同套餐 grok-4.6 5.09 亿 × 1.0",
@@ -3814,11 +4210,11 @@
           "tasks_per_dollar_annual": 594.5
         }
       },
-      "task_rank": 68,
-      "cohort_raw_rank": 84,
-      "rank_delta": 16,
-      "annual_task_rank": 61,
-      "annual_rank_shift": 7
+      "task_rank": 77,
+      "cohort_raw_rank": 100,
+      "rank_delta": 23,
+      "annual_task_rank": 72,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "cursor_pro",
@@ -3843,7 +4239,7 @@
       "cost_per_task_annual_usd": 0.002067,
       "tasks_per_dollar_annual": 483.7,
       "raw_usd_per_mtok": 0.04255,
-      "raw_token_rank": 127,
+      "raw_token_rank": 140,
       "confidence": "medium",
       "chart_tier": "main",
       "source": "Cursor 论坛面板：303.9M = 65% → 4.68 亿；另有用户口述 4~5 亿打满",
@@ -3885,11 +4281,11 @@
           "tasks_per_dollar_annual": 329.7
         }
       },
-      "task_rank": 69,
-      "cohort_raw_rank": 73,
-      "rank_delta": 4,
-      "annual_task_rank": 70,
-      "annual_rank_shift": -1
+      "task_rank": 78,
+      "cohort_raw_rank": 86,
+      "rank_delta": 8,
+      "annual_task_rank": 82,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "command_code_goat",
@@ -3914,7 +4310,7 @@
       "cost_per_task_annual_usd": 0.002091,
       "tasks_per_dollar_annual": 478.2,
       "raw_usd_per_mtok": 0.04272,
-      "raw_token_rank": 128,
+      "raw_token_rank": 142,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -3938,11 +4334,55 @@
           "tasks_per_dollar_annual": 309.0
         }
       },
-      "task_rank": 70,
-      "cohort_raw_rank": 74,
-      "rank_delta": 4,
-      "annual_task_rank": 71,
-      "annual_rank_shift": -1
+      "task_rank": 79,
+      "cohort_raw_rank": 88,
+      "rank_delta": 9,
+      "annual_task_rank": 83,
+      "annual_rank_shift": -4
+    },
+    {
+      "plan_id": "glm_coding_max_global_offpeak",
+      "plan_name": "GLM Coding Max ($168) 闲时",
+      "billing": "subscription",
+      "price": 168.0,
+      "currency": "USD",
+      "price_usd": 168.0,
+      "annual_fee_usd": 1411.2,
+      "effective_monthly_fee_usd": 117.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3",
+      "benchmarked_model_name": "GLM-5.3",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 69.0,
+      "output_tokens_per_task": 74953,
+      "monthly_tokens": 5926000000,
+      "monthly_tasks": 79062.9,
+      "cost_per_task_usd": 0.002125,
+      "tasks_per_dollar": 470.6,
+      "cost_per_task_annual_usd": 0.001487,
+      "tasks_per_dollar_annual": 672.3,
+      "raw_usd_per_mtok": 0.02835,
+      "raw_token_rank": 118,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 74953,
+          "score_pct": 69.0,
+          "monthly_tasks": 79062.9,
+          "cost_per_task_usd": 0.002125,
+          "tasks_per_dollar": 470.6,
+          "cost_per_task_annual_usd": 0.001487,
+          "tasks_per_dollar_annual": 672.3
+        }
+      },
+      "task_rank": 80,
+      "cohort_raw_rank": 69,
+      "rank_delta": -11,
+      "annual_task_rank": 67,
+      "annual_rank_shift": 13
     },
     {
       "plan_id": "command_code_goat",
@@ -3967,7 +4407,7 @@
       "cost_per_task_annual_usd": 0.002154,
       "tasks_per_dollar_annual": 464.2,
       "raw_usd_per_mtok": 0.02129,
-      "raw_token_rank": 93,
+      "raw_token_rank": 101,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；command-code-goat-deepseek-round1-2026-09-10.json",
@@ -3982,11 +4422,11 @@
           "tasks_per_dollar_annual": 464.2
         }
       },
-      "task_rank": 71,
-      "cohort_raw_rank": 50,
-      "rank_delta": -21,
-      "annual_task_rank": 73,
-      "annual_rank_shift": -2
+      "task_rank": 81,
+      "cohort_raw_rank": 58,
+      "rank_delta": -23,
+      "annual_task_rank": 85,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "glm_coding_pro_cn_new_offpeak",
@@ -4011,7 +4451,7 @@
       "cost_per_task_annual_usd": 0.001874,
       "tasks_per_dollar_annual": 533.7,
       "raw_usd_per_mtok": 0.03125,
-      "raw_token_rank": 111,
+      "raw_token_rank": 121,
       "confidence": "high",
       "chart_tier": "main",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -4026,11 +4466,55 @@
           "tasks_per_dollar_annual": 533.7
         }
       },
-      "task_rank": 72,
-      "cohort_raw_rank": 62,
+      "task_rank": 82,
+      "cohort_raw_rank": 72,
       "rank_delta": -10,
-      "annual_task_rank": 66,
-      "annual_rank_shift": 6
+      "annual_task_rank": 77,
+      "annual_rank_shift": 5
+    },
+    {
+      "plan_id": "glm_coding_pro_global_offpeak",
+      "plan_name": "GLM Coding Pro ($80) 闲时",
+      "billing": "subscription",
+      "price": 80.0,
+      "currency": "USD",
+      "price_usd": 80.0,
+      "annual_fee_usd": 672.0,
+      "effective_monthly_fee_usd": 56.0,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3",
+      "benchmarked_model_name": "GLM-5.3",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 69.0,
+      "output_tokens_per_task": 74953,
+      "monthly_tokens": 2540000000,
+      "monthly_tasks": 33887.9,
+      "cost_per_task_usd": 0.002361,
+      "tasks_per_dollar": 423.6,
+      "cost_per_task_annual_usd": 0.001653,
+      "tasks_per_dollar_annual": 605.1,
+      "raw_usd_per_mtok": 0.0315,
+      "raw_token_rank": 122,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 74953,
+          "score_pct": 69.0,
+          "monthly_tasks": 33887.9,
+          "cost_per_task_usd": 0.002361,
+          "tasks_per_dollar": 423.6,
+          "cost_per_task_annual_usd": 0.001653,
+          "tasks_per_dollar_annual": 605.1
+        }
+      },
+      "task_rank": 83,
+      "cohort_raw_rank": 73,
+      "rank_delta": -10,
+      "annual_task_rank": 71,
+      "annual_rank_shift": 12
     },
     {
       "plan_id": "supergrok_plus",
@@ -4055,7 +4539,7 @@
       "cost_per_task_annual_usd": 0.002382,
       "tasks_per_dollar_annual": 419.9,
       "raw_usd_per_mtok": 0.04902,
-      "raw_token_rank": 133,
+      "raw_token_rank": 147,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "面板周额度$100×Super精确标定×4周",
@@ -4097,11 +4581,11 @@
           "tasks_per_dollar_annual": 286.2
         }
       },
-      "task_rank": 73,
-      "cohort_raw_rank": 76,
-      "rank_delta": 3,
-      "annual_task_rank": 74,
-      "annual_rank_shift": -1
+      "task_rank": 84,
+      "cohort_raw_rank": 90,
+      "rank_delta": 6,
+      "annual_task_rank": 88,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "opencode_go",
@@ -4126,7 +4610,7 @@
       "cost_per_task_annual_usd": 0.002439,
       "tasks_per_dollar_annual": 410.0,
       "raw_usd_per_mtok": 0.04983,
-      "raw_token_rank": 134,
+      "raw_token_rank": 148,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json",
@@ -4150,11 +4634,11 @@
           "tasks_per_dollar_annual": 264.9
         }
       },
-      "task_rank": 74,
-      "cohort_raw_rank": 77,
-      "rank_delta": 3,
-      "annual_task_rank": 76,
-      "annual_rank_shift": -2
+      "task_rank": 85,
+      "cohort_raw_rank": 91,
+      "rank_delta": 6,
+      "annual_task_rank": 90,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "kimi_moderato_cn",
@@ -4179,7 +4663,7 @@
       "cost_per_task_annual_usd": 0.002513,
       "tasks_per_dollar_annual": 397.9,
       "raw_usd_per_mtok": 0.04651,
-      "raw_token_rank": 131,
+      "raw_token_rank": 145,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "199档×官方4/20；kimi-k27-adoption-round8-2026-09-08.json",
@@ -4194,11 +4678,11 @@
           "tasks_per_dollar_annual": 397.9
         }
       },
-      "task_rank": 75,
-      "cohort_raw_rank": 75,
-      "rank_delta": 0,
-      "annual_task_rank": 79,
-      "annual_rank_shift": -4
+      "task_rank": 86,
+      "cohort_raw_rank": 89,
+      "rank_delta": 3,
+      "annual_task_rank": 93,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "glm_coding_lite_cn_old_peak",
@@ -4223,7 +4707,7 @@
       "cost_per_task_annual_usd": 0.002556,
       "tasks_per_dollar_annual": 391.2,
       "raw_usd_per_mtok": 0.0341,
-      "raw_token_rank": 117,
+      "raw_token_rank": 128,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -4238,11 +4722,11 @@
           "tasks_per_dollar_annual": 391.2
         }
       },
-      "task_rank": 76,
-      "cohort_raw_rank": 65,
+      "task_rank": 87,
+      "cohort_raw_rank": 76,
       "rank_delta": -11,
-      "annual_task_rank": 80,
-      "annual_rank_shift": -4
+      "annual_task_rank": 94,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "glm_coding_max_cn_new_mid",
@@ -4267,7 +4751,7 @@
       "cost_per_task_annual_usd": 0.002145,
       "tasks_per_dollar_annual": 466.1,
       "raw_usd_per_mtok": 0.03578,
-      "raw_token_rank": 118,
+      "raw_token_rank": 129,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -4282,11 +4766,55 @@
           "tasks_per_dollar_annual": 466.1
         }
       },
-      "task_rank": 77,
-      "cohort_raw_rank": 66,
+      "task_rank": 88,
+      "cohort_raw_rank": 77,
       "rank_delta": -11,
-      "annual_task_rank": 72,
-      "annual_rank_shift": 5
+      "annual_task_rank": 84,
+      "annual_rank_shift": 4
+    },
+    {
+      "plan_id": "glm_coding_max_global_mid",
+      "plan_name": "GLM Coding Max ($168) 中间值",
+      "billing": "subscription",
+      "price": 168.0,
+      "currency": "USD",
+      "price_usd": 168.0,
+      "annual_fee_usd": 1411.2,
+      "effective_monthly_fee_usd": 117.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3",
+      "benchmarked_model_name": "GLM-5.3",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 69.0,
+      "output_tokens_per_task": 74953,
+      "monthly_tokens": 4445000000,
+      "monthly_tasks": 59303.8,
+      "cost_per_task_usd": 0.002833,
+      "tasks_per_dollar": 353.0,
+      "cost_per_task_annual_usd": 0.001983,
+      "tasks_per_dollar_annual": 504.3,
+      "raw_usd_per_mtok": 0.0378,
+      "raw_token_rank": 133,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 74953,
+          "score_pct": 69.0,
+          "monthly_tasks": 59303.8,
+          "cost_per_task_usd": 0.002833,
+          "tasks_per_dollar": 353.0,
+          "cost_per_task_annual_usd": 0.001983,
+          "tasks_per_dollar_annual": 504.3
+        }
+      },
+      "task_rank": 89,
+      "cohort_raw_rank": 80,
+      "rank_delta": -9,
+      "annual_task_rank": 80,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "supergrok",
@@ -4311,7 +4839,7 @@
       "cost_per_task_annual_usd": 0.002386,
       "tasks_per_dollar_annual": 419.1,
       "raw_usd_per_mtok": 0.05894,
-      "raw_token_rank": 142,
+      "raw_token_rank": 158,
       "confidence": "high",
       "chart_tier": "main",
       "source": "V2EX受控打满127,272,629 token/周×4周",
@@ -4353,11 +4881,11 @@
           "tasks_per_dollar_annual": 285.6
         }
       },
-      "task_rank": 78,
-      "cohort_raw_rank": 85,
-      "rank_delta": 7,
-      "annual_task_rank": 75,
-      "annual_rank_shift": 3
+      "task_rank": 90,
+      "cohort_raw_rank": 101,
+      "rank_delta": 11,
+      "annual_task_rank": 89,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "supergrok_heavy",
@@ -4382,7 +4910,7 @@
       "cost_per_task_annual_usd": 0.002864,
       "tasks_per_dollar_annual": 349.2,
       "raw_usd_per_mtok": 0.05894,
-      "raw_token_rank": 143,
+      "raw_token_rank": 159,
       "confidence": "medium",
       "chart_tier": "main",
       "source": "面板周额度$250×Super精确标定×4周",
@@ -4424,11 +4952,11 @@
           "tasks_per_dollar_annual": 238.0
         }
       },
-      "task_rank": 79,
-      "cohort_raw_rank": 86,
-      "rank_delta": 7,
-      "annual_task_rank": 81,
-      "annual_rank_shift": -2
+      "task_rank": 91,
+      "cohort_raw_rank": 102,
+      "rank_delta": 11,
+      "annual_task_rank": 95,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "opencode_go",
@@ -4453,7 +4981,7 @@
       "cost_per_task_annual_usd": 0.002872,
       "tasks_per_dollar_annual": 348.2,
       "raw_usd_per_mtok": 0.02838,
-      "raw_token_rank": 109,
+      "raw_token_rank": 119,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-deepseek-round6-2026-09-10.json",
@@ -4468,11 +4996,11 @@
           "tasks_per_dollar_annual": 348.2
         }
       },
-      "task_rank": 80,
-      "cohort_raw_rank": 60,
-      "rank_delta": -20,
-      "annual_task_rank": 82,
-      "annual_rank_shift": -2
+      "task_rank": 92,
+      "cohort_raw_rank": 70,
+      "rank_delta": -22,
+      "annual_task_rank": 96,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "glm_coding_lite_cn_new_offpeak",
@@ -4497,7 +5025,7 @@
       "cost_per_task_annual_usd": 0.002468,
       "tasks_per_dollar_annual": 405.2,
       "raw_usd_per_mtok": 0.04115,
-      "raw_token_rank": 123,
+      "raw_token_rank": 135,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -4512,11 +5040,11 @@
           "tasks_per_dollar_annual": 405.2
         }
       },
-      "task_rank": 81,
-      "cohort_raw_rank": 69,
+      "task_rank": 93,
+      "cohort_raw_rank": 81,
       "rank_delta": -12,
-      "annual_task_rank": 77,
-      "annual_rank_shift": 4
+      "annual_task_rank": 91,
+      "annual_rank_shift": 2
     },
     {
       "plan_id": "glm_coding_pro_cn_new_mid",
@@ -4541,7 +5069,7 @@
       "cost_per_task_annual_usd": 0.002498,
       "tasks_per_dollar_annual": 400.3,
       "raw_usd_per_mtok": 0.04166,
-      "raw_token_rank": 126,
+      "raw_token_rank": 138,
       "confidence": "high",
       "chart_tier": "main",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -4556,11 +5084,55 @@
           "tasks_per_dollar_annual": 400.3
         }
       },
-      "task_rank": 82,
-      "cohort_raw_rank": 72,
+      "task_rank": 94,
+      "cohort_raw_rank": 84,
       "rank_delta": -10,
-      "annual_task_rank": 78,
-      "annual_rank_shift": 4
+      "annual_task_rank": 92,
+      "annual_rank_shift": 2
+    },
+    {
+      "plan_id": "glm_coding_pro_global_mid",
+      "plan_name": "GLM Coding Pro ($80) 中间值",
+      "billing": "subscription",
+      "price": 80.0,
+      "currency": "USD",
+      "price_usd": 80.0,
+      "annual_fee_usd": 672.0,
+      "effective_monthly_fee_usd": 56.0,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3",
+      "benchmarked_model_name": "GLM-5.3",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 69.0,
+      "output_tokens_per_task": 74953,
+      "monthly_tokens": 1905000000,
+      "monthly_tasks": 25415.9,
+      "cost_per_task_usd": 0.003148,
+      "tasks_per_dollar": 317.7,
+      "cost_per_task_annual_usd": 0.002203,
+      "tasks_per_dollar_annual": 453.9,
+      "raw_usd_per_mtok": 0.04199,
+      "raw_token_rank": 139,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 74953,
+          "score_pct": 69.0,
+          "monthly_tasks": 25415.9,
+          "cost_per_task_usd": 0.003148,
+          "tasks_per_dollar": 317.7,
+          "cost_per_task_annual_usd": 0.002203,
+          "tasks_per_dollar_annual": 453.9
+        }
+      },
+      "task_rank": 95,
+      "cohort_raw_rank": 85,
+      "rank_delta": -10,
+      "annual_task_rank": 86,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "cursor_ultra_fast",
@@ -4585,7 +5157,7 @@
       "cost_per_task_annual_usd": 0.003161,
       "tasks_per_dollar_annual": 316.3,
       "raw_usd_per_mtok": 0.06506,
-      "raw_token_rank": 147,
+      "raw_token_rank": 164,
       "confidence": "high",
       "chart_tier": "main",
       "source": "用户当前平滑账号截图863.8M/28.1%直接反推；cursor-adoption-round8-2026-09-06.json",
@@ -4627,11 +5199,55 @@
           "tasks_per_dollar_annual": 215.6
         }
       },
-      "task_rank": 83,
-      "cohort_raw_rank": 88,
-      "rank_delta": 5,
-      "annual_task_rank": 83,
-      "annual_rank_shift": 0
+      "task_rank": 96,
+      "cohort_raw_rank": 105,
+      "rank_delta": 9,
+      "annual_task_rank": 99,
+      "annual_rank_shift": -3
+    },
+    {
+      "plan_id": "glm_coding_lite_global_offpeak",
+      "plan_name": "GLM Coding Lite ($18) 闲时",
+      "billing": "subscription",
+      "price": 18.0,
+      "currency": "USD",
+      "price_usd": 18.0,
+      "annual_fee_usd": 151.2,
+      "effective_monthly_fee_usd": 12.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3",
+      "benchmarked_model_name": "GLM-5.3",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 69.0,
+      "output_tokens_per_task": 74953,
+      "monthly_tokens": 423000000,
+      "monthly_tasks": 5643.5,
+      "cost_per_task_usd": 0.003189,
+      "tasks_per_dollar": 313.5,
+      "cost_per_task_annual_usd": 0.002233,
+      "tasks_per_dollar_annual": 447.9,
+      "raw_usd_per_mtok": 0.04255,
+      "raw_token_rank": 141,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 74953,
+          "score_pct": 69.0,
+          "monthly_tasks": 5643.5,
+          "cost_per_task_usd": 0.003189,
+          "tasks_per_dollar": 313.5,
+          "cost_per_task_annual_usd": 0.002233,
+          "tasks_per_dollar_annual": 447.9
+        }
+      },
+      "task_rank": 97,
+      "cohort_raw_rank": 87,
+      "rank_delta": -10,
+      "annual_task_rank": 87,
+      "annual_rank_shift": 10
     },
     {
       "plan_id": "supergrok_lite",
@@ -4656,7 +5272,7 @@
       "cost_per_task_annual_usd": 0.003239,
       "tasks_per_dollar_annual": 308.7,
       "raw_usd_per_mtok": 0.06667,
-      "raw_token_rank": 148,
+      "raw_token_rank": 165,
       "confidence": "low",
       "chart_tier": "full",
       "source": "aa_grok_build_2026_07",
@@ -4698,11 +5314,11 @@
           "tasks_per_dollar_annual": 210.4
         }
       },
-      "task_rank": 84,
-      "cohort_raw_rank": 89,
-      "rank_delta": 5,
-      "annual_task_rank": 85,
-      "annual_rank_shift": -1
+      "task_rank": 98,
+      "cohort_raw_rank": 106,
+      "rank_delta": 8,
+      "annual_task_rank": 101,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "kimi_moderato_cn",
@@ -4727,7 +5343,7 @@
       "cost_per_task_annual_usd": 0.003795,
       "tasks_per_dollar_annual": 263.5,
       "raw_usd_per_mtok": 0.05036,
-      "raw_token_rank": 136,
+      "raw_token_rank": 150,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "199档×官方4/20；kimi-adoption-round6-2026-09-08.json",
@@ -4742,11 +5358,11 @@
           "tasks_per_dollar_annual": 263.5
         }
       },
-      "task_rank": 85,
-      "cohort_raw_rank": 78,
+      "task_rank": 99,
+      "cohort_raw_rank": 92,
       "rank_delta": -7,
-      "annual_task_rank": 89,
-      "annual_rank_shift": -4
+      "annual_task_rank": 106,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "claude_max_5x",
@@ -4771,7 +5387,7 @@
       "cost_per_task_annual_usd": 0.003895,
       "tasks_per_dollar_annual": 256.7,
       "raw_usd_per_mtok": 0.10828,
-      "raw_token_rank": 164,
+      "raw_token_rank": 182,
       "confidence": "low",
       "chart_tier": "full",
       "source": "由同套餐 claude-opus-5 78.5 亿 × 0.11764705882352941",
@@ -4822,11 +5438,11 @@
           "tasks_per_dollar_annual": 79.9
         }
       },
-      "task_rank": 86,
-      "cohort_raw_rank": 100,
-      "rank_delta": 14,
-      "annual_task_rank": 90,
-      "annual_rank_shift": -4
+      "task_rank": 100,
+      "cohort_raw_rank": 118,
+      "rank_delta": 18,
+      "annual_task_rank": 107,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "ollama_max",
@@ -4851,7 +5467,7 @@
       "cost_per_task_annual_usd": 0.003958,
       "tasks_per_dollar_annual": 252.7,
       "raw_usd_per_mtok": 0.07322,
-      "raw_token_rank": 150,
+      "raw_token_rank": 167,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -4866,11 +5482,11 @@
           "tasks_per_dollar_annual": 252.7
         }
       },
-      "task_rank": 87,
-      "cohort_raw_rank": 90,
-      "rank_delta": 3,
-      "annual_task_rank": 91,
-      "annual_rank_shift": -4
+      "task_rank": 101,
+      "cohort_raw_rank": 107,
+      "rank_delta": 6,
+      "annual_task_rank": 108,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "ollama_pro",
@@ -4895,7 +5511,7 @@
       "cost_per_task_annual_usd": 0.003299,
       "tasks_per_dollar_annual": 303.1,
       "raw_usd_per_mtok": 0.07323,
-      "raw_token_rank": 151,
+      "raw_token_rank": 168,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -4910,11 +5526,11 @@
           "tasks_per_dollar_annual": 303.1
         }
       },
-      "task_rank": 88,
-      "cohort_raw_rank": 91,
-      "rank_delta": 3,
-      "annual_task_rank": 87,
-      "annual_rank_shift": 1
+      "task_rank": 102,
+      "cohort_raw_rank": 108,
+      "rank_delta": 6,
+      "annual_task_rank": 103,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "glm_coding_max_cn_new_peak",
@@ -4939,7 +5555,7 @@
       "cost_per_task_annual_usd": 0.003218,
       "tasks_per_dollar_annual": 310.7,
       "raw_usd_per_mtok": 0.05367,
-      "raw_token_rank": 139,
+      "raw_token_rank": 153,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -4954,11 +5570,11 @@
           "tasks_per_dollar_annual": 310.7
         }
       },
-      "task_rank": 89,
-      "cohort_raw_rank": 81,
+      "task_rank": 103,
+      "cohort_raw_rank": 95,
       "rank_delta": -8,
-      "annual_task_rank": 84,
-      "annual_rank_shift": 5
+      "annual_task_rank": 100,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "glm_coding_lite_cn_new_mid",
@@ -4983,7 +5599,7 @@
       "cost_per_task_annual_usd": 0.003293,
       "tasks_per_dollar_annual": 303.7,
       "raw_usd_per_mtok": 0.05491,
-      "raw_token_rank": 140,
+      "raw_token_rank": 154,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -4998,11 +5614,99 @@
           "tasks_per_dollar_annual": 303.7
         }
       },
-      "task_rank": 90,
-      "cohort_raw_rank": 82,
+      "task_rank": 104,
+      "cohort_raw_rank": 96,
       "rank_delta": -8,
-      "annual_task_rank": 86,
-      "annual_rank_shift": 4
+      "annual_task_rank": 102,
+      "annual_rank_shift": 2
+    },
+    {
+      "plan_id": "glm_coding_max_global_peak",
+      "plan_name": "GLM Coding Max ($168) 忙时",
+      "billing": "subscription",
+      "price": 168.0,
+      "currency": "USD",
+      "price_usd": 168.0,
+      "annual_fee_usd": 1411.2,
+      "effective_monthly_fee_usd": 117.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3",
+      "benchmarked_model_name": "GLM-5.3",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 69.0,
+      "output_tokens_per_task": 74953,
+      "monthly_tokens": 2963000000,
+      "monthly_tasks": 39531.4,
+      "cost_per_task_usd": 0.00425,
+      "tasks_per_dollar": 235.3,
+      "cost_per_task_annual_usd": 0.002975,
+      "tasks_per_dollar_annual": 336.2,
+      "raw_usd_per_mtok": 0.0567,
+      "raw_token_rank": 156,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 74953,
+          "score_pct": 69.0,
+          "monthly_tasks": 39531.4,
+          "cost_per_task_usd": 0.00425,
+          "tasks_per_dollar": 235.3,
+          "cost_per_task_annual_usd": 0.002975,
+          "tasks_per_dollar_annual": 336.2
+        }
+      },
+      "task_rank": 105,
+      "cohort_raw_rank": 97,
+      "rank_delta": -8,
+      "annual_task_rank": 97,
+      "annual_rank_shift": 8
+    },
+    {
+      "plan_id": "glm_coding_lite_global_mid",
+      "plan_name": "GLM Coding Lite ($18) 中间值",
+      "billing": "subscription",
+      "price": 18.0,
+      "currency": "USD",
+      "price_usd": 18.0,
+      "annual_fee_usd": 151.2,
+      "effective_monthly_fee_usd": 12.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3",
+      "benchmarked_model_name": "GLM-5.3",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 69.0,
+      "output_tokens_per_task": 74953,
+      "monthly_tokens": 317000000,
+      "monthly_tasks": 4229.3,
+      "cost_per_task_usd": 0.004256,
+      "tasks_per_dollar": 235.0,
+      "cost_per_task_annual_usd": 0.002979,
+      "tasks_per_dollar_annual": 335.7,
+      "raw_usd_per_mtok": 0.05678,
+      "raw_token_rank": 157,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 74953,
+          "score_pct": 69.0,
+          "monthly_tasks": 4229.3,
+          "cost_per_task_usd": 0.004256,
+          "tasks_per_dollar": 235.0,
+          "cost_per_task_annual_usd": 0.002979,
+          "tasks_per_dollar_annual": 335.7
+        }
+      },
+      "task_rank": 106,
+      "cohort_raw_rank": 98,
+      "rank_delta": -8,
+      "annual_task_rank": 98,
+      "annual_rank_shift": 8
     },
     {
       "plan_id": "command_code_goat",
@@ -5027,7 +5731,7 @@
       "cost_per_task_annual_usd": 0.004485,
       "tasks_per_dollar_annual": 223.0,
       "raw_usd_per_mtok": 0.05118,
-      "raw_token_rank": 138,
+      "raw_token_rank": 152,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -5060,11 +5764,11 @@
           "tasks_per_dollar_annual": 195.8
         }
       },
-      "task_rank": 91,
-      "cohort_raw_rank": 79,
-      "rank_delta": -12,
-      "annual_task_rank": 93,
-      "annual_rank_shift": -2
+      "task_rank": 107,
+      "cohort_raw_rank": 93,
+      "rank_delta": -14,
+      "annual_task_rank": 111,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "glm_coding_pro_cn_new_peak",
@@ -5089,7 +5793,7 @@
       "cost_per_task_annual_usd": 0.003747,
       "tasks_per_dollar_annual": 266.9,
       "raw_usd_per_mtok": 0.06249,
-      "raw_token_rank": 146,
+      "raw_token_rank": 162,
       "confidence": "high",
       "chart_tier": "main",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -5104,11 +5808,55 @@
           "tasks_per_dollar_annual": 266.9
         }
       },
-      "task_rank": 92,
-      "cohort_raw_rank": 87,
+      "task_rank": 108,
+      "cohort_raw_rank": 103,
       "rank_delta": -5,
-      "annual_task_rank": 88,
-      "annual_rank_shift": 4
+      "annual_task_rank": 105,
+      "annual_rank_shift": 3
+    },
+    {
+      "plan_id": "glm_coding_pro_global_peak",
+      "plan_name": "GLM Coding Pro ($80) 忙时",
+      "billing": "subscription",
+      "price": 80.0,
+      "currency": "USD",
+      "price_usd": 80.0,
+      "annual_fee_usd": 672.0,
+      "effective_monthly_fee_usd": 56.0,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3",
+      "benchmarked_model_name": "GLM-5.3",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 69.0,
+      "output_tokens_per_task": 74953,
+      "monthly_tokens": 1270000000,
+      "monthly_tasks": 16944.0,
+      "cost_per_task_usd": 0.004721,
+      "tasks_per_dollar": 211.8,
+      "cost_per_task_annual_usd": 0.003305,
+      "tasks_per_dollar_annual": 302.6,
+      "raw_usd_per_mtok": 0.06299,
+      "raw_token_rank": 163,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 74953,
+          "score_pct": 69.0,
+          "monthly_tasks": 16944.0,
+          "cost_per_task_usd": 0.004721,
+          "tasks_per_dollar": 211.8,
+          "cost_per_task_annual_usd": 0.003305,
+          "tasks_per_dollar_annual": 302.6
+        }
+      },
+      "task_rank": 109,
+      "cohort_raw_rank": 104,
+      "rank_delta": -5,
+      "annual_task_rank": 104,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "ollama_pro",
@@ -5133,7 +5881,7 @@
       "cost_per_task_annual_usd": 0.004065,
       "tasks_per_dollar_annual": 246.0,
       "raw_usd_per_mtok": 0.09965,
-      "raw_token_rank": 159,
+      "raw_token_rank": 177,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -5157,10 +5905,10 @@
           "tasks_per_dollar_annual": 158.9
         }
       },
-      "task_rank": 93,
-      "cohort_raw_rank": 95,
-      "rank_delta": 2,
-      "annual_task_rank": 92,
+      "task_rank": 110,
+      "cohort_raw_rank": 113,
+      "rank_delta": 3,
+      "annual_task_rank": 109,
       "annual_rank_shift": 1
     },
     {
@@ -5186,7 +5934,7 @@
       "cost_per_task_annual_usd": 0.004879,
       "tasks_per_dollar_annual": 204.9,
       "raw_usd_per_mtok": 0.09967,
-      "raw_token_rank": 161,
+      "raw_token_rank": 179,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -5210,11 +5958,11 @@
           "tasks_per_dollar_annual": 132.4
         }
       },
-      "task_rank": 94,
-      "cohort_raw_rank": 97,
-      "rank_delta": 3,
-      "annual_task_rank": 94,
-      "annual_rank_shift": 0
+      "task_rank": 111,
+      "cohort_raw_rank": 115,
+      "rank_delta": 4,
+      "annual_task_rank": 112,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "kimi_andante_cn",
@@ -5239,7 +5987,7 @@
       "cost_per_task_annual_usd": 0.00501,
       "tasks_per_dollar_annual": 199.6,
       "raw_usd_per_mtok": 0.09267,
-      "raw_token_rank": 155,
+      "raw_token_rank": 173,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "199档×官方1/20；K2.7 Standard所有会员可用；kimi-k27-adoption-round8-2026-09-08.json",
@@ -5254,11 +6002,11 @@
           "tasks_per_dollar_annual": 199.6
         }
       },
-      "task_rank": 95,
-      "cohort_raw_rank": 93,
-      "rank_delta": -2,
-      "annual_task_rank": 96,
-      "annual_rank_shift": -1
+      "task_rank": 112,
+      "cohort_raw_rank": 111,
+      "rank_delta": -1,
+      "annual_task_rank": 114,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "claude_max_20x",
@@ -5283,7 +6031,7 @@
       "cost_per_task_annual_usd": 0.005957,
       "tasks_per_dollar_annual": 167.9,
       "raw_usd_per_mtok": 0.1656,
-      "raw_token_rank": 171,
+      "raw_token_rank": 189,
       "confidence": "low",
       "chart_tier": "main",
       "source": "由同套餐 claude-opus-5 157 亿 × 0.07692307692307693",
@@ -5334,11 +6082,11 @@
           "tasks_per_dollar_annual": 52.2
         }
       },
-      "task_rank": 96,
-      "cohort_raw_rank": 105,
-      "rank_delta": 9,
-      "annual_task_rank": 97,
-      "annual_rank_shift": -1
+      "task_rank": 113,
+      "cohort_raw_rank": 123,
+      "rank_delta": 10,
+      "annual_task_rank": 115,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_lite_cn_new_peak",
@@ -5363,7 +6111,7 @@
       "cost_per_task_annual_usd": 0.004924,
       "tasks_per_dollar_annual": 203.1,
       "raw_usd_per_mtok": 0.08211,
-      "raw_token_rank": 154,
+      "raw_token_rank": 171,
       "confidence": "high",
       "chart_tier": "full",
       "source": "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
@@ -5378,11 +6126,11 @@
           "tasks_per_dollar_annual": 203.1
         }
       },
-      "task_rank": 97,
-      "cohort_raw_rank": 92,
+      "task_rank": 114,
+      "cohort_raw_rank": 109,
       "rank_delta": -5,
-      "annual_task_rank": 95,
-      "annual_rank_shift": 2
+      "annual_task_rank": 113,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "command_code_goat",
@@ -5407,7 +6155,7 @@
       "cost_per_task_annual_usd": 0.006166,
       "tasks_per_dollar_annual": 162.2,
       "raw_usd_per_mtok": 0.05118,
-      "raw_token_rank": 137,
+      "raw_token_rank": 151,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -5431,11 +6179,55 @@
           "tasks_per_dollar_annual": 141.2
         }
       },
-      "task_rank": 98,
-      "cohort_raw_rank": 80,
-      "rank_delta": -18,
-      "annual_task_rank": 98,
-      "annual_rank_shift": 0
+      "task_rank": 115,
+      "cohort_raw_rank": 94,
+      "rank_delta": -21,
+      "annual_task_rank": 116,
+      "annual_rank_shift": -1
+    },
+    {
+      "plan_id": "glm_coding_lite_global_peak",
+      "plan_name": "GLM Coding Lite ($18) 忙时",
+      "billing": "subscription",
+      "price": 18.0,
+      "currency": "USD",
+      "price_usd": 18.0,
+      "annual_fee_usd": 151.2,
+      "effective_monthly_fee_usd": 12.6,
+      "annual_discount_pct": 30.0,
+      "served_model": "glm-5.3",
+      "benchmarked_model_name": "GLM-5.3",
+      "benchmark_status": "available",
+      "default_tier": "Max",
+      "benchmark_score_pct": 69.0,
+      "output_tokens_per_task": 74953,
+      "monthly_tokens": 212000000,
+      "monthly_tasks": 2828.4,
+      "cost_per_task_usd": 0.006364,
+      "tasks_per_dollar": 157.1,
+      "cost_per_task_annual_usd": 0.004455,
+      "tasks_per_dollar_annual": 224.5,
+      "raw_usd_per_mtok": 0.08491,
+      "raw_token_rank": 172,
+      "confidence": "high",
+      "chart_tier": "full",
+      "source": "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 74953,
+          "score_pct": 69.0,
+          "monthly_tasks": 2828.4,
+          "cost_per_task_usd": 0.006364,
+          "tasks_per_dollar": 157.1,
+          "cost_per_task_annual_usd": 0.004455,
+          "tasks_per_dollar_annual": 224.5
+        }
+      },
+      "task_rank": 116,
+      "cohort_raw_rank": 110,
+      "rank_delta": -6,
+      "annual_task_rank": 110,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "ollama_pro",
@@ -5460,7 +6252,7 @@
       "cost_per_task_annual_usd": 0.006224,
       "tasks_per_dollar_annual": 160.7,
       "raw_usd_per_mtok": 0.09965,
-      "raw_token_rank": 158,
+      "raw_token_rank": 176,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -5475,10 +6267,10 @@
           "tasks_per_dollar_annual": 160.7
         }
       },
-      "task_rank": 99,
-      "cohort_raw_rank": 96,
+      "task_rank": 117,
+      "cohort_raw_rank": 114,
       "rank_delta": -3,
-      "annual_task_rank": 99,
+      "annual_task_rank": 117,
       "annual_rank_shift": 0
     },
     {
@@ -5504,7 +6296,7 @@
       "cost_per_task_annual_usd": 0.007471,
       "tasks_per_dollar_annual": 133.9,
       "raw_usd_per_mtok": 0.09967,
-      "raw_token_rank": 160,
+      "raw_token_rank": 178,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -5519,10 +6311,10 @@
           "tasks_per_dollar_annual": 133.9
         }
       },
-      "task_rank": 100,
-      "cohort_raw_rank": 98,
+      "task_rank": 118,
+      "cohort_raw_rank": 116,
       "rank_delta": -2,
-      "annual_task_rank": 100,
+      "annual_task_rank": 118,
       "annual_rank_shift": 0
     },
     {
@@ -5548,7 +6340,7 @@
       "cost_per_task_annual_usd": 0.007636,
       "tasks_per_dollar_annual": 131.0,
       "raw_usd_per_mtok": 0.09398,
-      "raw_token_rank": 157,
+      "raw_token_rank": 175,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -5563,10 +6355,10 @@
           "tasks_per_dollar_annual": 131.0
         }
       },
-      "task_rank": 101,
-      "cohort_raw_rank": 94,
+      "task_rank": 119,
+      "cohort_raw_rank": 112,
       "rank_delta": -7,
-      "annual_task_rank": 101,
+      "annual_task_rank": 119,
       "annual_rank_shift": 0
     },
     {
@@ -5592,7 +6384,7 @@
       "cost_per_task_annual_usd": 0.009435,
       "tasks_per_dollar_annual": 106.0,
       "raw_usd_per_mtok": 0.27548,
-      "raw_token_rank": 180,
+      "raw_token_rank": 198,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -5607,10 +6399,10 @@
           "tasks_per_dollar_annual": 106.0
         }
       },
-      "task_rank": 102,
-      "cohort_raw_rank": 110,
+      "task_rank": 120,
+      "cohort_raw_rank": 128,
       "rank_delta": 8,
-      "annual_task_rank": 103,
+      "annual_task_rank": 121,
       "annual_rank_shift": -1
     },
     {
@@ -5636,7 +6428,7 @@
       "cost_per_task_annual_usd": 0.01029,
       "tasks_per_dollar_annual": 97.2,
       "raw_usd_per_mtok": 0.1365,
-      "raw_token_rank": 165,
+      "raw_token_rank": 183,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -5651,10 +6443,10 @@
           "tasks_per_dollar_annual": 97.2
         }
       },
-      "task_rank": 103,
-      "cohort_raw_rank": 101,
+      "task_rank": 121,
+      "cohort_raw_rank": 119,
       "rank_delta": -2,
-      "annual_task_rank": 104,
+      "annual_task_rank": 122,
       "annual_rank_shift": -1
     },
     {
@@ -5680,7 +6472,7 @@
       "cost_per_task_annual_usd": 0.008576,
       "tasks_per_dollar_annual": 116.6,
       "raw_usd_per_mtok": 0.13652,
-      "raw_token_rank": 166,
+      "raw_token_rank": 184,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json",
@@ -5695,10 +6487,10 @@
           "tasks_per_dollar_annual": 116.6
         }
       },
-      "task_rank": 104,
-      "cohort_raw_rank": 102,
+      "task_rank": 122,
+      "cohort_raw_rank": 120,
       "rank_delta": -2,
-      "annual_task_rank": 102,
+      "annual_task_rank": 120,
       "annual_rank_shift": 2
     },
     {
@@ -5724,7 +6516,7 @@
       "cost_per_task_annual_usd": 0.011204,
       "tasks_per_dollar_annual": 89.3,
       "raw_usd_per_mtok": 0.14948,
-      "raw_token_rank": 168,
+      "raw_token_rank": 186,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -5739,10 +6531,10 @@
           "tasks_per_dollar_annual": 89.3
         }
       },
-      "task_rank": 105,
-      "cohort_raw_rank": 103,
+      "task_rank": 123,
+      "cohort_raw_rank": 121,
       "rank_delta": -2,
-      "annual_task_rank": 105,
+      "annual_task_rank": 123,
       "annual_rank_shift": 0
     },
     {
@@ -5768,7 +6560,7 @@
       "cost_per_task_annual_usd": 0.013385,
       "tasks_per_dollar_annual": 74.7,
       "raw_usd_per_mtok": 0.27548,
-      "raw_token_rank": 181,
+      "raw_token_rank": 199,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -5810,10 +6602,10 @@
           "tasks_per_dollar_annual": 50.9
         }
       },
-      "task_rank": 106,
-      "cohort_raw_rank": 111,
+      "task_rank": 124,
+      "cohort_raw_rank": 129,
       "rank_delta": 5,
-      "annual_task_rank": 106,
+      "annual_task_rank": 124,
       "annual_rank_shift": 0
     },
     {
@@ -5839,7 +6631,7 @@
       "cost_per_task_annual_usd": 0.013804,
       "tasks_per_dollar_annual": 72.4,
       "raw_usd_per_mtok": 0.15385,
-      "raw_token_rank": 169,
+      "raw_token_rank": 187,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -5854,10 +6646,10 @@
           "tasks_per_dollar_annual": 72.4
         }
       },
-      "task_rank": 107,
-      "cohort_raw_rank": 104,
+      "task_rank": 125,
+      "cohort_raw_rank": 122,
       "rank_delta": -3,
-      "annual_task_rank": 107,
+      "annual_task_rank": 125,
       "annual_rank_shift": 0
     },
     {
@@ -5883,7 +6675,7 @@
       "cost_per_task_annual_usd": 0.014931,
       "tasks_per_dollar_annual": 67.0,
       "raw_usd_per_mtok": 0.1992,
-      "raw_token_rank": 174,
+      "raw_token_rank": 192,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json",
@@ -5898,10 +6690,10 @@
           "tasks_per_dollar_annual": 67.0
         }
       },
-      "task_rank": 108,
-      "cohort_raw_rank": 106,
+      "task_rank": 126,
+      "cohort_raw_rank": 124,
       "rank_delta": -2,
-      "annual_task_rank": 108,
+      "annual_task_rank": 126,
       "annual_rank_shift": 0
     },
     {
@@ -5927,7 +6719,7 @@
       "cost_per_task_annual_usd": 0.015447,
       "tasks_per_dollar_annual": 64.7,
       "raw_usd_per_mtok": 0.20492,
-      "raw_token_rank": 175,
+      "raw_token_rank": 193,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
@@ -5942,10 +6734,10 @@
           "tasks_per_dollar_annual": 64.7
         }
       },
-      "task_rank": 109,
-      "cohort_raw_rank": 107,
+      "task_rank": 127,
+      "cohort_raw_rank": 125,
       "rank_delta": -2,
-      "annual_task_rank": 109,
+      "annual_task_rank": 127,
       "annual_rank_shift": 0
     },
     {
@@ -5971,7 +6763,7 @@
       "cost_per_task_annual_usd": 0.017862,
       "tasks_per_dollar_annual": 56.0,
       "raw_usd_per_mtok": 0.36765,
-      "raw_token_rank": 183,
+      "raw_token_rank": 201,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json",
@@ -6013,10 +6805,10 @@
           "tasks_per_dollar_annual": 38.2
         }
       },
-      "task_rank": 110,
-      "cohort_raw_rank": 112,
+      "task_rank": 128,
+      "cohort_raw_rank": 130,
       "rank_delta": 2,
-      "annual_task_rank": 110,
+      "annual_task_rank": 128,
       "annual_rank_shift": 0
     },
     {
@@ -6042,7 +6834,7 @@
       "cost_per_task_annual_usd": 0.018425,
       "tasks_per_dollar_annual": 54.3,
       "raw_usd_per_mtok": 0.20534,
-      "raw_token_rank": 176,
+      "raw_token_rank": 194,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json",
@@ -6057,10 +6849,10 @@
           "tasks_per_dollar_annual": 54.3
         }
       },
-      "task_rank": 111,
-      "cohort_raw_rank": 108,
+      "task_rank": 129,
+      "cohort_raw_rank": 126,
       "rank_delta": -3,
-      "annual_task_rank": 111,
+      "annual_task_rank": 129,
       "annual_rank_shift": 0
     },
     {
@@ -6086,7 +6878,7 @@
       "cost_per_task_annual_usd": 0.020596,
       "tasks_per_dollar_annual": 48.6,
       "raw_usd_per_mtok": 0.27322,
-      "raw_token_rank": 179,
+      "raw_token_rank": 197,
       "confidence": "medium",
       "chart_tier": "full",
       "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json",
@@ -6101,10 +6893,10 @@
           "tasks_per_dollar_annual": 48.6
         }
       },
-      "task_rank": 112,
-      "cohort_raw_rank": 109,
+      "task_rank": 130,
+      "cohort_raw_rank": 127,
       "rank_delta": -3,
-      "annual_task_rank": 112,
+      "annual_task_rank": 130,
       "annual_rank_shift": 0
     }
   ]

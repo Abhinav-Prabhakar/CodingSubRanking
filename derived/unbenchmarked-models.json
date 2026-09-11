@@ -20,7 +20,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01205,
-    "raw_token_rank": 64,
+    "raw_token_rank": 66,
     "confidence": "high",
     "chart_tier": "main",
     "source": "minimaxi.com/blog/minimax-m3 官方"
@@ -46,7 +46,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.00975,
-    "raw_token_rank": 46,
+    "raw_token_rank": 47,
     "confidence": "high",
     "chart_tier": "full",
     "source": "minimaxi.com/blog/minimax-m3 官方"
@@ -72,7 +72,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.00974,
-    "raw_token_rank": 45,
+    "raw_token_rank": 46,
     "confidence": "high",
     "chart_tier": "full",
     "source": "platform.minimaxi.com 迁移说明 2026-08-19"
@@ -98,7 +98,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01294,
-    "raw_token_rank": 70,
+    "raw_token_rank": 73,
     "confidence": "high",
     "chart_tier": "main",
     "source": "minimax.io/blog/minimax-m3 官方"
@@ -124,7 +124,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01078,
-    "raw_token_rank": 51,
+    "raw_token_rank": 53,
     "confidence": "high",
     "chart_tier": "full",
     "source": "minimax.io/blog/minimax-m3 官方"
@@ -150,7 +150,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01347,
-    "raw_token_rank": 72,
+    "raw_token_rank": 75,
     "confidence": "high",
     "chart_tier": "full",
     "source": "minimax.io/blog/minimax-m3 官方"
@@ -176,7 +176,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.14901,
-    "raw_token_rank": 167,
+    "raw_token_rank": 185,
     "confidence": "medium",
     "chart_tier": "main",
     "source": "《财经》2026-08 实测 ¥101/亿"
@@ -202,7 +202,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.25253,
-    "raw_token_rank": 178,
+    "raw_token_rank": 196,
     "confidence": "low",
     "chart_tier": "full",
     "source": "同 CN 档额度"
@@ -228,7 +228,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.04983,
-    "raw_token_rank": 135,
+    "raw_token_rank": 149,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json"
@@ -254,7 +254,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.03174,
-    "raw_token_rank": 112,
+    "raw_token_rank": 123,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json"
@@ -332,7 +332,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01062,
-    "raw_token_rank": 50,
+    "raw_token_rank": 52,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json"
@@ -358,7 +358,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01152,
-    "raw_token_rank": 57,
+    "raw_token_rank": 59,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json"
@@ -384,7 +384,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01152,
-    "raw_token_rank": 58,
+    "raw_token_rank": 60,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json"
@@ -410,7 +410,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01152,
-    "raw_token_rank": 59,
+    "raw_token_rank": 61,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json"
@@ -514,7 +514,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.18904,
-    "raw_token_rank": 173,
+    "raw_token_rank": 191,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json"
@@ -566,7 +566,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01167,
-    "raw_token_rank": 61,
+    "raw_token_rank": 63,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json"
@@ -618,7 +618,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.02254,
-    "raw_token_rank": 95,
+    "raw_token_rank": 103,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json"
@@ -774,7 +774,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01471,
-    "raw_token_rank": 78,
+    "raw_token_rank": 83,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -800,7 +800,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.17212,
-    "raw_token_rank": 172,
+    "raw_token_rank": 190,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -826,7 +826,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.02794,
-    "raw_token_rank": 107,
+    "raw_token_rank": 115,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -852,7 +852,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.03598,
-    "raw_token_rank": 119,
+    "raw_token_rank": 130,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -930,7 +930,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.15385,
-    "raw_token_rank": 170,
+    "raw_token_rank": 188,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -956,7 +956,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.03382,
-    "raw_token_rank": 116,
+    "raw_token_rank": 127,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -982,7 +982,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01034,
-    "raw_token_rank": 49,
+    "raw_token_rank": 50,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -1008,7 +1008,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.03811,
-    "raw_token_rank": 122,
+    "raw_token_rank": 134,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；command-code-goat-deepseek-round1-2026-09-10.json"
@@ -1034,7 +1034,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.09398,
-    "raw_token_rank": 156,
+    "raw_token_rank": 174,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -1112,7 +1112,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.21978,
-    "raw_token_rank": 177,
+    "raw_token_rank": 195,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -1138,7 +1138,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.29412,
-    "raw_token_rank": 182,
+    "raw_token_rank": 200,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -1164,7 +1164,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.1007,
-    "raw_token_rank": 163,
+    "raw_token_rank": 181,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -1190,7 +1190,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.05621,
-    "raw_token_rank": 141,
+    "raw_token_rank": 155,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -1216,7 +1216,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.02366,
-    "raw_token_rank": 101,
+    "raw_token_rank": 109,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -1242,7 +1242,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01135,
-    "raw_token_rank": 54,
+    "raw_token_rank": 56,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -1268,7 +1268,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.06916,
-    "raw_token_rank": 149,
+    "raw_token_rank": 166,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json"
@@ -1294,7 +1294,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.0759,
-    "raw_token_rank": 152,
+    "raw_token_rank": 169,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json"
@@ -1320,7 +1320,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.0461,
-    "raw_token_rank": 129,
+    "raw_token_rank": 143,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json"
@@ -1346,7 +1346,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.02305,
-    "raw_token_rank": 98,
+    "raw_token_rank": 106,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json"
@@ -1372,7 +1372,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.0759,
-    "raw_token_rank": 153,
+    "raw_token_rank": 170,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json"
@@ -1398,7 +1398,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.0461,
-    "raw_token_rank": 130,
+    "raw_token_rank": 144,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json"
@@ -1424,7 +1424,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.02305,
-    "raw_token_rank": 99,
+    "raw_token_rank": 107,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "https://ollama.com/pricing 官方 usage credits 与三段价；https://ollama.com/blog/transparent-pricing；code-subscriptions-round1-2026-09-06.json"
@@ -1658,7 +1658,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01005,
-    "raw_token_rank": 47,
+    "raw_token_rank": 48,
     "confidence": "medium",
     "chart_tier": "main",
     "source": "由同套餐 grok-4.6 77.37 亿 × 2.571095571095571"
@@ -1684,7 +1684,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01655,
-    "raw_token_rank": 81,
+    "raw_token_rank": 86,
     "confidence": "medium",
     "chart_tier": "main",
     "source": "由同套餐 grok-4.6 4.7 亿 × 2.571095571095571"
@@ -1710,7 +1710,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01131,
-    "raw_token_rank": 53,
+    "raw_token_rank": 55,
     "confidence": "low",
     "chart_tier": "full",
     "source": "由同套餐 grok-4.6 20.632 亿 × 2.571095571095571"
@@ -1736,7 +1736,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01205,
-    "raw_token_rank": 65,
+    "raw_token_rank": 67,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "由同套餐 minimax-m3 6.0 亿 × 1.0"
@@ -1762,7 +1762,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.01294,
-    "raw_token_rank": 71,
+    "raw_token_rank": 74,
     "confidence": "medium",
     "chart_tier": "full",
     "source": "由同套餐 minimax-m3 17.0 亿 × 1.0"
@@ -1788,7 +1788,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.02833,
-    "raw_token_rank": 108,
+    "raw_token_rank": 117,
     "confidence": "medium",
     "chart_tier": "main",
     "source": "https://cursor.com/docs/models/cursor-composer-2-5；audit-round4-2026-09-05.json"
@@ -1814,7 +1814,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.04664,
-    "raw_token_rank": 132,
+    "raw_token_rank": 146,
     "confidence": "medium",
     "chart_tier": "main",
     "source": "https://cursor.com/docs/models/cursor-composer-2-5；audit-round4-2026-09-05.json"
@@ -1840,7 +1840,7 @@
     "cost_per_task_annual_usd": null,
     "tasks_per_dollar_annual": null,
     "raw_usd_per_mtok": 0.03188,
-    "raw_token_rank": 113,
+    "raw_token_rank": 124,
     "confidence": "low",
     "chart_tier": "full",
     "source": "https://cursor.com/docs/models/cursor-composer-2-5；audit-round4-2026-09-05.json"

@@ -305,6 +305,7 @@ def stepfun_rows() -> list[tuple]:
 
 def glm_rows() -> list[tuple]:
     rows = []
+    # CN (Yuan) tiers: new customer (¥118/¥538/¥1078) and old customer (¥49/¥149/¥469)
     prices = {"new": {"lite": 118, "pro": 538, "max": 1078}, "old": {"lite": 49, "pro": 149, "max": 469}}
     for tier, credits in GLM_WEEKLY_CREDITS.items():
         for who, label in (("new", "新客"), ("old", "老客")):
@@ -318,6 +319,20 @@ def glm_rows() -> list[tuple]:
                         "docs.bigmodel.cn 官方周积分与三段积分系数；standard-token-mix-round1-2026-09-07.json",
                         f"统一标准负载；周积分{credits:g}，{band_label}系数{multiplier:g}×，周{peak_week_yi * multiplier:.3f}亿×{MONTH_WEEKS:g}周={monthly_yi:g}亿；不再取峰谷中位",
                     ))
+    # Global USD tiers (Z.ai official list pricing: Lite $18, Pro $80, Max $168)
+    prices_usd = {"lite": 18, "pro": 80, "max": 168}
+    for tier, credits in GLM_WEEKLY_CREDITS.items():
+        for model, rates in GLM_CREDIT_RATES.items():
+            peak_week_yi = credits * 10_000 / blended(*rates) / YI
+            for band, band_label, multiplier in (("peak", "忙时", 1), ("mid", "中间值", 1.5), ("offpeak", "闲时", 2)):
+                monthly_yi = round(peak_week_yi * multiplier * MONTH_WEEKS, 2)
+                p_usd = prices_usd[tier]
+                rows.append((
+                    f"glm_coding_{tier}_global_{band}", f"GLM Coding {tier.title()} (${p_usd}) {band_label}",
+                    p_usd, "USD", model, monthly_yi, "high",
+                    "https://z.ai 官方 GLM Coding Plan 美元标价与周积分体系",
+                    f"Z.ai 官方国际版美元套餐（Lite $18 / Pro $80 / Max $168）；周积分{credits:g}，{band_label}系数{multiplier:g}×，周{peak_week_yi * multiplier:.3f}亿×{MONTH_WEEKS:g}周={monthly_yi:g}亿；年付享30%折扣（如Pro $56/月）",
+                ))
     return rows
 
 
