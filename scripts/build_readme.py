@@ -88,7 +88,7 @@ The column **Shift vs Raw** indicates the ranking change compared to the traditi
 {tables['main_ranking_table']}
 
 > [!NOTE]
-> **Looking for all reasoning effort configurations?** We evaluate and rank all **260 plan × effort combinations** across Low, Medium, High, Extra High, and Max tiers. See the complete export in [`derived/task-ranking-all-efforts.csv`](derived/task-ranking-all-efforts.csv) and [`derived/task-ranking-all-efforts.json`](derived/task-ranking-all-efforts.json), or toggle the **"All"** effort filter in the interactive web interface (`web/index.html`).
+> **Looking for all reasoning effort configurations?** We evaluate and rank all **260 plan × effort combinations** across Low, Medium, High, Extra High, and Max tiers. See the complete export in [`derived/task-ranking-all-efforts.csv`](derived/task-ranking-all-efforts.csv) and [`derived/task-ranking-all-efforts.json`](derived/task-ranking-all-efforts.json), and explore all 260 combinations directly in the interactive web interface (`web/index.html`), which ranks all efforts by default.
 
 ---
 

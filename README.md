@@ -277,7 +277,7 @@ The column **Shift vs Raw** indicates the ranking change compared to the traditi
 | #130 |     ▼ -3     | OpenCode Go                   | kimi-k3           |     $10 |          75,383 |         486 |    $0.02060 |       48.6 |   $0.27322 |
 
 > [!NOTE]
-> **Looking for all reasoning effort configurations?** We evaluate and rank all **260 plan × effort combinations** across Low, Medium, High, Extra High, and Max tiers. See the complete export in [`derived/task-ranking-all-efforts.csv`](derived/task-ranking-all-efforts.csv) and [`derived/task-ranking-all-efforts.json`](derived/task-ranking-all-efforts.json), or toggle the **"All"** effort filter in the interactive web interface (`web/index.html`).
+> **Looking for all reasoning effort configurations?** We evaluate and rank all **260 plan × effort combinations** across Low, Medium, High, Extra High, and Max tiers. See the complete export in [`derived/task-ranking-all-efforts.csv`](derived/task-ranking-all-efforts.csv) and [`derived/task-ranking-all-efforts.json`](derived/task-ranking-all-efforts.json), and explore all 260 combinations directly in the interactive web interface (`web/index.html`), which ranks all efforts by default.
 
 ---
 

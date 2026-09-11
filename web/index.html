@@ -536,8 +536,8 @@ td.cpt { font-weight: 600; }
   <div class="container press-row">
     <span>Built on real-api-pricing</span><span class="sep"></span>
     <span>Token data: DeepSWE v1.1</span><span class="sep"></span>
-    <span>196 plan × model points</span><span class="sep"></span>
-    <span>112 rows ranked</span><span class="sep"></span>
+    <span>260 plan × effort configurations</span><span class="sep"></span>
+    <span>All efforts ranked</span><span class="sep"></span>
     <span>MIT Licensed</span>
   </div>
 </div>
@@ -593,7 +593,7 @@ td.cpt { font-weight: 600; }
         <p class="f-desc">The true efficiency metric: completed tasks delivered per dollar.</p>
       </div>
     </div>
-    <p class="method-note reveal">T = monthly usable tokens · C = output tokens per task (DeepSWE v1.1 medians) · P = monthly fee.<br>Baseline uses the Medium reasoning tier — or each model’s nearest available tier — switch tiers live in the <a href="#ranking">rankings</a>.</p>
+    <p class="method-note reveal">T = monthly usable tokens · C = output tokens per task (DeepSWE v1.1 medians) · P = monthly fee.<br>All evaluated reasoning effort tiers (Low to Max) are included by default in the <a href="#ranking">rankings</a>.</p>
   </div>
 </section>
 
@@ -644,17 +644,6 @@ td.cpt { font-weight: 600; }
         </div>
       </div>
       <div class="ctrl-group">
-        <span class="ctrl-label">Effort</span>
-        <div class="pills" id="effort-pills" role="group" aria-label="Reasoning effort tier">
-          <button data-effort="All">All</button>
-          <button data-effort="Low">Low</button>
-          <button class="on" data-effort="Medium" aria-pressed="true">Medium</button>
-          <button data-effort="High">High</button>
-          <button data-effort="Extra High">Extra&nbsp;High</button>
-          <button data-effort="Max">Max</button>
-        </div>
-      </div>
-      <div class="ctrl-group">
         <span class="ctrl-label">Billing</span>
         <div class="pills" id="cycle-pills" role="group" aria-label="Billing cycle">
           <button class="on" data-cycle="monthly" aria-pressed="true">Monthly</button>
@@ -670,8 +659,8 @@ td.cpt { font-weight: 600; }
           <button data-band="power" aria-pressed="false">$100–300</button>
         </div>
       </div>
-      <input class="search" id="search" type="search" placeholder="Search plan, model or effort…" aria-label="Search plans and models">
-      <span class="ctrl-note" id="effort-note">Live recomputation from DeepSWE token data — this view differs from the README’s Medium baseline. Models without the selected tier use their nearest available tier.</span>
+      <input class="search" id="search" type="search" placeholder="Search plan, model or effort (Low, Medium, High, Max)…" aria-label="Search plans and models">
+      <span class="ctrl-note" id="effort-note">All evaluated reasoning effort tiers (Low to Max) displayed across all benchmarked plans — 260 plan × effort configurations.</span>
     </div>
 
     <div class="card card-snow table-card reveal">
@@ -696,7 +685,7 @@ td.cpt { font-weight: 600; }
           <tbody id="rank-body"></tbody>
         </table>
       </div>
-      <div class="table-foot"><span id="table-foot-text">▲ jumped up · ▼ dropped down vs the raw $/MTok ranking · cost/task = monthly fee ÷ monthly tasks</span> · <span id="foot-baseline">baseline: Medium reasoning effort (nearest available tier per model)</span></div>
+      <div class="table-foot"><span id="table-foot-text">▲ jumped up · ▼ dropped down vs the raw $/MTok ranking · cost/task = monthly fee ÷ monthly tasks</span> · <span id="foot-baseline">view: all evaluated effort tiers (260 configurations)</span></div>
     </div>
   </div>
 </section>
@@ -1162,68 +1151,10 @@ function pickTier(fam, effort) {
   return { tier: best, tok: fam[best].t };
 }
 
-const state = { effort: "Medium", metric: "task", cycle: "monthly", band: "all", q: "", sortKey: null, sortDir: 1 };
+const state = { effort: "All", metric: "task", cycle: "monthly", band: "all", q: "", sortKey: null, sortDir: 1 };
 
 /* Build the full model at the current effort tier and billing cycle. */
-function buildModel(effort, cycle = state.cycle) {
-  const isAnn = cycle === "annual";
-  if (effort === "All") {
-    const rows = [];
-    ROWS.forEach((r, i) => {
-      const fee = isAnn ? (r.feeAnn != null ? r.feeAnn : r.fee) : r.fee;
-      const fam = TIERS[r.m] || {};
-      const tierKeys = Object.keys(fam);
-      // Sort tiers: Low, Medium, High, Extra High, Max, followed by others
-      tierKeys.sort((a, b) => {
-        const ia = TIER_ORDER.indexOf(a);
-        const ib = TIER_ORDER.indexOf(b);
-        return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
-      });
-      if (tierKeys.length === 0) {
-        rows.push({
-          ...r,
-          tier: "Standard",
-          curFee: fee,
-          crawRank: r.craw,
-          i
-        });
-      } else {
-        tierKeys.forEach(tName => {
-          const tData = fam[tName];
-          const tok = tData.t;
-          const tasks = r.mtok / tok;
-          const cpt = fee / tasks;
-          const tpd = 1 / cpt;
-          rows.push({
-            ...r,
-            tier: tName,
-            tok,
-            score: tData.s,
-            tasks,
-            cpt,
-            tpd,
-            curFee: fee,
-            i
-          });
-        });
-      }
-    });
-
-    // Rank by raw $/MTok across all configurations
-    const byRaw = [...rows].sort((a, b) => a.raw - b.raw || a.cpt - b.cpt || a.i - b.i);
-    byRaw.forEach((r, idx) => { r.crawRank = idx + 1; });
-
-    // Rank by task cost
-    const byCpt = [...rows].sort((a, b) => a.cpt - b.cpt || a.i - b.i);
-    byCpt.forEach((r, idx) => {
-      r.taskRank = idx + 1;
-      r.delta = r.crawRank - r.taskRank;
-    });
-    return rows;
-  }
-
-/* Build the full model at the current effort tier and billing cycle. */
-function buildModel(effort, cycle = state.cycle) {
+function buildModel(effort = state.effort, cycle = state.cycle) {
   const isAnn = cycle === "annual";
   if (effort === "All") {
     // First compute monthly baseline for all configurations to determine mRank
@@ -1450,22 +1381,8 @@ function renderTable() {
     th.setAttribute("aria-sort", active ? (state.sortDir === 1 ? "ascending" : "descending") : "none");
   });
 
-  const off = state.effort !== "Medium";
-  $("#effort-note").classList.toggle("show", off);
-  if (state.effort === "All") {
-    $("#effort-note").textContent = "All evaluated reasoning effort tiers (Low to Max) displayed across all benchmarked plans — 260 plan × effort configurations live recomputed.";
-    $("#foot-baseline").textContent = `view: all evaluated effort tiers (260 configurations; ${isAnn ? "annual commitment" : "monthly billing"})`;
-  } else if (off) {
-    $("#effort-note").textContent = `Live recomputation at ${state.effort} effort tier — models without ${state.effort} use their nearest available tier.`;
-    $("#foot-baseline").textContent = `baseline: live ${state.effort}-tier recomputation (${isAnn ? "annual commitment" : "monthly billing"})`;
-  } else {
-    $("#foot-baseline").textContent = `baseline: Medium reasoning effort (nearest available tier per model; ${isAnn ? "annual commitment" : "monthly billing"})`;
-  }
+  $("#foot-baseline").textContent = `view: all evaluated effort tiers (260 configurations; ${isAnn ? "annual commitment" : "monthly billing"})`;
 
-  $$("#effort-pills button").forEach(b => {
-    const on = b.dataset.effort === state.effort;
-    b.classList.toggle("on", on); b.setAttribute("aria-pressed", on);
-  });
   $$("#band-pills button").forEach(b => {
     const on = b.dataset.band === state.band;
     b.classList.toggle("on", on); b.setAttribute("aria-pressed", on);
@@ -1475,10 +1392,6 @@ function renderTable() {
 $("#metric-pills").addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
   state.metric = b.dataset.metric; state.sortKey = null; renderTable();
-});
-$("#effort-pills").addEventListener("click", e => {
-  const b = e.target.closest("button"); if (!b) return;
-  state.effort = b.dataset.effort; state.sortKey = null; renderTable();
 });
 $("#cycle-pills").addEventListener("click", e => {
   const b = e.target.closest("button"); if (!b) return;
