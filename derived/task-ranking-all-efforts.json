@@ -716,8 +716,8 @@
       "task_rank": 23,
       "cohort_raw_rank": 26,
       "rank_delta": 3,
-      "annual_task_rank": 23,
-      "annual_rank_shift": 0
+      "annual_task_rank": 24,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "claude_max_5x",
@@ -747,8 +747,8 @@
       "task_rank": 24,
       "cohort_raw_rank": 27,
       "rank_delta": 3,
-      "annual_task_rank": 24,
-      "annual_rank_shift": 0
+      "annual_task_rank": 25,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -778,8 +778,8 @@
       "task_rank": 25,
       "cohort_raw_rank": 91,
       "rank_delta": 66,
-      "annual_task_rank": 25,
-      "annual_rank_shift": 0
+      "annual_task_rank": 26,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -809,8 +809,8 @@
       "task_rank": 26,
       "cohort_raw_rank": 43,
       "rank_delta": 17,
-      "annual_task_rank": 26,
-      "annual_rank_shift": 0
+      "annual_task_rank": 27,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "chatgpt_plus",
@@ -840,8 +840,8 @@
       "task_rank": 27,
       "cohort_raw_rank": 14,
       "rank_delta": -13,
-      "annual_task_rank": 27,
-      "annual_rank_shift": 0
+      "annual_task_rank": 28,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -871,8 +871,8 @@
       "task_rank": 28,
       "cohort_raw_rank": 15,
       "rank_delta": -13,
-      "annual_task_rank": 28,
-      "annual_rank_shift": 0
+      "annual_task_rank": 29,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -902,8 +902,8 @@
       "task_rank": 29,
       "cohort_raw_rank": 121,
       "rank_delta": 92,
-      "annual_task_rank": 29,
-      "annual_rank_shift": 0
+      "annual_task_rank": 30,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "chatgpt_plus",
@@ -933,8 +933,8 @@
       "task_rank": 30,
       "cohort_raw_rank": 98,
       "rank_delta": 68,
-      "annual_task_rank": 30,
-      "annual_rank_shift": 0
+      "annual_task_rank": 31,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -964,8 +964,8 @@
       "task_rank": 31,
       "cohort_raw_rank": 99,
       "rank_delta": 68,
-      "annual_task_rank": 31,
-      "annual_rank_shift": 0
+      "annual_task_rank": 32,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "glm_coding_pro_cn_old_offpeak",
@@ -974,9 +974,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
-      "annual_fee_usd": 263.76,
-      "effective_monthly_fee_usd": 21.98,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 211.01,
+      "effective_monthly_fee_usd": 17.58,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "effort_tier": "Max",
@@ -986,8 +986,8 @@
       "monthly_tasks": 114074.5,
       "cost_per_task_usd": 0.000193,
       "tasks_per_dollar": 5189.9,
-      "cost_per_task_annual_usd": 0.000193,
-      "tasks_per_dollar_annual": 5189.9,
+      "cost_per_task_annual_usd": 0.000154,
+      "tasks_per_dollar_annual": 6488.9,
       "raw_usd_per_mtok": 0.00285,
       "confidence": "high",
       "chart_tier": "main",
@@ -995,8 +995,8 @@
       "task_rank": 32,
       "cohort_raw_rank": 16,
       "rank_delta": -16,
-      "annual_task_rank": 32,
-      "annual_rank_shift": 0
+      "annual_task_rank": 23,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "claude_max_20x",
@@ -1026,8 +1026,8 @@
       "task_rank": 33,
       "cohort_raw_rank": 64,
       "rank_delta": 31,
-      "annual_task_rank": 34,
-      "annual_rank_shift": -1
+      "annual_task_rank": 36,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "claude_max_5x",
@@ -1057,8 +1057,8 @@
       "task_rank": 34,
       "cohort_raw_rank": 65,
       "rank_delta": 31,
-      "annual_task_rank": 35,
-      "annual_rank_shift": -1
+      "annual_task_rank": 37,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "claude_pro",
@@ -1088,8 +1088,8 @@
       "task_rank": 35,
       "cohort_raw_rank": 22,
       "rank_delta": -13,
-      "annual_task_rank": 33,
-      "annual_rank_shift": 2
+      "annual_task_rank": 35,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "glm_coding_pro_cn_old_mid",
@@ -1098,9 +1098,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
-      "annual_fee_usd": 263.76,
-      "effective_monthly_fee_usd": 21.98,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 211.01,
+      "effective_monthly_fee_usd": 17.58,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "effort_tier": "Max",
@@ -1110,8 +1110,8 @@
       "monthly_tasks": 85552.1,
       "cost_per_task_usd": 0.000257,
       "tasks_per_dollar": 3892.3,
-      "cost_per_task_annual_usd": 0.000257,
-      "tasks_per_dollar_annual": 3892.3,
+      "cost_per_task_annual_usd": 0.000205,
+      "tasks_per_dollar_annual": 4866.4,
       "raw_usd_per_mtok": 0.00381,
       "confidence": "high",
       "chart_tier": "main",
@@ -1119,8 +1119,8 @@
       "task_rank": 36,
       "cohort_raw_rank": 17,
       "rank_delta": -19,
-      "annual_task_rank": 36,
-      "annual_rank_shift": 0
+      "annual_task_rank": 33,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "claude_max_20x",
@@ -1150,8 +1150,8 @@
       "task_rank": 37,
       "cohort_raw_rank": 28,
       "rank_delta": -9,
-      "annual_task_rank": 37,
-      "annual_rank_shift": 0
+      "annual_task_rank": 38,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "claude_max_5x",
@@ -1181,8 +1181,8 @@
       "task_rank": 38,
       "cohort_raw_rank": 29,
       "rank_delta": -9,
-      "annual_task_rank": 38,
-      "annual_rank_shift": 0
+      "annual_task_rank": 39,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "glm_coding_max_cn_old_offpeak",
@@ -1191,9 +1191,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
-      "annual_fee_usd": 830.28,
-      "effective_monthly_fee_usd": 69.19,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 664.22,
+      "effective_monthly_fee_usd": 55.35,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "effort_tier": "Max",
@@ -1203,8 +1203,8 @@
       "monthly_tasks": 266183.6,
       "cost_per_task_usd": 0.00026,
       "tasks_per_dollar": 3847.1,
-      "cost_per_task_annual_usd": 0.00026,
-      "tasks_per_dollar_annual": 3847.1,
+      "cost_per_task_annual_usd": 0.000208,
+      "tasks_per_dollar_annual": 4809.1,
       "raw_usd_per_mtok": 0.00385,
       "confidence": "high",
       "chart_tier": "full",
@@ -1212,8 +1212,8 @@
       "task_rank": 39,
       "cohort_raw_rank": 18,
       "rank_delta": -21,
-      "annual_task_rank": 39,
-      "annual_rank_shift": 0
+      "annual_task_rank": 34,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -1243,8 +1243,8 @@
       "task_rank": 40,
       "cohort_raw_rank": 92,
       "rank_delta": 52,
-      "annual_task_rank": 41,
-      "annual_rank_shift": -1
+      "annual_task_rank": 42,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -1274,8 +1274,8 @@
       "task_rank": 41,
       "cohort_raw_rank": 44,
       "rank_delta": 3,
-      "annual_task_rank": 42,
-      "annual_rank_shift": -1
+      "annual_task_rank": 46,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "claude_pro",
@@ -1336,8 +1336,8 @@
       "task_rank": 43,
       "cohort_raw_rank": 66,
       "rank_delta": 23,
-      "annual_task_rank": 43,
-      "annual_rank_shift": 0
+      "annual_task_rank": 47,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "chatgpt_plus",
@@ -1367,8 +1367,8 @@
       "task_rank": 44,
       "cohort_raw_rank": 147,
       "rank_delta": 103,
-      "annual_task_rank": 44,
-      "annual_rank_shift": 0
+      "annual_task_rank": 48,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -1398,8 +1398,8 @@
       "task_rank": 45,
       "cohort_raw_rank": 148,
       "rank_delta": 103,
-      "annual_task_rank": 45,
-      "annual_rank_shift": 0
+      "annual_task_rank": 49,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "command_code_goat",
@@ -1429,8 +1429,8 @@
       "task_rank": 46,
       "cohort_raw_rank": 84,
       "rank_delta": 38,
-      "annual_task_rank": 47,
-      "annual_rank_shift": -1
+      "annual_task_rank": 51,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "chatgpt_plus",
@@ -1460,8 +1460,8 @@
       "task_rank": 47,
       "cohort_raw_rank": 100,
       "rank_delta": 53,
-      "annual_task_rank": 48,
-      "annual_rank_shift": -1
+      "annual_task_rank": 52,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -1491,8 +1491,8 @@
       "task_rank": 48,
       "cohort_raw_rank": 101,
       "rank_delta": 53,
-      "annual_task_rank": 49,
-      "annual_rank_shift": -1
+      "annual_task_rank": 53,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "glm_coding_max_cn_old_mid",
@@ -1501,9 +1501,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
-      "annual_fee_usd": 830.28,
-      "effective_monthly_fee_usd": 69.19,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 664.22,
+      "effective_monthly_fee_usd": 55.35,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "effort_tier": "Max",
@@ -1513,8 +1513,8 @@
       "monthly_tasks": 199626.6,
       "cost_per_task_usd": 0.000347,
       "tasks_per_dollar": 2885.2,
-      "cost_per_task_annual_usd": 0.000347,
-      "tasks_per_dollar_annual": 2885.2,
+      "cost_per_task_annual_usd": 0.000277,
+      "tasks_per_dollar_annual": 3606.6,
       "raw_usd_per_mtok": 0.00514,
       "confidence": "high",
       "chart_tier": "full",
@@ -1522,8 +1522,8 @@
       "task_rank": 49,
       "cohort_raw_rank": 36,
       "rank_delta": -13,
-      "annual_task_rank": 50,
-      "annual_rank_shift": -1
+      "annual_task_rank": 41,
+      "annual_rank_shift": 8
     },
     {
       "plan_id": "chatgpt_plus",
@@ -1553,8 +1553,8 @@
       "task_rank": 50,
       "cohort_raw_rank": 163,
       "rank_delta": 113,
-      "annual_task_rank": 51,
-      "annual_rank_shift": -1
+      "annual_task_rank": 55,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -1584,8 +1584,8 @@
       "task_rank": 51,
       "cohort_raw_rank": 167,
       "rank_delta": 116,
-      "annual_task_rank": 52,
-      "annual_rank_shift": -1
+      "annual_task_rank": 56,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "glm_coding_lite_cn_old_offpeak",
@@ -1594,9 +1594,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
-      "annual_fee_usd": 86.76,
-      "effective_monthly_fee_usd": 7.23,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 69.41,
+      "effective_monthly_fee_usd": 5.78,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "effort_tier": "Max",
@@ -1606,8 +1606,8 @@
       "monthly_tasks": 19009.9,
       "cost_per_task_usd": 0.00038,
       "tasks_per_dollar": 2629.3,
-      "cost_per_task_annual_usd": 0.00038,
-      "tasks_per_dollar_annual": 2629.3,
+      "cost_per_task_annual_usd": 0.000304,
+      "tasks_per_dollar_annual": 3288.9,
       "raw_usd_per_mtok": 0.00563,
       "confidence": "high",
       "chart_tier": "full",
@@ -1615,8 +1615,8 @@
       "task_rank": 52,
       "cohort_raw_rank": 37,
       "rank_delta": -15,
-      "annual_task_rank": 53,
-      "annual_rank_shift": -1
+      "annual_task_rank": 43,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "glm_coding_pro_cn_old_peak",
@@ -1625,9 +1625,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
-      "annual_fee_usd": 263.76,
-      "effective_monthly_fee_usd": 21.98,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 211.01,
+      "effective_monthly_fee_usd": 17.58,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "effort_tier": "Max",
@@ -1637,8 +1637,8 @@
       "monthly_tasks": 57044.6,
       "cost_per_task_usd": 0.000385,
       "tasks_per_dollar": 2595.3,
-      "cost_per_task_annual_usd": 0.000385,
-      "tasks_per_dollar_annual": 2595.3,
+      "cost_per_task_annual_usd": 0.000308,
+      "tasks_per_dollar_annual": 3244.9,
       "raw_usd_per_mtok": 0.00571,
       "confidence": "high",
       "chart_tier": "main",
@@ -1646,8 +1646,8 @@
       "task_rank": 53,
       "cohort_raw_rank": 38,
       "rank_delta": -15,
-      "annual_task_rank": 54,
-      "annual_rank_shift": -1
+      "annual_task_rank": 44,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "cursor_ultra",
@@ -1656,9 +1656,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
-      "annual_fee_usd": 2400.0,
-      "effective_monthly_fee_usd": 200.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 1920.0,
+      "effective_monthly_fee_usd": 160.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Low",
@@ -1668,8 +1668,8 @@
       "monthly_tasks": 517975.5,
       "cost_per_task_usd": 0.000386,
       "tasks_per_dollar": 2589.9,
-      "cost_per_task_annual_usd": 0.000386,
-      "tasks_per_dollar_annual": 2589.9,
+      "cost_per_task_annual_usd": 0.000309,
+      "tasks_per_dollar_annual": 3237.3,
       "raw_usd_per_mtok": 0.02585,
       "confidence": "medium",
       "chart_tier": "main",
@@ -1677,8 +1677,8 @@
       "task_rank": 54,
       "cohort_raw_rank": 131,
       "rank_delta": 77,
-      "annual_task_rank": 56,
-      "annual_rank_shift": -2
+      "annual_task_rank": 45,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -1708,8 +1708,8 @@
       "task_rank": 55,
       "cohort_raw_rank": 122,
       "rank_delta": 67,
-      "annual_task_rank": 57,
-      "annual_rank_shift": -2
+      "annual_task_rank": 58,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "claude_pro",
@@ -1739,8 +1739,8 @@
       "task_rank": 56,
       "cohort_raw_rank": 23,
       "rank_delta": -33,
-      "annual_task_rank": 46,
-      "annual_rank_shift": 10
+      "annual_task_rank": 50,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "claude_max_20x",
@@ -1770,8 +1770,8 @@
       "task_rank": 57,
       "cohort_raw_rank": 30,
       "rank_delta": -27,
-      "annual_task_rank": 58,
-      "annual_rank_shift": -1
+      "annual_task_rank": 59,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "claude_max_5x",
@@ -1801,8 +1801,8 @@
       "task_rank": 58,
       "cohort_raw_rank": 31,
       "rank_delta": -27,
-      "annual_task_rank": 59,
-      "annual_rank_shift": -1
+      "annual_task_rank": 60,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "claude_max_20x",
@@ -1832,8 +1832,8 @@
       "task_rank": 59,
       "cohort_raw_rank": 67,
       "rank_delta": 8,
-      "annual_task_rank": 61,
-      "annual_rank_shift": -2
+      "annual_task_rank": 64,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "claude_max_5x",
@@ -1863,8 +1863,8 @@
       "task_rank": 60,
       "cohort_raw_rank": 68,
       "rank_delta": 8,
-      "annual_task_rank": 62,
-      "annual_rank_shift": -2
+      "annual_task_rank": 65,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "cursor_pro_plus",
@@ -1873,9 +1873,9 @@
       "price": 60.0,
       "currency": "USD",
       "price_usd": 60.0,
-      "annual_fee_usd": 720.0,
-      "effective_monthly_fee_usd": 60.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 576.0,
+      "effective_monthly_fee_usd": 48.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Low",
@@ -1885,8 +1885,8 @@
       "monthly_tasks": 138126.8,
       "cost_per_task_usd": 0.000434,
       "tasks_per_dollar": 2302.1,
-      "cost_per_task_annual_usd": 0.000434,
-      "tasks_per_dollar_annual": 2302.1,
+      "cost_per_task_annual_usd": 0.000348,
+      "tasks_per_dollar_annual": 2877.6,
       "raw_usd_per_mtok": 0.02908,
       "confidence": "medium",
       "chart_tier": "full",
@@ -1894,8 +1894,8 @@
       "task_rank": 61,
       "cohort_raw_rank": 141,
       "rank_delta": 80,
-      "annual_task_rank": 63,
-      "annual_rank_shift": -2
+      "annual_task_rank": 54,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -1925,8 +1925,8 @@
       "task_rank": 62,
       "cohort_raw_rank": 93,
       "rank_delta": 31,
-      "annual_task_rank": 65,
-      "annual_rank_shift": -3
+      "annual_task_rank": 67,
+      "annual_rank_shift": -5
     },
     {
       "plan_id": "claude_pro",
@@ -1956,8 +1956,8 @@
       "task_rank": 63,
       "cohort_raw_rank": 60,
       "rank_delta": -3,
-      "annual_task_rank": 55,
-      "annual_rank_shift": 8
+      "annual_task_rank": 57,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "opencode_go",
@@ -1987,8 +1987,8 @@
       "task_rank": 64,
       "cohort_raw_rank": 112,
       "rank_delta": 48,
-      "annual_task_rank": 66,
-      "annual_rank_shift": -2
+      "annual_task_rank": 68,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "claude_max_20x",
@@ -2018,8 +2018,8 @@
       "task_rank": 65,
       "cohort_raw_rank": 69,
       "rank_delta": 4,
-      "annual_task_rank": 67,
-      "annual_rank_shift": -2
+      "annual_task_rank": 69,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "ollama_pro",
@@ -2049,8 +2049,8 @@
       "task_rank": 66,
       "cohort_raw_rank": 19,
       "rank_delta": -47,
-      "annual_task_rank": 60,
-      "annual_rank_shift": 6
+      "annual_task_rank": 61,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "ollama_max",
@@ -2080,8 +2080,8 @@
       "task_rank": 67,
       "cohort_raw_rank": 20,
       "rank_delta": -47,
-      "annual_task_rank": 71,
-      "annual_rank_shift": -4
+      "annual_task_rank": 73,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "glm_coding_lite_cn_old_mid",
@@ -2090,9 +2090,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
-      "annual_fee_usd": 86.76,
-      "effective_monthly_fee_usd": 7.23,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 69.41,
+      "effective_monthly_fee_usd": 5.78,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "effort_tier": "Max",
@@ -2102,8 +2102,8 @@
       "monthly_tasks": 14253.8,
       "cost_per_task_usd": 0.000507,
       "tasks_per_dollar": 1971.5,
-      "cost_per_task_annual_usd": 0.000507,
-      "tasks_per_dollar_annual": 1971.5,
+      "cost_per_task_annual_usd": 0.000406,
+      "tasks_per_dollar_annual": 2466.0,
       "raw_usd_per_mtok": 0.00751,
       "confidence": "high",
       "chart_tier": "full",
@@ -2111,8 +2111,8 @@
       "task_rank": 68,
       "cohort_raw_rank": 39,
       "rank_delta": -29,
-      "annual_task_rank": 73,
-      "annual_rank_shift": -5
+      "annual_task_rank": 62,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "glm_coding_max_cn_old_peak",
@@ -2121,9 +2121,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
-      "annual_fee_usd": 830.28,
-      "effective_monthly_fee_usd": 69.19,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 664.22,
+      "effective_monthly_fee_usd": 55.35,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "effort_tier": "Max",
@@ -2133,8 +2133,8 @@
       "monthly_tasks": 133084.4,
       "cost_per_task_usd": 0.00052,
       "tasks_per_dollar": 1923.5,
-      "cost_per_task_annual_usd": 0.00052,
-      "tasks_per_dollar_annual": 1923.5,
+      "cost_per_task_annual_usd": 0.000416,
+      "tasks_per_dollar_annual": 2404.4,
       "raw_usd_per_mtok": 0.0077,
       "confidence": "high",
       "chart_tier": "full",
@@ -2142,8 +2142,8 @@
       "task_rank": 69,
       "cohort_raw_rank": 40,
       "rank_delta": -29,
-      "annual_task_rank": 74,
-      "annual_rank_shift": -5
+      "annual_task_rank": 63,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "claude_pro",
@@ -2173,8 +2173,8 @@
       "task_rank": 70,
       "cohort_raw_rank": 61,
       "rank_delta": -9,
-      "annual_task_rank": 68,
-      "annual_rank_shift": 2
+      "annual_task_rank": 70,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "claude_max_20x",
@@ -2204,8 +2204,8 @@
       "task_rank": 71,
       "cohort_raw_rank": 70,
       "rank_delta": -1,
-      "annual_task_rank": 76,
-      "annual_rank_shift": -5
+      "annual_task_rank": 78,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "claude_pro",
@@ -2235,8 +2235,8 @@
       "task_rank": 72,
       "cohort_raw_rank": 24,
       "rank_delta": -48,
-      "annual_task_rank": 69,
-      "annual_rank_shift": 3
+      "annual_task_rank": 71,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "chatgpt_plus",
@@ -2266,8 +2266,8 @@
       "task_rank": 73,
       "cohort_raw_rank": 149,
       "rank_delta": 76,
-      "annual_task_rank": 77,
-      "annual_rank_shift": -4
+      "annual_task_rank": 79,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -2297,8 +2297,8 @@
       "task_rank": 74,
       "cohort_raw_rank": 150,
       "rank_delta": 76,
-      "annual_task_rank": 78,
-      "annual_rank_shift": -4
+      "annual_task_rank": 80,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "claude_max_20x",
@@ -2328,8 +2328,8 @@
       "task_rank": 75,
       "cohort_raw_rank": 32,
       "rank_delta": -43,
-      "annual_task_rank": 79,
-      "annual_rank_shift": -4
+      "annual_task_rank": 81,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "claude_max_5x",
@@ -2359,8 +2359,8 @@
       "task_rank": 76,
       "cohort_raw_rank": 33,
       "rank_delta": -43,
-      "annual_task_rank": 80,
-      "annual_rank_shift": -4
+      "annual_task_rank": 82,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "command_code_goat",
@@ -2390,8 +2390,8 @@
       "task_rank": 77,
       "cohort_raw_rank": 46,
       "rank_delta": -31,
-      "annual_task_rank": 81,
-      "annual_rank_shift": -4
+      "annual_task_rank": 83,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -2421,8 +2421,8 @@
       "task_rank": 78,
       "cohort_raw_rank": 45,
       "rank_delta": -33,
-      "annual_task_rank": 83,
-      "annual_rank_shift": -5
+      "annual_task_rank": 85,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "command_code_goat",
@@ -2452,8 +2452,8 @@
       "task_rank": 79,
       "cohort_raw_rank": 85,
       "rank_delta": 6,
-      "annual_task_rank": 84,
-      "annual_rank_shift": -5
+      "annual_task_rank": 86,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "glm_coding_max_cn_new_offpeak",
@@ -2483,8 +2483,8 @@
       "task_rank": 80,
       "cohort_raw_rank": 48,
       "rank_delta": -32,
-      "annual_task_rank": 70,
-      "annual_rank_shift": 10
+      "annual_task_rank": 72,
+      "annual_rank_shift": 8
     },
     {
       "plan_id": "glm_coding_max_global_offpeak",
@@ -2514,8 +2514,8 @@
       "task_rank": 81,
       "cohort_raw_rank": 49,
       "rank_delta": -32,
-      "annual_task_rank": 64,
-      "annual_rank_shift": 17
+      "annual_task_rank": 66,
+      "annual_rank_shift": 15
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -2545,8 +2545,8 @@
       "task_rank": 82,
       "cohort_raw_rank": 123,
       "rank_delta": 41,
-      "annual_task_rank": 85,
-      "annual_rank_shift": -3
+      "annual_task_rank": 88,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "chatgpt_plus",
@@ -2576,8 +2576,8 @@
       "task_rank": 83,
       "cohort_raw_rank": 102,
       "rank_delta": 19,
-      "annual_task_rank": 86,
-      "annual_rank_shift": -3
+      "annual_task_rank": 89,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -2607,8 +2607,8 @@
       "task_rank": 84,
       "cohort_raw_rank": 103,
       "rank_delta": 19,
-      "annual_task_rank": 87,
-      "annual_rank_shift": -3
+      "annual_task_rank": 90,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "cursor_pro",
@@ -2617,9 +2617,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
-      "annual_fee_usd": 240.0,
-      "effective_monthly_fee_usd": 20.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 192.0,
+      "effective_monthly_fee_usd": 16.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Low",
@@ -2629,8 +2629,8 @@
       "monthly_tasks": 31465.5,
       "cost_per_task_usd": 0.000636,
       "tasks_per_dollar": 1573.3,
-      "cost_per_task_annual_usd": 0.000636,
-      "tasks_per_dollar_annual": 1573.3,
+      "cost_per_task_annual_usd": 0.000508,
+      "tasks_per_dollar_annual": 1966.6,
       "raw_usd_per_mtok": 0.04255,
       "confidence": "medium",
       "chart_tier": "main",
@@ -2638,8 +2638,8 @@
       "task_rank": 85,
       "cohort_raw_rank": 173,
       "rank_delta": 88,
-      "annual_task_rank": 88,
-      "annual_rank_shift": -3
+      "annual_task_rank": 75,
+      "annual_rank_shift": 10
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -2669,8 +2669,8 @@
       "task_rank": 86,
       "cohort_raw_rank": 94,
       "rank_delta": 8,
-      "annual_task_rank": 90,
-      "annual_rank_shift": -4
+      "annual_task_rank": 92,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "glm_coding_pro_cn_old_offpeak",
@@ -2679,9 +2679,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
-      "annual_fee_usd": 263.76,
-      "effective_monthly_fee_usd": 21.98,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 211.01,
+      "effective_monthly_fee_usd": 17.58,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "effort_tier": "Max",
@@ -2691,8 +2691,8 @@
       "monthly_tasks": 33887.9,
       "cost_per_task_usd": 0.000649,
       "tasks_per_dollar": 1541.8,
-      "cost_per_task_annual_usd": 0.000649,
-      "tasks_per_dollar_annual": 1541.8,
+      "cost_per_task_annual_usd": 0.000519,
+      "tasks_per_dollar_annual": 1927.6,
       "raw_usd_per_mtok": 0.00865,
       "confidence": "high",
       "chart_tier": "main",
@@ -2700,8 +2700,8 @@
       "task_rank": 87,
       "cohort_raw_rank": 47,
       "rank_delta": -40,
-      "annual_task_rank": 92,
-      "annual_rank_shift": -5
+      "annual_task_rank": 76,
+      "annual_rank_shift": 11
     },
     {
       "plan_id": "glm_coding_pro_cn_new_offpeak",
@@ -2731,8 +2731,8 @@
       "task_rank": 88,
       "cohort_raw_rank": 50,
       "rank_delta": -38,
-      "annual_task_rank": 75,
-      "annual_rank_shift": 13
+      "annual_task_rank": 77,
+      "annual_rank_shift": 11
     },
     {
       "plan_id": "glm_coding_pro_global_offpeak",
@@ -2762,8 +2762,8 @@
       "task_rank": 89,
       "cohort_raw_rank": 51,
       "rank_delta": -38,
-      "annual_task_rank": 72,
-      "annual_rank_shift": 17
+      "annual_task_rank": 74,
+      "annual_rank_shift": 15
     },
     {
       "plan_id": "supergrok_plus",
@@ -2793,8 +2793,8 @@
       "task_rank": 90,
       "cohort_raw_rank": 181,
       "rank_delta": 91,
-      "annual_task_rank": 95,
-      "annual_rank_shift": -5
+      "annual_task_rank": 99,
+      "annual_rank_shift": -9
     },
     {
       "plan_id": "glm_coding_lite_cn_old_peak",
@@ -2803,9 +2803,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
-      "annual_fee_usd": 86.76,
-      "effective_monthly_fee_usd": 7.23,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 69.41,
+      "effective_monthly_fee_usd": 5.78,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "effort_tier": "Max",
@@ -2815,8 +2815,8 @@
       "monthly_tasks": 9512.4,
       "cost_per_task_usd": 0.00076,
       "tasks_per_dollar": 1315.7,
-      "cost_per_task_annual_usd": 0.00076,
-      "tasks_per_dollar_annual": 1315.7,
+      "cost_per_task_annual_usd": 0.000608,
+      "tasks_per_dollar_annual": 1645.7,
       "raw_usd_per_mtok": 0.01126,
       "confidence": "high",
       "chart_tier": "full",
@@ -2824,8 +2824,8 @@
       "task_rank": 91,
       "cohort_raw_rank": 52,
       "rank_delta": -39,
-      "annual_task_rank": 99,
-      "annual_rank_shift": -8
+      "annual_task_rank": 87,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "claude_max_20x",
@@ -2855,8 +2855,8 @@
       "task_rank": 92,
       "cohort_raw_rank": 71,
       "rank_delta": -21,
-      "annual_task_rank": 100,
-      "annual_rank_shift": -8
+      "annual_task_rank": 104,
+      "annual_rank_shift": -12
     },
     {
       "plan_id": "claude_max_5x",
@@ -2886,8 +2886,8 @@
       "task_rank": 93,
       "cohort_raw_rank": 72,
       "rank_delta": -21,
-      "annual_task_rank": 101,
-      "annual_rank_shift": -8
+      "annual_task_rank": 105,
+      "annual_rank_shift": -12
     },
     {
       "plan_id": "ollama_pro",
@@ -2917,8 +2917,8 @@
       "task_rank": 94,
       "cohort_raw_rank": 53,
       "rank_delta": -41,
-      "annual_task_rank": 91,
-      "annual_rank_shift": 3
+      "annual_task_rank": 93,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "ollama_max",
@@ -2948,8 +2948,8 @@
       "task_rank": 95,
       "cohort_raw_rank": 54,
       "rank_delta": -41,
-      "annual_task_rank": 102,
-      "annual_rank_shift": -7
+      "annual_task_rank": 106,
+      "annual_rank_shift": -11
     },
     {
       "plan_id": "chatgpt_plus",
@@ -2979,8 +2979,8 @@
       "task_rank": 96,
       "cohort_raw_rank": 164,
       "rank_delta": 68,
-      "annual_task_rank": 103,
-      "annual_rank_shift": -7
+      "annual_task_rank": 108,
+      "annual_rank_shift": -12
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -3010,8 +3010,8 @@
       "task_rank": 97,
       "cohort_raw_rank": 168,
       "rank_delta": 71,
-      "annual_task_rank": 104,
-      "annual_rank_shift": -7
+      "annual_task_rank": 109,
+      "annual_rank_shift": -12
     },
     {
       "plan_id": "opencode_go",
@@ -3041,8 +3041,8 @@
       "task_rank": 98,
       "cohort_raw_rank": 113,
       "rank_delta": 15,
-      "annual_task_rank": 105,
-      "annual_rank_shift": -7
+      "annual_task_rank": 110,
+      "annual_rank_shift": -12
     },
     {
       "plan_id": "glm_coding_max_cn_new_mid",
@@ -3072,8 +3072,8 @@
       "task_rank": 99,
       "cohort_raw_rank": 57,
       "rank_delta": -42,
-      "annual_task_rank": 89,
-      "annual_rank_shift": 10
+      "annual_task_rank": 91,
+      "annual_rank_shift": 8
     },
     {
       "plan_id": "glm_coding_max_global_mid",
@@ -3103,8 +3103,8 @@
       "task_rank": 100,
       "cohort_raw_rank": 58,
       "rank_delta": -42,
-      "annual_task_rank": 82,
-      "annual_rank_shift": 18
+      "annual_task_rank": 84,
+      "annual_rank_shift": 16
     },
     {
       "plan_id": "glm_coding_pro_cn_old_mid",
@@ -3113,9 +3113,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
-      "annual_fee_usd": 263.76,
-      "effective_monthly_fee_usd": 21.98,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 211.01,
+      "effective_monthly_fee_usd": 17.58,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "effort_tier": "Max",
@@ -3125,8 +3125,8 @@
       "monthly_tasks": 25415.9,
       "cost_per_task_usd": 0.000865,
       "tasks_per_dollar": 1156.3,
-      "cost_per_task_annual_usd": 0.000865,
-      "tasks_per_dollar_annual": 1156.3,
+      "cost_per_task_annual_usd": 0.000692,
+      "tasks_per_dollar_annual": 1445.7,
       "raw_usd_per_mtok": 0.01154,
       "confidence": "high",
       "chart_tier": "main",
@@ -3134,8 +3134,8 @@
       "task_rank": 101,
       "cohort_raw_rank": 55,
       "rank_delta": -46,
-      "annual_task_rank": 108,
-      "annual_rank_shift": -7
+      "annual_task_rank": 96,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "glm_coding_max_cn_old_offpeak",
@@ -3144,9 +3144,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
-      "annual_fee_usd": 830.28,
-      "effective_monthly_fee_usd": 69.19,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 664.22,
+      "effective_monthly_fee_usd": 55.35,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "effort_tier": "Max",
@@ -3156,8 +3156,8 @@
       "monthly_tasks": 79062.9,
       "cost_per_task_usd": 0.000875,
       "tasks_per_dollar": 1142.7,
-      "cost_per_task_annual_usd": 0.000875,
-      "tasks_per_dollar_annual": 1142.7,
+      "cost_per_task_annual_usd": 0.0007,
+      "tasks_per_dollar_annual": 1428.4,
       "raw_usd_per_mtok": 0.01168,
       "confidence": "high",
       "chart_tier": "full",
@@ -3165,8 +3165,8 @@
       "task_rank": 102,
       "cohort_raw_rank": 56,
       "rank_delta": -46,
-      "annual_task_rank": 109,
-      "annual_rank_shift": -7
+      "annual_task_rank": 97,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "supergrok",
@@ -3196,8 +3196,8 @@
       "task_rank": 103,
       "cohort_raw_rank": 197,
       "rank_delta": 94,
-      "annual_task_rank": 97,
-      "annual_rank_shift": 6
+      "annual_task_rank": 101,
+      "annual_rank_shift": 2
     },
     {
       "plan_id": "supergrok_heavy",
@@ -3206,9 +3206,9 @@
       "price": 300.0,
       "currency": "USD",
       "price_usd": 300.0,
-      "annual_fee_usd": 3600.0,
-      "effective_monthly_fee_usd": 300.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 3000.0,
+      "effective_monthly_fee_usd": 250.0,
+      "annual_discount_pct": 16.7,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Low",
@@ -3218,8 +3218,8 @@
       "monthly_tasks": 340764.5,
       "cost_per_task_usd": 0.00088,
       "tasks_per_dollar": 1135.9,
-      "cost_per_task_annual_usd": 0.00088,
-      "tasks_per_dollar_annual": 1135.9,
+      "cost_per_task_annual_usd": 0.000734,
+      "tasks_per_dollar_annual": 1363.1,
       "raw_usd_per_mtok": 0.05894,
       "confidence": "medium",
       "chart_tier": "main",
@@ -3227,8 +3227,8 @@
       "task_rank": 104,
       "cohort_raw_rank": 198,
       "rank_delta": 94,
-      "annual_task_rank": 110,
-      "annual_rank_shift": -6
+      "annual_task_rank": 102,
+      "annual_rank_shift": 2
     },
     {
       "plan_id": "cursor_ultra",
@@ -3237,9 +3237,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
-      "annual_fee_usd": 2400.0,
-      "effective_monthly_fee_usd": 200.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 1920.0,
+      "effective_monthly_fee_usd": 160.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.5",
       "benchmarked_model_name": "Grok 4.5",
       "effort_tier": "High",
@@ -3249,8 +3249,8 @@
       "monthly_tasks": 225897.8,
       "cost_per_task_usd": 0.000885,
       "tasks_per_dollar": 1129.5,
-      "cost_per_task_annual_usd": 0.000885,
-      "tasks_per_dollar_annual": 1129.5,
+      "cost_per_task_annual_usd": 0.000708,
+      "tasks_per_dollar_annual": 1411.9,
       "raw_usd_per_mtok": 0.02585,
       "confidence": "medium",
       "chart_tier": "full",
@@ -3258,8 +3258,8 @@
       "task_rank": 105,
       "cohort_raw_rank": 132,
       "rank_delta": 27,
-      "annual_task_rank": 113,
-      "annual_rank_shift": -8
+      "annual_task_rank": 98,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "chatgpt_plus",
@@ -3289,8 +3289,8 @@
       "task_rank": 106,
       "cohort_raw_rank": 151,
       "rank_delta": 45,
-      "annual_task_rank": 114,
-      "annual_rank_shift": -8
+      "annual_task_rank": 116,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -3320,8 +3320,8 @@
       "task_rank": 107,
       "cohort_raw_rank": 152,
       "rank_delta": 45,
-      "annual_task_rank": 115,
-      "annual_rank_shift": -8
+      "annual_task_rank": 117,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "glm_coding_lite_cn_new_offpeak",
@@ -3351,8 +3351,8 @@
       "task_rank": 108,
       "cohort_raw_rank": 79,
       "rank_delta": -29,
-      "annual_task_rank": 96,
-      "annual_rank_shift": 12
+      "annual_task_rank": 100,
+      "annual_rank_shift": 8
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -3382,8 +3382,8 @@
       "task_rank": 109,
       "cohort_raw_rank": 124,
       "rank_delta": 15,
-      "annual_task_rank": 116,
-      "annual_rank_shift": -7
+      "annual_task_rank": 118,
+      "annual_rank_shift": -9
     },
     {
       "plan_id": "glm_coding_pro_cn_new_mid",
@@ -3413,8 +3413,8 @@
       "task_rank": 110,
       "cohort_raw_rank": 80,
       "rank_delta": -30,
-      "annual_task_rank": 98,
-      "annual_rank_shift": 12
+      "annual_task_rank": 103,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "glm_coding_pro_global_mid",
@@ -3444,8 +3444,8 @@
       "task_rank": 111,
       "cohort_raw_rank": 81,
       "rank_delta": -30,
-      "annual_task_rank": 93,
-      "annual_rank_shift": 18
+      "annual_task_rank": 94,
+      "annual_rank_shift": 17
     },
     {
       "plan_id": "glm_coding_lite_global_offpeak",
@@ -3475,8 +3475,8 @@
       "task_rank": 112,
       "cohort_raw_rank": 87,
       "rank_delta": -25,
-      "annual_task_rank": 94,
-      "annual_rank_shift": 18
+      "annual_task_rank": 95,
+      "annual_rank_shift": 17
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -3506,8 +3506,8 @@
       "task_rank": 113,
       "cohort_raw_rank": 95,
       "rank_delta": -18,
-      "annual_task_rank": 117,
-      "annual_rank_shift": -4
+      "annual_task_rank": 121,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "cursor_ultra_fast",
@@ -3516,9 +3516,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
-      "annual_fee_usd": 2400.0,
-      "effective_monthly_fee_usd": 200.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 1920.0,
+      "effective_monthly_fee_usd": 160.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Low",
@@ -3528,8 +3528,8 @@
       "monthly_tasks": 205797.7,
       "cost_per_task_usd": 0.000972,
       "tasks_per_dollar": 1029.0,
-      "cost_per_task_annual_usd": 0.000972,
-      "tasks_per_dollar_annual": 1029.0,
+      "cost_per_task_annual_usd": 0.000777,
+      "tasks_per_dollar_annual": 1286.2,
       "raw_usd_per_mtok": 0.06506,
       "confidence": "high",
       "chart_tier": "main",
@@ -3537,8 +3537,8 @@
       "task_rank": 114,
       "cohort_raw_rank": 209,
       "rank_delta": 95,
-      "annual_task_rank": 119,
-      "annual_rank_shift": -5
+      "annual_task_rank": 107,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "claude_pro",
@@ -3568,8 +3568,8 @@
       "task_rank": 115,
       "cohort_raw_rank": 62,
       "rank_delta": -53,
-      "annual_task_rank": 106,
-      "annual_rank_shift": 9
+      "annual_task_rank": 112,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "command_code_goat",
@@ -3599,8 +3599,8 @@
       "task_rank": 116,
       "cohort_raw_rank": 86,
       "rank_delta": -30,
-      "annual_task_rank": 122,
-      "annual_rank_shift": -6
+      "annual_task_rank": 125,
+      "annual_rank_shift": -9
     },
     {
       "plan_id": "claude_max_20x",
@@ -3630,8 +3630,8 @@
       "task_rank": 117,
       "cohort_raw_rank": 73,
       "rank_delta": -44,
-      "annual_task_rank": 123,
-      "annual_rank_shift": -6
+      "annual_task_rank": 126,
+      "annual_rank_shift": -9
     },
     {
       "plan_id": "supergrok_lite",
@@ -3661,8 +3661,8 @@
       "task_rank": 118,
       "cohort_raw_rank": 213,
       "rank_delta": 95,
-      "annual_task_rank": 124,
-      "annual_rank_shift": -6
+      "annual_task_rank": 127,
+      "annual_rank_shift": -9
     },
     {
       "plan_id": "command_code_goat",
@@ -3692,8 +3692,8 @@
       "task_rank": 119,
       "cohort_raw_rank": 229,
       "rank_delta": 110,
-      "annual_task_rank": 125,
-      "annual_rank_shift": -6
+      "annual_task_rank": 129,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "kimi_allegretto_cn",
@@ -3702,9 +3702,9 @@
       "price": 199.0,
       "currency": "CNY",
       "price_usd": 29.36,
-      "annual_fee_usd": 352.32,
-      "effective_monthly_fee_usd": 29.36,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 281.86,
+      "effective_monthly_fee_usd": 23.49,
+      "annual_discount_pct": 20.0,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "effort_tier": "Standard",
@@ -3714,8 +3714,8 @@
       "monthly_tasks": 29008.0,
       "cost_per_task_usd": 0.001012,
       "tasks_per_dollar": 988.0,
-      "cost_per_task_annual_usd": 0.001012,
-      "tasks_per_dollar_annual": 988.0,
+      "cost_per_task_annual_usd": 0.00081,
+      "tasks_per_dollar_annual": 1234.9,
       "raw_usd_per_mtok": 0.01872,
       "confidence": "medium",
       "chart_tier": "main",
@@ -3723,8 +3723,8 @@
       "task_rank": 120,
       "cohort_raw_rank": 117,
       "rank_delta": -3,
-      "annual_task_rank": 126,
-      "annual_rank_shift": -6
+      "annual_task_rank": 111,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "claude_pro",
@@ -3754,8 +3754,8 @@
       "task_rank": 121,
       "cohort_raw_rank": 25,
       "rank_delta": -96,
-      "annual_task_rank": 107,
-      "annual_rank_shift": 14
+      "annual_task_rank": 113,
+      "annual_rank_shift": 8
     },
     {
       "plan_id": "claude_max_20x",
@@ -3785,8 +3785,8 @@
       "task_rank": 122,
       "cohort_raw_rank": 34,
       "rank_delta": -88,
-      "annual_task_rank": 127,
-      "annual_rank_shift": -5
+      "annual_task_rank": 132,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "claude_max_5x",
@@ -3816,8 +3816,8 @@
       "task_rank": 123,
       "cohort_raw_rank": 35,
       "rank_delta": -88,
-      "annual_task_rank": 128,
-      "annual_rank_shift": -5
+      "annual_task_rank": 133,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "claude_max_20x",
@@ -3847,8 +3847,8 @@
       "task_rank": 124,
       "cohort_raw_rank": 74,
       "rank_delta": -50,
-      "annual_task_rank": 129,
-      "annual_rank_shift": -5
+      "annual_task_rank": 134,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "claude_max_5x",
@@ -3878,8 +3878,8 @@
       "task_rank": 125,
       "cohort_raw_rank": 75,
       "rank_delta": -50,
-      "annual_task_rank": 130,
-      "annual_rank_shift": -5
+      "annual_task_rank": 135,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "glm_coding_max_cn_old_mid",
@@ -3888,9 +3888,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
-      "annual_fee_usd": 830.28,
-      "effective_monthly_fee_usd": 69.19,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 664.22,
+      "effective_monthly_fee_usd": 55.35,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "effort_tier": "Max",
@@ -3900,8 +3900,8 @@
       "monthly_tasks": 59303.8,
       "cost_per_task_usd": 0.001167,
       "tasks_per_dollar": 857.1,
-      "cost_per_task_annual_usd": 0.001167,
-      "tasks_per_dollar_annual": 857.1,
+      "cost_per_task_annual_usd": 0.000933,
+      "tasks_per_dollar_annual": 1071.4,
       "raw_usd_per_mtok": 0.01557,
       "confidence": "high",
       "chart_tier": "full",
@@ -3909,8 +3909,8 @@
       "task_rank": 126,
       "cohort_raw_rank": 90,
       "rank_delta": -36,
-      "annual_task_rank": 132,
-      "annual_rank_shift": -6
+      "annual_task_rank": 119,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "chatgpt_plus",
@@ -3940,8 +3940,8 @@
       "task_rank": 127,
       "cohort_raw_rank": 104,
       "rank_delta": -23,
-      "annual_task_rank": 133,
-      "annual_rank_shift": -6
+      "annual_task_rank": 138,
+      "annual_rank_shift": -11
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -3971,8 +3971,8 @@
       "task_rank": 128,
       "cohort_raw_rank": 105,
       "rank_delta": -23,
-      "annual_task_rank": 134,
-      "annual_rank_shift": -6
+      "annual_task_rank": 139,
+      "annual_rank_shift": -11
     },
     {
       "plan_id": "kimi_allegro_cn",
@@ -3981,9 +3981,9 @@
       "price": 699.0,
       "currency": "CNY",
       "price_usd": 103.12,
-      "annual_fee_usd": 1237.44,
-      "effective_monthly_fee_usd": 103.12,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 989.95,
+      "effective_monthly_fee_usd": 82.5,
+      "annual_discount_pct": 20.0,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "effort_tier": "Standard",
@@ -3993,8 +3993,8 @@
       "monthly_tasks": 87024.1,
       "cost_per_task_usd": 0.001185,
       "tasks_per_dollar": 843.9,
-      "cost_per_task_annual_usd": 0.001185,
-      "tasks_per_dollar_annual": 843.9,
+      "cost_per_task_annual_usd": 0.000948,
+      "tasks_per_dollar_annual": 1054.8,
       "raw_usd_per_mtok": 0.02192,
       "confidence": "medium",
       "chart_tier": "full",
@@ -4002,8 +4002,8 @@
       "task_rank": 129,
       "cohort_raw_rank": 126,
       "rank_delta": -3,
-      "annual_task_rank": 135,
-      "annual_rank_shift": -6
+      "annual_task_rank": 120,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "glm_coding_max_cn_new_peak",
@@ -4033,8 +4033,8 @@
       "task_rank": 130,
       "cohort_raw_rank": 108,
       "rank_delta": -22,
-      "annual_task_rank": 118,
-      "annual_rank_shift": 12
+      "annual_task_rank": 122,
+      "annual_rank_shift": 8
     },
     {
       "plan_id": "glm_coding_lite_cn_new_mid",
@@ -4064,8 +4064,8 @@
       "task_rank": 131,
       "cohort_raw_rank": 109,
       "rank_delta": -22,
-      "annual_task_rank": 120,
-      "annual_rank_shift": 11
+      "annual_task_rank": 123,
+      "annual_rank_shift": 8
     },
     {
       "plan_id": "cursor_ultra",
@@ -4074,9 +4074,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
-      "annual_fee_usd": 2400.0,
-      "effective_monthly_fee_usd": 200.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 1920.0,
+      "effective_monthly_fee_usd": 160.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Medium",
@@ -4086,8 +4086,8 @@
       "monthly_tasks": 159243.4,
       "cost_per_task_usd": 0.001256,
       "tasks_per_dollar": 796.2,
-      "cost_per_task_annual_usd": 0.001256,
-      "tasks_per_dollar_annual": 796.2,
+      "cost_per_task_annual_usd": 0.001005,
+      "tasks_per_dollar_annual": 995.3,
       "raw_usd_per_mtok": 0.02585,
       "confidence": "medium",
       "chart_tier": "main",
@@ -4095,8 +4095,8 @@
       "task_rank": 132,
       "cohort_raw_rank": 133,
       "rank_delta": 1,
-      "annual_task_rank": 137,
-      "annual_rank_shift": -5
+      "annual_task_rank": 128,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "glm_coding_max_global_peak",
@@ -4126,8 +4126,8 @@
       "task_rank": 133,
       "cohort_raw_rank": 115,
       "rank_delta": -18,
-      "annual_task_rank": 111,
-      "annual_rank_shift": 22
+      "annual_task_rank": 114,
+      "annual_rank_shift": 19
     },
     {
       "plan_id": "glm_coding_lite_global_mid",
@@ -4157,8 +4157,8 @@
       "task_rank": 134,
       "cohort_raw_rank": 116,
       "rank_delta": -18,
-      "annual_task_rank": 112,
-      "annual_rank_shift": 22
+      "annual_task_rank": 115,
+      "annual_rank_shift": 19
     },
     {
       "plan_id": "chatgpt_plus",
@@ -4188,8 +4188,8 @@
       "task_rank": 135,
       "cohort_raw_rank": 165,
       "rank_delta": 30,
-      "annual_task_rank": 138,
-      "annual_rank_shift": -3
+      "annual_task_rank": 143,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -4219,8 +4219,8 @@
       "task_rank": 136,
       "cohort_raw_rank": 169,
       "rank_delta": 33,
-      "annual_task_rank": 139,
-      "annual_rank_shift": -3
+      "annual_task_rank": 144,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "chatgpt_plus",
@@ -4250,8 +4250,8 @@
       "task_rank": 137,
       "cohort_raw_rank": 153,
       "rank_delta": 16,
-      "annual_task_rank": 140,
-      "annual_rank_shift": -3
+      "annual_task_rank": 145,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -4281,8 +4281,8 @@
       "task_rank": 138,
       "cohort_raw_rank": 154,
       "rank_delta": 16,
-      "annual_task_rank": 141,
-      "annual_rank_shift": -3
+      "annual_task_rank": 146,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "glm_coding_lite_cn_old_offpeak",
@@ -4291,9 +4291,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
-      "annual_fee_usd": 86.76,
-      "effective_monthly_fee_usd": 7.23,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 69.41,
+      "effective_monthly_fee_usd": 5.78,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "effort_tier": "Max",
@@ -4303,8 +4303,8 @@
       "monthly_tasks": 5643.5,
       "cost_per_task_usd": 0.001281,
       "tasks_per_dollar": 780.6,
-      "cost_per_task_annual_usd": 0.001281,
-      "tasks_per_dollar_annual": 780.6,
+      "cost_per_task_annual_usd": 0.001024,
+      "tasks_per_dollar_annual": 976.4,
       "raw_usd_per_mtok": 0.01709,
       "confidence": "high",
       "chart_tier": "full",
@@ -4312,8 +4312,8 @@
       "task_rank": 139,
       "cohort_raw_rank": 106,
       "rank_delta": -33,
-      "annual_task_rank": 142,
-      "annual_rank_shift": -3
+      "annual_task_rank": 130,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "glm_coding_pro_cn_old_peak",
@@ -4322,9 +4322,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
-      "annual_fee_usd": 263.76,
-      "effective_monthly_fee_usd": 21.98,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 211.01,
+      "effective_monthly_fee_usd": 17.58,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "effort_tier": "Max",
@@ -4334,8 +4334,8 @@
       "monthly_tasks": 16944.0,
       "cost_per_task_usd": 0.001297,
       "tasks_per_dollar": 770.9,
-      "cost_per_task_annual_usd": 0.001297,
-      "tasks_per_dollar_annual": 770.9,
+      "cost_per_task_annual_usd": 0.001038,
+      "tasks_per_dollar_annual": 963.8,
       "raw_usd_per_mtok": 0.01731,
       "confidence": "high",
       "chart_tier": "main",
@@ -4343,8 +4343,8 @@
       "task_rank": 140,
       "cohort_raw_rank": 107,
       "rank_delta": -33,
-      "annual_task_rank": 143,
-      "annual_rank_shift": -3
+      "annual_task_rank": 131,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "opencode_go",
@@ -4374,8 +4374,8 @@
       "task_rank": 141,
       "cohort_raw_rank": 114,
       "rank_delta": -27,
-      "annual_task_rank": 144,
-      "annual_rank_shift": -3
+      "annual_task_rank": 147,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "glm_coding_pro_cn_new_peak",
@@ -4405,8 +4405,8 @@
       "task_rank": 142,
       "cohort_raw_rank": 119,
       "rank_delta": -23,
-      "annual_task_rank": 131,
-      "annual_rank_shift": 11
+      "annual_task_rank": 136,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "glm_coding_pro_global_peak",
@@ -4436,8 +4436,8 @@
       "task_rank": 143,
       "cohort_raw_rank": 120,
       "rank_delta": -23,
-      "annual_task_rank": 121,
-      "annual_rank_shift": 22
+      "annual_task_rank": 124,
+      "annual_rank_shift": 19
     },
     {
       "plan_id": "cursor_pro_plus",
@@ -4446,9 +4446,9 @@
       "price": 60.0,
       "currency": "USD",
       "price_usd": 60.0,
-      "annual_fee_usd": 720.0,
-      "effective_monthly_fee_usd": 60.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 576.0,
+      "effective_monthly_fee_usd": 48.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Medium",
@@ -4458,8 +4458,8 @@
       "monthly_tasks": 42464.9,
       "cost_per_task_usd": 0.001413,
       "tasks_per_dollar": 707.7,
-      "cost_per_task_annual_usd": 0.001413,
-      "tasks_per_dollar_annual": 707.7,
+      "cost_per_task_annual_usd": 0.00113,
+      "tasks_per_dollar_annual": 884.7,
       "raw_usd_per_mtok": 0.02908,
       "confidence": "medium",
       "chart_tier": "full",
@@ -4467,8 +4467,8 @@
       "task_rank": 144,
       "cohort_raw_rank": 142,
       "rank_delta": -2,
-      "annual_task_rank": 147,
-      "annual_rank_shift": -3
+      "annual_task_rank": 137,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "ollama_pro",
@@ -4498,8 +4498,8 @@
       "task_rank": 145,
       "cohort_raw_rank": 88,
       "rank_delta": -57,
-      "annual_task_rank": 136,
-      "annual_rank_shift": 9
+      "annual_task_rank": 140,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "ollama_max",
@@ -4529,8 +4529,8 @@
       "task_rank": 146,
       "cohort_raw_rank": 89,
       "rank_delta": -57,
-      "annual_task_rank": 148,
-      "annual_rank_shift": -2
+      "annual_task_rank": 154,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "claude_max_20x",
@@ -4560,8 +4560,8 @@
       "task_rank": 147,
       "cohort_raw_rank": 76,
       "rank_delta": -71,
-      "annual_task_rank": 149,
-      "annual_rank_shift": -2
+      "annual_task_rank": 155,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "claude_max_5x",
@@ -4591,8 +4591,8 @@
       "task_rank": 148,
       "cohort_raw_rank": 77,
       "rank_delta": -71,
-      "annual_task_rank": 150,
-      "annual_rank_shift": -2
+      "annual_task_rank": 156,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "kimi_allegretto_cn",
@@ -4601,9 +4601,9 @@
       "price": 199.0,
       "currency": "CNY",
       "price_usd": 29.36,
-      "annual_fee_usd": 352.32,
-      "effective_monthly_fee_usd": 29.36,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 281.86,
+      "effective_monthly_fee_usd": 23.49,
+      "annual_discount_pct": 20.0,
       "served_model": "kimi-k3",
       "benchmarked_model_name": "Kimi K3",
       "effort_tier": "Max",
@@ -4613,8 +4613,8 @@
       "monthly_tasks": 19248.4,
       "cost_per_task_usd": 0.001525,
       "tasks_per_dollar": 655.6,
-      "cost_per_task_annual_usd": 0.001525,
-      "tasks_per_dollar_annual": 655.6,
+      "cost_per_task_annual_usd": 0.00122,
+      "tasks_per_dollar_annual": 819.4,
       "raw_usd_per_mtok": 0.02023,
       "confidence": "medium",
       "chart_tier": "main",
@@ -4622,8 +4622,8 @@
       "task_rank": 149,
       "cohort_raw_rank": 118,
       "rank_delta": -31,
-      "annual_task_rank": 153,
-      "annual_rank_shift": -4
+      "annual_task_rank": 141,
+      "annual_rank_shift": 8
     },
     {
       "plan_id": "opencode_go",
@@ -4653,8 +4653,8 @@
       "task_rank": 150,
       "cohort_raw_rank": 128,
       "rank_delta": -22,
-      "annual_task_rank": 154,
-      "annual_rank_shift": -4
+      "annual_task_rank": 160,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "cursor_ultra",
@@ -4663,9 +4663,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
-      "annual_fee_usd": 2400.0,
-      "effective_monthly_fee_usd": 200.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 1920.0,
+      "effective_monthly_fee_usd": 160.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "High",
@@ -4675,8 +4675,8 @@
       "monthly_tasks": 128821.2,
       "cost_per_task_usd": 0.001553,
       "tasks_per_dollar": 644.1,
-      "cost_per_task_annual_usd": 0.001553,
-      "tasks_per_dollar_annual": 644.1,
+      "cost_per_task_annual_usd": 0.001242,
+      "tasks_per_dollar_annual": 805.1,
       "raw_usd_per_mtok": 0.02585,
       "confidence": "medium",
       "chart_tier": "main",
@@ -4684,8 +4684,8 @@
       "task_rank": 151,
       "cohort_raw_rank": 134,
       "rank_delta": -17,
-      "annual_task_rank": 155,
-      "annual_rank_shift": -4
+      "annual_task_rank": 142,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "claude_pro",
@@ -4715,8 +4715,8 @@
       "task_rank": 152,
       "cohort_raw_rank": 63,
       "rank_delta": -89,
-      "annual_task_rank": 146,
-      "annual_rank_shift": 6
+      "annual_task_rank": 149,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "claude_max_20x",
@@ -4746,8 +4746,8 @@
       "task_rank": 153,
       "cohort_raw_rank": 78,
       "rank_delta": -75,
-      "annual_task_rank": 157,
-      "annual_rank_shift": -4
+      "annual_task_rank": 162,
+      "annual_rank_shift": -9
     },
     {
       "plan_id": "glm_coding_lite_cn_old_mid",
@@ -4756,9 +4756,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
-      "annual_fee_usd": 86.76,
-      "effective_monthly_fee_usd": 7.23,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 69.41,
+      "effective_monthly_fee_usd": 5.78,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "effort_tier": "Max",
@@ -4768,8 +4768,8 @@
       "monthly_tasks": 4229.3,
       "cost_per_task_usd": 0.001709,
       "tasks_per_dollar": 585.0,
-      "cost_per_task_annual_usd": 0.001709,
-      "tasks_per_dollar_annual": 585.0,
+      "cost_per_task_annual_usd": 0.001367,
+      "tasks_per_dollar_annual": 731.7,
       "raw_usd_per_mtok": 0.0228,
       "confidence": "high",
       "chart_tier": "full",
@@ -4777,8 +4777,8 @@
       "task_rank": 154,
       "cohort_raw_rank": 127,
       "rank_delta": -27,
-      "annual_task_rank": 160,
-      "annual_rank_shift": -6
+      "annual_task_rank": 150,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "cursor_pro_plus",
@@ -4787,9 +4787,9 @@
       "price": 60.0,
       "currency": "USD",
       "price_usd": 60.0,
-      "annual_fee_usd": 720.0,
-      "effective_monthly_fee_usd": 60.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 576.0,
+      "effective_monthly_fee_usd": 48.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "High",
@@ -4799,8 +4799,8 @@
       "monthly_tasks": 34352.3,
       "cost_per_task_usd": 0.001747,
       "tasks_per_dollar": 572.5,
-      "cost_per_task_annual_usd": 0.001747,
-      "tasks_per_dollar_annual": 572.5,
+      "cost_per_task_annual_usd": 0.001397,
+      "tasks_per_dollar_annual": 715.7,
       "raw_usd_per_mtok": 0.02908,
       "confidence": "medium",
       "chart_tier": "full",
@@ -4808,8 +4808,8 @@
       "task_rank": 155,
       "cohort_raw_rank": 143,
       "rank_delta": -12,
-      "annual_task_rank": 161,
-      "annual_rank_shift": -6
+      "annual_task_rank": 151,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "glm_coding_max_cn_old_peak",
@@ -4818,9 +4818,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
-      "annual_fee_usd": 830.28,
-      "effective_monthly_fee_usd": 69.19,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 664.22,
+      "effective_monthly_fee_usd": 55.35,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "effort_tier": "Max",
@@ -4830,8 +4830,8 @@
       "monthly_tasks": 39531.4,
       "cost_per_task_usd": 0.00175,
       "tasks_per_dollar": 571.3,
-      "cost_per_task_annual_usd": 0.00175,
-      "tasks_per_dollar_annual": 571.3,
+      "cost_per_task_annual_usd": 0.0014,
+      "tasks_per_dollar_annual": 714.2,
       "raw_usd_per_mtok": 0.02335,
       "confidence": "high",
       "chart_tier": "full",
@@ -4839,8 +4839,8 @@
       "task_rank": 156,
       "cohort_raw_rank": 129,
       "rank_delta": -27,
-      "annual_task_rank": 162,
-      "annual_rank_shift": -6
+      "annual_task_rank": 152,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "command_code_goat",
@@ -4870,8 +4870,8 @@
       "task_rank": 157,
       "cohort_raw_rank": 230,
       "rank_delta": 73,
-      "annual_task_rank": 163,
-      "annual_rank_shift": -6
+      "annual_task_rank": 168,
+      "annual_rank_shift": -11
     },
     {
       "plan_id": "kimi_allegro_cn",
@@ -4880,9 +4880,9 @@
       "price": 699.0,
       "currency": "CNY",
       "price_usd": 103.12,
-      "annual_fee_usd": 1237.44,
-      "effective_monthly_fee_usd": 103.12,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 989.95,
+      "effective_monthly_fee_usd": 82.5,
+      "annual_discount_pct": 20.0,
       "served_model": "kimi-k3",
       "benchmarked_model_name": "Kimi K3",
       "effort_tier": "Max",
@@ -4892,8 +4892,8 @@
       "monthly_tasks": 57745.1,
       "cost_per_task_usd": 0.001786,
       "tasks_per_dollar": 560.0,
-      "cost_per_task_annual_usd": 0.001786,
-      "tasks_per_dollar_annual": 560.0,
+      "cost_per_task_annual_usd": 0.001429,
+      "tasks_per_dollar_annual": 699.9,
       "raw_usd_per_mtok": 0.02369,
       "confidence": "medium",
       "chart_tier": "full",
@@ -4901,8 +4901,8 @@
       "task_rank": 158,
       "cohort_raw_rank": 130,
       "rank_delta": -28,
-      "annual_task_rank": 164,
-      "annual_rank_shift": -6
+      "annual_task_rank": 153,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "glm_coding_lite_cn_new_peak",
@@ -4932,8 +4932,8 @@
       "task_rank": 159,
       "cohort_raw_rank": 137,
       "rank_delta": -22,
-      "annual_task_rank": 151,
-      "annual_rank_shift": 8
+      "annual_task_rank": 157,
+      "annual_rank_shift": 2
     },
     {
       "plan_id": "cursor_ultra",
@@ -4942,9 +4942,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
-      "annual_fee_usd": 2400.0,
-      "effective_monthly_fee_usd": 200.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 1920.0,
+      "effective_monthly_fee_usd": 160.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Extra High",
@@ -4954,8 +4954,8 @@
       "monthly_tasks": 108536.2,
       "cost_per_task_usd": 0.001843,
       "tasks_per_dollar": 542.7,
-      "cost_per_task_annual_usd": 0.001843,
-      "tasks_per_dollar_annual": 542.7,
+      "cost_per_task_annual_usd": 0.001474,
+      "tasks_per_dollar_annual": 678.4,
       "raw_usd_per_mtok": 0.02585,
       "confidence": "medium",
       "chart_tier": "main",
@@ -4963,8 +4963,8 @@
       "task_rank": 160,
       "cohort_raw_rank": 135,
       "rank_delta": -25,
-      "annual_task_rank": 165,
-      "annual_rank_shift": -5
+      "annual_task_rank": 158,
+      "annual_rank_shift": 2
     },
     {
       "plan_id": "chatgpt_plus",
@@ -4994,8 +4994,8 @@
       "task_rank": 161,
       "cohort_raw_rank": 166,
       "rank_delta": 5,
-      "annual_task_rank": 166,
-      "annual_rank_shift": -5
+      "annual_task_rank": 169,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -5025,8 +5025,8 @@
       "task_rank": 162,
       "cohort_raw_rank": 170,
       "rank_delta": 8,
-      "annual_task_rank": 167,
-      "annual_rank_shift": -5
+      "annual_task_rank": 170,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "glm_coding_lite_global_peak",
@@ -5056,8 +5056,8 @@
       "task_rank": 163,
       "cohort_raw_rank": 138,
       "rank_delta": -25,
-      "annual_task_rank": 145,
-      "annual_rank_shift": 18
+      "annual_task_rank": 148,
+      "annual_rank_shift": 15
     },
     {
       "plan_id": "chatgpt_plus",
@@ -5087,8 +5087,8 @@
       "task_rank": 164,
       "cohort_raw_rank": 155,
       "rank_delta": -9,
-      "annual_task_rank": 169,
-      "annual_rank_shift": -5
+      "annual_task_rank": 172,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -5118,8 +5118,8 @@
       "task_rank": 165,
       "cohort_raw_rank": 156,
       "rank_delta": -9,
-      "annual_task_rank": 170,
-      "annual_rank_shift": -5
+      "annual_task_rank": 173,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "opencode_go",
@@ -5149,8 +5149,8 @@
       "task_rank": 166,
       "cohort_raw_rank": 159,
       "rank_delta": -7,
-      "annual_task_rank": 171,
-      "annual_rank_shift": -5
+      "annual_task_rank": 174,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "command_code_goat",
@@ -5180,8 +5180,8 @@
       "task_rank": 167,
       "cohort_raw_rank": 160,
       "rank_delta": -7,
-      "annual_task_rank": 172,
-      "annual_rank_shift": -5
+      "annual_task_rank": 175,
+      "annual_rank_shift": -8
     },
     {
       "plan_id": "glm_coding_max_cn_new_offpeak",
@@ -5211,8 +5211,8 @@
       "task_rank": 168,
       "cohort_raw_rank": 136,
       "rank_delta": -32,
-      "annual_task_rank": 156,
-      "annual_rank_shift": 12
+      "annual_task_rank": 161,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "supergrok_heavy",
@@ -5221,9 +5221,9 @@
       "price": 300.0,
       "currency": "USD",
       "price_usd": 300.0,
-      "annual_fee_usd": 3600.0,
-      "effective_monthly_fee_usd": 300.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 3000.0,
+      "effective_monthly_fee_usd": 250.0,
+      "annual_discount_pct": 16.7,
       "served_model": "grok-4.5",
       "benchmarked_model_name": "Grok 4.5",
       "effort_tier": "High",
@@ -5233,8 +5233,8 @@
       "monthly_tasks": 148613.1,
       "cost_per_task_usd": 0.002019,
       "tasks_per_dollar": 495.4,
-      "cost_per_task_annual_usd": 0.002019,
-      "tasks_per_dollar_annual": 495.4,
+      "cost_per_task_annual_usd": 0.001682,
+      "tasks_per_dollar_annual": 594.5,
       "raw_usd_per_mtok": 0.05894,
       "confidence": "medium",
       "chart_tier": "full",
@@ -5242,8 +5242,8 @@
       "task_rank": 169,
       "cohort_raw_rank": 199,
       "rank_delta": 30,
-      "annual_task_rank": 174,
-      "annual_rank_shift": -5
+      "annual_task_rank": 166,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "supergrok",
@@ -5273,8 +5273,8 @@
       "task_rank": 170,
       "cohort_raw_rank": 200,
       "rank_delta": 30,
-      "annual_task_rank": 159,
-      "annual_rank_shift": 11
+      "annual_task_rank": 167,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "cursor_pro",
@@ -5283,9 +5283,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
-      "annual_fee_usd": 240.0,
-      "effective_monthly_fee_usd": 20.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 192.0,
+      "effective_monthly_fee_usd": 16.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Medium",
@@ -5295,8 +5295,8 @@
       "monthly_tasks": 9673.6,
       "cost_per_task_usd": 0.002067,
       "tasks_per_dollar": 483.7,
-      "cost_per_task_annual_usd": 0.002067,
-      "tasks_per_dollar_annual": 483.7,
+      "cost_per_task_annual_usd": 0.001654,
+      "tasks_per_dollar_annual": 604.6,
       "raw_usd_per_mtok": 0.04255,
       "confidence": "medium",
       "chart_tier": "main",
@@ -5304,8 +5304,8 @@
       "task_rank": 171,
       "cohort_raw_rank": 174,
       "rank_delta": 3,
-      "annual_task_rank": 175,
-      "annual_rank_shift": -4
+      "annual_task_rank": 164,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "cursor_pro_plus",
@@ -5314,9 +5314,9 @@
       "price": 60.0,
       "currency": "USD",
       "price_usd": 60.0,
-      "annual_fee_usd": 720.0,
-      "effective_monthly_fee_usd": 60.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 576.0,
+      "effective_monthly_fee_usd": 48.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Extra High",
@@ -5326,8 +5326,8 @@
       "monthly_tasks": 28943.0,
       "cost_per_task_usd": 0.002073,
       "tasks_per_dollar": 482.4,
-      "cost_per_task_annual_usd": 0.002073,
-      "tasks_per_dollar_annual": 482.4,
+      "cost_per_task_annual_usd": 0.001658,
+      "tasks_per_dollar_annual": 603.0,
       "raw_usd_per_mtok": 0.02908,
       "confidence": "medium",
       "chart_tier": "full",
@@ -5335,8 +5335,8 @@
       "task_rank": 172,
       "cohort_raw_rank": 144,
       "rank_delta": -28,
-      "annual_task_rank": 176,
-      "annual_rank_shift": -4
+      "annual_task_rank": 165,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "command_code_goat",
@@ -5366,8 +5366,8 @@
       "task_rank": 173,
       "cohort_raw_rank": 178,
       "rank_delta": 5,
-      "annual_task_rank": 177,
-      "annual_rank_shift": -4
+      "annual_task_rank": 180,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "glm_coding_max_global_offpeak",
@@ -5397,8 +5397,8 @@
       "task_rank": 174,
       "cohort_raw_rank": 139,
       "rank_delta": -35,
-      "annual_task_rank": 152,
-      "annual_rank_shift": 22
+      "annual_task_rank": 159,
+      "annual_rank_shift": 15
     },
     {
       "plan_id": "command_code_goat",
@@ -5428,8 +5428,8 @@
       "task_rank": 175,
       "cohort_raw_rank": 125,
       "rank_delta": -50,
-      "annual_task_rank": 179,
-      "annual_rank_shift": -4
+      "annual_task_rank": 182,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "glm_coding_pro_cn_new_offpeak",
@@ -5459,8 +5459,8 @@
       "task_rank": 176,
       "cohort_raw_rank": 145,
       "rank_delta": -31,
-      "annual_task_rank": 168,
-      "annual_rank_shift": 8
+      "annual_task_rank": 171,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "glm_coding_pro_global_offpeak",
@@ -5490,8 +5490,8 @@
       "task_rank": 177,
       "cohort_raw_rank": 146,
       "rank_delta": -31,
-      "annual_task_rank": 158,
-      "annual_rank_shift": 19
+      "annual_task_rank": 163,
+      "annual_rank_shift": 14
     },
     {
       "plan_id": "supergrok_plus",
@@ -5521,8 +5521,8 @@
       "task_rank": 178,
       "cohort_raw_rank": 182,
       "rank_delta": 4,
-      "annual_task_rank": 182,
-      "annual_rank_shift": -4
+      "annual_task_rank": 185,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "claude_max_5x",
@@ -5552,8 +5552,8 @@
       "task_rank": 179,
       "cohort_raw_rank": 234,
       "rank_delta": 55,
-      "annual_task_rank": 184,
-      "annual_rank_shift": -5
+      "annual_task_rank": 188,
+      "annual_rank_shift": -9
     },
     {
       "plan_id": "opencode_go",
@@ -5583,8 +5583,8 @@
       "task_rank": 180,
       "cohort_raw_rank": 185,
       "rank_delta": 5,
-      "annual_task_rank": 185,
-      "annual_rank_shift": -5
+      "annual_task_rank": 190,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "kimi_moderato_cn",
@@ -5593,9 +5593,9 @@
       "price": 99.0,
       "currency": "CNY",
       "price_usd": 14.6,
-      "annual_fee_usd": 175.2,
-      "effective_monthly_fee_usd": 14.6,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 140.16,
+      "effective_monthly_fee_usd": 11.68,
+      "annual_discount_pct": 20.0,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "effort_tier": "Standard",
@@ -5605,8 +5605,8 @@
       "monthly_tasks": 5809.0,
       "cost_per_task_usd": 0.002513,
       "tasks_per_dollar": 397.9,
-      "cost_per_task_annual_usd": 0.002513,
-      "tasks_per_dollar_annual": 397.9,
+      "cost_per_task_annual_usd": 0.002011,
+      "tasks_per_dollar_annual": 497.3,
       "raw_usd_per_mtok": 0.04651,
       "confidence": "medium",
       "chart_tier": "full",
@@ -5614,8 +5614,8 @@
       "task_rank": 181,
       "cohort_raw_rank": 180,
       "rank_delta": -1,
-      "annual_task_rank": 188,
-      "annual_rank_shift": -7
+      "annual_task_rank": 177,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "cursor_pro",
@@ -5624,9 +5624,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
-      "annual_fee_usd": 240.0,
-      "effective_monthly_fee_usd": 20.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 192.0,
+      "effective_monthly_fee_usd": 16.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "High",
@@ -5636,8 +5636,8 @@
       "monthly_tasks": 7825.5,
       "cost_per_task_usd": 0.002556,
       "tasks_per_dollar": 391.3,
-      "cost_per_task_annual_usd": 0.002556,
-      "tasks_per_dollar_annual": 391.3,
+      "cost_per_task_annual_usd": 0.002045,
+      "tasks_per_dollar_annual": 489.1,
       "raw_usd_per_mtok": 0.04255,
       "confidence": "medium",
       "chart_tier": "main",
@@ -5645,8 +5645,8 @@
       "task_rank": 182,
       "cohort_raw_rank": 175,
       "rank_delta": -7,
-      "annual_task_rank": 189,
-      "annual_rank_shift": -7
+      "annual_task_rank": 179,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "glm_coding_lite_cn_old_peak",
@@ -5655,9 +5655,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
-      "annual_fee_usd": 86.76,
-      "effective_monthly_fee_usd": 7.23,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 69.41,
+      "effective_monthly_fee_usd": 5.78,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "effort_tier": "Max",
@@ -5667,8 +5667,8 @@
       "monthly_tasks": 2828.4,
       "cost_per_task_usd": 0.002556,
       "tasks_per_dollar": 391.2,
-      "cost_per_task_annual_usd": 0.002556,
-      "tasks_per_dollar_annual": 391.2,
+      "cost_per_task_annual_usd": 0.002044,
+      "tasks_per_dollar_annual": 489.3,
       "raw_usd_per_mtok": 0.0341,
       "confidence": "high",
       "chart_tier": "full",
@@ -5676,8 +5676,8 @@
       "task_rank": 183,
       "cohort_raw_rank": 157,
       "rank_delta": -26,
-      "annual_task_rank": 190,
-      "annual_rank_shift": -7
+      "annual_task_rank": 178,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "glm_coding_max_cn_new_mid",
@@ -5707,8 +5707,8 @@
       "task_rank": 184,
       "cohort_raw_rank": 158,
       "rank_delta": -26,
-      "annual_task_rank": 178,
-      "annual_rank_shift": 6
+      "annual_task_rank": 181,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "command_code_goat",
@@ -5738,8 +5738,8 @@
       "task_rank": 185,
       "cohort_raw_rank": 231,
       "rank_delta": 46,
-      "annual_task_rank": 191,
-      "annual_rank_shift": -6
+      "annual_task_rank": 194,
+      "annual_rank_shift": -9
     },
     {
       "plan_id": "glm_coding_max_global_mid",
@@ -5769,8 +5769,8 @@
       "task_rank": 186,
       "cohort_raw_rank": 161,
       "rank_delta": -25,
-      "annual_task_rank": 173,
-      "annual_rank_shift": 13
+      "annual_task_rank": 176,
+      "annual_rank_shift": 10
     },
     {
       "plan_id": "supergrok",
@@ -5800,8 +5800,8 @@
       "task_rank": 187,
       "cohort_raw_rank": 201,
       "rank_delta": 14,
-      "annual_task_rank": 183,
-      "annual_rank_shift": 4
+      "annual_task_rank": 186,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "supergrok_heavy",
@@ -5810,9 +5810,9 @@
       "price": 300.0,
       "currency": "USD",
       "price_usd": 300.0,
-      "annual_fee_usd": 3600.0,
-      "effective_monthly_fee_usd": 300.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 3000.0,
+      "effective_monthly_fee_usd": 250.0,
+      "annual_discount_pct": 16.7,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Medium",
@@ -5822,8 +5822,8 @@
       "monthly_tasks": 104762.7,
       "cost_per_task_usd": 0.002864,
       "tasks_per_dollar": 349.2,
-      "cost_per_task_annual_usd": 0.002864,
-      "tasks_per_dollar_annual": 349.2,
+      "cost_per_task_annual_usd": 0.002386,
+      "tasks_per_dollar_annual": 419.1,
       "raw_usd_per_mtok": 0.05894,
       "confidence": "medium",
       "chart_tier": "main",
@@ -5831,8 +5831,8 @@
       "task_rank": 188,
       "cohort_raw_rank": 202,
       "rank_delta": 14,
-      "annual_task_rank": 192,
-      "annual_rank_shift": -4
+      "annual_task_rank": 187,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "opencode_go",
@@ -5862,8 +5862,8 @@
       "task_rank": 189,
       "cohort_raw_rank": 140,
       "rank_delta": -49,
-      "annual_task_rank": 193,
-      "annual_rank_shift": -4
+      "annual_task_rank": 195,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "supergrok_plus",
@@ -5893,8 +5893,8 @@
       "task_rank": 190,
       "cohort_raw_rank": 183,
       "rank_delta": -7,
-      "annual_task_rank": 194,
-      "annual_rank_shift": -4
+      "annual_task_rank": 196,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "cursor_pro",
@@ -5903,9 +5903,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
-      "annual_fee_usd": 240.0,
-      "effective_monthly_fee_usd": 20.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 192.0,
+      "effective_monthly_fee_usd": 16.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Extra High",
@@ -5915,8 +5915,8 @@
       "monthly_tasks": 6593.3,
       "cost_per_task_usd": 0.003033,
       "tasks_per_dollar": 329.7,
-      "cost_per_task_annual_usd": 0.003033,
-      "tasks_per_dollar_annual": 329.7,
+      "cost_per_task_annual_usd": 0.002427,
+      "tasks_per_dollar_annual": 412.1,
       "raw_usd_per_mtok": 0.04255,
       "confidence": "medium",
       "chart_tier": "main",
@@ -5924,8 +5924,8 @@
       "task_rank": 191,
       "cohort_raw_rank": 176,
       "rank_delta": -15,
-      "annual_task_rank": 198,
-      "annual_rank_shift": -7
+      "annual_task_rank": 189,
+      "annual_rank_shift": 2
     },
     {
       "plan_id": "glm_coding_lite_cn_new_offpeak",
@@ -5955,8 +5955,8 @@
       "task_rank": 192,
       "cohort_raw_rank": 162,
       "rank_delta": -30,
-      "annual_task_rank": 186,
-      "annual_rank_shift": 6
+      "annual_task_rank": 191,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "glm_coding_pro_cn_new_mid",
@@ -5986,8 +5986,8 @@
       "task_rank": 193,
       "cohort_raw_rank": 171,
       "rank_delta": -22,
-      "annual_task_rank": 187,
-      "annual_rank_shift": 6
+      "annual_task_rank": 192,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "glm_coding_pro_global_mid",
@@ -6017,8 +6017,8 @@
       "task_rank": 194,
       "cohort_raw_rank": 172,
       "rank_delta": -22,
-      "annual_task_rank": 180,
-      "annual_rank_shift": 14
+      "annual_task_rank": 183,
+      "annual_rank_shift": 11
     },
     {
       "plan_id": "cursor_ultra_fast",
@@ -6027,9 +6027,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
-      "annual_fee_usd": 2400.0,
-      "effective_monthly_fee_usd": 200.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 1920.0,
+      "effective_monthly_fee_usd": 160.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Medium",
@@ -6039,8 +6039,8 @@
       "monthly_tasks": 63269.3,
       "cost_per_task_usd": 0.003161,
       "tasks_per_dollar": 316.3,
-      "cost_per_task_annual_usd": 0.003161,
-      "tasks_per_dollar_annual": 316.3,
+      "cost_per_task_annual_usd": 0.002529,
+      "tasks_per_dollar_annual": 395.4,
       "raw_usd_per_mtok": 0.06506,
       "confidence": "high",
       "chart_tier": "main",
@@ -6048,8 +6048,8 @@
       "task_rank": 195,
       "cohort_raw_rank": 210,
       "rank_delta": 15,
-      "annual_task_rank": 199,
-      "annual_rank_shift": -4
+      "annual_task_rank": 193,
+      "annual_rank_shift": 2
     },
     {
       "plan_id": "glm_coding_lite_global_offpeak",
@@ -6079,8 +6079,8 @@
       "task_rank": 196,
       "cohort_raw_rank": 177,
       "rank_delta": -19,
-      "annual_task_rank": 181,
-      "annual_rank_shift": 15
+      "annual_task_rank": 184,
+      "annual_rank_shift": 12
     },
     {
       "plan_id": "command_code_goat",
@@ -6110,8 +6110,8 @@
       "task_rank": 197,
       "cohort_raw_rank": 179,
       "rank_delta": -18,
-      "annual_task_rank": 201,
-      "annual_rank_shift": -4
+      "annual_task_rank": 204,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "supergrok_lite",
@@ -6141,8 +6141,8 @@
       "task_rank": 198,
       "cohort_raw_rank": 214,
       "rank_delta": 16,
-      "annual_task_rank": 202,
-      "annual_rank_shift": -4
+      "annual_task_rank": 205,
+      "annual_rank_shift": -7
     },
     {
       "plan_id": "supergrok_plus",
@@ -6172,8 +6172,8 @@
       "task_rank": 199,
       "cohort_raw_rank": 184,
       "rank_delta": -15,
-      "annual_task_rank": 206,
-      "annual_rank_shift": -7
+      "annual_task_rank": 209,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "supergrok",
@@ -6203,8 +6203,8 @@
       "task_rank": 200,
       "cohort_raw_rank": 203,
       "rank_delta": 3,
-      "annual_task_rank": 195,
-      "annual_rank_shift": 5
+      "annual_task_rank": 197,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "supergrok_heavy",
@@ -6213,9 +6213,9 @@
       "price": 300.0,
       "currency": "USD",
       "price_usd": 300.0,
-      "annual_fee_usd": 3600.0,
-      "effective_monthly_fee_usd": 300.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 3000.0,
+      "effective_monthly_fee_usd": 250.0,
+      "annual_discount_pct": 16.7,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "High",
@@ -6225,8 +6225,8 @@
       "monthly_tasks": 84748.6,
       "cost_per_task_usd": 0.00354,
       "tasks_per_dollar": 282.5,
-      "cost_per_task_annual_usd": 0.00354,
-      "tasks_per_dollar_annual": 282.5,
+      "cost_per_task_annual_usd": 0.00295,
+      "tasks_per_dollar_annual": 339.0,
       "raw_usd_per_mtok": 0.05894,
       "confidence": "medium",
       "chart_tier": "main",
@@ -6234,8 +6234,8 @@
       "task_rank": 201,
       "cohort_raw_rank": 204,
       "rank_delta": 3,
-      "annual_task_rank": 208,
-      "annual_rank_shift": -7
+      "annual_task_rank": 198,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "claude_max_20x",
@@ -6265,8 +6265,8 @@
       "task_rank": 202,
       "cohort_raw_rank": 243,
       "rank_delta": 41,
-      "annual_task_rank": 209,
-      "annual_rank_shift": -7
+      "annual_task_rank": 212,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "command_code_goat",
@@ -6296,8 +6296,8 @@
       "task_rank": 203,
       "cohort_raw_rank": 188,
       "rank_delta": -15,
-      "annual_task_rank": 210,
-      "annual_rank_shift": -7
+      "annual_task_rank": 214,
+      "annual_rank_shift": -11
     },
     {
       "plan_id": "opencode_go",
@@ -6327,8 +6327,8 @@
       "task_rank": 204,
       "cohort_raw_rank": 186,
       "rank_delta": -18,
-      "annual_task_rank": 212,
-      "annual_rank_shift": -8
+      "annual_task_rank": 216,
+      "annual_rank_shift": -12
     },
     {
       "plan_id": "kimi_moderato_cn",
@@ -6337,9 +6337,9 @@
       "price": 99.0,
       "currency": "CNY",
       "price_usd": 14.6,
-      "annual_fee_usd": 175.2,
-      "effective_monthly_fee_usd": 14.6,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 140.16,
+      "effective_monthly_fee_usd": 11.68,
+      "annual_discount_pct": 20.0,
       "served_model": "kimi-k3",
       "benchmarked_model_name": "Kimi K3",
       "effort_tier": "Max",
@@ -6349,8 +6349,8 @@
       "monthly_tasks": 3847.0,
       "cost_per_task_usd": 0.003795,
       "tasks_per_dollar": 263.5,
-      "cost_per_task_annual_usd": 0.003795,
-      "tasks_per_dollar_annual": 263.5,
+      "cost_per_task_annual_usd": 0.003036,
+      "tasks_per_dollar_annual": 329.4,
       "raw_usd_per_mtok": 0.05036,
       "confidence": "medium",
       "chart_tier": "full",
@@ -6358,8 +6358,8 @@
       "task_rank": 205,
       "cohort_raw_rank": 187,
       "rank_delta": -18,
-      "annual_task_rank": 213,
-      "annual_rank_shift": -8
+      "annual_task_rank": 201,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "claude_max_5x",
@@ -6389,8 +6389,8 @@
       "task_rank": 206,
       "cohort_raw_rank": 235,
       "rank_delta": 29,
-      "annual_task_rank": 214,
-      "annual_rank_shift": -8
+      "annual_task_rank": 217,
+      "annual_rank_shift": -11
     },
     {
       "plan_id": "cursor_ultra_fast",
@@ -6399,9 +6399,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
-      "annual_fee_usd": 2400.0,
-      "effective_monthly_fee_usd": 200.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 1920.0,
+      "effective_monthly_fee_usd": 160.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "High",
@@ -6411,8 +6411,8 @@
       "monthly_tasks": 51182.2,
       "cost_per_task_usd": 0.003908,
       "tasks_per_dollar": 255.9,
-      "cost_per_task_annual_usd": 0.003908,
-      "tasks_per_dollar_annual": 255.9,
+      "cost_per_task_annual_usd": 0.003126,
+      "tasks_per_dollar_annual": 319.9,
       "raw_usd_per_mtok": 0.06506,
       "confidence": "high",
       "chart_tier": "main",
@@ -6420,8 +6420,8 @@
       "task_rank": 207,
       "cohort_raw_rank": 211,
       "rank_delta": 4,
-      "annual_task_rank": 215,
-      "annual_rank_shift": -8
+      "annual_task_rank": 202,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "command_code_goat",
@@ -6451,8 +6451,8 @@
       "task_rank": 208,
       "cohort_raw_rank": 232,
       "rank_delta": 24,
-      "annual_task_rank": 216,
-      "annual_rank_shift": -8
+      "annual_task_rank": 218,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "ollama_max",
@@ -6482,8 +6482,8 @@
       "task_rank": 209,
       "cohort_raw_rank": 217,
       "rank_delta": 8,
-      "annual_task_rank": 217,
-      "annual_rank_shift": -8
+      "annual_task_rank": 219,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "ollama_pro",
@@ -6513,8 +6513,8 @@
       "task_rank": 210,
       "cohort_raw_rank": 218,
       "rank_delta": 8,
-      "annual_task_rank": 204,
-      "annual_rank_shift": 6
+      "annual_task_rank": 207,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "supergrok_lite",
@@ -6544,8 +6544,8 @@
       "task_rank": 211,
       "cohort_raw_rank": 215,
       "rank_delta": 4,
-      "annual_task_rank": 218,
-      "annual_rank_shift": -7
+      "annual_task_rank": 220,
+      "annual_rank_shift": -9
     },
     {
       "plan_id": "glm_coding_max_cn_new_peak",
@@ -6575,8 +6575,8 @@
       "task_rank": 212,
       "cohort_raw_rank": 193,
       "rank_delta": -19,
-      "annual_task_rank": 200,
-      "annual_rank_shift": 12
+      "annual_task_rank": 203,
+      "annual_rank_shift": 9
     },
     {
       "plan_id": "command_code_goat",
@@ -6606,8 +6606,8 @@
       "task_rank": 213,
       "cohort_raw_rank": 252,
       "rank_delta": 39,
-      "annual_task_rank": 220,
-      "annual_rank_shift": -7
+      "annual_task_rank": 223,
+      "annual_rank_shift": -10
     },
     {
       "plan_id": "glm_coding_lite_cn_new_mid",
@@ -6637,8 +6637,8 @@
       "task_rank": 214,
       "cohort_raw_rank": 194,
       "rank_delta": -20,
-      "annual_task_rank": 203,
-      "annual_rank_shift": 11
+      "annual_task_rank": 206,
+      "annual_rank_shift": 8
     },
     {
       "plan_id": "supergrok",
@@ -6668,8 +6668,8 @@
       "task_rank": 215,
       "cohort_raw_rank": 205,
       "rank_delta": -10,
-      "annual_task_rank": 207,
-      "annual_rank_shift": 8
+      "annual_task_rank": 210,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "supergrok_heavy",
@@ -6678,9 +6678,9 @@
       "price": 300.0,
       "currency": "USD",
       "price_usd": 300.0,
-      "annual_fee_usd": 3600.0,
-      "effective_monthly_fee_usd": 300.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 3000.0,
+      "effective_monthly_fee_usd": 250.0,
+      "annual_discount_pct": 16.7,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Extra High",
@@ -6690,8 +6690,8 @@
       "monthly_tasks": 71403.5,
       "cost_per_task_usd": 0.004201,
       "tasks_per_dollar": 238.0,
-      "cost_per_task_annual_usd": 0.004201,
-      "tasks_per_dollar_annual": 238.0,
+      "cost_per_task_annual_usd": 0.003501,
+      "tasks_per_dollar_annual": 285.6,
       "raw_usd_per_mtok": 0.05894,
       "confidence": "medium",
       "chart_tier": "main",
@@ -6699,8 +6699,8 @@
       "task_rank": 216,
       "cohort_raw_rank": 206,
       "rank_delta": -10,
-      "annual_task_rank": 221,
-      "annual_rank_shift": -5
+      "annual_task_rank": 211,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "glm_coding_max_global_peak",
@@ -6730,8 +6730,8 @@
       "task_rank": 217,
       "cohort_raw_rank": 195,
       "rank_delta": -22,
-      "annual_task_rank": 196,
-      "annual_rank_shift": 21
+      "annual_task_rank": 199,
+      "annual_rank_shift": 18
     },
     {
       "plan_id": "glm_coding_lite_global_mid",
@@ -6761,8 +6761,8 @@
       "task_rank": 218,
       "cohort_raw_rank": 196,
       "rank_delta": -22,
-      "annual_task_rank": 197,
-      "annual_rank_shift": 21
+      "annual_task_rank": 200,
+      "annual_rank_shift": 18
     },
     {
       "plan_id": "command_code_goat",
@@ -6792,8 +6792,8 @@
       "task_rank": 219,
       "cohort_raw_rank": 189,
       "rank_delta": -30,
-      "annual_task_rank": 223,
-      "annual_rank_shift": -4
+      "annual_task_rank": 225,
+      "annual_rank_shift": -6
     },
     {
       "plan_id": "cursor_ultra_fast",
@@ -6802,9 +6802,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
-      "annual_fee_usd": 2400.0,
-      "effective_monthly_fee_usd": 200.0,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 1920.0,
+      "effective_monthly_fee_usd": 160.0,
+      "annual_discount_pct": 20.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "effort_tier": "Extra High",
@@ -6814,8 +6814,8 @@
       "monthly_tasks": 43122.7,
       "cost_per_task_usd": 0.004638,
       "tasks_per_dollar": 215.6,
-      "cost_per_task_annual_usd": 0.004638,
-      "tasks_per_dollar_annual": 215.6,
+      "cost_per_task_annual_usd": 0.00371,
+      "tasks_per_dollar_annual": 269.5,
       "raw_usd_per_mtok": 0.06506,
       "confidence": "high",
       "chart_tier": "main",
@@ -6823,8 +6823,8 @@
       "task_rank": 220,
       "cohort_raw_rank": 212,
       "rank_delta": -8,
-      "annual_task_rank": 224,
-      "annual_rank_shift": -4
+      "annual_task_rank": 213,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "glm_coding_pro_cn_new_peak",
@@ -6854,8 +6854,8 @@
       "task_rank": 221,
       "cohort_raw_rank": 207,
       "rank_delta": -14,
-      "annual_task_rank": 211,
-      "annual_rank_shift": 10
+      "annual_task_rank": 215,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "glm_coding_pro_global_peak",
@@ -6885,8 +6885,8 @@
       "task_rank": 222,
       "cohort_raw_rank": 208,
       "rank_delta": -14,
-      "annual_task_rank": 205,
-      "annual_rank_shift": 17
+      "annual_task_rank": 208,
+      "annual_rank_shift": 14
     },
     {
       "plan_id": "supergrok_lite",
@@ -6916,8 +6916,8 @@
       "task_rank": 223,
       "cohort_raw_rank": 216,
       "rank_delta": -7,
-      "annual_task_rank": 225,
-      "annual_rank_shift": -2
+      "annual_task_rank": 226,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "ollama_pro",
@@ -6947,8 +6947,8 @@
       "task_rank": 224,
       "cohort_raw_rank": 223,
       "rank_delta": -1,
-      "annual_task_rank": 219,
-      "annual_rank_shift": 5
+      "annual_task_rank": 222,
+      "annual_rank_shift": 2
     },
     {
       "plan_id": "ollama_max",
@@ -6978,8 +6978,8 @@
       "task_rank": 225,
       "cohort_raw_rank": 226,
       "rank_delta": 1,
-      "annual_task_rank": 226,
-      "annual_rank_shift": -1
+      "annual_task_rank": 227,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "kimi_andante_cn",
@@ -6988,9 +6988,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
-      "annual_fee_usd": 86.76,
-      "effective_monthly_fee_usd": 7.23,
-      "annual_discount_pct": 0.0,
+      "annual_fee_usd": 69.41,
+      "effective_monthly_fee_usd": 5.78,
+      "annual_discount_pct": 20.0,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "effort_tier": "Standard",
@@ -7000,8 +7000,8 @@
       "monthly_tasks": 1443.0,
       "cost_per_task_usd": 0.00501,
       "tasks_per_dollar": 199.6,
-      "cost_per_task_annual_usd": 0.00501,
-      "tasks_per_dollar_annual": 199.6,
+      "cost_per_task_annual_usd": 0.004006,
+      "tasks_per_dollar_annual": 249.7,
       "raw_usd_per_mtok": 0.09267,
       "confidence": "medium",
       "chart_tier": "full",
@@ -7009,8 +7009,8 @@
       "task_rank": 226,
       "cohort_raw_rank": 221,
       "rank_delta": -5,
-      "annual_task_rank": 228,
-      "annual_rank_shift": -2
+      "annual_task_rank": 221,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "command_code_goat",
@@ -7195,8 +7195,8 @@
       "task_rank": 232,
       "cohort_raw_rank": 219,
       "rank_delta": -13,
-      "annual_task_rank": 227,
-      "annual_rank_shift": 5
+      "annual_task_rank": 228,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "command_code_goat",
@@ -7257,8 +7257,8 @@
       "task_rank": 234,
       "cohort_raw_rank": 220,
       "rank_delta": -14,
-      "annual_task_rank": 222,
-      "annual_rank_shift": 12
+      "annual_task_rank": 224,
+      "annual_rank_shift": 10
     },
     {
       "plan_id": "command_code_goat",

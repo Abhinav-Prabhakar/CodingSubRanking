@@ -1,12 +1,12 @@
 plan_name,price_usd,effective_monthly_fee_usd,annual_fee_usd,annual_discount_pct,served_model,monthly_tokens,raw_usd_per_mtok,benchmark_note,confidence,plan_id
-MiniMax Token Plan Plus,7.23,7.23,86.76,0.0,minimax-m3,600000000,0.01205,[Pending DeepSWE],high,minimax_token_plus_cn
-MiniMax Token Plan Max,17.55,17.55,210.6,0.0,minimax-m3,1800000000,0.00975,[Pending DeepSWE],high,minimax_token_max_cn
-MiniMax Token Plan Ultra,69.19,69.19,830.28,0.0,minimax-m3,7100000000,0.00974,[Pending DeepSWE],high,minimax_token_ultra_cn
-MiniMax Token Plan Plus (Global),22.0,22.0,264.0,0.0,minimax-m3,1700000000,0.01294,[Pending DeepSWE],high,minimax_token_plus_global
-MiniMax Token Plan Max (Global),55.0,55.0,660.0,0.0,minimax-m3,5100000000,0.01078,[Pending DeepSWE],high,minimax_token_max_global
-MiniMax Token Plan Ultra (Global),132.0,132.0,1584.0,0.0,minimax-m3,9800000000,0.01347,[Pending DeepSWE],high,minimax_token_ultra_global
-阿里云百炼 Coding Plan Pro,29.5,29.5,354.0,0.0,qwen3.7-plus,198000000,0.14901,[Pending DeepSWE],medium,aliyun_coding_pro_cn
-Alibaba Cloud Coding Plan Pro,50.0,50.0,600.0,0.0,qwen3.7-plus,198000000,0.25253,[Pending DeepSWE],low,aliyun_coding_pro_global
+MiniMax Token Plan Plus,7.23,5.78,69.41,20.0,minimax-m3,600000000,0.01205,[Pending DeepSWE],high,minimax_token_plus_cn
+MiniMax Token Plan Max,17.55,14.04,168.48,20.0,minimax-m3,1800000000,0.00975,[Pending DeepSWE],high,minimax_token_max_cn
+MiniMax Token Plan Ultra,69.19,55.35,664.22,20.0,minimax-m3,7100000000,0.00974,[Pending DeepSWE],high,minimax_token_ultra_cn
+MiniMax Token Plan Plus (Global),22.0,17.6,211.2,20.0,minimax-m3,1700000000,0.01294,[Pending DeepSWE],high,minimax_token_plus_global
+MiniMax Token Plan Max (Global),55.0,44.0,528.0,20.0,minimax-m3,5100000000,0.01078,[Pending DeepSWE],high,minimax_token_max_global
+MiniMax Token Plan Ultra (Global),132.0,105.6,1267.2,20.0,minimax-m3,9800000000,0.01347,[Pending DeepSWE],high,minimax_token_ultra_global
+阿里云百炼 Coding Plan Pro,29.5,23.6,283.2,20.0,qwen3.7-plus,198000000,0.14901,[Pending DeepSWE],medium,aliyun_coding_pro_cn
+Alibaba Cloud Coding Plan Pro,50.0,40.0,480.0,20.0,qwen3.7-plus,198000000,0.25253,[Pending DeepSWE],low,aliyun_coding_pro_global
 OpenCode Go,10.0,10.0,120.0,0.0,glm-5.1,200700000,0.04983,[Pending DeepSWE],medium,opencode_go
 OpenCode Go,10.0,10.0,120.0,0.0,kimi-k2.6,315100000,0.03174,[Pending DeepSWE],medium,opencode_go
 OpenCode Go,10.0,10.0,120.0,0.0,longcat-2.0,3636400000,0.00275,[Pending DeepSWE],medium,opencode_go
@@ -54,22 +54,22 @@ Ollama Pro,20.0,16.67,200.0,16.7,minimax-m2.7,867700000,0.02305,[Pending DeepSWE
 Ollama Max,100.0,100.0,1200.0,0.0,glm-5.1,1317500000,0.0759,[Pending DeepSWE],medium,ollama_max
 Ollama Max,100.0,100.0,1200.0,0.0,minimax-m3,2169200000,0.0461,[Pending DeepSWE],medium,ollama_max
 Ollama Max,100.0,100.0,1200.0,0.0,minimax-m2.7,4338400000,0.02305,[Pending DeepSWE],medium,ollama_max
-Step Plan Mini (¥49),7.23,7.23,86.76,0.0,step-3.5-flash,2517300000,0.00287,[Pending DeepSWE],medium,stepfun_mini_cn
-Step Plan Mini (¥49),7.23,7.23,86.76,0.0,step-3.7-flash,1247600000,0.00579,[Pending DeepSWE],medium,stepfun_mini_cn
-Step Plan Plus (¥99),14.6,14.6,175.2,0.0,step-3.5-flash,10069200000,0.00145,[Pending DeepSWE],medium,stepfun_plus_cn
-Step Plan Plus (¥99),14.6,14.6,175.2,0.0,step-3.7-flash,4990300000,0.00293,[Pending DeepSWE],medium,stepfun_plus_cn
-Step Plan Pro (¥199),29.36,29.36,352.32,0.0,step-3.5-flash,50346100000,0.00058,[Pending DeepSWE],medium,stepfun_pro_cn
-Step Plan Pro (¥199),29.36,29.36,352.32,0.0,step-3.7-flash,24951300000,0.00118,[Pending DeepSWE],medium,stepfun_pro_cn
-Step Plan Max (¥699),103.12,103.12,1237.44,0.0,step-3.5-flash,251730600000,0.00041,[Pending DeepSWE],medium,stepfun_max_cn
-Step Plan Max (¥699),103.12,103.12,1237.44,0.0,step-3.7-flash,124756300000,0.00083,[Pending DeepSWE],medium,stepfun_max_cn
-Cursor Ultra (Standard),200.0,200.0,2400.0,0.0,composer-2.5,19892600000,0.01005,[Pending DeepSWE],medium,cursor_ultra
-Cursor Pro (Standard),20.0,20.0,240.0,0.0,composer-2.5,1208400000,0.01655,[Pending DeepSWE],medium,cursor_pro
-Cursor Pro+ (Standard),60.0,60.0,720.0,0.0,composer-2.5,5304700000,0.01131,[Pending DeepSWE],low,cursor_pro_plus
-MiniMax Token Plan Plus,7.23,7.23,86.76,0.0,minimax-m2.7,600000000,0.01205,[Pending DeepSWE],medium,minimax_token_plus_cn
-MiniMax Token Plan Plus (Global),22.0,22.0,264.0,0.0,minimax-m2.7,1700000000,0.01294,[Pending DeepSWE],medium,minimax_token_plus_global
-Cursor Ultra (Composer Fast),200.0,200.0,2400.0,0.0,composer-2.5,7058700000,0.02833,[Pending DeepSWE],medium,cursor_ultra_composer_fast
-Cursor Pro (Composer Fast),20.0,20.0,240.0,0.0,composer-2.5,428800000,0.04664,[Pending DeepSWE],medium,cursor_pro_composer_fast
-Cursor Pro+ (Composer Fast),60.0,60.0,720.0,0.0,composer-2.5,1882300000,0.03188,[Pending DeepSWE],low,cursor_pro_plus_composer_fast
+Step Plan Mini (¥49),7.23,5.78,69.41,20.0,step-3.5-flash,2517300000,0.00287,[Pending DeepSWE],medium,stepfun_mini_cn
+Step Plan Mini (¥49),7.23,5.78,69.41,20.0,step-3.7-flash,1247600000,0.00579,[Pending DeepSWE],medium,stepfun_mini_cn
+Step Plan Plus (¥99),14.6,11.68,140.16,20.0,step-3.5-flash,10069200000,0.00145,[Pending DeepSWE],medium,stepfun_plus_cn
+Step Plan Plus (¥99),14.6,11.68,140.16,20.0,step-3.7-flash,4990300000,0.00293,[Pending DeepSWE],medium,stepfun_plus_cn
+Step Plan Pro (¥199),29.36,23.49,281.86,20.0,step-3.5-flash,50346100000,0.00058,[Pending DeepSWE],medium,stepfun_pro_cn
+Step Plan Pro (¥199),29.36,23.49,281.86,20.0,step-3.7-flash,24951300000,0.00118,[Pending DeepSWE],medium,stepfun_pro_cn
+Step Plan Max (¥699),103.12,82.5,989.95,20.0,step-3.5-flash,251730600000,0.00041,[Pending DeepSWE],medium,stepfun_max_cn
+Step Plan Max (¥699),103.12,82.5,989.95,20.0,step-3.7-flash,124756300000,0.00083,[Pending DeepSWE],medium,stepfun_max_cn
+Cursor Ultra (Standard),200.0,160.0,1920.0,20.0,composer-2.5,19892600000,0.01005,[Pending DeepSWE],medium,cursor_ultra
+Cursor Pro (Standard),20.0,16.0,192.0,20.0,composer-2.5,1208400000,0.01655,[Pending DeepSWE],medium,cursor_pro
+Cursor Pro+ (Standard),60.0,48.0,576.0,20.0,composer-2.5,5304700000,0.01131,[Pending DeepSWE],low,cursor_pro_plus
+MiniMax Token Plan Plus,7.23,5.78,69.41,20.0,minimax-m2.7,600000000,0.01205,[Pending DeepSWE],medium,minimax_token_plus_cn
+MiniMax Token Plan Plus (Global),22.0,17.6,211.2,20.0,minimax-m2.7,1700000000,0.01294,[Pending DeepSWE],medium,minimax_token_plus_global
+Cursor Ultra (Composer Fast),200.0,160.0,1920.0,20.0,composer-2.5,7058700000,0.02833,[Pending DeepSWE],medium,cursor_ultra_composer_fast
+Cursor Pro (Composer Fast),20.0,16.0,192.0,20.0,composer-2.5,428800000,0.04664,[Pending DeepSWE],medium,cursor_pro_composer_fast
+Cursor Pro+ (Composer Fast),60.0,48.0,576.0,20.0,composer-2.5,1882300000,0.03188,[Pending DeepSWE],low,cursor_pro_plus_composer_fast
 DeepSeek V4.1 Flash API 闲时,0.0,,,,deepseek-v4.1-flash,,0.00825,[Pending DeepSWE],high,deepseek_v41_flash_offpeak
 DeepSeek V4.1 Flash API 忙时,0.0,,,,deepseek-v4.1-flash,,0.0165,[Pending DeepSWE],high,deepseek_v41_flash_peak
 DeepSeek V4 Flash API 闲时,0.0,,,,deepseek-v4-flash,,0.01386,[Pending DeepSWE],high,deepseek_v4_flash_offpeak

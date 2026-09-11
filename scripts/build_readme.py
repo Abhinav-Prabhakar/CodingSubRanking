@@ -54,11 +54,13 @@ To find the true purchasing power of an AI coding subscription, we adjust for ou
    *(The true efficiency metric: completed tasks delivered per dollar)*
 
 4. **Annual Billing & Discount Dynamics**:
-   For providers without differentiated annual rates (e.g. OpenAI), the annual price is simply $12 \\times P_{{\\text{{monthly}}}}$ ($0\\%$ discount, same effective monthly rate). For providers offering annual commitments:
-   - **Claude Pro (Anthropic)**: \\$200/year (\\$16.67/mo effective, $\\sim$16.7% discount).
-   - **GLM Coding Plans (Zhipu)**: 30% annual discount on global USD plans (\\$56/mo Pro down from \\$80/mo, \\$12.60/mo Lite, \\$117.60/mo Max) and 20% on new-customer CN tiers.
-   - **SuperGrok (xAI)**: \\$300/year (\\$25/mo effective, 16.7% discount).
-   - **Ollama Pro**: \\$200/year (\\$16.67/mo effective, 16.7% discount).
+   For providers without differentiated annual rates (e.g. OpenAI ChatGPT, Ollama Max, Claude Max, Command Code, OpenCode), the annual price is simply $12 \\times P_{{\\text{{monthly}}}}$ ($0\\%$ discount, same effective monthly rate). For providers offering annual commitments:
+   - **GLM Coding Plans (Zhipu / Z.ai)**: **30% annual discount** on global USD plans (\\$56/mo Pro down from \\$80/mo, \\$12.60/mo Lite, \\$117.60/mo Max) and **20% annual discount (8折)** across all Chinese CNY tiers.
+   - **Cursor**: **20% annual discount** across all tiers — Cursor Pro (\\$16/mo or \\$192/yr down from \\$20/mo), Pro+ (\\$48/mo), and Ultra (\\$160/mo).
+   - **Kimi (Moonshot AI)**: **20% annual discount (8折)** on continuous annual memberships (Andante ¥39.2/mo, Moderato ¥79.2/mo, Allegretto ¥159.2/mo, Allegro ¥559.2/mo saving up to ¥1,680/yr).
+   - **Claude Pro (Anthropic)**: \\$200/year (\\$16.67/mo effective, $\\sim$16.7% discount; Claude Max is monthly only).
+   - **Ollama Pro**: \\$200/year (\\$16.67/mo effective, 16.7% discount; Ollama Max has no annual discount).
+   - **SuperGrok (xAI)**: \\$300/year (\\$25/mo effective, 16.7% discount) and SuperGrok Heavy \\$3,000/year (\\$250/mo).
    Effective cost per task under annual billing drops proportionally:
    $$Cost_{{\\text{{task, annual}}}} = \\frac{{P_{{\\text{{annual}}}} / 12}}{{N_{{\\text{{tasks}}}}}} = Cost_{{\\text{{task, monthly}}}} \\times (1 - \\text{{Discount}}\\%)$$
 

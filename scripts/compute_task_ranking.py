@@ -13,9 +13,26 @@ DERIVED_DIR.mkdir(exist_ok=True)
 
 
 ANNUAL_DISCOUNT_RULES = {
+    # Anthropic
     "claude_pro": {"annual_usd": 200.0, "effective_monthly_usd": 200.0 / 12.0, "discount_pct": round((1.0 - (200.0 / 12.0) / 20.0) * 100, 1)},
+    # xAI
     "supergrok": {"annual_usd": 300.0, "effective_monthly_usd": 300.0 / 12.0, "discount_pct": round((1.0 - (300.0 / 12.0) / 30.0) * 100, 1)},
+    "supergrok_heavy": {"annual_usd": 3000.0, "effective_monthly_usd": 3000.0 / 12.0, "discount_pct": round((1.0 - (3000.0 / 12.0) / 300.0) * 100, 1)},
+    # Ollama (Pro has $200/yr discount; Max offers NO annual discount, billed at standard 12x monthly)
     "ollama_pro": {"annual_usd": 200.0, "effective_monthly_usd": 200.0 / 12.0, "discount_pct": round((1.0 - (200.0 / 12.0) / 20.0) * 100, 1)},
+    # Cursor (20% annual discount on Pro, Pro+, Ultra)
+    "cursor_pro": {"annual_usd": 192.0, "effective_monthly_usd": 16.0, "discount_pct": 20.0},
+    "cursor_pro_composer_fast": {"annual_usd": 192.0, "effective_monthly_usd": 16.0, "discount_pct": 20.0},
+    "cursor_pro_plus": {"annual_usd": 576.0, "effective_monthly_usd": 48.0, "discount_pct": 20.0},
+    "cursor_pro_plus_composer_fast": {"annual_usd": 576.0, "effective_monthly_usd": 48.0, "discount_pct": 20.0},
+    "cursor_ultra": {"annual_usd": 1920.0, "effective_monthly_usd": 160.0, "discount_pct": 20.0},
+    "cursor_ultra_composer_fast": {"annual_usd": 1920.0, "effective_monthly_usd": 160.0, "discount_pct": 20.0},
+    "cursor_ultra_fast": {"annual_usd": 1920.0, "effective_monthly_usd": 160.0, "discount_pct": 20.0},
+    # Kimi / Moonshot AI (20% annual discount / 8折 on continuous annual across all tiers, saving up to ¥1,680 on Allegro)
+    "kimi_andante_cn": {"discount_pct": 20.0},
+    "kimi_moderato_cn": {"discount_pct": 20.0},
+    "kimi_allegretto_cn": {"discount_pct": 20.0},
+    "kimi_allegro_cn": {"discount_pct": 20.0},
 }
 
 
@@ -23,18 +40,27 @@ def get_annual_pricing(plan_id: str, price_usd: float):
     """Return (annual_fee_usd, effective_monthly_fee_usd, discount_pct)."""
     if plan_id in ANNUAL_DISCOUNT_RULES:
         rule = ANNUAL_DISCOUNT_RULES[plan_id]
-        return rule["annual_usd"], rule["effective_monthly_usd"], rule["discount_pct"]
+        if "effective_monthly_usd" in rule:
+            return rule["annual_usd"], rule["effective_monthly_usd"], rule["discount_pct"]
+        disc = rule["discount_pct"]
+        eff_m = price_usd * (1.0 - disc / 100.0)
+        return eff_m * 12.0, eff_m, disc
     # GLM Global USD Coding Plans: 30% discount on annual billing ($80 -> $56/mo for Pro, $18 -> $12.60 for Lite, $168 -> $117.60 for Max)
     if plan_id.startswith("glm_coding_") and "_global_" in plan_id:
         eff_m = price_usd * 0.7  # 30% discount
         ann_usd = eff_m * 12.0
         return ann_usd, eff_m, 30.0
-    # GLM CN Coding Plans: 20% discount on continuous monthly / annual commitment for new-customer tiers
-    if plan_id.startswith("glm_coding_") and "_new_" in plan_id:
+    # GLM CN Coding Plans: 20% discount on continuous annual commitment across all CN tiers (Lite, Pro, Max)
+    if plan_id.startswith("glm_coding_") and "_cn_" in plan_id:
+        eff_m = price_usd * 0.8  # 20% discount (8折包年)
+        ann_usd = eff_m * 12.0
+        return ann_usd, eff_m, 20.0
+    # Other Chinese subscriptions offering 20% annual discount (8折)
+    if plan_id.startswith("aliyun_coding_") or plan_id.startswith("minimax_token_") or plan_id.startswith("stepfun_"):
         eff_m = price_usd * 0.8
         ann_usd = eff_m * 12.0
         return ann_usd, eff_m, 20.0
-    # Default: 12x monthly, 0% discount
+    # Default: 12x monthly, 0% discount (e.g. OpenAI ChatGPT, Ollama Max, Command Code, OpenCode, Claude Max)
     return price_usd * 12.0, price_usd, 0.0
 
 
