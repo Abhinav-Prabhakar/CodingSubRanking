@@ -1,0 +1,181 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Compute task-adjusted coding subscription rankings using CursorBench output token consumption."""
+
+import csv
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parent.parent
+DATA_DIR = ROOT / "data"
+DERIVED_DIR = ROOT / "derived"
+DERIVED_DIR.mkdir(exist_ok=True)
+
+
+def compute_task_rankings():
+    # Load model token consumption mapping
+    with open(DATA_DIR / "model-token-consumption.json", "r", encoding="utf-8") as f:
+        model_map = json.load(f)
+
+    # Load adopted subscription data
+    with open(DATA_DIR / "adopted.csv", "r", encoding="utf-8-sig") as f:
+        rows = list(csv.DictReader(f))
+
+    # Raw ranking by $/MTok for delta comparison
+    # Only consider subscriptions with price_usd > 0 and monthly_tokens > 0
+    valid_subs = [r for r in rows if float(r.get("monthly_tokens") or 0) > 0 and float(r.get("price_usd") or 0) > 0]
+    valid_subs.sort(key=lambda x: float(x["real_usd_per_mtok"]))
+    raw_rank_map = {f"{r['plan_id']}__{r['served_model']}": idx + 1 for idx, r in enumerate(valid_subs)}
+
+    benchmarked_points = []
+    unbenchmarked_points = []
+
+    for r in rows:
+        model = r["served_model"]
+        plan_id = r["plan_id"]
+        key = f"{plan_id}__{model}"
+        m_tokens = float(r.get("monthly_tokens") or 0)
+        p_usd = float(r.get("price_usd") or 0)
+        raw_price_mtok = float(r.get("real_usd_per_mtok") or 0)
+        raw_rank = raw_rank_map.get(key)
+
+        m_info = model_map.get(model, {})
+        status = m_info.get("cursorbench_status", "pending")
+
+        if status == "available" and m_tokens > 0 and p_usd > 0:
+            default_tier = m_info.get("default_tier", "Medium")
+            out_tokens = m_info.get("default_output_tokens_per_task")
+            score_pct = m_info.get("default_score_pct")
+
+            monthly_tasks = m_tokens / out_tokens
+            cost_per_task = p_usd / monthly_tasks
+            tasks_per_dollar = monthly_tasks / p_usd
+
+            # Also compute for all tiers
+            tier_computations = {}
+            for t_name, t_tokens in m_info.get("all_tiers", {}).items():
+                t_tasks = m_tokens / t_tokens
+                t_cost = p_usd / t_tasks
+                t_tasks_per_usd = t_tasks / p_usd
+                t_score = m_info.get("all_scores", {}).get(t_name)
+                tier_computations[t_name] = {
+                    "output_tokens_per_task": t_tokens,
+                    "score_pct": t_score,
+                    "monthly_tasks": round(t_tasks, 1),
+                    "cost_per_task_usd": round(t_cost, 6),
+                    "tasks_per_dollar": round(t_tasks_per_usd, 1)
+                }
+
+            entry = {
+                "plan_id": plan_id,
+                "plan_name": r["plan_name"],
+                "billing": r["billing"],
+                "price": float(r["price"]),
+                "currency": r["currency"],
+                "price_usd": p_usd,
+                "served_model": model,
+                "benchmarked_model_name": m_info.get("benchmarked_name"),
+                "cursorbench_status": "available",
+                "default_tier": default_tier,
+                "cursorbench_score_pct": score_pct,
+                "output_tokens_per_task": out_tokens,
+                "monthly_tokens": int(m_tokens),
+                "monthly_tasks": round(monthly_tasks, 1),
+                "cost_per_task_usd": round(cost_per_task, 6),
+                "tasks_per_dollar": round(tasks_per_dollar, 1),
+                "raw_usd_per_mtok": raw_price_mtok,
+                "raw_token_rank": raw_rank,
+                "confidence": r.get("confidence", "medium"),
+                "chart_tier": r.get("chart_tier", "main"),
+                "source": r.get("source", ""),
+                "tier_computations": tier_computations
+            }
+            benchmarked_points.append(entry)
+        else:
+            entry = {
+                "plan_id": plan_id,
+                "plan_name": r["plan_name"],
+                "billing": r["billing"],
+                "price": float(r["price"]) if r.get("price") else 0,
+                "currency": r["currency"],
+                "price_usd": p_usd,
+                "served_model": model,
+                "cursorbench_status": "pending",
+                "cursorbench_note": "[Pending CursorBench]",
+                "output_tokens_per_task": None,
+                "monthly_tokens": int(m_tokens) if m_tokens else None,
+                "monthly_tasks": None,
+                "cost_per_task_usd": None,
+                "tasks_per_dollar": None,
+                "raw_usd_per_mtok": raw_price_mtok if raw_price_mtok else None,
+                "raw_token_rank": raw_rank,
+                "confidence": r.get("confidence", "medium"),
+                "chart_tier": r.get("chart_tier", "main"),
+                "source": r.get("source", "")
+            }
+            unbenchmarked_points.append(entry)
+
+    # Sort benchmarked points by cost_per_task_usd ascending (cheapest task first)
+    benchmarked_points.sort(key=lambda x: x["cost_per_task_usd"])
+    for rank, p in enumerate(benchmarked_points, 1):
+        p["task_rank"] = rank
+        # Calculate rank shift relative to raw token rank among benchmarked points
+        # (Negative means cheaper/improved rank, positive means worse rank)
+
+    # Recompute relative rank among benchmarked cohort
+    benchmarked_by_raw = sorted(benchmarked_points, key=lambda x: x["raw_usd_per_mtok"])
+    benchmarked_raw_order = {p["plan_id"] + "__" + p["served_model"]: idx + 1 for idx, p in enumerate(benchmarked_by_raw)}
+    for p in benchmarked_points:
+        cohort_raw_rank = benchmarked_raw_order[p["plan_id"] + "__" + p["served_model"]]
+        p["cohort_raw_rank"] = cohort_raw_rank
+        # rank delta = cohort_raw_rank - task_rank (positive = climbed in rank due to low verbosity)
+        p["rank_delta"] = cohort_raw_rank - p["task_rank"]
+
+    # Save benchmarked ranking
+    out_json = DERIVED_DIR / "task-ranking.json"
+    with open(out_json, "w", encoding="utf-8") as f:
+        json.dump({
+            "metadata": {
+                "benchmark": "CursorBench 4.0 (cursor.com/cursorbench)",
+                "metric": "Output token consumption (completion tokens / task)",
+                "default_reasoning_tier": "Medium / Standard",
+                "reference_data": "FeiZhuLulu/real-api-pricing",
+                "total_benchmarked_plans": len(benchmarked_points),
+                "total_unbenchmarked_plans": len(unbenchmarked_points)
+            },
+            "rankings": benchmarked_points
+        }, f, indent=2, ensure_ascii=False)
+    print(f"Saved {len(benchmarked_points)} task-ranked points to {out_json}")
+
+    # Save benchmarked CSV
+    csv_fields = [
+        "task_rank", "cohort_raw_rank", "rank_delta", "plan_name", "price_usd",
+        "served_model", "output_tokens_per_task", "cursorbench_score_pct",
+        "monthly_tokens", "monthly_tasks", "cost_per_task_usd", "tasks_per_dollar",
+        "raw_usd_per_mtok", "confidence", "plan_id"
+    ]
+    out_csv = DERIVED_DIR / "task-ranking.csv"
+    with open(out_csv, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=csv_fields, extrasaction="ignore")
+        writer.writeheader()
+        writer.writerows(benchmarked_points)
+    print(f"Saved {len(benchmarked_points)} task-ranked points to {out_csv}")
+
+    # Save unbenchmarked models
+    unbench_json = DERIVED_DIR / "unbenchmarked-models.json"
+    with open(unbench_json, "w", encoding="utf-8") as f:
+        json.dump(unbenchmarked_points, f, indent=2, ensure_ascii=False)
+
+    unbench_csv = DERIVED_DIR / "unbenchmarked-models.csv"
+    with open(unbench_csv, "w", encoding="utf-8", newline="") as f:
+        unbench_fields = ["plan_name", "price_usd", "served_model", "monthly_tokens", "raw_usd_per_mtok", "cursorbench_note", "confidence", "plan_id"]
+        writer = csv.DictWriter(f, fieldnames=unbench_fields, extrasaction="ignore")
+        writer.writeheader()
+        writer.writerows(unbenchmarked_points)
+    print(f"Saved {len(unbenchmarked_points)} unbenchmarked points to {unbench_csv}")
+
+    return benchmarked_points, unbenchmarked_points
+
+
+if __name__ == "__main__":
+    compute_task_rankings()

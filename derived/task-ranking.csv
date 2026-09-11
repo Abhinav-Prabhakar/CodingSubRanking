@@ -1,0 +1,40 @@
+task_rank,cohort_raw_rank,rank_delta,plan_name,price_usd,served_model,output_tokens_per_task,cursorbench_score_pct,monthly_tokens,monthly_tasks,cost_per_task_usd,tasks_per_dollar,raw_usd_per_mtok,confidence,plan_id
+1,2,1,ChatGPT Pro 20x,200.0,gpt-5.6-luna,7642,22.2,150222000000,19657419.5,1e-05,98287.1,0.00133,medium,chatgpt_pro_20x
+2,4,2,ChatGPT Plus,20.0,gpt-5.6-luna,7642,22.2,7511000000,982857.9,2e-05,49142.9,0.00266,high,chatgpt_plus
+3,5,2,ChatGPT Pro 5x,100.0,gpt-5.6-luna,7642,22.2,37556000000,4914420.3,2e-05,49144.2,0.00266,medium,chatgpt_pro_5x
+4,1,-3,OpenCode Go,10.0,muse-spark-1.3-contributor,27255,32.6,12500000000,458631.4,2.2e-05,45863.1,0.0008,medium,opencode_go
+5,9,4,ChatGPT Pro 20x,200.0,gpt-5.6-terra,7307,27.6,24024000000,3287806.2,6.1e-05,16439.0,0.00833,medium,chatgpt_pro_20x
+6,3,-3,Command Code GOAT,10.0,muse-spark-1.3-contributor,27255,32.6,4166700000,152878.4,6.5e-05,15287.8,0.0024,medium,command_code_goat
+7,14,7,Command Code GOAT,10.0,gpt-5.6-luna,7642,22.2,714300000,93470.3,0.000107,9347.0,0.014,medium,command_code_goat
+8,17,9,ChatGPT Plus,20.0,gpt-5.6-terra,7307,27.6,1201200000,164390.3,0.000122,8219.5,0.01665,medium,chatgpt_plus
+9,18,9,ChatGPT Pro 5x,100.0,gpt-5.6-terra,7307,27.6,6006000000,821951.6,0.000122,8219.5,0.01665,medium,chatgpt_pro_5x
+10,19,9,OpenCode Go,10.0,gpt-5.6-luna,7642,22.2,535700000,70099.5,0.000143,7009.9,0.01867,medium,opencode_go
+11,15,4,ChatGPT Pro 20x,200.0,gpt-5.6-sol,10111,31.1,12320000000,1218474.9,0.000164,6092.4,0.01623,high,chatgpt_pro_20x
+12,10,-2,Cursor Ultra (Standard),200.0,composer-2.5,17347,27.7,19892600000,1146745.8,0.000174,5733.7,0.01005,medium,cursor_ultra
+13,11,-2,Cursor Pro+ (Standard),60.0,composer-2.5,17347,27.7,5304700000,305799.3,0.000196,5096.7,0.01131,low,cursor_pro_plus
+14,6,-8,Claude Pro,20.0,claude-sonnet-5,39114,28.0,3970000000,101498.2,0.000197,5074.9,0.00504,medium,claude_pro
+15,7,-8,Claude Max 20x (9/14+),200.0,claude-sonnet-5,39114,28.0,39250000000,1003477.0,0.000199,5017.4,0.0051,medium,claude_max_20x
+16,8,-8,Claude Max 5x (9/14+),100.0,claude-sonnet-5,39114,28.0,19625000000,501738.5,0.000199,5017.4,0.0051,low,claude_max_5x
+17,16,-1,Cursor Pro (Standard),20.0,composer-2.5,17347,27.7,1208400000,69660.5,0.000287,3483.0,0.01655,medium,cursor_pro
+18,24,6,ChatGPT Plus,20.0,gpt-5.6-sol,10111,31.1,616000000,60923.7,0.000328,3046.2,0.03247,medium,chatgpt_plus
+19,25,6,ChatGPT Pro 5x,100.0,gpt-5.6-sol,10111,31.1,3080000000,304618.7,0.000328,3046.2,0.03247,medium,chatgpt_pro_5x
+20,21,1,Cursor Ultra (Composer Fast),200.0,composer-2.5,17347,27.7,7058700000,406911.9,0.000492,2034.6,0.02833,medium,cursor_ultra_composer_fast
+21,23,2,Cursor Pro+ (Composer Fast),60.0,composer-2.5,17347,27.7,1882300000,108508.7,0.000553,1808.5,0.03188,low,cursor_pro_plus_composer_fast
+22,12,-10,Claude Max 20x (9/14+),200.0,claude-opus-5,45272,43.3,15700000000,346792.7,0.000577,1734.0,0.01274,medium,claude_max_20x
+23,13,-10,Claude Max 5x (9/14+),100.0,claude-opus-5,45272,43.3,7850000000,173396.4,0.000577,1734.0,0.01274,medium,claude_max_5x
+24,20,-4,Cursor Ultra,200.0,grok-4.6,24893,36.1,7737000000,310810.3,0.000643,1554.1,0.02585,medium,cursor_ultra
+25,22,-3,Cursor Pro+,60.0,grok-4.6,24893,36.1,2063200000,82882.7,0.000724,1381.4,0.02908,medium,cursor_pro_plus
+26,27,1,Cursor Pro (Composer Fast),20.0,composer-2.5,17347,27.7,428800000,24719.0,0.000809,1235.9,0.04664,medium,cursor_pro_composer_fast
+27,35,8,Command Code GOAT,10.0,gpt-5.6-sol,10111,31.1,100000000,9890.2,0.001011,989.0,0.1,medium,command_code_goat
+28,26,-2,Cursor Pro,20.0,grok-4.6,24893,36.1,470000000,18880.8,0.001059,944.0,0.04255,medium,cursor_pro
+29,28,-1,SuperGrok Plus,100.0,grok-4.6,24893,36.1,2040000000,81950.7,0.00122,819.5,0.04902,medium,supergrok_plus
+30,30,0,SuperGrok,30.0,grok-4.6,24893,36.1,509000000,20447.5,0.001467,681.6,0.05894,high,supergrok
+31,31,0,SuperGrok Heavy,300.0,grok-4.6,24893,36.1,5090000000,204475.2,0.001467,681.6,0.05894,medium,supergrok_heavy
+32,32,0,Cursor Ultra (Fast),200.0,grok-4.6,24893,36.1,3074000000,123488.5,0.00162,617.4,0.06506,high,cursor_ultra_fast
+33,33,0,SuperGrok Lite,10.0,grok-4.6,24893,36.1,150000000,6025.8,0.00166,602.6,0.06667,low,supergrok_lite
+34,34,0,Command Code GOAT,10.0,muse-spark-1.3,27255,32.6,106400000,3903.9,0.002562,390.4,0.09398,medium,command_code_goat
+35,36,1,Claude Max 5x (9/14+),100.0,claude-fable-5,45411,46.8,923500000,20336.5,0.004917,203.4,0.10828,low,claude_max_5x
+36,29,-7,Command Code GOAT,10.0,gemini-3.8-flash,128364,37.3,195400000,1522.2,0.006569,152.2,0.05118,medium,command_code_goat
+37,38,1,Command Code GOAT,10.0,grok-4.6,24893,36.1,36300000,1458.2,0.006858,145.8,0.27548,medium,command_code_goat
+38,37,-1,Claude Max 20x (9/14+),200.0,claude-fable-5,45411,46.8,1207700000,26594.9,0.00752,133.0,0.1656,low,claude_max_20x
+39,39,0,OpenCode Go,10.0,grok-4.6,24893,36.1,27200000,1092.7,0.009152,109.3,0.36765,medium,opencode_go

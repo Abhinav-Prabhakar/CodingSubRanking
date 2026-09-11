@@ -1,0 +1,683 @@
+{
+  "claude-fable-5": {
+    "model_id": "claude-fable-5",
+    "cursorbench_status": "available",
+    "benchmarked_name": "Fable 5.1",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 45411,
+    "default_score_pct": 46.8,
+    "all_tiers": {
+      "Max": 117236,
+      "Extra High": 87294,
+      "High": 58438,
+      "Medium": 45411,
+      "Low": 34795
+    },
+    "all_scores": {
+      "Max": 51.8,
+      "Extra High": 51.6,
+      "High": 49.2,
+      "Medium": 46.8,
+      "Low": 45.1
+    },
+    "note": "CursorBench 4.0 data available across 5 tier(s)"
+  },
+  "claude-opus-4.8": {
+    "model_id": "claude-opus-4.8",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "claude-opus-5": {
+    "model_id": "claude-opus-5",
+    "cursorbench_status": "available",
+    "benchmarked_name": "Opus 5",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 45272,
+    "default_score_pct": 43.3,
+    "all_tiers": {
+      "Max": 85384,
+      "Extra High": 80094,
+      "High": 61405,
+      "Medium": 45272,
+      "Low": 31995
+    },
+    "all_scores": {
+      "Max": 46.6,
+      "Extra High": 46.1,
+      "High": 44.7,
+      "Medium": 43.3,
+      "Low": 40.7
+    },
+    "note": "CursorBench 4.0 data available across 5 tier(s)"
+  },
+  "claude-sonnet-5": {
+    "model_id": "claude-sonnet-5",
+    "cursorbench_status": "available",
+    "benchmarked_name": "Sonnet 5",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 39114,
+    "default_score_pct": 28.0,
+    "all_tiers": {
+      "Max": 149257,
+      "Extra High": 83373,
+      "High": 61146,
+      "Medium": 39114,
+      "Low": 23772
+    },
+    "all_scores": {
+      "Max": 34.1,
+      "Extra High": 32.0,
+      "High": 30.8,
+      "Medium": 28.0,
+      "Low": 24.1
+    },
+    "note": "CursorBench 4.0 data available across 5 tier(s)"
+  },
+  "composer-2.5": {
+    "model_id": "composer-2.5",
+    "cursorbench_status": "available",
+    "benchmarked_name": "Composer 2.5",
+    "default_tier": "Standard",
+    "default_output_tokens_per_task": 17347,
+    "default_score_pct": 27.7,
+    "all_tiers": {
+      "Standard": 17347
+    },
+    "all_scores": {
+      "Standard": 27.7
+    },
+    "note": "CursorBench 4.0 data available across 1 tier(s)"
+  },
+  "deepseek-v4-flash": {
+    "model_id": "deepseek-v4-flash",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "deepseek-v4-flash-fast": {
+    "model_id": "deepseek-v4-flash-fast",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "deepseek-v4-pro": {
+    "model_id": "deepseek-v4-pro",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "deepseek-v4.1-flash": {
+    "model_id": "deepseek-v4.1-flash",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "gemini-3.7-flash": {
+    "model_id": "gemini-3.7-flash",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "gemini-3.8-flash": {
+    "model_id": "gemini-3.8-flash",
+    "cursorbench_status": "available",
+    "benchmarked_name": "Gemini 3.8 Flash",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 128364,
+    "default_score_pct": 37.3,
+    "all_tiers": {
+      "High": 162565,
+      "Medium": 128364
+    },
+    "all_scores": {
+      "High": 39.6,
+      "Medium": 37.3
+    },
+    "note": "CursorBench 4.0 data available across 2 tier(s)"
+  },
+  "glm-5.1": {
+    "model_id": "glm-5.1",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "glm-5.2": {
+    "model_id": "glm-5.2",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "glm-5.2-fast": {
+    "model_id": "glm-5.2-fast",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "glm-5.3": {
+    "model_id": "glm-5.3",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "glm-5.3-flash": {
+    "model_id": "glm-5.3-flash",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "gpt-5.5": {
+    "model_id": "gpt-5.5",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "gpt-5.6-luna": {
+    "model_id": "gpt-5.6-luna",
+    "cursorbench_status": "available",
+    "benchmarked_name": "GPT-5.6 Luna",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 7642,
+    "default_score_pct": 22.2,
+    "all_tiers": {
+      "Max": 87284,
+      "Extra High": 40598,
+      "High": 23368,
+      "Medium": 7642,
+      "Low": 3288
+    },
+    "all_scores": {
+      "Max": 35.9,
+      "Extra High": 33.0,
+      "High": 29.4,
+      "Medium": 22.2,
+      "Low": 16.0
+    },
+    "note": "CursorBench 4.0 data available across 5 tier(s)"
+  },
+  "gpt-5.6-sol": {
+    "model_id": "gpt-5.6-sol",
+    "cursorbench_status": "available",
+    "benchmarked_name": "GPT-5.6 Sol",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 10111,
+    "default_score_pct": 31.1,
+    "all_tiers": {
+      "Max": 42944,
+      "Extra High": 24729,
+      "High": 16174,
+      "Medium": 10111,
+      "Low": 4885
+    },
+    "all_scores": {
+      "Max": 41.7,
+      "Extra High": 37.7,
+      "High": 35.7,
+      "Medium": 31.1,
+      "Low": 24.6
+    },
+    "note": "CursorBench 4.0 data available across 5 tier(s)"
+  },
+  "gpt-5.6-terra": {
+    "model_id": "gpt-5.6-terra",
+    "cursorbench_status": "available",
+    "benchmarked_name": "GPT-5.6 Terra",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 7307,
+    "default_score_pct": 27.6,
+    "all_tiers": {
+      "Max": 60814,
+      "Extra High": 23436,
+      "High": 13162,
+      "Medium": 7307,
+      "Low": 5914
+    },
+    "all_scores": {
+      "Max": 41.3,
+      "Extra High": 33.6,
+      "High": 30.7,
+      "Medium": 27.6,
+      "Low": 25.2
+    },
+    "note": "CursorBench 4.0 data available across 5 tier(s)"
+  },
+  "grok-4.5": {
+    "model_id": "grok-4.5",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "grok-4.6": {
+    "model_id": "grok-4.6",
+    "cursorbench_status": "available",
+    "benchmarked_name": "Grok 4.6",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 24893,
+    "default_score_pct": 36.1,
+    "all_tiers": {
+      "Extra High": 49814,
+      "High": 41387,
+      "Medium": 24893,
+      "Low": 16307
+    },
+    "all_scores": {
+      "Extra High": 41.4,
+      "High": 40.4,
+      "Medium": 36.1,
+      "Low": 33.4
+    },
+    "note": "CursorBench 4.0 data available across 4 tier(s)"
+  },
+  "hy3": {
+    "model_id": "hy3",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "hy4-preview": {
+    "model_id": "hy4-preview",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "inkling": {
+    "model_id": "inkling",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "inkling-small": {
+    "model_id": "inkling-small",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "kimi-k2.6": {
+    "model_id": "kimi-k2.6",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "kimi-k2.7-code": {
+    "model_id": "kimi-k2.7-code",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "kimi-k2.7-code-highspeed": {
+    "model_id": "kimi-k2.7-code-highspeed",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "kimi-k3": {
+    "model_id": "kimi-k3",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "longcat-2.0": {
+    "model_id": "longcat-2.0",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "mimo-v2.5": {
+    "model_id": "mimo-v2.5",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "mimo-v2.5-pro": {
+    "model_id": "mimo-v2.5-pro",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "minimax-m2.5": {
+    "model_id": "minimax-m2.5",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "minimax-m2.7": {
+    "model_id": "minimax-m2.7",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "minimax-m3": {
+    "model_id": "minimax-m3",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "muse-spark-1.2": {
+    "model_id": "muse-spark-1.2",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "muse-spark-1.2-contributor": {
+    "model_id": "muse-spark-1.2-contributor",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "muse-spark-1.3": {
+    "model_id": "muse-spark-1.3",
+    "cursorbench_status": "available",
+    "benchmarked_name": "Muse Spark 1.3",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 27255,
+    "default_score_pct": 32.6,
+    "all_tiers": {
+      "Max": 52005,
+      "Extra High": 40891,
+      "High": 30654,
+      "Medium": 27255,
+      "Low": 17483,
+      "Minimal": 10620
+    },
+    "all_scores": {
+      "Max": 41.6,
+      "Extra High": 37.5,
+      "High": 33.4,
+      "Medium": 32.6,
+      "Low": 29.3,
+      "Minimal": 24.3
+    },
+    "note": "CursorBench 4.0 data available across 6 tier(s)"
+  },
+  "muse-spark-1.3-contributor": {
+    "model_id": "muse-spark-1.3-contributor",
+    "cursorbench_status": "available",
+    "benchmarked_name": "Muse Spark 1.3",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 27255,
+    "default_score_pct": 32.6,
+    "all_tiers": {
+      "Max": 52005,
+      "Extra High": 40891,
+      "High": 30654,
+      "Medium": 27255,
+      "Low": 17483,
+      "Minimal": 10620
+    },
+    "all_scores": {
+      "Max": 41.6,
+      "Extra High": 37.5,
+      "High": 33.4,
+      "Medium": 32.6,
+      "Low": 29.3,
+      "Minimal": 24.3
+    },
+    "note": "CursorBench 4.0 data available across 6 tier(s)"
+  },
+  "nemotron-3-ultra": {
+    "model_id": "nemotron-3-ultra",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "omen-alpha": {
+    "model_id": "omen-alpha",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "qwen3.6-plus": {
+    "model_id": "qwen3.6-plus",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "qwen3.7-max": {
+    "model_id": "qwen3.7-max",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "qwen3.7-plus": {
+    "model_id": "qwen3.7-plus",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "qwen3.8-27b": {
+    "model_id": "qwen3.8-27b",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "qwen3.8-flash": {
+    "model_id": "qwen3.8-flash",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "qwen3.8-max": {
+    "model_id": "qwen3.8-max",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "qwen3.8-max-0902": {
+    "model_id": "qwen3.8-max-0902",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "step-3.5-flash": {
+    "model_id": "step-3.5-flash",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  },
+  "step-3.7-flash": {
+    "model_id": "step-3.7-flash",
+    "cursorbench_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on CursorBench 4.0; marked pending"
+  }
+}

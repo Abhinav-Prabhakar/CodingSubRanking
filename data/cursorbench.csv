@@ -1,0 +1,44 @@
+rank,display_name,base_model,canonical_model_id,reasoning_effort,score_pct,cost_usd_per_task,output_tokens_per_task,steps_per_task,source_url
+1,Fable 5.1 Max,Fable 5.1,claude-fable-5,Max,51.8,17.28,117236,128,https://cursor.com/cursorbench
+2,Fable 5.1 Extra High,Fable 5.1,claude-fable-5,Extra High,51.6,13.01,87294,101,https://cursor.com/cursorbench
+3,Fable 5.1 High,Fable 5.1,claude-fable-5,High,49.2,9.08,58438,77,https://cursor.com/cursorbench
+4,Fable 5.1 Medium,Fable 5.1,claude-fable-5,Medium,46.8,7.05,45411,63,https://cursor.com/cursorbench
+5,Opus 5 Max,Opus 5,claude-opus-5,Max,46.6,11.95,85384,106,https://cursor.com/cursorbench
+6,Opus 5 Extra High,Opus 5,claude-opus-5,Extra High,46.1,11.43,80094,103,https://cursor.com/cursorbench
+7,Fable 5.1 Low,Fable 5.1,claude-fable-5,Low,45.1,5.44,34795,51,https://cursor.com/cursorbench
+8,Opus 5 High,Opus 5,claude-opus-5,High,44.7,9.0,61405,86,https://cursor.com/cursorbench
+9,Opus 5 Medium,Opus 5,claude-opus-5,Medium,43.3,6.94,45272,72,https://cursor.com/cursorbench
+10,GPT-5.6 Sol Max,GPT-5.6 Sol,gpt-5.6-sol,Max,41.7,8.23,42944,99,https://cursor.com/cursorbench
+11,Muse Spark 1.3 Max,Muse Spark 1.3,muse-spark-1.3,Max,41.6,2.64,52005,98,https://cursor.com/cursorbench
+12,Grok 4.6 Extra High,Grok 4.6,grok-4.6,Extra High,41.4,6.1,49814,56,https://cursor.com/cursorbench
+13,GPT-5.6 Terra Max,GPT-5.6 Terra,gpt-5.6-terra,Max,41.3,5.14,60814,107,https://cursor.com/cursorbench
+14,Opus 5 Low,Opus 5,claude-opus-5,Low,40.7,4.87,31995,57,https://cursor.com/cursorbench
+15,Grok 4.6 High,Grok 4.6,grok-4.6,High,40.4,5.2,41387,48,https://cursor.com/cursorbench
+16,Gemini 3.8 Flash High,Gemini 3.8 Flash,gemini-3.8-flash,High,39.6,4.7,162565,324,https://cursor.com/cursorbench
+17,GPT-5.6 Sol Extra High,GPT-5.6 Sol,gpt-5.6-sol,Extra High,37.7,4.4,24729,55,https://cursor.com/cursorbench
+18,Muse Spark 1.3 Extra High,Muse Spark 1.3,muse-spark-1.3,Extra High,37.5,2.1,40891,83,https://cursor.com/cursorbench
+19,Gemini 3.8 Flash Medium,Gemini 3.8 Flash,gemini-3.8-flash,Medium,37.3,4.06,128364,290,https://cursor.com/cursorbench
+20,Grok 4.6 Medium,Grok 4.6,grok-4.6,Medium,36.1,3.48,24893,40,https://cursor.com/cursorbench
+21,GPT-5.6 Luna Max,GPT-5.6 Luna,gpt-5.6-luna,Max,35.9,1.03,87284,208,https://cursor.com/cursorbench
+22,GPT-5.6 Sol High,GPT-5.6 Sol,gpt-5.6-sol,High,35.7,2.85,16174,41,https://cursor.com/cursorbench
+23,Sonnet 5 Max,Sonnet 5,claude-sonnet-5,Max,34.1,7.17,149257,140,https://cursor.com/cursorbench
+24,GPT-5.6 Terra Extra High,GPT-5.6 Terra,gpt-5.6-terra,Extra High,33.6,1.81,23436,43,https://cursor.com/cursorbench
+25,Grok 4.6 Low,Grok 4.6,grok-4.6,Low,33.4,2.25,16307,32,https://cursor.com/cursorbench
+26,Muse Spark 1.3 High,Muse Spark 1.3,muse-spark-1.3,High,33.4,1.66,30654,69,https://cursor.com/cursorbench
+27,GPT-5.6 Luna Extra High,GPT-5.6 Luna,gpt-5.6-luna,Extra High,33.0,0.44,40598,98,https://cursor.com/cursorbench
+28,Muse Spark 1.3 Medium,Muse Spark 1.3,muse-spark-1.3,Medium,32.6,1.49,27255,64,https://cursor.com/cursorbench
+29,Sonnet 5 Extra High,Sonnet 5,claude-sonnet-5,Extra High,32.0,4.55,83373,102,https://cursor.com/cursorbench
+30,GPT-5.6 Sol Medium,GPT-5.6 Sol,gpt-5.6-sol,Medium,31.1,1.77,10111,32,https://cursor.com/cursorbench
+31,Sonnet 5 High,Sonnet 5,claude-sonnet-5,High,30.8,3.48,61146,85,https://cursor.com/cursorbench
+32,GPT-5.6 Terra High,GPT-5.6 Terra,gpt-5.6-terra,High,30.7,1.11,13162,33,https://cursor.com/cursorbench
+33,GPT-5.6 Luna High,GPT-5.6 Luna,gpt-5.6-luna,High,29.4,0.25,23368,64,https://cursor.com/cursorbench
+34,Muse Spark 1.3 Low,Muse Spark 1.3,muse-spark-1.3,Low,29.3,0.93,17483,47,https://cursor.com/cursorbench
+35,Sonnet 5 Medium,Sonnet 5,claude-sonnet-5,Medium,28.0,2.31,39114,65,https://cursor.com/cursorbench
+36,Composer 2.5,Composer 2.5,composer-2.5,Standard,27.7,0.68,17347,41,https://cursor.com/cursorbench
+37,GPT-5.6 Terra Medium,GPT-5.6 Terra,gpt-5.6-terra,Medium,27.6,0.64,7307,25,https://cursor.com/cursorbench
+38,GPT-5.6 Terra Low,GPT-5.6 Terra,gpt-5.6-terra,Low,25.2,0.52,5914,23,https://cursor.com/cursorbench
+39,GPT-5.6 Sol Low,GPT-5.6 Sol,gpt-5.6-sol,Low,24.6,0.87,4885,21,https://cursor.com/cursorbench
+40,Muse Spark 1.3 Minimal,Muse Spark 1.3,muse-spark-1.3,Minimal,24.3,0.56,10620,34,https://cursor.com/cursorbench
+41,Sonnet 5 Low,Sonnet 5,claude-sonnet-5,Low,24.1,1.39,23772,46,https://cursor.com/cursorbench
+42,GPT-5.6 Luna Medium,GPT-5.6 Luna,gpt-5.6-luna,Medium,22.2,0.08,7642,32,https://cursor.com/cursorbench
+43,GPT-5.6 Luna Low,GPT-5.6 Luna,gpt-5.6-luna,Low,16.0,0.03,3288,18,https://cursor.com/cursorbench

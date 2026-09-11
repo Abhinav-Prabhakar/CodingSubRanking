@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TaskAdjustedRankingDataContract",
+  "description": "Schema for the frontend data layer consuming derived task-ranking datasets",
+  "type": "object",
+  "required": ["metadata", "rankings"],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "benchmark": { "type": "string" },
+        "metric": { "type": "string" },
+        "default_reasoning_tier": { "type": "string" },
+        "reference_data": { "type": "string" },
+        "total_benchmarked_plans": { "type": "integer" },
+        "total_unbenchmarked_plans": { "type": "integer" }
+      }
+    },
+    "rankings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "task_rank",
+          "plan_id",
+          "plan_name",
+          "price_usd",
+          "served_model",
+          "output_tokens_per_task",
+          "monthly_tokens",
+          "monthly_tasks",
+          "cost_per_task_usd",
+          "tasks_per_dollar",
+          "raw_usd_per_mtok",
+          "rank_delta"
+        ],
+        "properties": {
+          "task_rank": { "type": "integer" },
+          "cohort_raw_rank": { "type": "integer" },
+          "rank_delta": { "type": "integer" },
+          "plan_id": { "type": "string" },
+          "plan_name": { "type": "string" },
+          "billing": { "type": "string" },
+          "price": { "type": "number" },
+          "currency": { "type": "string" },
+          "price_usd": { "type": "number" },
+          "served_model": { "type": "string" },
+          "benchmarked_model_name": { "type": "string" },
+          "cursorbench_status": { "type": "string", "enum": ["available", "pending"] },
+          "default_tier": { "type": "string" },
+          "cursorbench_score_pct": { "type": "number" },
+          "output_tokens_per_task": { "type": "integer" },
+          "monthly_tokens": { "type": "integer" },
+          "monthly_tasks": { "type": "number" },
+          "cost_per_task_usd": { "type": "number" },
+          "tasks_per_dollar": { "type": "number" },
+          "raw_usd_per_mtok": { "type": "number" },
+          "confidence": { "type": "string" },
+          "tier_computations": { "type": "object" }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+plan_name,price_usd,served_model,monthly_tokens,raw_usd_per_mtok,cursorbench_note,confidence,plan_id
+Claude Pro,20.0,claude-opus-4.8,1588000000,0.01259,[Pending CursorBench],medium,claude_pro
+Kimi 会员 199,29.36,kimi-k3,1451000000,0.02023,[Pending CursorBench],medium,kimi_allegretto_cn
+Kimi 会员 99,14.6,kimi-k3,290000000,0.05036,[Pending CursorBench],medium,kimi_moderato_cn
+Kimi 会员 699,103.12,kimi-k3,4353000000,0.02369,[Pending CursorBench],medium,kimi_allegro_cn
+Kimi 会员 199,29.36,kimi-k2.7-code,1568000000,0.01872,[Pending CursorBench],medium,kimi_allegretto_cn
+Kimi 会员 99,14.6,kimi-k2.7-code,314000000,0.04651,[Pending CursorBench],medium,kimi_moderato_cn
+Kimi 会员 49,7.23,kimi-k2.7-code,78000000,0.09267,[Pending CursorBench],medium,kimi_andante_cn
+Kimi 会员 699,103.12,kimi-k2.7-code,4704000000,0.02192,[Pending CursorBench],medium,kimi_allegro_cn
+GLM Coding Lite (新客 ¥118) 忙时,17.41,glm-5.3,212000000,0.08211,[Pending CursorBench],high,glm_coding_lite_cn_new_peak
+GLM Coding Lite (新客 ¥118) 中间值,17.41,glm-5.3,317000000,0.05491,[Pending CursorBench],high,glm_coding_lite_cn_new_mid
+GLM Coding Lite (新客 ¥118) 闲时,17.41,glm-5.3,423000000,0.04115,[Pending CursorBench],high,glm_coding_lite_cn_new_offpeak
+GLM Coding Lite (新客 ¥118) 忙时,17.41,glm-5.3-flash,642000000,0.02711,[Pending CursorBench],high,glm_coding_lite_cn_new_peak
+GLM Coding Lite (新客 ¥118) 中间值,17.41,glm-5.3-flash,962000000,0.0181,[Pending CursorBench],high,glm_coding_lite_cn_new_mid
+GLM Coding Lite (新客 ¥118) 闲时,17.41,glm-5.3-flash,1283000000,0.01357,[Pending CursorBench],high,glm_coding_lite_cn_new_offpeak
+GLM Coding Lite (老客 ¥49) 忙时,7.23,glm-5.3,212000000,0.0341,[Pending CursorBench],high,glm_coding_lite_cn_old_peak
+GLM Coding Lite (老客 ¥49) 中间值,7.23,glm-5.3,317000000,0.0228,[Pending CursorBench],high,glm_coding_lite_cn_old_mid
+GLM Coding Lite (老客 ¥49) 闲时,7.23,glm-5.3,423000000,0.01709,[Pending CursorBench],high,glm_coding_lite_cn_old_offpeak
+GLM Coding Lite (老客 ¥49) 忙时,7.23,glm-5.3-flash,642000000,0.01126,[Pending CursorBench],high,glm_coding_lite_cn_old_peak
+GLM Coding Lite (老客 ¥49) 中间值,7.23,glm-5.3-flash,962000000,0.00751,[Pending CursorBench],high,glm_coding_lite_cn_old_mid
+GLM Coding Lite (老客 ¥49) 闲时,7.23,glm-5.3-flash,1283000000,0.00563,[Pending CursorBench],high,glm_coding_lite_cn_old_offpeak
+GLM Coding Pro (新客 ¥538) 忙时,79.37,glm-5.3,1270000000,0.06249,[Pending CursorBench],high,glm_coding_pro_cn_new_peak
+GLM Coding Pro (新客 ¥538) 中间值,79.37,glm-5.3,1905000000,0.04166,[Pending CursorBench],high,glm_coding_pro_cn_new_mid
+GLM Coding Pro (新客 ¥538) 闲时,79.37,glm-5.3,2540000000,0.03125,[Pending CursorBench],high,glm_coding_pro_cn_new_offpeak
+GLM Coding Pro (新客 ¥538) 忙时,79.37,glm-5.3-flash,3850000000,0.02061,[Pending CursorBench],high,glm_coding_pro_cn_new_peak
+GLM Coding Pro (新客 ¥538) 中间值,79.37,glm-5.3-flash,5774000000,0.01375,[Pending CursorBench],high,glm_coding_pro_cn_new_mid
+GLM Coding Pro (新客 ¥538) 闲时,79.37,glm-5.3-flash,7699000000,0.01031,[Pending CursorBench],high,glm_coding_pro_cn_new_offpeak
+GLM Coding Pro (老客 ¥149) 忙时,21.98,glm-5.3,1270000000,0.01731,[Pending CursorBench],high,glm_coding_pro_cn_old_peak
+GLM Coding Pro (老客 ¥149) 中间值,21.98,glm-5.3,1905000000,0.01154,[Pending CursorBench],high,glm_coding_pro_cn_old_mid
+GLM Coding Pro (老客 ¥149) 闲时,21.98,glm-5.3,2540000000,0.00865,[Pending CursorBench],high,glm_coding_pro_cn_old_offpeak
+GLM Coding Pro (老客 ¥149) 忙时,21.98,glm-5.3-flash,3850000000,0.00571,[Pending CursorBench],high,glm_coding_pro_cn_old_peak
+GLM Coding Pro (老客 ¥149) 中间值,21.98,glm-5.3-flash,5774000000,0.00381,[Pending CursorBench],high,glm_coding_pro_cn_old_mid
+GLM Coding Pro (老客 ¥149) 闲时,21.98,glm-5.3-flash,7699000000,0.00285,[Pending CursorBench],high,glm_coding_pro_cn_old_offpeak
+GLM Coding Max (新客 ¥1078) 忙时,159.03,glm-5.3,2963000000,0.05367,[Pending CursorBench],high,glm_coding_max_cn_new_peak
+GLM Coding Max (新客 ¥1078) 中间值,159.03,glm-5.3,4445000000,0.03578,[Pending CursorBench],high,glm_coding_max_cn_new_mid
+GLM Coding Max (新客 ¥1078) 闲时,159.03,glm-5.3,5926000000,0.02684,[Pending CursorBench],high,glm_coding_max_cn_new_offpeak
+GLM Coding Max (新客 ¥1078) 忙时,159.03,glm-5.3-flash,8982000000,0.01771,[Pending CursorBench],high,glm_coding_max_cn_new_peak
+GLM Coding Max (新客 ¥1078) 中间值,159.03,glm-5.3-flash,13473000000,0.0118,[Pending CursorBench],high,glm_coding_max_cn_new_mid
+GLM Coding Max (新客 ¥1078) 闲时,159.03,glm-5.3-flash,17965000000,0.00885,[Pending CursorBench],high,glm_coding_max_cn_new_offpeak
+GLM Coding Max (老客 ¥469) 忙时,69.19,glm-5.3,2963000000,0.02335,[Pending CursorBench],high,glm_coding_max_cn_old_peak
+GLM Coding Max (老客 ¥469) 中间值,69.19,glm-5.3,4445000000,0.01557,[Pending CursorBench],high,glm_coding_max_cn_old_mid
+GLM Coding Max (老客 ¥469) 闲时,69.19,glm-5.3,5926000000,0.01168,[Pending CursorBench],high,glm_coding_max_cn_old_offpeak
+GLM Coding Max (老客 ¥469) 忙时,69.19,glm-5.3-flash,8982000000,0.0077,[Pending CursorBench],high,glm_coding_max_cn_old_peak
+GLM Coding Max (老客 ¥469) 中间值,69.19,glm-5.3-flash,13473000000,0.00514,[Pending CursorBench],high,glm_coding_max_cn_old_mid
+GLM Coding Max (老客 ¥469) 闲时,69.19,glm-5.3-flash,17965000000,0.00385,[Pending CursorBench],high,glm_coding_max_cn_old_offpeak
+MiniMax Token Plan Plus,7.23,minimax-m3,600000000,0.01205,[Pending CursorBench],high,minimax_token_plus_cn
+MiniMax Token Plan Max,17.55,minimax-m3,1800000000,0.00975,[Pending CursorBench],high,minimax_token_max_cn
+MiniMax Token Plan Ultra,69.19,minimax-m3,7100000000,0.00974,[Pending CursorBench],high,minimax_token_ultra_cn
+MiniMax Token Plan Plus (Global),22.0,minimax-m3,1700000000,0.01294,[Pending CursorBench],high,minimax_token_plus_global
+MiniMax Token Plan Max (Global),55.0,minimax-m3,5100000000,0.01078,[Pending CursorBench],high,minimax_token_max_global
+MiniMax Token Plan Ultra (Global),132.0,minimax-m3,9800000000,0.01347,[Pending CursorBench],high,minimax_token_ultra_global
+阿里云百炼 Coding Plan Pro,29.5,qwen3.7-plus,198000000,0.14901,[Pending CursorBench],medium,aliyun_coding_pro_cn
+Alibaba Cloud Coding Plan Pro,50.0,qwen3.7-plus,198000000,0.25253,[Pending CursorBench],low,aliyun_coding_pro_global
+OpenCode Go,10.0,glm-5.3-flash,438300000,0.02282,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,glm-5.3,50200000,0.1992,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,glm-5.2,200700000,0.04983,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,glm-5.1,200700000,0.04983,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,kimi-k3,36600000,0.27322,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,kimi-k2.7-code,273100000,0.03662,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,kimi-k2.6,315100000,0.03174,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,longcat-2.0,3636400000,0.00275,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,mimo-v2.5,8928600000,0.00112,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,mimo-v2.5-pro,941500000,0.01062,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,minimax-m3,867700000,0.01152,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,minimax-m2.7,867700000,0.01152,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,minimax-m2.5,867700000,0.01152,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,muse-spark-1.2-contributor,12500000000,0.0008,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,qwen3.8-max,48700000,0.20534,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,qwen3.8-flash,1465600000,0.00682,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,qwen3.7-max,52900000,0.18904,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,qwen3.7-plus,1127800000,0.00887,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,qwen3.6-plus,857100000,0.01167,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,deepseek-v4.1-flash,1818200000,0.0055,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,deepseek-v4-pro,352400000,0.02838,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,hy4-preview,443600000,0.02254,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,hy3,1532000000,0.00653,[Pending CursorBench],medium,opencode_go
+OpenCode Go,10.0,omen-alpha,1315500000,0.0076,[Pending CursorBench],medium,opencode_go
+Command Code GOAT,10.0,glm-5.2,234100000,0.04272,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,hy3,1787300000,0.0056,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,qwen3.8-27b,1204800000,0.0083,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,deepseek-v4.1-flash,4848500000,0.00206,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,kimi-k2.7-code,273100000,0.03662,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,minimax-m3,679700000,0.01471,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,glm-5.3-flash,1168700000,0.00856,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,qwen3.7-max,58100000,0.17212,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,qwen3.7-plus,357900000,0.02794,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,qwen3.6-plus,277900000,0.03598,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,mimo-v2.5,4464300000,0.00224,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,deepseek-v4-pro,469800000,0.02129,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,qwen3.8-max,65000000,0.15385,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,mimo-v2.5-pro,1257300000,0.00795,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,qwen3.8-max-0902,65000000,0.15385,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,hy4-preview,295700000,0.03382,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,qwen3.8-flash,966900000,0.01034,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,deepseek-v4-flash-fast,262400000,0.03811,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,glm-5.3,66900000,0.14948,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,muse-spark-1.2,106400000,0.09398,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,muse-spark-1.2-contributor,4166700000,0.0024,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,kimi-k3,48800000,0.20492,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,kimi-k2.7-code-highspeed,45500000,0.21978,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,grok-4.5,36300000,0.27548,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,gemini-3.7-flash,195400000,0.05118,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,glm-5.2-fast,34000000,0.29412,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,inkling,99300000,0.1007,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,inkling-small,177900000,0.05621,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,step-3.7-flash,422600000,0.02366,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,step-3.5-flash,881100000,0.01135,[Pending CursorBench],medium,command_code_goat
+Command Code GOAT,10.0,nemotron-3-ultra,144600000,0.06916,[Pending CursorBench],medium,command_code_goat
+Ollama Pro,20.0,deepseek-v4-flash,4327400000,0.00462,[Pending CursorBench],medium,ollama_pro
+Ollama Pro,20.0,deepseek-v4-pro,1409400000,0.01419,[Pending CursorBench],medium,ollama_pro
+Ollama Pro,20.0,glm-5.3,200700000,0.09965,[Pending CursorBench],medium,ollama_pro
+Ollama Pro,20.0,glm-5.3-flash,1753100000,0.01141,[Pending CursorBench],medium,ollama_pro
+Ollama Pro,20.0,glm-5.2,200700000,0.09965,[Pending CursorBench],medium,ollama_pro
+Ollama Pro,20.0,glm-5.1,263500000,0.0759,[Pending CursorBench],medium,ollama_pro
+Ollama Pro,20.0,kimi-k3,146500000,0.13652,[Pending CursorBench],medium,ollama_pro
+Ollama Pro,20.0,kimi-k2.7-code,273100000,0.07323,[Pending CursorBench],medium,ollama_pro
+Ollama Pro,20.0,minimax-m3,433800000,0.0461,[Pending CursorBench],medium,ollama_pro
+Ollama Pro,20.0,minimax-m2.7,867700000,0.02305,[Pending CursorBench],medium,ollama_pro
+Ollama Max,100.0,deepseek-v4-flash,21637200000,0.00462,[Pending CursorBench],medium,ollama_max
+Ollama Max,100.0,deepseek-v4-pro,7047200000,0.01419,[Pending CursorBench],medium,ollama_max
+Ollama Max,100.0,glm-5.3,1003300000,0.09967,[Pending CursorBench],medium,ollama_max
+Ollama Max,100.0,glm-5.3-flash,8765500000,0.01141,[Pending CursorBench],medium,ollama_max
+Ollama Max,100.0,glm-5.2,1003300000,0.09967,[Pending CursorBench],medium,ollama_max
+Ollama Max,100.0,glm-5.1,1317500000,0.0759,[Pending CursorBench],medium,ollama_max
+Ollama Max,100.0,kimi-k3,732600000,0.1365,[Pending CursorBench],medium,ollama_max
+Ollama Max,100.0,kimi-k2.7-code,1365700000,0.07322,[Pending CursorBench],medium,ollama_max
+Ollama Max,100.0,minimax-m3,2169200000,0.0461,[Pending CursorBench],medium,ollama_max
+Ollama Max,100.0,minimax-m2.7,4338400000,0.02305,[Pending CursorBench],medium,ollama_max
+Step Plan Mini (¥49),7.23,step-3.5-flash,2517300000,0.00287,[Pending CursorBench],medium,stepfun_mini_cn
+Step Plan Mini (¥49),7.23,step-3.7-flash,1247600000,0.00579,[Pending CursorBench],medium,stepfun_mini_cn
+Step Plan Plus (¥99),14.6,step-3.5-flash,10069200000,0.00145,[Pending CursorBench],medium,stepfun_plus_cn
+Step Plan Plus (¥99),14.6,step-3.7-flash,4990300000,0.00293,[Pending CursorBench],medium,stepfun_plus_cn
+Step Plan Pro (¥199),29.36,step-3.5-flash,50346100000,0.00058,[Pending CursorBench],medium,stepfun_pro_cn
+Step Plan Pro (¥199),29.36,step-3.7-flash,24951300000,0.00118,[Pending CursorBench],medium,stepfun_pro_cn
+Step Plan Max (¥699),103.12,step-3.5-flash,251730600000,0.00041,[Pending CursorBench],medium,stepfun_max_cn
+Step Plan Max (¥699),103.12,step-3.7-flash,124756300000,0.00083,[Pending CursorBench],medium,stepfun_max_cn
+ChatGPT Plus,20.0,gpt-5.5,480500000,0.04162,[Pending CursorBench],medium,chatgpt_plus
+ChatGPT Pro 5x,100.0,gpt-5.5,2402400000,0.04163,[Pending CursorBench],medium,chatgpt_pro_5x
+ChatGPT Pro 20x,200.0,gpt-5.5,9609600000,0.02081,[Pending CursorBench],medium,chatgpt_pro_20x
+Claude Max 20x (9/14+),200.0,claude-opus-4.8,15700000000,0.01274,[Pending CursorBench],low,claude_max_20x
+Cursor Ultra,200.0,grok-4.5,7737000000,0.02585,[Pending CursorBench],medium,cursor_ultra
+SuperGrok Heavy,300.0,grok-4.5,5090000000,0.05894,[Pending CursorBench],medium,supergrok_heavy
+SuperGrok,30.0,grok-4.5,509000000,0.05894,[Pending CursorBench],medium,supergrok
+MiniMax Token Plan Plus,7.23,minimax-m2.7,600000000,0.01205,[Pending CursorBench],medium,minimax_token_plus_cn
+MiniMax Token Plan Plus (Global),22.0,minimax-m2.7,1700000000,0.01294,[Pending CursorBench],medium,minimax_token_plus_global
+DeepSeek V4.1 Flash API 闲时,0.0,deepseek-v4.1-flash,,0.00825,[Pending CursorBench],high,deepseek_v41_flash_offpeak
+DeepSeek V4.1 Flash API 忙时,0.0,deepseek-v4.1-flash,,0.0165,[Pending CursorBench],high,deepseek_v41_flash_peak
+DeepSeek V4 Flash API 闲时,0.0,deepseek-v4-flash,,0.01386,[Pending CursorBench],high,deepseek_v4_flash_offpeak
+DeepSeek V4 Flash API 忙时,0.0,deepseek-v4-flash,,0.02773,[Pending CursorBench],high,deepseek_v4_flash_peak
+DeepSeek V4 Pro API 闲时,0.0,deepseek-v4-pro,,0.04257,[Pending CursorBench],high,deepseek_v4_pro_offpeak
+DeepSeek V4 Pro API 忙时,0.0,deepseek-v4-pro,,0.08514,[Pending CursorBench],high,deepseek_v4_pro_peak
+GPT-5.6 Sol API,0.0,gpt-5.6-sol,,0.546,[Pending CursorBench],high,openai_sol_api
+Grok 4.6 API (<200k),0.0,grok-4.6,,0.5515,[Pending CursorBench],high,xai_grok46_api
+Claude Opus 5 API,0.0,claude-opus-5,,0.6825,[Pending CursorBench],high,anthropic_opus5_api
+Claude Sonnet 5 API,0.0,claude-sonnet-5,,0.273,[Pending CursorBench],high,anthropic_sonnet5_api
+Claude Fable 5 API,0.0,claude-fable-5,,1.365,[Pending CursorBench],high,anthropic_fable5_api
+GPT-5.6 Terra API,0.0,gpt-5.6-terra,,0.28,[Pending CursorBench],high,openai_terra_api
+GPT-5.6 Luna API,0.0,gpt-5.6-luna,,0.028,[Pending CursorBench],high,openai_luna_api

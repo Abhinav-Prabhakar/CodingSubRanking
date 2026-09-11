@@ -1,0 +1,37 @@
+{
+  "updatedAt": "2026-09-07",
+  "project": "真实API定价",
+  "role": "定义当前采用、计算、绘图和公开发布共用的项目口径",
+  "formula": "订阅价 ÷ 用户实际能用到的月 token = 真实混合单价",
+  "usdPerCny": 6.7787,
+  "exchangeRate": {
+    "date": "2026-09-04",
+    "pair": "USD/CNY",
+    "units": "CNY per USD; legacy field usdPerCny stores this direction",
+    "kind": "人民币汇率中间价",
+    "labelZh": "中国外汇交易中心中间价，新华社转载",
+    "labelEn": "CFETS central parity, via Xinhua",
+    "source": "https://www.xinhuanet.com/20260904/4c1ce1cbf39d416997cb9c237d6f5024/c.html",
+    "evidence": "data/research/fx-caijing-round5-2026-09-05.json",
+    "previousRate": 7.2,
+    "note": "2026-09-05为周六，采用最近交易日9月4日中间价；非银行卡实际结算价。100美元=677.87人民币。"
+  },
+  "monthWeeks": 4,
+  "monthWeeksAlt": "30/7 只作灵敏度",
+  "tokenPolicy": "所有 token 一视同仁；美元额度和三段价统一按项目标准负载折算",
+  "standardTokenMix": {
+    "cache": 0.975,
+    "input": 0.0215,
+    "output": 0.0035,
+    "labelZh": "项目统一标准负载：缓存读取97.5% / 普通输入2.15% / 输出0.35%",
+    "labelEn": "Project standard workload: 97.5% cache reads / 2.15% fresh input / 0.35% output",
+    "note": "固定比较口径，不代表任何平台或用户的实际负载；三项合计100%。当前不单列cache write；厂商另收缓存写入费时，换算可能偏高估token。"
+  },
+  "sourcePriority": [
+    "用户面板截图反推、受控打满实测、官方绝对token或积分表",
+    "本地日志/ccusage与同窗额度百分比",
+    "用户确认；若与多个独立来源冲突，必须公开冲突并重新拍板",
+    "官方美元/credits额度与三段价按项目统一标准负载换算",
+    "第三方综述和跨档假设仅作低置信旁证"
+  ]
+}

@@ -1,0 +1,2231 @@
+{
+  "metadata": {
+    "benchmark": "CursorBench 4.0 (cursor.com/cursorbench)",
+    "metric": "Output token consumption (completion tokens / task)",
+    "default_reasoning_tier": "Medium / Standard",
+    "reference_data": "FeiZhuLulu/real-api-pricing",
+    "total_benchmarked_plans": 39,
+    "total_unbenchmarked_plans": 157
+  },
+  "rankings": [
+    {
+      "plan_id": "chatgpt_pro_20x",
+      "plan_name": "ChatGPT Pro 20x",
+      "billing": "subscription",
+      "price": 200.0,
+      "currency": "USD",
+      "price_usd": 200.0,
+      "served_model": "gpt-5.6-luna",
+      "benchmarked_model_name": "GPT-5.6 Luna",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 22.2,
+      "output_tokens_per_task": 7642,
+      "monthly_tokens": 150222000000,
+      "monthly_tasks": 19657419.5,
+      "cost_per_task_usd": 1e-05,
+      "tasks_per_dollar": 98287.1,
+      "raw_usd_per_mtok": 0.00133,
+      "raw_token_rank": 8,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "Plus Luna实测×官方20x；GitHub #8社区美元等效旁证；chatgpt-luna-adoption-round6-2026-09-08.json",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 87284,
+          "score_pct": 35.9,
+          "monthly_tasks": 1721071.4,
+          "cost_per_task_usd": 0.000116,
+          "tasks_per_dollar": 8605.4
+        },
+        "Extra High": {
+          "output_tokens_per_task": 40598,
+          "score_pct": 33.0,
+          "monthly_tasks": 3700231.5,
+          "cost_per_task_usd": 5.4e-05,
+          "tasks_per_dollar": 18501.2
+        },
+        "High": {
+          "output_tokens_per_task": 23368,
+          "score_pct": 29.4,
+          "monthly_tasks": 6428534.7,
+          "cost_per_task_usd": 3.1e-05,
+          "tasks_per_dollar": 32142.7
+        },
+        "Medium": {
+          "output_tokens_per_task": 7642,
+          "score_pct": 22.2,
+          "monthly_tasks": 19657419.5,
+          "cost_per_task_usd": 1e-05,
+          "tasks_per_dollar": 98287.1
+        },
+        "Low": {
+          "output_tokens_per_task": 3288,
+          "score_pct": 16.0,
+          "monthly_tasks": 45687956.2,
+          "cost_per_task_usd": 4e-06,
+          "tasks_per_dollar": 228439.8
+        }
+      },
+      "task_rank": 1,
+      "cohort_raw_rank": 2,
+      "rank_delta": 1
+    },
+    {
+      "plan_id": "chatgpt_plus",
+      "plan_name": "ChatGPT Plus",
+      "billing": "subscription",
+      "price": 20.0,
+      "currency": "USD",
+      "price_usd": 20.0,
+      "served_model": "gpt-5.6-luna",
+      "benchmarked_model_name": "GPT-5.6 Luna",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 22.2,
+      "output_tokens_per_task": 7642,
+      "monthly_tokens": 7511000000,
+      "monthly_tasks": 982857.9,
+      "cost_per_task_usd": 2e-05,
+      "tasks_per_dollar": 49142.9,
+      "raw_usd_per_mtok": 0.00266,
+      "raw_token_rank": 14,
+      "confidence": "high",
+      "chart_tier": "main",
+      "source": "用户Plus面板：112,666,769 total tokens = 周额度约6%；chatgpt-luna-adoption-round6-2026-09-08.json",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 87284,
+          "score_pct": 35.9,
+          "monthly_tasks": 86052.4,
+          "cost_per_task_usd": 0.000232,
+          "tasks_per_dollar": 4302.6
+        },
+        "Extra High": {
+          "output_tokens_per_task": 40598,
+          "score_pct": 33.0,
+          "monthly_tasks": 185009.1,
+          "cost_per_task_usd": 0.000108,
+          "tasks_per_dollar": 9250.5
+        },
+        "High": {
+          "output_tokens_per_task": 23368,
+          "score_pct": 29.4,
+          "monthly_tasks": 321422.5,
+          "cost_per_task_usd": 6.2e-05,
+          "tasks_per_dollar": 16071.1
+        },
+        "Medium": {
+          "output_tokens_per_task": 7642,
+          "score_pct": 22.2,
+          "monthly_tasks": 982857.9,
+          "cost_per_task_usd": 2e-05,
+          "tasks_per_dollar": 49142.9
+        },
+        "Low": {
+          "output_tokens_per_task": 3288,
+          "score_pct": 16.0,
+          "monthly_tasks": 2284367.4,
+          "cost_per_task_usd": 9e-06,
+          "tasks_per_dollar": 114218.4
+        }
+      },
+      "task_rank": 2,
+      "cohort_raw_rank": 4,
+      "rank_delta": 2
+    },
+    {
+      "plan_id": "chatgpt_pro_5x",
+      "plan_name": "ChatGPT Pro 5x",
+      "billing": "subscription",
+      "price": 100.0,
+      "currency": "USD",
+      "price_usd": 100.0,
+      "served_model": "gpt-5.6-luna",
+      "benchmarked_model_name": "GPT-5.6 Luna",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 22.2,
+      "output_tokens_per_task": 7642,
+      "monthly_tokens": 37556000000,
+      "monthly_tasks": 4914420.3,
+      "cost_per_task_usd": 2e-05,
+      "tasks_per_dollar": 49144.2,
+      "raw_usd_per_mtok": 0.00266,
+      "raw_token_rank": 15,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "Plus Luna实测×官方5x；chatgpt-luna-adoption-round6-2026-09-08.json",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 87284,
+          "score_pct": 35.9,
+          "monthly_tasks": 430273.6,
+          "cost_per_task_usd": 0.000232,
+          "tasks_per_dollar": 4302.7
+        },
+        "Extra High": {
+          "output_tokens_per_task": 40598,
+          "score_pct": 33.0,
+          "monthly_tasks": 925070.2,
+          "cost_per_task_usd": 0.000108,
+          "tasks_per_dollar": 9250.7
+        },
+        "High": {
+          "output_tokens_per_task": 23368,
+          "score_pct": 29.4,
+          "monthly_tasks": 1607155.1,
+          "cost_per_task_usd": 6.2e-05,
+          "tasks_per_dollar": 16071.6
+        },
+        "Medium": {
+          "output_tokens_per_task": 7642,
+          "score_pct": 22.2,
+          "monthly_tasks": 4914420.3,
+          "cost_per_task_usd": 2e-05,
+          "tasks_per_dollar": 49144.2
+        },
+        "Low": {
+          "output_tokens_per_task": 3288,
+          "score_pct": 16.0,
+          "monthly_tasks": 11422141.1,
+          "cost_per_task_usd": 9e-06,
+          "tasks_per_dollar": 114221.4
+        }
+      },
+      "task_rank": 3,
+      "cohort_raw_rank": 5,
+      "rank_delta": 2
+    },
+    {
+      "plan_id": "opencode_go",
+      "plan_name": "OpenCode Go",
+      "billing": "subscription",
+      "price": 10.0,
+      "currency": "USD",
+      "price_usd": 10.0,
+      "served_model": "muse-spark-1.3-contributor",
+      "benchmarked_model_name": "Muse Spark 1.3",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 32.6,
+      "output_tokens_per_task": 27255,
+      "monthly_tokens": 12500000000,
+      "monthly_tasks": 458631.4,
+      "cost_per_task_usd": 2.2e-05,
+      "tasks_per_dollar": 45863.1,
+      "raw_usd_per_mtok": 0.0008,
+      "raw_token_rank": 3,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 52005,
+          "score_pct": 41.6,
+          "monthly_tasks": 240361.5,
+          "cost_per_task_usd": 4.2e-05,
+          "tasks_per_dollar": 24036.2
+        },
+        "Extra High": {
+          "output_tokens_per_task": 40891,
+          "score_pct": 37.5,
+          "monthly_tasks": 305690.7,
+          "cost_per_task_usd": 3.3e-05,
+          "tasks_per_dollar": 30569.1
+        },
+        "High": {
+          "output_tokens_per_task": 30654,
+          "score_pct": 33.4,
+          "monthly_tasks": 407777.1,
+          "cost_per_task_usd": 2.5e-05,
+          "tasks_per_dollar": 40777.7
+        },
+        "Medium": {
+          "output_tokens_per_task": 27255,
+          "score_pct": 32.6,
+          "monthly_tasks": 458631.4,
+          "cost_per_task_usd": 2.2e-05,
+          "tasks_per_dollar": 45863.1
+        },
+        "Low": {
+          "output_tokens_per_task": 17483,
+          "score_pct": 29.3,
+          "monthly_tasks": 714980.3,
+          "cost_per_task_usd": 1.4e-05,
+          "tasks_per_dollar": 71498.0
+        },
+        "Minimal": {
+          "output_tokens_per_task": 10620,
+          "score_pct": 24.3,
+          "monthly_tasks": 1177024.5,
+          "cost_per_task_usd": 8e-06,
+          "tasks_per_dollar": 117702.4
+        }
+      },
+      "task_rank": 4,
+      "cohort_raw_rank": 1,
+      "rank_delta": -3
+    },
+    {
+      "plan_id": "chatgpt_pro_20x",
+      "plan_name": "ChatGPT Pro 20x",
+      "billing": "subscription",
+      "price": 200.0,
+      "currency": "USD",
+      "price_usd": 200.0,
+      "served_model": "gpt-5.6-terra",
+      "benchmarked_model_name": "GPT-5.6 Terra",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 27.6,
+      "output_tokens_per_task": 7307,
+      "monthly_tokens": 24024000000,
+      "monthly_tasks": 3287806.2,
+      "cost_per_task_usd": 6.1e-05,
+      "tasks_per_dollar": 16439.0,
+      "raw_usd_per_mtok": 0.00833,
+      "raw_token_rank": 40,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "由同套餐 gpt-5.6-sol 123.2 亿 × 1.95",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 60814,
+          "score_pct": 41.3,
+          "monthly_tasks": 395040.6,
+          "cost_per_task_usd": 0.000506,
+          "tasks_per_dollar": 1975.2
+        },
+        "Extra High": {
+          "output_tokens_per_task": 23436,
+          "score_pct": 33.6,
+          "monthly_tasks": 1025089.6,
+          "cost_per_task_usd": 0.000195,
+          "tasks_per_dollar": 5125.4
+        },
+        "High": {
+          "output_tokens_per_task": 13162,
+          "score_pct": 30.7,
+          "monthly_tasks": 1825254.5,
+          "cost_per_task_usd": 0.00011,
+          "tasks_per_dollar": 9126.3
+        },
+        "Medium": {
+          "output_tokens_per_task": 7307,
+          "score_pct": 27.6,
+          "monthly_tasks": 3287806.2,
+          "cost_per_task_usd": 6.1e-05,
+          "tasks_per_dollar": 16439.0
+        },
+        "Low": {
+          "output_tokens_per_task": 5914,
+          "score_pct": 25.2,
+          "monthly_tasks": 4062225.2,
+          "cost_per_task_usd": 4.9e-05,
+          "tasks_per_dollar": 20311.1
+        }
+      },
+      "task_rank": 5,
+      "cohort_raw_rank": 9,
+      "rank_delta": 4
+    },
+    {
+      "plan_id": "command_code_goat",
+      "plan_name": "Command Code GOAT",
+      "billing": "subscription",
+      "price": 10.0,
+      "currency": "USD",
+      "price_usd": 10.0,
+      "served_model": "muse-spark-1.3-contributor",
+      "benchmarked_model_name": "Muse Spark 1.3",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 32.6,
+      "output_tokens_per_task": 27255,
+      "monthly_tokens": 4166700000,
+      "monthly_tasks": 152878.4,
+      "cost_per_task_usd": 6.5e-05,
+      "tasks_per_dollar": 15287.8,
+      "raw_usd_per_mtok": 0.0024,
+      "raw_token_rank": 12,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 52005,
+          "score_pct": 41.6,
+          "monthly_tasks": 80121.1,
+          "cost_per_task_usd": 0.000125,
+          "tasks_per_dollar": 8012.1
+        },
+        "Extra High": {
+          "output_tokens_per_task": 40891,
+          "score_pct": 37.5,
+          "monthly_tasks": 101897.7,
+          "cost_per_task_usd": 9.8e-05,
+          "tasks_per_dollar": 10189.8
+        },
+        "High": {
+          "output_tokens_per_task": 30654,
+          "score_pct": 33.4,
+          "monthly_tasks": 135926.8,
+          "cost_per_task_usd": 7.4e-05,
+          "tasks_per_dollar": 13592.7
+        },
+        "Medium": {
+          "output_tokens_per_task": 27255,
+          "score_pct": 32.6,
+          "monthly_tasks": 152878.4,
+          "cost_per_task_usd": 6.5e-05,
+          "tasks_per_dollar": 15287.8
+        },
+        "Low": {
+          "output_tokens_per_task": 17483,
+          "score_pct": 29.3,
+          "monthly_tasks": 238328.7,
+          "cost_per_task_usd": 4.2e-05,
+          "tasks_per_dollar": 23832.9
+        },
+        "Minimal": {
+          "output_tokens_per_task": 10620,
+          "score_pct": 24.3,
+          "monthly_tasks": 392344.6,
+          "cost_per_task_usd": 2.5e-05,
+          "tasks_per_dollar": 39234.5
+        }
+      },
+      "task_rank": 6,
+      "cohort_raw_rank": 3,
+      "rank_delta": -3
+    },
+    {
+      "plan_id": "command_code_goat",
+      "plan_name": "Command Code GOAT",
+      "billing": "subscription",
+      "price": 10.0,
+      "currency": "USD",
+      "price_usd": 10.0,
+      "served_model": "gpt-5.6-luna",
+      "benchmarked_model_name": "GPT-5.6 Luna",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 22.2,
+      "output_tokens_per_task": 7642,
+      "monthly_tokens": 714300000,
+      "monthly_tasks": 93470.3,
+      "cost_per_task_usd": 0.000107,
+      "tasks_per_dollar": 9347.0,
+      "raw_usd_per_mtok": 0.014,
+      "raw_token_rank": 75,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 87284,
+          "score_pct": 35.9,
+          "monthly_tasks": 8183.6,
+          "cost_per_task_usd": 0.001222,
+          "tasks_per_dollar": 818.4
+        },
+        "Extra High": {
+          "output_tokens_per_task": 40598,
+          "score_pct": 33.0,
+          "monthly_tasks": 17594.5,
+          "cost_per_task_usd": 0.000568,
+          "tasks_per_dollar": 1759.4
+        },
+        "High": {
+          "output_tokens_per_task": 23368,
+          "score_pct": 29.4,
+          "monthly_tasks": 30567.4,
+          "cost_per_task_usd": 0.000327,
+          "tasks_per_dollar": 3056.7
+        },
+        "Medium": {
+          "output_tokens_per_task": 7642,
+          "score_pct": 22.2,
+          "monthly_tasks": 93470.3,
+          "cost_per_task_usd": 0.000107,
+          "tasks_per_dollar": 9347.0
+        },
+        "Low": {
+          "output_tokens_per_task": 3288,
+          "score_pct": 16.0,
+          "monthly_tasks": 217244.5,
+          "cost_per_task_usd": 4.6e-05,
+          "tasks_per_dollar": 21724.5
+        }
+      },
+      "task_rank": 7,
+      "cohort_raw_rank": 14,
+      "rank_delta": 7
+    },
+    {
+      "plan_id": "chatgpt_plus",
+      "plan_name": "ChatGPT Plus",
+      "billing": "subscription",
+      "price": 20.0,
+      "currency": "USD",
+      "price_usd": 20.0,
+      "served_model": "gpt-5.6-terra",
+      "benchmarked_model_name": "GPT-5.6 Terra",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 27.6,
+      "output_tokens_per_task": 7307,
+      "monthly_tokens": 1201200000,
+      "monthly_tasks": 164390.3,
+      "cost_per_task_usd": 0.000122,
+      "tasks_per_dollar": 8219.5,
+      "raw_usd_per_mtok": 0.01665,
+      "raw_token_rank": 82,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "由同套餐 gpt-5.6-sol 6.16 亿 × 1.95",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 60814,
+          "score_pct": 41.3,
+          "monthly_tasks": 19752.0,
+          "cost_per_task_usd": 0.001013,
+          "tasks_per_dollar": 987.6
+        },
+        "Extra High": {
+          "output_tokens_per_task": 23436,
+          "score_pct": 33.6,
+          "monthly_tasks": 51254.5,
+          "cost_per_task_usd": 0.00039,
+          "tasks_per_dollar": 2562.7
+        },
+        "High": {
+          "output_tokens_per_task": 13162,
+          "score_pct": 30.7,
+          "monthly_tasks": 91262.7,
+          "cost_per_task_usd": 0.000219,
+          "tasks_per_dollar": 4563.1
+        },
+        "Medium": {
+          "output_tokens_per_task": 7307,
+          "score_pct": 27.6,
+          "monthly_tasks": 164390.3,
+          "cost_per_task_usd": 0.000122,
+          "tasks_per_dollar": 8219.5
+        },
+        "Low": {
+          "output_tokens_per_task": 5914,
+          "score_pct": 25.2,
+          "monthly_tasks": 203111.3,
+          "cost_per_task_usd": 9.8e-05,
+          "tasks_per_dollar": 10155.6
+        }
+      },
+      "task_rank": 8,
+      "cohort_raw_rank": 17,
+      "rank_delta": 9
+    },
+    {
+      "plan_id": "chatgpt_pro_5x",
+      "plan_name": "ChatGPT Pro 5x",
+      "billing": "subscription",
+      "price": 100.0,
+      "currency": "USD",
+      "price_usd": 100.0,
+      "served_model": "gpt-5.6-terra",
+      "benchmarked_model_name": "GPT-5.6 Terra",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 27.6,
+      "output_tokens_per_task": 7307,
+      "monthly_tokens": 6006000000,
+      "monthly_tasks": 821951.6,
+      "cost_per_task_usd": 0.000122,
+      "tasks_per_dollar": 8219.5,
+      "raw_usd_per_mtok": 0.01665,
+      "raw_token_rank": 83,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "由同套餐 gpt-5.6-sol 30.8 亿 × 1.95",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 60814,
+          "score_pct": 41.3,
+          "monthly_tasks": 98760.2,
+          "cost_per_task_usd": 0.001013,
+          "tasks_per_dollar": 987.6
+        },
+        "Extra High": {
+          "output_tokens_per_task": 23436,
+          "score_pct": 33.6,
+          "monthly_tasks": 256272.4,
+          "cost_per_task_usd": 0.00039,
+          "tasks_per_dollar": 2562.7
+        },
+        "High": {
+          "output_tokens_per_task": 13162,
+          "score_pct": 30.7,
+          "monthly_tasks": 456313.6,
+          "cost_per_task_usd": 0.000219,
+          "tasks_per_dollar": 4563.1
+        },
+        "Medium": {
+          "output_tokens_per_task": 7307,
+          "score_pct": 27.6,
+          "monthly_tasks": 821951.6,
+          "cost_per_task_usd": 0.000122,
+          "tasks_per_dollar": 8219.5
+        },
+        "Low": {
+          "output_tokens_per_task": 5914,
+          "score_pct": 25.2,
+          "monthly_tasks": 1015556.3,
+          "cost_per_task_usd": 9.8e-05,
+          "tasks_per_dollar": 10155.6
+        }
+      },
+      "task_rank": 9,
+      "cohort_raw_rank": 18,
+      "rank_delta": 9
+    },
+    {
+      "plan_id": "opencode_go",
+      "plan_name": "OpenCode Go",
+      "billing": "subscription",
+      "price": 10.0,
+      "currency": "USD",
+      "price_usd": 10.0,
+      "served_model": "gpt-5.6-luna",
+      "benchmarked_model_name": "GPT-5.6 Luna",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 22.2,
+      "output_tokens_per_task": 7642,
+      "monthly_tokens": 535700000,
+      "monthly_tasks": 70099.5,
+      "cost_per_task_usd": 0.000143,
+      "tasks_per_dollar": 7009.9,
+      "raw_usd_per_mtok": 0.01867,
+      "raw_token_rank": 88,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 87284,
+          "score_pct": 35.9,
+          "monthly_tasks": 6137.4,
+          "cost_per_task_usd": 0.001629,
+          "tasks_per_dollar": 613.7
+        },
+        "Extra High": {
+          "output_tokens_per_task": 40598,
+          "score_pct": 33.0,
+          "monthly_tasks": 13195.2,
+          "cost_per_task_usd": 0.000758,
+          "tasks_per_dollar": 1319.5
+        },
+        "High": {
+          "output_tokens_per_task": 23368,
+          "score_pct": 29.4,
+          "monthly_tasks": 22924.5,
+          "cost_per_task_usd": 0.000436,
+          "tasks_per_dollar": 2292.5
+        },
+        "Medium": {
+          "output_tokens_per_task": 7642,
+          "score_pct": 22.2,
+          "monthly_tasks": 70099.5,
+          "cost_per_task_usd": 0.000143,
+          "tasks_per_dollar": 7009.9
+        },
+        "Low": {
+          "output_tokens_per_task": 3288,
+          "score_pct": 16.0,
+          "monthly_tasks": 162925.8,
+          "cost_per_task_usd": 6.1e-05,
+          "tasks_per_dollar": 16292.6
+        }
+      },
+      "task_rank": 10,
+      "cohort_raw_rank": 19,
+      "rank_delta": 9
+    },
+    {
+      "plan_id": "chatgpt_pro_20x",
+      "plan_name": "ChatGPT Pro 20x",
+      "billing": "subscription",
+      "price": 200.0,
+      "currency": "USD",
+      "price_usd": 200.0,
+      "served_model": "gpt-5.6-sol",
+      "benchmarked_model_name": "GPT-5.6 Sol",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 31.1,
+      "output_tokens_per_task": 10111,
+      "monthly_tokens": 12320000000,
+      "monthly_tasks": 1218474.9,
+      "cost_per_task_usd": 0.000164,
+      "tasks_per_dollar": 6092.4,
+      "raw_usd_per_mtok": 0.01623,
+      "raw_token_rank": 80,
+      "confidence": "high",
+      "chart_tier": "main",
+      "source": "Plus × 官方 20x",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 42944,
+          "score_pct": 41.7,
+          "monthly_tasks": 286885.2,
+          "cost_per_task_usd": 0.000697,
+          "tasks_per_dollar": 1434.4
+        },
+        "Extra High": {
+          "output_tokens_per_task": 24729,
+          "score_pct": 37.7,
+          "monthly_tasks": 498200.5,
+          "cost_per_task_usd": 0.000401,
+          "tasks_per_dollar": 2491.0
+        },
+        "High": {
+          "output_tokens_per_task": 16174,
+          "score_pct": 35.7,
+          "monthly_tasks": 761716.3,
+          "cost_per_task_usd": 0.000263,
+          "tasks_per_dollar": 3808.6
+        },
+        "Medium": {
+          "output_tokens_per_task": 10111,
+          "score_pct": 31.1,
+          "monthly_tasks": 1218474.9,
+          "cost_per_task_usd": 0.000164,
+          "tasks_per_dollar": 6092.4
+        },
+        "Low": {
+          "output_tokens_per_task": 4885,
+          "score_pct": 24.6,
+          "monthly_tasks": 2522006.1,
+          "cost_per_task_usd": 7.9e-05,
+          "tasks_per_dollar": 12610.0
+        }
+      },
+      "task_rank": 11,
+      "cohort_raw_rank": 15,
+      "rank_delta": 4
+    },
+    {
+      "plan_id": "cursor_ultra",
+      "plan_name": "Cursor Ultra (Standard)",
+      "billing": "subscription",
+      "price": 200.0,
+      "currency": "USD",
+      "price_usd": 200.0,
+      "served_model": "composer-2.5",
+      "benchmarked_model_name": "Composer 2.5",
+      "cursorbench_status": "available",
+      "default_tier": "Standard",
+      "cursorbench_score_pct": 27.7,
+      "output_tokens_per_task": 17347,
+      "monthly_tokens": 19892600000,
+      "monthly_tasks": 1146745.8,
+      "cost_per_task_usd": 0.000174,
+      "tasks_per_dollar": 5733.7,
+      "raw_usd_per_mtok": 0.01005,
+      "raw_token_rank": 47,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "由同套餐 grok-4.6 77.37 亿 × 2.571095571095571",
+      "tier_computations": {
+        "Standard": {
+          "output_tokens_per_task": 17347,
+          "score_pct": 27.7,
+          "monthly_tasks": 1146745.8,
+          "cost_per_task_usd": 0.000174,
+          "tasks_per_dollar": 5733.7
+        }
+      },
+      "task_rank": 12,
+      "cohort_raw_rank": 10,
+      "rank_delta": -2
+    },
+    {
+      "plan_id": "cursor_pro_plus",
+      "plan_name": "Cursor Pro+ (Standard)",
+      "billing": "subscription",
+      "price": 60.0,
+      "currency": "USD",
+      "price_usd": 60.0,
+      "served_model": "composer-2.5",
+      "benchmarked_model_name": "Composer 2.5",
+      "cursorbench_status": "available",
+      "default_tier": "Standard",
+      "cursorbench_score_pct": 27.7,
+      "output_tokens_per_task": 17347,
+      "monthly_tokens": 5304700000,
+      "monthly_tasks": 305799.3,
+      "cost_per_task_usd": 0.000196,
+      "tasks_per_dollar": 5096.7,
+      "raw_usd_per_mtok": 0.01131,
+      "raw_token_rank": 53,
+      "confidence": "low",
+      "chart_tier": "full",
+      "source": "由同套餐 grok-4.6 20.632 亿 × 2.571095571095571",
+      "tier_computations": {
+        "Standard": {
+          "output_tokens_per_task": 17347,
+          "score_pct": 27.7,
+          "monthly_tasks": 305799.3,
+          "cost_per_task_usd": 0.000196,
+          "tasks_per_dollar": 5096.7
+        }
+      },
+      "task_rank": 13,
+      "cohort_raw_rank": 11,
+      "rank_delta": -2
+    },
+    {
+      "plan_id": "claude_pro",
+      "plan_name": "Claude Pro",
+      "billing": "subscription",
+      "price": 20.0,
+      "currency": "USD",
+      "price_usd": 20.0,
+      "served_model": "claude-sonnet-5",
+      "benchmarked_model_name": "Sonnet 5",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 28.0,
+      "output_tokens_per_task": 39114,
+      "monthly_tokens": 3970000000,
+      "monthly_tasks": 101498.2,
+      "cost_per_task_usd": 0.000197,
+      "tasks_per_dollar": 5074.9,
+      "raw_usd_per_mtok": 0.00504,
+      "raw_token_rank": 24,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "由同套餐 claude-opus-4.8 15.88 亿 × 2.5",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 149257,
+          "score_pct": 34.1,
+          "monthly_tasks": 26598.4,
+          "cost_per_task_usd": 0.000752,
+          "tasks_per_dollar": 1329.9
+        },
+        "Extra High": {
+          "output_tokens_per_task": 83373,
+          "score_pct": 32.0,
+          "monthly_tasks": 47617.3,
+          "cost_per_task_usd": 0.00042,
+          "tasks_per_dollar": 2380.9
+        },
+        "High": {
+          "output_tokens_per_task": 61146,
+          "score_pct": 30.8,
+          "monthly_tasks": 64926.6,
+          "cost_per_task_usd": 0.000308,
+          "tasks_per_dollar": 3246.3
+        },
+        "Medium": {
+          "output_tokens_per_task": 39114,
+          "score_pct": 28.0,
+          "monthly_tasks": 101498.2,
+          "cost_per_task_usd": 0.000197,
+          "tasks_per_dollar": 5074.9
+        },
+        "Low": {
+          "output_tokens_per_task": 23772,
+          "score_pct": 24.1,
+          "monthly_tasks": 167003.2,
+          "cost_per_task_usd": 0.00012,
+          "tasks_per_dollar": 8350.2
+        }
+      },
+      "task_rank": 14,
+      "cohort_raw_rank": 6,
+      "rank_delta": -8
+    },
+    {
+      "plan_id": "claude_max_20x",
+      "plan_name": "Claude Max 20x (9/14+)",
+      "billing": "subscription",
+      "price": 200.0,
+      "currency": "USD",
+      "price_usd": 200.0,
+      "served_model": "claude-sonnet-5",
+      "benchmarked_model_name": "Sonnet 5",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 28.0,
+      "output_tokens_per_task": 39114,
+      "monthly_tokens": 39250000000,
+      "monthly_tasks": 1003477.0,
+      "cost_per_task_usd": 0.000199,
+      "tasks_per_dollar": 5017.4,
+      "raw_usd_per_mtok": 0.0051,
+      "raw_token_rank": 25,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "由同套餐 claude-opus-5 157 亿 × 2.5",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 149257,
+          "score_pct": 34.1,
+          "monthly_tasks": 262969.2,
+          "cost_per_task_usd": 0.000761,
+          "tasks_per_dollar": 1314.8
+        },
+        "Extra High": {
+          "output_tokens_per_task": 83373,
+          "score_pct": 32.0,
+          "monthly_tasks": 470775.9,
+          "cost_per_task_usd": 0.000425,
+          "tasks_per_dollar": 2353.9
+        },
+        "High": {
+          "output_tokens_per_task": 61146,
+          "score_pct": 30.8,
+          "monthly_tasks": 641906.3,
+          "cost_per_task_usd": 0.000312,
+          "tasks_per_dollar": 3209.5
+        },
+        "Medium": {
+          "output_tokens_per_task": 39114,
+          "score_pct": 28.0,
+          "monthly_tasks": 1003477.0,
+          "cost_per_task_usd": 0.000199,
+          "tasks_per_dollar": 5017.4
+        },
+        "Low": {
+          "output_tokens_per_task": 23772,
+          "score_pct": 24.1,
+          "monthly_tasks": 1651102.1,
+          "cost_per_task_usd": 0.000121,
+          "tasks_per_dollar": 8255.5
+        }
+      },
+      "task_rank": 15,
+      "cohort_raw_rank": 7,
+      "rank_delta": -8
+    },
+    {
+      "plan_id": "claude_max_5x",
+      "plan_name": "Claude Max 5x (9/14+)",
+      "billing": "subscription",
+      "price": 100.0,
+      "currency": "USD",
+      "price_usd": 100.0,
+      "served_model": "claude-sonnet-5",
+      "benchmarked_model_name": "Sonnet 5",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 28.0,
+      "output_tokens_per_task": 39114,
+      "monthly_tokens": 19625000000,
+      "monthly_tasks": 501738.5,
+      "cost_per_task_usd": 0.000199,
+      "tasks_per_dollar": 5017.4,
+      "raw_usd_per_mtok": 0.0051,
+      "raw_token_rank": 26,
+      "confidence": "low",
+      "chart_tier": "full",
+      "source": "由同套餐 claude-opus-5 78.5 亿 × 2.5",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 149257,
+          "score_pct": 34.1,
+          "monthly_tasks": 131484.6,
+          "cost_per_task_usd": 0.000761,
+          "tasks_per_dollar": 1314.8
+        },
+        "Extra High": {
+          "output_tokens_per_task": 83373,
+          "score_pct": 32.0,
+          "monthly_tasks": 235388.0,
+          "cost_per_task_usd": 0.000425,
+          "tasks_per_dollar": 2353.9
+        },
+        "High": {
+          "output_tokens_per_task": 61146,
+          "score_pct": 30.8,
+          "monthly_tasks": 320953.1,
+          "cost_per_task_usd": 0.000312,
+          "tasks_per_dollar": 3209.5
+        },
+        "Medium": {
+          "output_tokens_per_task": 39114,
+          "score_pct": 28.0,
+          "monthly_tasks": 501738.5,
+          "cost_per_task_usd": 0.000199,
+          "tasks_per_dollar": 5017.4
+        },
+        "Low": {
+          "output_tokens_per_task": 23772,
+          "score_pct": 24.1,
+          "monthly_tasks": 825551.1,
+          "cost_per_task_usd": 0.000121,
+          "tasks_per_dollar": 8255.5
+        }
+      },
+      "task_rank": 16,
+      "cohort_raw_rank": 8,
+      "rank_delta": -8
+    },
+    {
+      "plan_id": "cursor_pro",
+      "plan_name": "Cursor Pro (Standard)",
+      "billing": "subscription",
+      "price": 20.0,
+      "currency": "USD",
+      "price_usd": 20.0,
+      "served_model": "composer-2.5",
+      "benchmarked_model_name": "Composer 2.5",
+      "cursorbench_status": "available",
+      "default_tier": "Standard",
+      "cursorbench_score_pct": 27.7,
+      "output_tokens_per_task": 17347,
+      "monthly_tokens": 1208400000,
+      "monthly_tasks": 69660.5,
+      "cost_per_task_usd": 0.000287,
+      "tasks_per_dollar": 3483.0,
+      "raw_usd_per_mtok": 0.01655,
+      "raw_token_rank": 81,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "由同套餐 grok-4.6 4.7 亿 × 2.571095571095571",
+      "tier_computations": {
+        "Standard": {
+          "output_tokens_per_task": 17347,
+          "score_pct": 27.7,
+          "monthly_tasks": 69660.5,
+          "cost_per_task_usd": 0.000287,
+          "tasks_per_dollar": 3483.0
+        }
+      },
+      "task_rank": 17,
+      "cohort_raw_rank": 16,
+      "rank_delta": -1
+    },
+    {
+      "plan_id": "chatgpt_plus",
+      "plan_name": "ChatGPT Plus",
+      "billing": "subscription",
+      "price": 20.0,
+      "currency": "USD",
+      "price_usd": 20.0,
+      "served_model": "gpt-5.6-sol",
+      "benchmarked_model_name": "GPT-5.6 Sol",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 31.1,
+      "output_tokens_per_task": 10111,
+      "monthly_tokens": 616000000,
+      "monthly_tasks": 60923.7,
+      "cost_per_task_usd": 0.000328,
+      "tasks_per_dollar": 3046.2,
+      "raw_usd_per_mtok": 0.03247,
+      "raw_token_rank": 114,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "awesome-coding-plan 2026-07-30 实测",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 42944,
+          "score_pct": 41.7,
+          "monthly_tasks": 14344.3,
+          "cost_per_task_usd": 0.001394,
+          "tasks_per_dollar": 717.2
+        },
+        "Extra High": {
+          "output_tokens_per_task": 24729,
+          "score_pct": 37.7,
+          "monthly_tasks": 24910.0,
+          "cost_per_task_usd": 0.000803,
+          "tasks_per_dollar": 1245.5
+        },
+        "High": {
+          "output_tokens_per_task": 16174,
+          "score_pct": 35.7,
+          "monthly_tasks": 38085.8,
+          "cost_per_task_usd": 0.000525,
+          "tasks_per_dollar": 1904.3
+        },
+        "Medium": {
+          "output_tokens_per_task": 10111,
+          "score_pct": 31.1,
+          "monthly_tasks": 60923.7,
+          "cost_per_task_usd": 0.000328,
+          "tasks_per_dollar": 3046.2
+        },
+        "Low": {
+          "output_tokens_per_task": 4885,
+          "score_pct": 24.6,
+          "monthly_tasks": 126100.3,
+          "cost_per_task_usd": 0.000159,
+          "tasks_per_dollar": 6305.0
+        }
+      },
+      "task_rank": 18,
+      "cohort_raw_rank": 24,
+      "rank_delta": 6
+    },
+    {
+      "plan_id": "chatgpt_pro_5x",
+      "plan_name": "ChatGPT Pro 5x",
+      "billing": "subscription",
+      "price": 100.0,
+      "currency": "USD",
+      "price_usd": 100.0,
+      "served_model": "gpt-5.6-sol",
+      "benchmarked_model_name": "GPT-5.6 Sol",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 31.1,
+      "output_tokens_per_task": 10111,
+      "monthly_tokens": 3080000000,
+      "monthly_tasks": 304618.7,
+      "cost_per_task_usd": 0.000328,
+      "tasks_per_dollar": 3046.2,
+      "raw_usd_per_mtok": 0.03247,
+      "raw_token_rank": 115,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "Plus × 官方 5x",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 42944,
+          "score_pct": 41.7,
+          "monthly_tasks": 71721.3,
+          "cost_per_task_usd": 0.001394,
+          "tasks_per_dollar": 717.2
+        },
+        "Extra High": {
+          "output_tokens_per_task": 24729,
+          "score_pct": 37.7,
+          "monthly_tasks": 124550.1,
+          "cost_per_task_usd": 0.000803,
+          "tasks_per_dollar": 1245.5
+        },
+        "High": {
+          "output_tokens_per_task": 16174,
+          "score_pct": 35.7,
+          "monthly_tasks": 190429.1,
+          "cost_per_task_usd": 0.000525,
+          "tasks_per_dollar": 1904.3
+        },
+        "Medium": {
+          "output_tokens_per_task": 10111,
+          "score_pct": 31.1,
+          "monthly_tasks": 304618.7,
+          "cost_per_task_usd": 0.000328,
+          "tasks_per_dollar": 3046.2
+        },
+        "Low": {
+          "output_tokens_per_task": 4885,
+          "score_pct": 24.6,
+          "monthly_tasks": 630501.5,
+          "cost_per_task_usd": 0.000159,
+          "tasks_per_dollar": 6305.0
+        }
+      },
+      "task_rank": 19,
+      "cohort_raw_rank": 25,
+      "rank_delta": 6
+    },
+    {
+      "plan_id": "cursor_ultra_composer_fast",
+      "plan_name": "Cursor Ultra (Composer Fast)",
+      "billing": "subscription",
+      "price": 200.0,
+      "currency": "USD",
+      "price_usd": 200.0,
+      "served_model": "composer-2.5",
+      "benchmarked_model_name": "Composer 2.5",
+      "cursorbench_status": "available",
+      "default_tier": "Standard",
+      "cursorbench_score_pct": 27.7,
+      "output_tokens_per_task": 17347,
+      "monthly_tokens": 7058700000,
+      "monthly_tasks": 406911.9,
+      "cost_per_task_usd": 0.000492,
+      "tasks_per_dollar": 2034.6,
+      "raw_usd_per_mtok": 0.02833,
+      "raw_token_rank": 108,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "https://cursor.com/docs/models/cursor-composer-2-5；audit-round4-2026-09-05.json",
+      "tier_computations": {
+        "Standard": {
+          "output_tokens_per_task": 17347,
+          "score_pct": 27.7,
+          "monthly_tasks": 406911.9,
+          "cost_per_task_usd": 0.000492,
+          "tasks_per_dollar": 2034.6
+        }
+      },
+      "task_rank": 20,
+      "cohort_raw_rank": 21,
+      "rank_delta": 1
+    },
+    {
+      "plan_id": "cursor_pro_plus_composer_fast",
+      "plan_name": "Cursor Pro+ (Composer Fast)",
+      "billing": "subscription",
+      "price": 60.0,
+      "currency": "USD",
+      "price_usd": 60.0,
+      "served_model": "composer-2.5",
+      "benchmarked_model_name": "Composer 2.5",
+      "cursorbench_status": "available",
+      "default_tier": "Standard",
+      "cursorbench_score_pct": 27.7,
+      "output_tokens_per_task": 17347,
+      "monthly_tokens": 1882300000,
+      "monthly_tasks": 108508.7,
+      "cost_per_task_usd": 0.000553,
+      "tasks_per_dollar": 1808.5,
+      "raw_usd_per_mtok": 0.03188,
+      "raw_token_rank": 113,
+      "confidence": "low",
+      "chart_tier": "full",
+      "source": "https://cursor.com/docs/models/cursor-composer-2-5；audit-round4-2026-09-05.json",
+      "tier_computations": {
+        "Standard": {
+          "output_tokens_per_task": 17347,
+          "score_pct": 27.7,
+          "monthly_tasks": 108508.7,
+          "cost_per_task_usd": 0.000553,
+          "tasks_per_dollar": 1808.5
+        }
+      },
+      "task_rank": 21,
+      "cohort_raw_rank": 23,
+      "rank_delta": 2
+    },
+    {
+      "plan_id": "claude_max_20x",
+      "plan_name": "Claude Max 20x (9/14+)",
+      "billing": "subscription",
+      "price": 200.0,
+      "currency": "USD",
+      "price_usd": 200.0,
+      "served_model": "claude-opus-5",
+      "benchmarked_model_name": "Opus 5",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 43.3,
+      "output_tokens_per_task": 45272,
+      "monthly_tokens": 15700000000,
+      "monthly_tasks": 346792.7,
+      "cost_per_task_usd": 0.000577,
+      "tasks_per_dollar": 1734.0,
+      "raw_usd_per_mtok": 0.01274,
+      "raw_token_rank": 67,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "Zenn skipbit实测+用户永久口径；claude-adoption-round6-2026-09-06.json",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 85384,
+          "score_pct": 46.6,
+          "monthly_tasks": 183875.2,
+          "cost_per_task_usd": 0.001088,
+          "tasks_per_dollar": 919.4
+        },
+        "Extra High": {
+          "output_tokens_per_task": 80094,
+          "score_pct": 46.1,
+          "monthly_tasks": 196019.7,
+          "cost_per_task_usd": 0.00102,
+          "tasks_per_dollar": 980.1
+        },
+        "High": {
+          "output_tokens_per_task": 61405,
+          "score_pct": 44.7,
+          "monthly_tasks": 255679.5,
+          "cost_per_task_usd": 0.000782,
+          "tasks_per_dollar": 1278.4
+        },
+        "Medium": {
+          "output_tokens_per_task": 45272,
+          "score_pct": 43.3,
+          "monthly_tasks": 346792.7,
+          "cost_per_task_usd": 0.000577,
+          "tasks_per_dollar": 1734.0
+        },
+        "Low": {
+          "output_tokens_per_task": 31995,
+          "score_pct": 40.7,
+          "monthly_tasks": 490701.7,
+          "cost_per_task_usd": 0.000408,
+          "tasks_per_dollar": 2453.5
+        }
+      },
+      "task_rank": 22,
+      "cohort_raw_rank": 12,
+      "rank_delta": -10
+    },
+    {
+      "plan_id": "claude_max_5x",
+      "plan_name": "Claude Max 5x (9/14+)",
+      "billing": "subscription",
+      "price": 100.0,
+      "currency": "USD",
+      "price_usd": 100.0,
+      "served_model": "claude-opus-5",
+      "benchmarked_model_name": "Opus 5",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 43.3,
+      "output_tokens_per_task": 45272,
+      "monthly_tokens": 7850000000,
+      "monthly_tasks": 173396.4,
+      "cost_per_task_usd": 0.000577,
+      "tasks_per_dollar": 1734.0,
+      "raw_usd_per_mtok": 0.01274,
+      "raw_token_rank": 68,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "用户明确20x周池仅为5x的2倍；claude-adoption-round6-2026-09-06.json",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 85384,
+          "score_pct": 46.6,
+          "monthly_tasks": 91937.6,
+          "cost_per_task_usd": 0.001088,
+          "tasks_per_dollar": 919.4
+        },
+        "Extra High": {
+          "output_tokens_per_task": 80094,
+          "score_pct": 46.1,
+          "monthly_tasks": 98009.8,
+          "cost_per_task_usd": 0.00102,
+          "tasks_per_dollar": 980.1
+        },
+        "High": {
+          "output_tokens_per_task": 61405,
+          "score_pct": 44.7,
+          "monthly_tasks": 127839.8,
+          "cost_per_task_usd": 0.000782,
+          "tasks_per_dollar": 1278.4
+        },
+        "Medium": {
+          "output_tokens_per_task": 45272,
+          "score_pct": 43.3,
+          "monthly_tasks": 173396.4,
+          "cost_per_task_usd": 0.000577,
+          "tasks_per_dollar": 1734.0
+        },
+        "Low": {
+          "output_tokens_per_task": 31995,
+          "score_pct": 40.7,
+          "monthly_tasks": 245350.8,
+          "cost_per_task_usd": 0.000408,
+          "tasks_per_dollar": 2453.5
+        }
+      },
+      "task_rank": 23,
+      "cohort_raw_rank": 13,
+      "rank_delta": -10
+    },
+    {
+      "plan_id": "cursor_ultra",
+      "plan_name": "Cursor Ultra",
+      "billing": "subscription",
+      "price": 200.0,
+      "currency": "USD",
+      "price_usd": 200.0,
+      "served_model": "grok-4.6",
+      "benchmarked_model_name": "Grok 4.6",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 36.1,
+      "output_tokens_per_task": 24893,
+      "monthly_tokens": 7737000000,
+      "monthly_tasks": 310810.3,
+      "cost_per_task_usd": 0.000643,
+      "tasks_per_dollar": 1554.1,
+      "raw_usd_per_mtok": 0.02585,
+      "raw_token_rank": 103,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "两张调整后个人Ultra标准主行中间值；cursor-adoption-round8-2026-09-06.json",
+      "tier_computations": {
+        "Extra High": {
+          "output_tokens_per_task": 49814,
+          "score_pct": 41.4,
+          "monthly_tasks": 155317.8,
+          "cost_per_task_usd": 0.001288,
+          "tasks_per_dollar": 776.6
+        },
+        "High": {
+          "output_tokens_per_task": 41387,
+          "score_pct": 40.4,
+          "monthly_tasks": 186942.8,
+          "cost_per_task_usd": 0.00107,
+          "tasks_per_dollar": 934.7
+        },
+        "Medium": {
+          "output_tokens_per_task": 24893,
+          "score_pct": 36.1,
+          "monthly_tasks": 310810.3,
+          "cost_per_task_usd": 0.000643,
+          "tasks_per_dollar": 1554.1
+        },
+        "Low": {
+          "output_tokens_per_task": 16307,
+          "score_pct": 33.4,
+          "monthly_tasks": 474458.8,
+          "cost_per_task_usd": 0.000422,
+          "tasks_per_dollar": 2372.3
+        }
+      },
+      "task_rank": 24,
+      "cohort_raw_rank": 20,
+      "rank_delta": -4
+    },
+    {
+      "plan_id": "cursor_pro_plus",
+      "plan_name": "Cursor Pro+",
+      "billing": "subscription",
+      "price": 60.0,
+      "currency": "USD",
+      "price_usd": 60.0,
+      "served_model": "grok-4.6",
+      "benchmarked_model_name": "Grok 4.6",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 36.1,
+      "output_tokens_per_task": 24893,
+      "monthly_tokens": 2063200000,
+      "monthly_tasks": 82882.7,
+      "cost_per_task_usd": 0.000724,
+      "tasks_per_dollar": 1381.4,
+      "raw_usd_per_mtok": 0.02908,
+      "raw_token_rank": 110,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "round3面板Pro+池约$800；按Ultra池$3000等比；cursor-adoption-round8-2026-09-06.json",
+      "tier_computations": {
+        "Extra High": {
+          "output_tokens_per_task": 49814,
+          "score_pct": 41.4,
+          "monthly_tasks": 41418.1,
+          "cost_per_task_usd": 0.001449,
+          "tasks_per_dollar": 690.3
+        },
+        "High": {
+          "output_tokens_per_task": 41387,
+          "score_pct": 40.4,
+          "monthly_tasks": 49851.4,
+          "cost_per_task_usd": 0.001204,
+          "tasks_per_dollar": 830.9
+        },
+        "Medium": {
+          "output_tokens_per_task": 24893,
+          "score_pct": 36.1,
+          "monthly_tasks": 82882.7,
+          "cost_per_task_usd": 0.000724,
+          "tasks_per_dollar": 1381.4
+        },
+        "Low": {
+          "output_tokens_per_task": 16307,
+          "score_pct": 33.4,
+          "monthly_tasks": 126522.4,
+          "cost_per_task_usd": 0.000474,
+          "tasks_per_dollar": 2108.7
+        }
+      },
+      "task_rank": 25,
+      "cohort_raw_rank": 22,
+      "rank_delta": -3
+    },
+    {
+      "plan_id": "cursor_pro_composer_fast",
+      "plan_name": "Cursor Pro (Composer Fast)",
+      "billing": "subscription",
+      "price": 20.0,
+      "currency": "USD",
+      "price_usd": 20.0,
+      "served_model": "composer-2.5",
+      "benchmarked_model_name": "Composer 2.5",
+      "cursorbench_status": "available",
+      "default_tier": "Standard",
+      "cursorbench_score_pct": 27.7,
+      "output_tokens_per_task": 17347,
+      "monthly_tokens": 428800000,
+      "monthly_tasks": 24719.0,
+      "cost_per_task_usd": 0.000809,
+      "tasks_per_dollar": 1235.9,
+      "raw_usd_per_mtok": 0.04664,
+      "raw_token_rank": 132,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "https://cursor.com/docs/models/cursor-composer-2-5；audit-round4-2026-09-05.json",
+      "tier_computations": {
+        "Standard": {
+          "output_tokens_per_task": 17347,
+          "score_pct": 27.7,
+          "monthly_tasks": 24719.0,
+          "cost_per_task_usd": 0.000809,
+          "tasks_per_dollar": 1235.9
+        }
+      },
+      "task_rank": 26,
+      "cohort_raw_rank": 27,
+      "rank_delta": 1
+    },
+    {
+      "plan_id": "command_code_goat",
+      "plan_name": "Command Code GOAT",
+      "billing": "subscription",
+      "price": 10.0,
+      "currency": "USD",
+      "price_usd": 10.0,
+      "served_model": "gpt-5.6-sol",
+      "benchmarked_model_name": "GPT-5.6 Sol",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 31.1,
+      "output_tokens_per_task": 10111,
+      "monthly_tokens": 100000000,
+      "monthly_tasks": 9890.2,
+      "cost_per_task_usd": 0.001011,
+      "tasks_per_dollar": 989.0,
+      "raw_usd_per_mtok": 0.1,
+      "raw_token_rank": 162,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 42944,
+          "score_pct": 41.7,
+          "monthly_tasks": 2328.6,
+          "cost_per_task_usd": 0.004294,
+          "tasks_per_dollar": 232.9
+        },
+        "Extra High": {
+          "output_tokens_per_task": 24729,
+          "score_pct": 37.7,
+          "monthly_tasks": 4043.8,
+          "cost_per_task_usd": 0.002473,
+          "tasks_per_dollar": 404.4
+        },
+        "High": {
+          "output_tokens_per_task": 16174,
+          "score_pct": 35.7,
+          "monthly_tasks": 6182.8,
+          "cost_per_task_usd": 0.001617,
+          "tasks_per_dollar": 618.3
+        },
+        "Medium": {
+          "output_tokens_per_task": 10111,
+          "score_pct": 31.1,
+          "monthly_tasks": 9890.2,
+          "cost_per_task_usd": 0.001011,
+          "tasks_per_dollar": 989.0
+        },
+        "Low": {
+          "output_tokens_per_task": 4885,
+          "score_pct": 24.6,
+          "monthly_tasks": 20470.8,
+          "cost_per_task_usd": 0.000489,
+          "tasks_per_dollar": 2047.1
+        }
+      },
+      "task_rank": 27,
+      "cohort_raw_rank": 35,
+      "rank_delta": 8
+    },
+    {
+      "plan_id": "cursor_pro",
+      "plan_name": "Cursor Pro",
+      "billing": "subscription",
+      "price": 20.0,
+      "currency": "USD",
+      "price_usd": 20.0,
+      "served_model": "grok-4.6",
+      "benchmarked_model_name": "Grok 4.6",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 36.1,
+      "output_tokens_per_task": 24893,
+      "monthly_tokens": 470000000,
+      "monthly_tasks": 18880.8,
+      "cost_per_task_usd": 0.001059,
+      "tasks_per_dollar": 944.0,
+      "raw_usd_per_mtok": 0.04255,
+      "raw_token_rank": 127,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "Cursor 论坛面板：303.9M = 65% → 4.68 亿；另有用户口述 4~5 亿打满",
+      "tier_computations": {
+        "Extra High": {
+          "output_tokens_per_task": 49814,
+          "score_pct": 41.4,
+          "monthly_tasks": 9435.1,
+          "cost_per_task_usd": 0.00212,
+          "tasks_per_dollar": 471.8
+        },
+        "High": {
+          "output_tokens_per_task": 41387,
+          "score_pct": 40.4,
+          "monthly_tasks": 11356.2,
+          "cost_per_task_usd": 0.001761,
+          "tasks_per_dollar": 567.8
+        },
+        "Medium": {
+          "output_tokens_per_task": 24893,
+          "score_pct": 36.1,
+          "monthly_tasks": 18880.8,
+          "cost_per_task_usd": 0.001059,
+          "tasks_per_dollar": 944.0
+        },
+        "Low": {
+          "output_tokens_per_task": 16307,
+          "score_pct": 33.4,
+          "monthly_tasks": 28822.0,
+          "cost_per_task_usd": 0.000694,
+          "tasks_per_dollar": 1441.1
+        }
+      },
+      "task_rank": 28,
+      "cohort_raw_rank": 26,
+      "rank_delta": -2
+    },
+    {
+      "plan_id": "supergrok_plus",
+      "plan_name": "SuperGrok Plus",
+      "billing": "subscription",
+      "price": 100.0,
+      "currency": "USD",
+      "price_usd": 100.0,
+      "served_model": "grok-4.6",
+      "benchmarked_model_name": "Grok 4.6",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 36.1,
+      "output_tokens_per_task": 24893,
+      "monthly_tokens": 2040000000,
+      "monthly_tasks": 81950.7,
+      "cost_per_task_usd": 0.00122,
+      "tasks_per_dollar": 819.5,
+      "raw_usd_per_mtok": 0.04902,
+      "raw_token_rank": 133,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "面板周额度$100×Super精确标定×4周",
+      "tier_computations": {
+        "Extra High": {
+          "output_tokens_per_task": 49814,
+          "score_pct": 41.4,
+          "monthly_tasks": 40952.3,
+          "cost_per_task_usd": 0.002442,
+          "tasks_per_dollar": 409.5
+        },
+        "High": {
+          "output_tokens_per_task": 41387,
+          "score_pct": 40.4,
+          "monthly_tasks": 49290.8,
+          "cost_per_task_usd": 0.002029,
+          "tasks_per_dollar": 492.9
+        },
+        "Medium": {
+          "output_tokens_per_task": 24893,
+          "score_pct": 36.1,
+          "monthly_tasks": 81950.7,
+          "cost_per_task_usd": 0.00122,
+          "tasks_per_dollar": 819.5
+        },
+        "Low": {
+          "output_tokens_per_task": 16307,
+          "score_pct": 33.4,
+          "monthly_tasks": 125099.7,
+          "cost_per_task_usd": 0.000799,
+          "tasks_per_dollar": 1251.0
+        }
+      },
+      "task_rank": 29,
+      "cohort_raw_rank": 28,
+      "rank_delta": -1
+    },
+    {
+      "plan_id": "supergrok",
+      "plan_name": "SuperGrok",
+      "billing": "subscription",
+      "price": 30.0,
+      "currency": "USD",
+      "price_usd": 30.0,
+      "served_model": "grok-4.6",
+      "benchmarked_model_name": "Grok 4.6",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 36.1,
+      "output_tokens_per_task": 24893,
+      "monthly_tokens": 509000000,
+      "monthly_tasks": 20447.5,
+      "cost_per_task_usd": 0.001467,
+      "tasks_per_dollar": 681.6,
+      "raw_usd_per_mtok": 0.05894,
+      "raw_token_rank": 142,
+      "confidence": "high",
+      "chart_tier": "main",
+      "source": "V2EX受控打满127,272,629 token/周×4周",
+      "tier_computations": {
+        "Extra High": {
+          "output_tokens_per_task": 49814,
+          "score_pct": 41.4,
+          "monthly_tasks": 10218.0,
+          "cost_per_task_usd": 0.002936,
+          "tasks_per_dollar": 340.6
+        },
+        "High": {
+          "output_tokens_per_task": 41387,
+          "score_pct": 40.4,
+          "monthly_tasks": 12298.5,
+          "cost_per_task_usd": 0.002439,
+          "tasks_per_dollar": 410.0
+        },
+        "Medium": {
+          "output_tokens_per_task": 24893,
+          "score_pct": 36.1,
+          "monthly_tasks": 20447.5,
+          "cost_per_task_usd": 0.001467,
+          "tasks_per_dollar": 681.6
+        },
+        "Low": {
+          "output_tokens_per_task": 16307,
+          "score_pct": 33.4,
+          "monthly_tasks": 31213.6,
+          "cost_per_task_usd": 0.000961,
+          "tasks_per_dollar": 1040.5
+        }
+      },
+      "task_rank": 30,
+      "cohort_raw_rank": 30,
+      "rank_delta": 0
+    },
+    {
+      "plan_id": "supergrok_heavy",
+      "plan_name": "SuperGrok Heavy",
+      "billing": "subscription",
+      "price": 300.0,
+      "currency": "USD",
+      "price_usd": 300.0,
+      "served_model": "grok-4.6",
+      "benchmarked_model_name": "Grok 4.6",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 36.1,
+      "output_tokens_per_task": 24893,
+      "monthly_tokens": 5090000000,
+      "monthly_tasks": 204475.2,
+      "cost_per_task_usd": 0.001467,
+      "tasks_per_dollar": 681.6,
+      "raw_usd_per_mtok": 0.05894,
+      "raw_token_rank": 143,
+      "confidence": "medium",
+      "chart_tier": "main",
+      "source": "面板周额度$250×Super精确标定×4周",
+      "tier_computations": {
+        "Extra High": {
+          "output_tokens_per_task": 49814,
+          "score_pct": 41.4,
+          "monthly_tasks": 102180.1,
+          "cost_per_task_usd": 0.002936,
+          "tasks_per_dollar": 340.6
+        },
+        "High": {
+          "output_tokens_per_task": 41387,
+          "score_pct": 40.4,
+          "monthly_tasks": 122985.5,
+          "cost_per_task_usd": 0.002439,
+          "tasks_per_dollar": 410.0
+        },
+        "Medium": {
+          "output_tokens_per_task": 24893,
+          "score_pct": 36.1,
+          "monthly_tasks": 204475.2,
+          "cost_per_task_usd": 0.001467,
+          "tasks_per_dollar": 681.6
+        },
+        "Low": {
+          "output_tokens_per_task": 16307,
+          "score_pct": 33.4,
+          "monthly_tasks": 312135.9,
+          "cost_per_task_usd": 0.000961,
+          "tasks_per_dollar": 1040.5
+        }
+      },
+      "task_rank": 31,
+      "cohort_raw_rank": 31,
+      "rank_delta": 0
+    },
+    {
+      "plan_id": "cursor_ultra_fast",
+      "plan_name": "Cursor Ultra (Fast)",
+      "billing": "subscription",
+      "price": 200.0,
+      "currency": "USD",
+      "price_usd": 200.0,
+      "served_model": "grok-4.6",
+      "benchmarked_model_name": "Grok 4.6",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 36.1,
+      "output_tokens_per_task": 24893,
+      "monthly_tokens": 3074000000,
+      "monthly_tasks": 123488.5,
+      "cost_per_task_usd": 0.00162,
+      "tasks_per_dollar": 617.4,
+      "raw_usd_per_mtok": 0.06506,
+      "raw_token_rank": 147,
+      "confidence": "high",
+      "chart_tier": "main",
+      "source": "用户当前平滑账号截图863.8M/28.1%直接反推；cursor-adoption-round8-2026-09-06.json",
+      "tier_computations": {
+        "Extra High": {
+          "output_tokens_per_task": 49814,
+          "score_pct": 41.4,
+          "monthly_tasks": 61709.6,
+          "cost_per_task_usd": 0.003241,
+          "tasks_per_dollar": 308.5
+        },
+        "High": {
+          "output_tokens_per_task": 41387,
+          "score_pct": 40.4,
+          "monthly_tasks": 74274.5,
+          "cost_per_task_usd": 0.002693,
+          "tasks_per_dollar": 371.4
+        },
+        "Medium": {
+          "output_tokens_per_task": 24893,
+          "score_pct": 36.1,
+          "monthly_tasks": 123488.5,
+          "cost_per_task_usd": 0.00162,
+          "tasks_per_dollar": 617.4
+        },
+        "Low": {
+          "output_tokens_per_task": 16307,
+          "score_pct": 33.4,
+          "monthly_tasks": 188508.0,
+          "cost_per_task_usd": 0.001061,
+          "tasks_per_dollar": 942.5
+        }
+      },
+      "task_rank": 32,
+      "cohort_raw_rank": 32,
+      "rank_delta": 0
+    },
+    {
+      "plan_id": "supergrok_lite",
+      "plan_name": "SuperGrok Lite",
+      "billing": "subscription",
+      "price": 10.0,
+      "currency": "USD",
+      "price_usd": 10.0,
+      "served_model": "grok-4.6",
+      "benchmarked_model_name": "Grok 4.6",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 36.1,
+      "output_tokens_per_task": 24893,
+      "monthly_tokens": 150000000,
+      "monthly_tasks": 6025.8,
+      "cost_per_task_usd": 0.00166,
+      "tasks_per_dollar": 602.6,
+      "raw_usd_per_mtok": 0.06667,
+      "raw_token_rank": 148,
+      "confidence": "low",
+      "chart_tier": "full",
+      "source": "aa_grok_build_2026_07",
+      "tier_computations": {
+        "Extra High": {
+          "output_tokens_per_task": 49814,
+          "score_pct": 41.4,
+          "monthly_tasks": 3011.2,
+          "cost_per_task_usd": 0.003321,
+          "tasks_per_dollar": 301.1
+        },
+        "High": {
+          "output_tokens_per_task": 41387,
+          "score_pct": 40.4,
+          "monthly_tasks": 3624.3,
+          "cost_per_task_usd": 0.002759,
+          "tasks_per_dollar": 362.4
+        },
+        "Medium": {
+          "output_tokens_per_task": 24893,
+          "score_pct": 36.1,
+          "monthly_tasks": 6025.8,
+          "cost_per_task_usd": 0.00166,
+          "tasks_per_dollar": 602.6
+        },
+        "Low": {
+          "output_tokens_per_task": 16307,
+          "score_pct": 33.4,
+          "monthly_tasks": 9198.5,
+          "cost_per_task_usd": 0.001087,
+          "tasks_per_dollar": 919.9
+        }
+      },
+      "task_rank": 33,
+      "cohort_raw_rank": 33,
+      "rank_delta": 0
+    },
+    {
+      "plan_id": "command_code_goat",
+      "plan_name": "Command Code GOAT",
+      "billing": "subscription",
+      "price": 10.0,
+      "currency": "USD",
+      "price_usd": 10.0,
+      "served_model": "muse-spark-1.3",
+      "benchmarked_model_name": "Muse Spark 1.3",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 32.6,
+      "output_tokens_per_task": 27255,
+      "monthly_tokens": 106400000,
+      "monthly_tasks": 3903.9,
+      "cost_per_task_usd": 0.002562,
+      "tasks_per_dollar": 390.4,
+      "raw_usd_per_mtok": 0.09398,
+      "raw_token_rank": 156,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 52005,
+          "score_pct": 41.6,
+          "monthly_tasks": 2046.0,
+          "cost_per_task_usd": 0.004888,
+          "tasks_per_dollar": 204.6
+        },
+        "Extra High": {
+          "output_tokens_per_task": 40891,
+          "score_pct": 37.5,
+          "monthly_tasks": 2602.0,
+          "cost_per_task_usd": 0.003843,
+          "tasks_per_dollar": 260.2
+        },
+        "High": {
+          "output_tokens_per_task": 30654,
+          "score_pct": 33.4,
+          "monthly_tasks": 3471.0,
+          "cost_per_task_usd": 0.002881,
+          "tasks_per_dollar": 347.1
+        },
+        "Medium": {
+          "output_tokens_per_task": 27255,
+          "score_pct": 32.6,
+          "monthly_tasks": 3903.9,
+          "cost_per_task_usd": 0.002562,
+          "tasks_per_dollar": 390.4
+        },
+        "Low": {
+          "output_tokens_per_task": 17483,
+          "score_pct": 29.3,
+          "monthly_tasks": 6085.9,
+          "cost_per_task_usd": 0.001643,
+          "tasks_per_dollar": 608.6
+        },
+        "Minimal": {
+          "output_tokens_per_task": 10620,
+          "score_pct": 24.3,
+          "monthly_tasks": 10018.8,
+          "cost_per_task_usd": 0.000998,
+          "tasks_per_dollar": 1001.9
+        }
+      },
+      "task_rank": 34,
+      "cohort_raw_rank": 34,
+      "rank_delta": 0
+    },
+    {
+      "plan_id": "claude_max_5x",
+      "plan_name": "Claude Max 5x (9/14+)",
+      "billing": "subscription",
+      "price": 100.0,
+      "currency": "USD",
+      "price_usd": 100.0,
+      "served_model": "claude-fable-5",
+      "benchmarked_model_name": "Fable 5.1",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 46.8,
+      "output_tokens_per_task": 45411,
+      "monthly_tokens": 923500000,
+      "monthly_tasks": 20336.5,
+      "cost_per_task_usd": 0.004917,
+      "tasks_per_dollar": 203.4,
+      "raw_usd_per_mtok": 0.10828,
+      "raw_token_rank": 164,
+      "confidence": "low",
+      "chart_tier": "full",
+      "source": "由同套餐 claude-opus-5 78.5 亿 × 0.11764705882352941",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 117236,
+          "score_pct": 51.8,
+          "monthly_tasks": 7877.3,
+          "cost_per_task_usd": 0.012695,
+          "tasks_per_dollar": 78.8
+        },
+        "Extra High": {
+          "output_tokens_per_task": 87294,
+          "score_pct": 51.6,
+          "monthly_tasks": 10579.2,
+          "cost_per_task_usd": 0.009453,
+          "tasks_per_dollar": 105.8
+        },
+        "High": {
+          "output_tokens_per_task": 58438,
+          "score_pct": 49.2,
+          "monthly_tasks": 15803.1,
+          "cost_per_task_usd": 0.006328,
+          "tasks_per_dollar": 158.0
+        },
+        "Medium": {
+          "output_tokens_per_task": 45411,
+          "score_pct": 46.8,
+          "monthly_tasks": 20336.5,
+          "cost_per_task_usd": 0.004917,
+          "tasks_per_dollar": 203.4
+        },
+        "Low": {
+          "output_tokens_per_task": 34795,
+          "score_pct": 45.1,
+          "monthly_tasks": 26541.2,
+          "cost_per_task_usd": 0.003768,
+          "tasks_per_dollar": 265.4
+        }
+      },
+      "task_rank": 35,
+      "cohort_raw_rank": 36,
+      "rank_delta": 1
+    },
+    {
+      "plan_id": "command_code_goat",
+      "plan_name": "Command Code GOAT",
+      "billing": "subscription",
+      "price": 10.0,
+      "currency": "USD",
+      "price_usd": 10.0,
+      "served_model": "gemini-3.8-flash",
+      "benchmarked_model_name": "Gemini 3.8 Flash",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 37.3,
+      "output_tokens_per_task": 128364,
+      "monthly_tokens": 195400000,
+      "monthly_tasks": 1522.2,
+      "cost_per_task_usd": 0.006569,
+      "tasks_per_dollar": 152.2,
+      "raw_usd_per_mtok": 0.05118,
+      "raw_token_rank": 137,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
+      "tier_computations": {
+        "High": {
+          "output_tokens_per_task": 162565,
+          "score_pct": 39.6,
+          "monthly_tasks": 1202.0,
+          "cost_per_task_usd": 0.00832,
+          "tasks_per_dollar": 120.2
+        },
+        "Medium": {
+          "output_tokens_per_task": 128364,
+          "score_pct": 37.3,
+          "monthly_tasks": 1522.2,
+          "cost_per_task_usd": 0.006569,
+          "tasks_per_dollar": 152.2
+        }
+      },
+      "task_rank": 36,
+      "cohort_raw_rank": 29,
+      "rank_delta": -7
+    },
+    {
+      "plan_id": "command_code_goat",
+      "plan_name": "Command Code GOAT",
+      "billing": "subscription",
+      "price": 10.0,
+      "currency": "USD",
+      "price_usd": 10.0,
+      "served_model": "grok-4.6",
+      "benchmarked_model_name": "Grok 4.6",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 36.1,
+      "output_tokens_per_task": 24893,
+      "monthly_tokens": 36300000,
+      "monthly_tasks": 1458.2,
+      "cost_per_task_usd": 0.006858,
+      "tasks_per_dollar": 145.8,
+      "raw_usd_per_mtok": 0.27548,
+      "raw_token_rank": 181,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "https://commandcode.ai/docs/plans/goat 官方每模型 allowance 与三段价；https://commandcode.ai/pricing；$10→$70 credits；code-subscriptions-round1-2026-09-06.json",
+      "tier_computations": {
+        "Extra High": {
+          "output_tokens_per_task": 49814,
+          "score_pct": 41.4,
+          "monthly_tasks": 728.7,
+          "cost_per_task_usd": 0.013723,
+          "tasks_per_dollar": 72.9
+        },
+        "High": {
+          "output_tokens_per_task": 41387,
+          "score_pct": 40.4,
+          "monthly_tasks": 877.1,
+          "cost_per_task_usd": 0.011401,
+          "tasks_per_dollar": 87.7
+        },
+        "Medium": {
+          "output_tokens_per_task": 24893,
+          "score_pct": 36.1,
+          "monthly_tasks": 1458.2,
+          "cost_per_task_usd": 0.006858,
+          "tasks_per_dollar": 145.8
+        },
+        "Low": {
+          "output_tokens_per_task": 16307,
+          "score_pct": 33.4,
+          "monthly_tasks": 2226.0,
+          "cost_per_task_usd": 0.004492,
+          "tasks_per_dollar": 222.6
+        }
+      },
+      "task_rank": 37,
+      "cohort_raw_rank": 38,
+      "rank_delta": 1
+    },
+    {
+      "plan_id": "claude_max_20x",
+      "plan_name": "Claude Max 20x (9/14+)",
+      "billing": "subscription",
+      "price": 200.0,
+      "currency": "USD",
+      "price_usd": 200.0,
+      "served_model": "claude-fable-5",
+      "benchmarked_model_name": "Fable 5.1",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 46.8,
+      "output_tokens_per_task": 45411,
+      "monthly_tokens": 1207700000,
+      "monthly_tasks": 26594.9,
+      "cost_per_task_usd": 0.00752,
+      "tasks_per_dollar": 133.0,
+      "raw_usd_per_mtok": 0.1656,
+      "raw_token_rank": 171,
+      "confidence": "low",
+      "chart_tier": "main",
+      "source": "由同套餐 claude-opus-5 157 亿 × 0.07692307692307693",
+      "tier_computations": {
+        "Max": {
+          "output_tokens_per_task": 117236,
+          "score_pct": 51.8,
+          "monthly_tasks": 10301.4,
+          "cost_per_task_usd": 0.019415,
+          "tasks_per_dollar": 51.5
+        },
+        "Extra High": {
+          "output_tokens_per_task": 87294,
+          "score_pct": 51.6,
+          "monthly_tasks": 13834.9,
+          "cost_per_task_usd": 0.014456,
+          "tasks_per_dollar": 69.2
+        },
+        "High": {
+          "output_tokens_per_task": 58438,
+          "score_pct": 49.2,
+          "monthly_tasks": 20666.3,
+          "cost_per_task_usd": 0.009678,
+          "tasks_per_dollar": 103.3
+        },
+        "Medium": {
+          "output_tokens_per_task": 45411,
+          "score_pct": 46.8,
+          "monthly_tasks": 26594.9,
+          "cost_per_task_usd": 0.00752,
+          "tasks_per_dollar": 133.0
+        },
+        "Low": {
+          "output_tokens_per_task": 34795,
+          "score_pct": 45.1,
+          "monthly_tasks": 34709.0,
+          "cost_per_task_usd": 0.005762,
+          "tasks_per_dollar": 173.5
+        }
+      },
+      "task_rank": 38,
+      "cohort_raw_rank": 37,
+      "rank_delta": -1
+    },
+    {
+      "plan_id": "opencode_go",
+      "plan_name": "OpenCode Go",
+      "billing": "subscription",
+      "price": 10.0,
+      "currency": "USD",
+      "price_usd": 10.0,
+      "served_model": "grok-4.6",
+      "benchmarked_model_name": "Grok 4.6",
+      "cursorbench_status": "available",
+      "default_tier": "Medium",
+      "cursorbench_score_pct": 36.1,
+      "output_tokens_per_task": 24893,
+      "monthly_tokens": 27200000,
+      "monthly_tasks": 1092.7,
+      "cost_per_task_usd": 0.009152,
+      "tasks_per_dollar": 109.3,
+      "raw_usd_per_mtok": 0.36765,
+      "raw_token_rank": 183,
+      "confidence": "medium",
+      "chart_tier": "full",
+      "source": "https://opencode.ai/docs/go/ 官方每模型 Usage 与三段价格；opencode-go-round5-2026-09-06.json",
+      "tier_computations": {
+        "Extra High": {
+          "output_tokens_per_task": 49814,
+          "score_pct": 41.4,
+          "monthly_tasks": 546.0,
+          "cost_per_task_usd": 0.018314,
+          "tasks_per_dollar": 54.6
+        },
+        "High": {
+          "output_tokens_per_task": 41387,
+          "score_pct": 40.4,
+          "monthly_tasks": 657.2,
+          "cost_per_task_usd": 0.015216,
+          "tasks_per_dollar": 65.7
+        },
+        "Medium": {
+          "output_tokens_per_task": 24893,
+          "score_pct": 36.1,
+          "monthly_tasks": 1092.7,
+          "cost_per_task_usd": 0.009152,
+          "tasks_per_dollar": 109.3
+        },
+        "Low": {
+          "output_tokens_per_task": 16307,
+          "score_pct": 33.4,
+          "monthly_tasks": 1668.0,
+          "cost_per_task_usd": 0.005995,
+          "tasks_per_dollar": 166.8
+        }
+      },
+      "task_rank": 39,
+      "cohort_raw_rank": 39,
+      "rank_delta": 0
+    }
+  ]
+}
