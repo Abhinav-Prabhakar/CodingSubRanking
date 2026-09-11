@@ -53,6 +53,15 @@ To find the true purchasing power of an AI coding subscription, we adjust for ou
    $$Tasks_{{\\textdollar}} = \\frac{{N_{{\\text{{tasks}}}}}}{{P_{{\\text{{monthly}}}}}} = \\frac{{1}}{{Cost_{{\\text{{task}}}}}}$$
    *(The true efficiency metric: completed tasks delivered per dollar)*
 
+4. **Annual Billing & Discount Dynamics**:
+   For providers without differentiated annual rates (e.g. OpenAI), the annual price is simply $12 \\times P_{{\\text{{monthly}}}}$ ($0\\%$ discount, same effective monthly rate). For providers offering annual commitments:
+   - **Claude Pro (Anthropic)**: \\$200/year (\\$16.67/mo effective, $\\sim$16.7% discount).
+   - **GLM Coding Plans (Zhipu)**: 20% annual discount on new-customer tiers (Lite ¥94.4/mo, Pro ¥430.4/mo, Max ¥862.4/mo).
+   - **SuperGrok (xAI)**: \\$300/year (\\$25/mo effective, 16.7% discount).
+   - **Ollama Pro**: \\$200/year (\\$16.67/mo effective, 16.7% discount).
+   Effective cost per task under annual billing drops proportionally:
+   $$Cost_{{\\text{{task, annual}}}} = \\frac{{P_{{\\text{{annual}}}} / 12}}{{N_{{\\text{{tasks}}}}}} = Cost_{{\\text{{task, monthly}}}} \\times (1 - \\text{{Discount}}\\%)$$
+
 ---
 
 ## 2. DeepSWE v1.1 Token Consumption Data
@@ -78,7 +87,18 @@ The column **Shift vs Raw** indicates the ranking change compared to the traditi
 
 ---
 
-## 4. Key Takeaways & Ranking Shifts
+## 4. Annual Pricing & Discount Comparison
+
+When paid annually, subscriptions with discounts become significantly more cost-effective per completed task. Below are the plans offering explicit annual discounts, showing how their effective monthly fee, $/task, and rankings improve:
+
+{tables['annual_discount_table']}
+
+> [!TIP]
+> Plans without published annual discounts (e.g. ChatGPT Plus / Pro, Command Code GOAT, OpenCode) maintain the same effective monthly fee ($12 \\times$ monthly with 0% discount). Consequently, discounted subscriptions like **Claude Pro** and **GLM Coding Plans** climb several spots under annual billing.
+
+---
+
+## 5. Key Takeaways & Ranking Shifts
 
 1. **The Verbosity Penalty**:
    - Models with large raw token allowances like `gemini-3.8-flash` offer tens of billions of tokens, ranking high on raw $/MTok charts. However, at **120,488 median output tokens/task** (Medium tier), its effective task cost falls behind far more token-efficient models.

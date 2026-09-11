@@ -12,6 +12,27 @@ DERIVED_DIR = ROOT / "derived"
 DERIVED_DIR.mkdir(exist_ok=True)
 
 
+ANNUAL_DISCOUNT_RULES = {
+    "claude_pro": {"annual_usd": 200.0, "effective_monthly_usd": 200.0 / 12.0, "discount_pct": round((1.0 - (200.0 / 12.0) / 20.0) * 100, 1)},
+    "supergrok": {"annual_usd": 300.0, "effective_monthly_usd": 300.0 / 12.0, "discount_pct": round((1.0 - (300.0 / 12.0) / 30.0) * 100, 1)},
+    "ollama_pro": {"annual_usd": 200.0, "effective_monthly_usd": 200.0 / 12.0, "discount_pct": round((1.0 - (200.0 / 12.0) / 20.0) * 100, 1)},
+}
+
+
+def get_annual_pricing(plan_id: str, price_usd: float):
+    """Return (annual_fee_usd, effective_monthly_fee_usd, discount_pct)."""
+    if plan_id in ANNUAL_DISCOUNT_RULES:
+        rule = ANNUAL_DISCOUNT_RULES[plan_id]
+        return rule["annual_usd"], rule["effective_monthly_usd"], rule["discount_pct"]
+    # GLM Coding Plans: 20% discount on continuous monthly / annual commitment for new-customer tiers
+    if plan_id.startswith("glm_coding_") and "_new_" in plan_id:
+        eff_m = price_usd * 0.8
+        ann_usd = eff_m * 12.0
+        return ann_usd, eff_m, 20.0
+    # Default: 12x monthly, 0% discount
+    return price_usd * 12.0, price_usd, 0.0
+
+
 def compute_task_rankings():
     # Load model token consumption mapping
     with open(DATA_DIR / "model-token-consumption.json", "r", encoding="utf-8") as f:
@@ -51,19 +72,28 @@ def compute_task_rankings():
             cost_per_task = p_usd / monthly_tasks
             tasks_per_dollar = monthly_tasks / p_usd
 
+            # Annual pricing
+            ann_fee_usd, eff_monthly_usd, ann_disc_pct = get_annual_pricing(plan_id, p_usd)
+            cost_per_task_ann = eff_monthly_usd / monthly_tasks
+            tasks_per_dollar_ann = monthly_tasks / eff_monthly_usd
+
             # Also compute for all tiers
             tier_computations = {}
             for t_name, t_tokens in m_info.get("all_tiers", {}).items():
                 t_tasks = m_tokens / t_tokens
                 t_cost = p_usd / t_tasks
                 t_tasks_per_usd = t_tasks / p_usd
+                t_cost_ann = eff_monthly_usd / t_tasks
+                t_tasks_per_usd_ann = t_tasks / eff_monthly_usd
                 t_score = m_info.get("all_scores", {}).get(t_name)
                 tier_computations[t_name] = {
                     "output_tokens_per_task": t_tokens,
                     "score_pct": t_score,
                     "monthly_tasks": round(t_tasks, 1),
                     "cost_per_task_usd": round(t_cost, 6),
-                    "tasks_per_dollar": round(t_tasks_per_usd, 1)
+                    "tasks_per_dollar": round(t_tasks_per_usd, 1),
+                    "cost_per_task_annual_usd": round(t_cost_ann, 6),
+                    "tasks_per_dollar_annual": round(t_tasks_per_usd_ann, 1),
                 }
 
             entry = {
@@ -73,6 +103,9 @@ def compute_task_rankings():
                 "price": float(r["price"]),
                 "currency": r["currency"],
                 "price_usd": p_usd,
+                "annual_fee_usd": round(ann_fee_usd, 2),
+                "effective_monthly_fee_usd": round(eff_monthly_usd, 2),
+                "annual_discount_pct": ann_disc_pct,
                 "served_model": model,
                 "benchmarked_model_name": m_info.get("benchmarked_name"),
                 "benchmark_status": "available",
@@ -83,6 +116,8 @@ def compute_task_rankings():
                 "monthly_tasks": round(monthly_tasks, 1),
                 "cost_per_task_usd": round(cost_per_task, 6),
                 "tasks_per_dollar": round(tasks_per_dollar, 1),
+                "cost_per_task_annual_usd": round(cost_per_task_ann, 6),
+                "tasks_per_dollar_annual": round(tasks_per_dollar_ann, 1),
                 "raw_usd_per_mtok": raw_price_mtok,
                 "raw_token_rank": raw_rank,
                 "confidence": r.get("confidence", "medium"),
@@ -92,6 +127,7 @@ def compute_task_rankings():
             }
             benchmarked_points.append(entry)
         else:
+            ann_fee_usd, eff_monthly_usd, ann_disc_pct = get_annual_pricing(plan_id, p_usd) if p_usd > 0 else (0, 0, 0)
             entry = {
                 "plan_id": plan_id,
                 "plan_name": r["plan_name"],
@@ -99,6 +135,9 @@ def compute_task_rankings():
                 "price": float(r["price"]) if r.get("price") else 0,
                 "currency": r["currency"],
                 "price_usd": p_usd,
+                "annual_fee_usd": round(ann_fee_usd, 2) if p_usd > 0 else None,
+                "effective_monthly_fee_usd": round(eff_monthly_usd, 2) if p_usd > 0 else None,
+                "annual_discount_pct": ann_disc_pct if p_usd > 0 else None,
                 "served_model": model,
                 "benchmark_status": "pending",
                 "benchmark_note": "[Pending DeepSWE]",
@@ -107,6 +146,8 @@ def compute_task_rankings():
                 "monthly_tasks": None,
                 "cost_per_task_usd": None,
                 "tasks_per_dollar": None,
+                "cost_per_task_annual_usd": None,
+                "tasks_per_dollar_annual": None,
                 "raw_usd_per_mtok": raw_price_mtok if raw_price_mtok else None,
                 "raw_token_rank": raw_rank,
                 "confidence": r.get("confidence", "medium"),
@@ -119,8 +160,6 @@ def compute_task_rankings():
     benchmarked_points.sort(key=lambda x: x["cost_per_task_usd"])
     for rank, p in enumerate(benchmarked_points, 1):
         p["task_rank"] = rank
-        # Calculate rank shift relative to raw token rank among benchmarked points
-        # (Negative means cheaper/improved rank, positive means worse rank)
 
     # Recompute relative rank among benchmarked cohort
     benchmarked_by_raw = sorted(benchmarked_points, key=lambda x: x["raw_usd_per_mtok"])
@@ -131,6 +170,13 @@ def compute_task_rankings():
         # rank delta = cohort_raw_rank - task_rank (positive = climbed in rank due to low verbosity)
         p["rank_delta"] = cohort_raw_rank - p["task_rank"]
 
+    # Compute annual ranking and annual shift
+    benchmarked_by_ann = sorted(benchmarked_points, key=lambda x: x["cost_per_task_annual_usd"])
+    for rank, p in enumerate(benchmarked_by_ann, 1):
+        p["annual_task_rank"] = rank
+        # Shift vs monthly task rank (positive = climbed higher under annual pricing due to discount)
+        p["annual_rank_shift"] = p["task_rank"] - rank
+
     # Save benchmarked ranking
     out_json = DERIVED_DIR / "task-ranking.json"
     with open(out_json, "w", encoding="utf-8") as f:
@@ -140,6 +186,7 @@ def compute_task_rankings():
                 "metric": "Output token consumption (median output tokens / task)",
                 "default_reasoning_tier": "Medium / nearest available",
                 "reference_data": "FeiZhuLulu/real-api-pricing",
+                "annual_pricing_rules": "12x monthly default; Claude Pro ($200/yr), SuperGrok ($300/yr), Ollama Pro ($200/yr), GLM new plans (20% off)",
                 "total_benchmarked_plans": len(benchmarked_points),
                 "total_unbenchmarked_plans": len(unbenchmarked_points)
             },
@@ -149,9 +196,11 @@ def compute_task_rankings():
 
     # Save benchmarked CSV
     csv_fields = [
-        "task_rank", "cohort_raw_rank", "rank_delta", "plan_name", "price_usd",
+        "task_rank", "cohort_raw_rank", "rank_delta", "annual_task_rank", "annual_rank_shift",
+        "plan_name", "price_usd", "effective_monthly_fee_usd", "annual_fee_usd", "annual_discount_pct",
         "served_model", "output_tokens_per_task", "benchmark_score_pct",
         "monthly_tokens", "monthly_tasks", "cost_per_task_usd", "tasks_per_dollar",
+        "cost_per_task_annual_usd", "tasks_per_dollar_annual",
         "raw_usd_per_mtok", "confidence", "plan_id"
     ]
     out_csv = DERIVED_DIR / "task-ranking.csv"
@@ -168,7 +217,7 @@ def compute_task_rankings():
 
     unbench_csv = DERIVED_DIR / "unbenchmarked-models.csv"
     with open(unbench_csv, "w", encoding="utf-8", newline="") as f:
-        unbench_fields = ["plan_name", "price_usd", "served_model", "monthly_tokens", "raw_usd_per_mtok", "benchmark_note", "confidence", "plan_id"]
+        unbench_fields = ["plan_name", "price_usd", "effective_monthly_fee_usd", "annual_fee_usd", "annual_discount_pct", "served_model", "monthly_tokens", "raw_usd_per_mtok", "benchmark_note", "confidence", "plan_id"]
         writer = csv.DictWriter(f, fieldnames=unbench_fields, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(unbenchmarked_points)

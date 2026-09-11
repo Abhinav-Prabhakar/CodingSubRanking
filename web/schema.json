@@ -56,6 +56,13 @@
           "tasks_per_dollar": { "type": "number" },
           "raw_usd_per_mtok": { "type": "number" },
           "confidence": { "type": "string" },
+          "annual_task_rank": { "type": "integer" },
+          "annual_rank_shift": { "type": "integer" },
+          "annual_fee_usd": { "type": "number" },
+          "effective_monthly_fee_usd": { "type": "number" },
+          "annual_discount_pct": { "type": "number" },
+          "cost_per_task_annual_usd": { "type": "number" },
+          "tasks_per_dollar_annual": { "type": "number" },
           "tier_computations": { "type": "object" }
         }
       }

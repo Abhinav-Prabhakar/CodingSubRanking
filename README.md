@@ -40,6 +40,15 @@ To find the true purchasing power of an AI coding subscription, we adjust for ou
    $$Tasks_{\textdollar} = \frac{N_{\text{tasks}}}{P_{\text{monthly}}} = \frac{1}{Cost_{\text{task}}}$$
    *(The true efficiency metric: completed tasks delivered per dollar)*
 
+4. **Annual Billing & Discount Dynamics**:
+   For providers without differentiated annual rates (e.g. OpenAI), the annual price is simply $12 \times P_{\text{monthly}}$ ($0\%$ discount, same effective monthly rate). For providers offering annual commitments:
+   - **Claude Pro (Anthropic)**: \$200/year (\$16.67/mo effective, $\sim$16.7% discount).
+   - **GLM Coding Plans (Zhipu)**: 20% annual discount on new-customer tiers (Lite ¥94.4/mo, Pro ¥430.4/mo, Max ¥862.4/mo).
+   - **SuperGrok (xAI)**: \$300/year (\$25/mo effective, 16.7% discount).
+   - **Ollama Pro**: \$200/year (\$16.67/mo effective, 16.7% discount).
+   Effective cost per task under annual billing drops proportionally:
+   $$Cost_{\text{task, annual}} = \frac{P_{\text{annual}} / 12}{N_{\text{tasks}}} = Cost_{\text{task, monthly}} \times (1 - \text{Discount}\%)$$
+
 ---
 
 ## 2. DeepSWE v1.1 Token Consumption Data
@@ -249,7 +258,48 @@ The column **Shift vs Raw** indicates the ranking change compared to the traditi
 
 ---
 
-## 4. Key Takeaways & Ranking Shifts
+## 4. Annual Pricing & Discount Comparison
+
+When paid annually, subscriptions with discounts become significantly more cost-effective per completed task. Below are the plans offering explicit annual discounts, showing how their effective monthly fee, $/task, and rankings improve:
+
+| Plan Name                     | Served Model      | Monthly Fee | Annual Total | Eff. Monthly | Discount | Monthly Rank | Annual Rank | Shift | Monthly $/Task | Annual $/Task |
+| ----------------------------- | ----------------- | ----------: | -----------: | -----------: | :------: | :----------: | :---------: | :---: | -------------: | ------------: |
+| Claude Pro                    | claude-sonnet-5   |      $20.00 |      $200.00 |       $16.67 |  -16.7%  |     #10      |     #10     |   —   |       $0.00025 |      $0.00021 |
+| Claude Pro                    | claude-opus-4.8   |      $20.00 |      $200.00 |       $16.67 |  -16.7%  |     #22      |     #19     |  ▲ +3 |       $0.00046 |      $0.00038 |
+| Ollama Pro                    | deepseek-v4-flash |      $20.00 |      $200.00 |       $16.67 |  -16.7%  |     #24      |     #21     |  ▲ +3 |       $0.00048 |      $0.00040 |
+| GLM Coding Max (新客 ¥1078) 闲时  | glm-5.3-flash     |     $159.03 |     $1526.69 |      $127.22 |  -20.0%  |     #31      |     #25     |  ▲ +6 |       $0.00060 |      $0.00048 |
+| GLM Coding Pro (新客 ¥538) 闲时   | glm-5.3-flash     |      $79.37 |      $761.95 |       $63.50 |  -20.0%  |     #33      |     #29     |  ▲ +4 |       $0.00070 |      $0.00056 |
+| GLM Coding Max (新客 ¥1078) 中间值 | glm-5.3-flash     |     $159.03 |     $1526.69 |      $127.22 |  -20.0%  |     #39      |     #33     |  ▲ +6 |       $0.00080 |      $0.00064 |
+| Ollama Pro                    | glm-5.3-flash     |      $20.00 |      $200.00 |       $16.67 |  -16.7%  |     #35      |     #34     |  ▲ +1 |       $0.00077 |      $0.00064 |
+| GLM Coding Lite (新客 ¥118) 闲时  | glm-5.3-flash     |      $17.41 |      $167.14 |       $13.93 |  -20.0%  |     #43      |     #36     |  ▲ +7 |       $0.00092 |      $0.00073 |
+| GLM Coding Pro (新客 ¥538) 中间值  | glm-5.3-flash     |      $79.37 |      $761.95 |       $63.50 |  -20.0%  |     #44      |     #37     |  ▲ +7 |       $0.00093 |      $0.00074 |
+| GLM Coding Max (新客 ¥1078) 忙时  | glm-5.3-flash     |     $159.03 |     $1526.69 |      $127.22 |  -20.0%  |     #48      |     #45     |  ▲ +3 |       $0.00120 |      $0.00096 |
+| GLM Coding Lite (新客 ¥118) 中间值 | glm-5.3-flash     |      $17.41 |      $167.14 |       $13.93 |  -20.0%  |     #49      |     #46     |  ▲ +3 |       $0.00122 |      $0.00098 |
+| GLM Coding Pro (新客 ¥538) 忙时   | glm-5.3-flash     |      $79.37 |      $761.95 |       $63.50 |  -20.0%  |     #53      |     #48     |  ▲ +5 |       $0.00139 |      $0.00111 |
+| Ollama Pro                    | deepseek-v4-pro   |      $20.00 |      $200.00 |       $16.67 |  -16.7%  |     #55      |     #51     |  ▲ +4 |       $0.00144 |      $0.00120 |
+| GLM Coding Lite (新客 ¥118) 忙时  | glm-5.3-flash     |      $17.41 |      $167.14 |       $13.93 |  -20.0%  |     #63      |     #57     |  ▲ +6 |       $0.00183 |      $0.00146 |
+| GLM Coding Max (新客 ¥1078) 闲时  | glm-5.3           |     $159.03 |     $1526.69 |      $127.22 |  -20.0%  |     #66      |     #60     |  ▲ +6 |       $0.00201 |      $0.00161 |
+| SuperGrok                     | grok-4.5          |      $30.00 |      $300.00 |       $25.00 |  -16.7%  |     #68      |     #61     |  ▲ +7 |       $0.00202 |      $0.00168 |
+| GLM Coding Pro (新客 ¥538) 闲时   | glm-5.3           |      $79.37 |      $761.95 |       $63.50 |  -20.0%  |     #72      |     #66     |  ▲ +6 |       $0.00234 |      $0.00187 |
+| GLM Coding Max (新客 ¥1078) 中间值 | glm-5.3           |     $159.03 |     $1526.69 |      $127.22 |  -20.0%  |     #77      |     #72     |  ▲ +5 |       $0.00268 |      $0.00215 |
+| SuperGrok                     | grok-4.6          |      $30.00 |      $300.00 |       $25.00 |  -16.7%  |     #78      |     #75     |  ▲ +3 |       $0.00286 |      $0.00239 |
+| GLM Coding Lite (新客 ¥118) 闲时  | glm-5.3           |      $17.41 |      $167.14 |       $13.93 |  -20.0%  |     #81      |     #77     |  ▲ +4 |       $0.00309 |      $0.00247 |
+| GLM Coding Pro (新客 ¥538) 中间值  | glm-5.3           |      $79.37 |      $761.95 |       $63.50 |  -20.0%  |     #82      |     #78     |  ▲ +4 |       $0.00312 |      $0.00250 |
+| GLM Coding Max (新客 ¥1078) 忙时  | glm-5.3           |     $159.03 |     $1526.69 |      $127.22 |  -20.0%  |     #89      |     #84     |  ▲ +5 |       $0.00402 |      $0.00322 |
+| GLM Coding Lite (新客 ¥118) 中间值 | glm-5.3           |      $17.41 |      $167.14 |       $13.93 |  -20.0%  |     #90      |     #86     |  ▲ +4 |       $0.00412 |      $0.00329 |
+| Ollama Pro                    | kimi-k2.7-code    |      $20.00 |      $200.00 |       $16.67 |  -16.7%  |     #88      |     #87     |  ▲ +1 |       $0.00396 |      $0.00330 |
+| GLM Coding Pro (新客 ¥538) 忙时   | glm-5.3           |      $79.37 |      $761.95 |       $63.50 |  -20.0%  |     #92      |     #88     |  ▲ +4 |       $0.00468 |      $0.00375 |
+| Ollama Pro                    | glm-5.2           |      $20.00 |      $200.00 |       $16.67 |  -16.7%  |     #93      |     #92     |  ▲ +1 |       $0.00488 |      $0.00407 |
+| GLM Coding Lite (新客 ¥118) 忙时  | glm-5.3           |      $17.41 |      $167.14 |       $13.93 |  -20.0%  |     #97      |     #95     |  ▲ +2 |       $0.00615 |      $0.00492 |
+| Ollama Pro                    | glm-5.3           |      $20.00 |      $200.00 |       $16.67 |  -16.7%  |     #99      |     #99     |   —   |       $0.00747 |      $0.00622 |
+| Ollama Pro                    | kimi-k3           |      $20.00 |      $200.00 |       $16.67 |  -16.7%  |     #104     |     #102    |  ▲ +2 |       $0.01029 |      $0.00858 |
+
+> [!TIP]
+> Plans without published annual discounts (e.g. ChatGPT Plus / Pro, Command Code GOAT, OpenCode) maintain the same effective monthly fee ($12 \times$ monthly with 0% discount). Consequently, discounted subscriptions like **Claude Pro** and **GLM Coding Plans** climb several spots under annual billing.
+
+---
+
+## 5. Key Takeaways & Ranking Shifts
 
 1. **The Verbosity Penalty**:
    - Models with large raw token allowances like `gemini-3.8-flash` offer tens of billions of tokens, ranking high on raw $/MTok charts. However, at **120,488 median output tokens/task** (Medium tier), its effective task cost falls behind far more token-efficient models.

@@ -4,6 +4,7 @@
     "metric": "Output token consumption (median output tokens / task)",
     "default_reasoning_tier": "Medium / nearest available",
     "reference_data": "FeiZhuLulu/real-api-pricing",
+    "annual_pricing_rules": "12x monthly default; Claude Pro ($200/yr), SuperGrok ($300/yr), Ollama Pro ($200/yr), GLM new plans (20% off)",
     "total_benchmarked_plans": 112,
     "total_unbenchmarked_plans": 84
   },
@@ -15,6 +16,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
+      "annual_fee_usd": 2400.0,
+      "effective_monthly_fee_usd": 200.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-luna",
       "benchmarked_model_name": "GPT-5.6 Luna",
       "benchmark_status": "available",
@@ -25,6 +29,8 @@
       "monthly_tasks": 18972215.2,
       "cost_per_task_usd": 1.1e-05,
       "tasks_per_dollar": 94861.1,
+      "cost_per_task_annual_usd": 1.1e-05,
+      "tasks_per_dollar_annual": 94861.1,
       "raw_usd_per_mtok": 0.00133,
       "raw_token_rank": 8,
       "confidence": "medium",
@@ -36,40 +42,52 @@
           "score_pct": 1.5,
           "monthly_tasks": 49108205.3,
           "cost_per_task_usd": 4e-06,
-          "tasks_per_dollar": 245541.0
+          "tasks_per_dollar": 245541.0,
+          "cost_per_task_annual_usd": 4e-06,
+          "tasks_per_dollar_annual": 245541.0
         },
         "Medium": {
           "output_tokens_per_task": 7918,
           "score_pct": 11.3,
           "monthly_tasks": 18972215.2,
           "cost_per_task_usd": 1.1e-05,
-          "tasks_per_dollar": 94861.1
+          "tasks_per_dollar": 94861.1,
+          "cost_per_task_annual_usd": 1.1e-05,
+          "tasks_per_dollar_annual": 94861.1
         },
         "High": {
           "output_tokens_per_task": 24818,
           "score_pct": 44.2,
           "monthly_tasks": 6052945.4,
           "cost_per_task_usd": 3.3e-05,
-          "tasks_per_dollar": 30264.7
+          "tasks_per_dollar": 30264.7,
+          "cost_per_task_annual_usd": 3.3e-05,
+          "tasks_per_dollar_annual": 30264.7
         },
         "Extra High": {
           "output_tokens_per_task": 42374,
           "score_pct": 56.9,
           "monthly_tasks": 3545145.6,
           "cost_per_task_usd": 5.6e-05,
-          "tasks_per_dollar": 17725.7
+          "tasks_per_dollar": 17725.7,
+          "cost_per_task_annual_usd": 5.6e-05,
+          "tasks_per_dollar_annual": 17725.7
         },
         "Max": {
           "output_tokens_per_task": 70253,
           "score_pct": 67.2,
           "monthly_tasks": 2138300.1,
           "cost_per_task_usd": 9.4e-05,
-          "tasks_per_dollar": 10691.5
+          "tasks_per_dollar": 10691.5,
+          "cost_per_task_annual_usd": 9.4e-05,
+          "tasks_per_dollar_annual": 10691.5
         }
       },
       "task_rank": 1,
       "cohort_raw_rank": 1,
-      "rank_delta": 0
+      "rank_delta": 0,
+      "annual_task_rank": 1,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "chatgpt_plus",
@@ -78,6 +96,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 240.0,
+      "effective_monthly_fee_usd": 20.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-luna",
       "benchmarked_model_name": "GPT-5.6 Luna",
       "benchmark_status": "available",
@@ -88,6 +109,8 @@
       "monthly_tasks": 948598.1,
       "cost_per_task_usd": 2.1e-05,
       "tasks_per_dollar": 47429.9,
+      "cost_per_task_annual_usd": 2.1e-05,
+      "tasks_per_dollar_annual": 47429.9,
       "raw_usd_per_mtok": 0.00266,
       "raw_token_rank": 14,
       "confidence": "high",
@@ -99,40 +122,52 @@
           "score_pct": 1.5,
           "monthly_tasks": 2455377.6,
           "cost_per_task_usd": 8e-06,
-          "tasks_per_dollar": 122768.9
+          "tasks_per_dollar": 122768.9,
+          "cost_per_task_annual_usd": 8e-06,
+          "tasks_per_dollar_annual": 122768.9
         },
         "Medium": {
           "output_tokens_per_task": 7918,
           "score_pct": 11.3,
           "monthly_tasks": 948598.1,
           "cost_per_task_usd": 2.1e-05,
-          "tasks_per_dollar": 47429.9
+          "tasks_per_dollar": 47429.9,
+          "cost_per_task_annual_usd": 2.1e-05,
+          "tasks_per_dollar_annual": 47429.9
         },
         "High": {
           "output_tokens_per_task": 24818,
           "score_pct": 44.2,
           "monthly_tasks": 302643.2,
           "cost_per_task_usd": 6.6e-05,
-          "tasks_per_dollar": 15132.2
+          "tasks_per_dollar": 15132.2,
+          "cost_per_task_annual_usd": 6.6e-05,
+          "tasks_per_dollar_annual": 15132.2
         },
         "Extra High": {
           "output_tokens_per_task": 42374,
           "score_pct": 56.9,
           "monthly_tasks": 177254.9,
           "cost_per_task_usd": 0.000113,
-          "tasks_per_dollar": 8862.7
+          "tasks_per_dollar": 8862.7,
+          "cost_per_task_annual_usd": 0.000113,
+          "tasks_per_dollar_annual": 8862.7
         },
         "Max": {
           "output_tokens_per_task": 70253,
           "score_pct": 67.2,
           "monthly_tasks": 106913.6,
           "cost_per_task_usd": 0.000187,
-          "tasks_per_dollar": 5345.7
+          "tasks_per_dollar": 5345.7,
+          "cost_per_task_annual_usd": 0.000187,
+          "tasks_per_dollar_annual": 5345.7
         }
       },
       "task_rank": 2,
       "cohort_raw_rank": 2,
-      "rank_delta": 0
+      "rank_delta": 0,
+      "annual_task_rank": 2,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -141,6 +176,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-luna",
       "benchmarked_model_name": "GPT-5.6 Luna",
       "benchmark_status": "available",
@@ -151,6 +189,8 @@
       "monthly_tasks": 4743116.9,
       "cost_per_task_usd": 2.1e-05,
       "tasks_per_dollar": 47431.2,
+      "cost_per_task_annual_usd": 2.1e-05,
+      "tasks_per_dollar_annual": 47431.2,
       "raw_usd_per_mtok": 0.00266,
       "raw_token_rank": 15,
       "confidence": "medium",
@@ -162,40 +202,52 @@
           "score_pct": 1.5,
           "monthly_tasks": 12277214.8,
           "cost_per_task_usd": 8e-06,
-          "tasks_per_dollar": 122772.1
+          "tasks_per_dollar": 122772.1,
+          "cost_per_task_annual_usd": 8e-06,
+          "tasks_per_dollar_annual": 122772.1
         },
         "Medium": {
           "output_tokens_per_task": 7918,
           "score_pct": 11.3,
           "monthly_tasks": 4743116.9,
           "cost_per_task_usd": 2.1e-05,
-          "tasks_per_dollar": 47431.2
+          "tasks_per_dollar": 47431.2,
+          "cost_per_task_annual_usd": 2.1e-05,
+          "tasks_per_dollar_annual": 47431.2
         },
         "High": {
           "output_tokens_per_task": 24818,
           "score_pct": 44.2,
           "monthly_tasks": 1513256.5,
           "cost_per_task_usd": 6.6e-05,
-          "tasks_per_dollar": 15132.6
+          "tasks_per_dollar": 15132.6,
+          "cost_per_task_annual_usd": 6.6e-05,
+          "tasks_per_dollar_annual": 15132.6
         },
         "Extra High": {
           "output_tokens_per_task": 42374,
           "score_pct": 56.9,
           "monthly_tasks": 886298.2,
           "cost_per_task_usd": 0.000113,
-          "tasks_per_dollar": 8863.0
+          "tasks_per_dollar": 8863.0,
+          "cost_per_task_annual_usd": 0.000113,
+          "tasks_per_dollar_annual": 8863.0
         },
         "Max": {
           "output_tokens_per_task": 70253,
           "score_pct": 67.2,
           "monthly_tasks": 534582.2,
           "cost_per_task_usd": 0.000187,
-          "tasks_per_dollar": 5345.8
+          "tasks_per_dollar": 5345.8,
+          "cost_per_task_annual_usd": 0.000187,
+          "tasks_per_dollar_annual": 5345.8
         }
       },
       "task_rank": 3,
       "cohort_raw_rank": 3,
-      "rank_delta": 0
+      "rank_delta": 0,
+      "annual_task_rank": 3,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -204,6 +256,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
+      "annual_fee_usd": 2400.0,
+      "effective_monthly_fee_usd": 200.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-terra",
       "benchmarked_model_name": "GPT-5.6 Terra",
       "benchmark_status": "available",
@@ -214,6 +269,8 @@
       "monthly_tasks": 2097616.3,
       "cost_per_task_usd": 9.5e-05,
       "tasks_per_dollar": 10488.1,
+      "cost_per_task_annual_usd": 9.5e-05,
+      "tasks_per_dollar_annual": 10488.1,
       "raw_usd_per_mtok": 0.00833,
       "raw_token_rank": 40,
       "confidence": "medium",
@@ -225,40 +282,52 @@
           "score_pct": 24.1,
           "monthly_tasks": 2906715.1,
           "cost_per_task_usd": 6.9e-05,
-          "tasks_per_dollar": 14533.6
+          "tasks_per_dollar": 14533.6,
+          "cost_per_task_annual_usd": 6.9e-05,
+          "tasks_per_dollar_annual": 14533.6
         },
         "Medium": {
           "output_tokens_per_task": 11453,
           "score_pct": 35.1,
           "monthly_tasks": 2097616.3,
           "cost_per_task_usd": 9.5e-05,
-          "tasks_per_dollar": 10488.1
+          "tasks_per_dollar": 10488.1,
+          "cost_per_task_annual_usd": 9.5e-05,
+          "tasks_per_dollar_annual": 10488.1
         },
         "High": {
           "output_tokens_per_task": 20866,
           "score_pct": 53.8,
           "monthly_tasks": 1151346.7,
           "cost_per_task_usd": 0.000174,
-          "tasks_per_dollar": 5756.7
+          "tasks_per_dollar": 5756.7,
+          "cost_per_task_annual_usd": 0.000174,
+          "tasks_per_dollar_annual": 5756.7
         },
         "Extra High": {
           "output_tokens_per_task": 38006,
           "score_pct": 60.2,
           "monthly_tasks": 632110.7,
           "cost_per_task_usd": 0.000316,
-          "tasks_per_dollar": 3160.6
+          "tasks_per_dollar": 3160.6,
+          "cost_per_task_annual_usd": 0.000316,
+          "tasks_per_dollar_annual": 3160.6
         },
         "Max": {
           "output_tokens_per_task": 70835,
           "score_pct": 69.6,
           "monthly_tasks": 339154.4,
           "cost_per_task_usd": 0.00059,
-          "tasks_per_dollar": 1695.8
+          "tasks_per_dollar": 1695.8,
+          "cost_per_task_annual_usd": 0.00059,
+          "tasks_per_dollar_annual": 1695.8
         }
       },
       "task_rank": 4,
       "cohort_raw_rank": 17,
-      "rank_delta": 13
+      "rank_delta": 13,
+      "annual_task_rank": 4,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "command_code_goat",
@@ -267,6 +336,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-luna",
       "benchmarked_model_name": "GPT-5.6 Luna",
       "benchmark_status": "available",
@@ -277,6 +349,8 @@
       "monthly_tasks": 90212.2,
       "cost_per_task_usd": 0.000111,
       "tasks_per_dollar": 9021.2,
+      "cost_per_task_annual_usd": 0.000111,
+      "tasks_per_dollar_annual": 9021.2,
       "raw_usd_per_mtok": 0.014,
       "raw_token_rank": 75,
       "confidence": "medium",
@@ -288,40 +362,52 @@
           "score_pct": 1.5,
           "monthly_tasks": 233507.7,
           "cost_per_task_usd": 4.3e-05,
-          "tasks_per_dollar": 23350.8
+          "tasks_per_dollar": 23350.8,
+          "cost_per_task_annual_usd": 4.3e-05,
+          "tasks_per_dollar_annual": 23350.8
         },
         "Medium": {
           "output_tokens_per_task": 7918,
           "score_pct": 11.3,
           "monthly_tasks": 90212.2,
           "cost_per_task_usd": 0.000111,
-          "tasks_per_dollar": 9021.2
+          "tasks_per_dollar": 9021.2,
+          "cost_per_task_annual_usd": 0.000111,
+          "tasks_per_dollar_annual": 9021.2
         },
         "High": {
           "output_tokens_per_task": 24818,
           "score_pct": 44.2,
           "monthly_tasks": 28781.5,
           "cost_per_task_usd": 0.000347,
-          "tasks_per_dollar": 2878.2
+          "tasks_per_dollar": 2878.2,
+          "cost_per_task_annual_usd": 0.000347,
+          "tasks_per_dollar_annual": 2878.2
         },
         "Extra High": {
           "output_tokens_per_task": 42374,
           "score_pct": 56.9,
           "monthly_tasks": 16857.0,
           "cost_per_task_usd": 0.000593,
-          "tasks_per_dollar": 1685.7
+          "tasks_per_dollar": 1685.7,
+          "cost_per_task_annual_usd": 0.000593,
+          "tasks_per_dollar_annual": 1685.7
         },
         "Max": {
           "output_tokens_per_task": 70253,
           "score_pct": 67.2,
           "monthly_tasks": 10167.5,
           "cost_per_task_usd": 0.000984,
-          "tasks_per_dollar": 1016.8
+          "tasks_per_dollar": 1016.8,
+          "cost_per_task_annual_usd": 0.000984,
+          "tasks_per_dollar_annual": 1016.8
         }
       },
       "task_rank": 5,
       "cohort_raw_rank": 34,
-      "rank_delta": 29
+      "rank_delta": 29,
+      "annual_task_rank": 5,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "opencode_go",
@@ -330,6 +416,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-luna",
       "benchmarked_model_name": "GPT-5.6 Luna",
       "benchmark_status": "available",
@@ -340,6 +429,8 @@
       "monthly_tasks": 67656.0,
       "cost_per_task_usd": 0.000148,
       "tasks_per_dollar": 6765.6,
+      "cost_per_task_annual_usd": 0.000148,
+      "tasks_per_dollar_annual": 6765.6,
       "raw_usd_per_mtok": 0.01867,
       "raw_token_rank": 88,
       "confidence": "medium",
@@ -351,40 +442,52 @@
           "score_pct": 1.5,
           "monthly_tasks": 175122.6,
           "cost_per_task_usd": 5.7e-05,
-          "tasks_per_dollar": 17512.3
+          "tasks_per_dollar": 17512.3,
+          "cost_per_task_annual_usd": 5.7e-05,
+          "tasks_per_dollar_annual": 17512.3
         },
         "Medium": {
           "output_tokens_per_task": 7918,
           "score_pct": 11.3,
           "monthly_tasks": 67656.0,
           "cost_per_task_usd": 0.000148,
-          "tasks_per_dollar": 6765.6
+          "tasks_per_dollar": 6765.6,
+          "cost_per_task_annual_usd": 0.000148,
+          "tasks_per_dollar_annual": 6765.6
         },
         "High": {
           "output_tokens_per_task": 24818,
           "score_pct": 44.2,
           "monthly_tasks": 21585.1,
           "cost_per_task_usd": 0.000463,
-          "tasks_per_dollar": 2158.5
+          "tasks_per_dollar": 2158.5,
+          "cost_per_task_annual_usd": 0.000463,
+          "tasks_per_dollar_annual": 2158.5
         },
         "Extra High": {
           "output_tokens_per_task": 42374,
           "score_pct": 56.9,
           "monthly_tasks": 12642.2,
           "cost_per_task_usd": 0.000791,
-          "tasks_per_dollar": 1264.2
+          "tasks_per_dollar": 1264.2,
+          "cost_per_task_annual_usd": 0.000791,
+          "tasks_per_dollar_annual": 1264.2
         },
         "Max": {
           "output_tokens_per_task": 70253,
           "score_pct": 67.2,
           "monthly_tasks": 7625.3,
           "cost_per_task_usd": 0.001311,
-          "tasks_per_dollar": 762.5
+          "tasks_per_dollar": 762.5,
+          "cost_per_task_annual_usd": 0.001311,
+          "tasks_per_dollar_annual": 762.5
         }
       },
       "task_rank": 6,
       "cohort_raw_rank": 45,
-      "rank_delta": 39
+      "rank_delta": 39,
+      "annual_task_rank": 6,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "chatgpt_plus",
@@ -393,6 +496,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 240.0,
+      "effective_monthly_fee_usd": 20.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-terra",
       "benchmarked_model_name": "GPT-5.6 Terra",
       "benchmark_status": "available",
@@ -403,6 +509,8 @@
       "monthly_tasks": 104880.8,
       "cost_per_task_usd": 0.000191,
       "tasks_per_dollar": 5244.0,
+      "cost_per_task_annual_usd": 0.000191,
+      "tasks_per_dollar_annual": 5244.0,
       "raw_usd_per_mtok": 0.01665,
       "raw_token_rank": 82,
       "confidence": "medium",
@@ -414,40 +522,52 @@
           "score_pct": 24.1,
           "monthly_tasks": 145335.8,
           "cost_per_task_usd": 0.000138,
-          "tasks_per_dollar": 7266.8
+          "tasks_per_dollar": 7266.8,
+          "cost_per_task_annual_usd": 0.000138,
+          "tasks_per_dollar_annual": 7266.8
         },
         "Medium": {
           "output_tokens_per_task": 11453,
           "score_pct": 35.1,
           "monthly_tasks": 104880.8,
           "cost_per_task_usd": 0.000191,
-          "tasks_per_dollar": 5244.0
+          "tasks_per_dollar": 5244.0,
+          "cost_per_task_annual_usd": 0.000191,
+          "tasks_per_dollar_annual": 5244.0
         },
         "High": {
           "output_tokens_per_task": 20866,
           "score_pct": 53.8,
           "monthly_tasks": 57567.3,
           "cost_per_task_usd": 0.000347,
-          "tasks_per_dollar": 2878.4
+          "tasks_per_dollar": 2878.4,
+          "cost_per_task_annual_usd": 0.000347,
+          "tasks_per_dollar_annual": 2878.4
         },
         "Extra High": {
           "output_tokens_per_task": 38006,
           "score_pct": 60.2,
           "monthly_tasks": 31605.5,
           "cost_per_task_usd": 0.000633,
-          "tasks_per_dollar": 1580.3
+          "tasks_per_dollar": 1580.3,
+          "cost_per_task_annual_usd": 0.000633,
+          "tasks_per_dollar_annual": 1580.3
         },
         "Max": {
           "output_tokens_per_task": 70835,
           "score_pct": 69.6,
           "monthly_tasks": 16957.7,
           "cost_per_task_usd": 0.001179,
-          "tasks_per_dollar": 847.9
+          "tasks_per_dollar": 847.9,
+          "cost_per_task_annual_usd": 0.001179,
+          "tasks_per_dollar_annual": 847.9
         }
       },
       "task_rank": 7,
       "cohort_raw_rank": 39,
-      "rank_delta": 32
+      "rank_delta": 32,
+      "annual_task_rank": 7,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -456,6 +576,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-terra",
       "benchmarked_model_name": "GPT-5.6 Terra",
       "benchmark_status": "available",
@@ -466,6 +589,8 @@
       "monthly_tasks": 524404.1,
       "cost_per_task_usd": 0.000191,
       "tasks_per_dollar": 5244.0,
+      "cost_per_task_annual_usd": 0.000191,
+      "tasks_per_dollar_annual": 5244.0,
       "raw_usd_per_mtok": 0.01665,
       "raw_token_rank": 83,
       "confidence": "medium",
@@ -477,40 +602,52 @@
           "score_pct": 24.1,
           "monthly_tasks": 726678.8,
           "cost_per_task_usd": 0.000138,
-          "tasks_per_dollar": 7266.8
+          "tasks_per_dollar": 7266.8,
+          "cost_per_task_annual_usd": 0.000138,
+          "tasks_per_dollar_annual": 7266.8
         },
         "Medium": {
           "output_tokens_per_task": 11453,
           "score_pct": 35.1,
           "monthly_tasks": 524404.1,
           "cost_per_task_usd": 0.000191,
-          "tasks_per_dollar": 5244.0
+          "tasks_per_dollar": 5244.0,
+          "cost_per_task_annual_usd": 0.000191,
+          "tasks_per_dollar_annual": 5244.0
         },
         "High": {
           "output_tokens_per_task": 20866,
           "score_pct": 53.8,
           "monthly_tasks": 287836.7,
           "cost_per_task_usd": 0.000347,
-          "tasks_per_dollar": 2878.4
+          "tasks_per_dollar": 2878.4,
+          "cost_per_task_annual_usd": 0.000347,
+          "tasks_per_dollar_annual": 2878.4
         },
         "Extra High": {
           "output_tokens_per_task": 38006,
           "score_pct": 60.2,
           "monthly_tasks": 158027.7,
           "cost_per_task_usd": 0.000633,
-          "tasks_per_dollar": 1580.3
+          "tasks_per_dollar": 1580.3,
+          "cost_per_task_annual_usd": 0.000633,
+          "tasks_per_dollar_annual": 1580.3
         },
         "Max": {
           "output_tokens_per_task": 70835,
           "score_pct": 69.6,
           "monthly_tasks": 84788.6,
           "cost_per_task_usd": 0.001179,
-          "tasks_per_dollar": 847.9
+          "tasks_per_dollar": 847.9,
+          "cost_per_task_annual_usd": 0.001179,
+          "tasks_per_dollar_annual": 847.9
         }
       },
       "task_rank": 8,
       "cohort_raw_rank": 40,
-      "rank_delta": 32
+      "rank_delta": 32,
+      "annual_task_rank": 8,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "glm_coding_pro_cn_old_offpeak",
@@ -519,6 +656,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
+      "annual_fee_usd": 263.76,
+      "effective_monthly_fee_usd": 21.98,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -529,6 +669,8 @@
       "monthly_tasks": 114074.5,
       "cost_per_task_usd": 0.000193,
       "tasks_per_dollar": 5189.9,
+      "cost_per_task_annual_usd": 0.000193,
+      "tasks_per_dollar_annual": 5189.9,
       "raw_usd_per_mtok": 0.00285,
       "raw_token_rank": 17,
       "confidence": "high",
@@ -540,12 +682,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 114074.5,
           "cost_per_task_usd": 0.000193,
-          "tasks_per_dollar": 5189.9
+          "tasks_per_dollar": 5189.9,
+          "cost_per_task_annual_usd": 0.000193,
+          "tasks_per_dollar_annual": 5189.9
         }
       },
       "task_rank": 9,
       "cohort_raw_rank": 4,
-      "rank_delta": -5
+      "rank_delta": -5,
+      "annual_task_rank": 9,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "claude_pro",
@@ -554,6 +700,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 200.0,
+      "effective_monthly_fee_usd": 16.67,
+      "annual_discount_pct": 16.7,
       "served_model": "claude-sonnet-5",
       "benchmarked_model_name": "Claude Sonnet 5",
       "benchmark_status": "available",
@@ -564,6 +713,8 @@
       "monthly_tasks": 78748.0,
       "cost_per_task_usd": 0.000254,
       "tasks_per_dollar": 3937.4,
+      "cost_per_task_annual_usd": 0.000212,
+      "tasks_per_dollar_annual": 4724.9,
       "raw_usd_per_mtok": 0.00504,
       "raw_token_rank": 24,
       "confidence": "medium",
@@ -575,40 +726,52 @@
           "score_pct": 30.5,
           "monthly_tasks": 126119.8,
           "cost_per_task_usd": 0.000159,
-          "tasks_per_dollar": 6306.0
+          "tasks_per_dollar": 6306.0,
+          "cost_per_task_annual_usd": 0.000132,
+          "tasks_per_dollar_annual": 7567.2
         },
         "Medium": {
           "output_tokens_per_task": 50414,
           "score_pct": 39.8,
           "monthly_tasks": 78748.0,
           "cost_per_task_usd": 0.000254,
-          "tasks_per_dollar": 3937.4
+          "tasks_per_dollar": 3937.4,
+          "cost_per_task_annual_usd": 0.000212,
+          "tasks_per_dollar_annual": 4724.9
         },
         "High": {
           "output_tokens_per_task": 77993,
           "score_pct": 48.2,
           "monthly_tasks": 50902.0,
           "cost_per_task_usd": 0.000393,
-          "tasks_per_dollar": 2545.1
+          "tasks_per_dollar": 2545.1,
+          "cost_per_task_annual_usd": 0.000327,
+          "tasks_per_dollar_annual": 3054.1
         },
         "Extra High": {
           "output_tokens_per_task": 113150,
           "score_pct": 49.7,
           "monthly_tasks": 35086.2,
           "cost_per_task_usd": 0.00057,
-          "tasks_per_dollar": 1754.3
+          "tasks_per_dollar": 1754.3,
+          "cost_per_task_annual_usd": 0.000475,
+          "tasks_per_dollar_annual": 2105.2
         },
         "Max": {
           "output_tokens_per_task": 203918,
           "score_pct": 53.8,
           "monthly_tasks": 19468.6,
           "cost_per_task_usd": 0.001027,
-          "tasks_per_dollar": 973.4
+          "tasks_per_dollar": 973.4,
+          "cost_per_task_annual_usd": 0.000856,
+          "tasks_per_dollar_annual": 1168.1
         }
       },
       "task_rank": 10,
       "cohort_raw_rank": 9,
-      "rank_delta": -1
+      "rank_delta": -1,
+      "annual_task_rank": 10,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "glm_coding_pro_cn_old_mid",
@@ -617,6 +780,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
+      "annual_fee_usd": 263.76,
+      "effective_monthly_fee_usd": 21.98,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -627,6 +793,8 @@
       "monthly_tasks": 85552.1,
       "cost_per_task_usd": 0.000257,
       "tasks_per_dollar": 3892.3,
+      "cost_per_task_annual_usd": 0.000257,
+      "tasks_per_dollar_annual": 3892.3,
       "raw_usd_per_mtok": 0.00381,
       "raw_token_rank": 20,
       "confidence": "high",
@@ -638,12 +806,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 85552.1,
           "cost_per_task_usd": 0.000257,
-          "tasks_per_dollar": 3892.3
+          "tasks_per_dollar": 3892.3,
+          "cost_per_task_annual_usd": 0.000257,
+          "tasks_per_dollar_annual": 3892.3
         }
       },
       "task_rank": 11,
       "cohort_raw_rank": 5,
-      "rank_delta": -6
+      "rank_delta": -6,
+      "annual_task_rank": 11,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "claude_max_20x",
@@ -652,6 +824,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
+      "annual_fee_usd": 2400.0,
+      "effective_monthly_fee_usd": 200.0,
+      "annual_discount_pct": 0.0,
       "served_model": "claude-sonnet-5",
       "benchmarked_model_name": "Claude Sonnet 5",
       "benchmark_status": "available",
@@ -662,6 +837,8 @@
       "monthly_tasks": 778553.6,
       "cost_per_task_usd": 0.000257,
       "tasks_per_dollar": 3892.8,
+      "cost_per_task_annual_usd": 0.000257,
+      "tasks_per_dollar_annual": 3892.8,
       "raw_usd_per_mtok": 0.0051,
       "raw_token_rank": 25,
       "confidence": "medium",
@@ -673,40 +850,52 @@
           "score_pct": 30.5,
           "monthly_tasks": 1246902.6,
           "cost_per_task_usd": 0.00016,
-          "tasks_per_dollar": 6234.5
+          "tasks_per_dollar": 6234.5,
+          "cost_per_task_annual_usd": 0.00016,
+          "tasks_per_dollar_annual": 6234.5
         },
         "Medium": {
           "output_tokens_per_task": 50414,
           "score_pct": 39.8,
           "monthly_tasks": 778553.6,
           "cost_per_task_usd": 0.000257,
-          "tasks_per_dollar": 3892.8
+          "tasks_per_dollar": 3892.8,
+          "cost_per_task_annual_usd": 0.000257,
+          "tasks_per_dollar_annual": 3892.8
         },
         "High": {
           "output_tokens_per_task": 77993,
           "score_pct": 48.2,
           "monthly_tasks": 503250.3,
           "cost_per_task_usd": 0.000397,
-          "tasks_per_dollar": 2516.3
+          "tasks_per_dollar": 2516.3,
+          "cost_per_task_annual_usd": 0.000397,
+          "tasks_per_dollar_annual": 2516.3
         },
         "Extra High": {
           "output_tokens_per_task": 113150,
           "score_pct": 49.7,
           "monthly_tasks": 346884.7,
           "cost_per_task_usd": 0.000577,
-          "tasks_per_dollar": 1734.4
+          "tasks_per_dollar": 1734.4,
+          "cost_per_task_annual_usd": 0.000577,
+          "tasks_per_dollar_annual": 1734.4
         },
         "Max": {
           "output_tokens_per_task": 203918,
           "score_pct": 53.8,
           "monthly_tasks": 192479.3,
           "cost_per_task_usd": 0.001039,
-          "tasks_per_dollar": 962.4
+          "tasks_per_dollar": 962.4,
+          "cost_per_task_annual_usd": 0.001039,
+          "tasks_per_dollar_annual": 962.4
         }
       },
       "task_rank": 12,
       "cohort_raw_rank": 10,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "annual_task_rank": 12,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "claude_max_5x",
@@ -715,6 +904,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "claude-sonnet-5",
       "benchmarked_model_name": "Claude Sonnet 5",
       "benchmark_status": "available",
@@ -725,6 +917,8 @@
       "monthly_tasks": 389276.8,
       "cost_per_task_usd": 0.000257,
       "tasks_per_dollar": 3892.8,
+      "cost_per_task_annual_usd": 0.000257,
+      "tasks_per_dollar_annual": 3892.8,
       "raw_usd_per_mtok": 0.0051,
       "raw_token_rank": 26,
       "confidence": "low",
@@ -736,40 +930,52 @@
           "score_pct": 30.5,
           "monthly_tasks": 623451.3,
           "cost_per_task_usd": 0.00016,
-          "tasks_per_dollar": 6234.5
+          "tasks_per_dollar": 6234.5,
+          "cost_per_task_annual_usd": 0.00016,
+          "tasks_per_dollar_annual": 6234.5
         },
         "Medium": {
           "output_tokens_per_task": 50414,
           "score_pct": 39.8,
           "monthly_tasks": 389276.8,
           "cost_per_task_usd": 0.000257,
-          "tasks_per_dollar": 3892.8
+          "tasks_per_dollar": 3892.8,
+          "cost_per_task_annual_usd": 0.000257,
+          "tasks_per_dollar_annual": 3892.8
         },
         "High": {
           "output_tokens_per_task": 77993,
           "score_pct": 48.2,
           "monthly_tasks": 251625.1,
           "cost_per_task_usd": 0.000397,
-          "tasks_per_dollar": 2516.3
+          "tasks_per_dollar": 2516.3,
+          "cost_per_task_annual_usd": 0.000397,
+          "tasks_per_dollar_annual": 2516.3
         },
         "Extra High": {
           "output_tokens_per_task": 113150,
           "score_pct": 49.7,
           "monthly_tasks": 173442.3,
           "cost_per_task_usd": 0.000577,
-          "tasks_per_dollar": 1734.4
+          "tasks_per_dollar": 1734.4,
+          "cost_per_task_annual_usd": 0.000577,
+          "tasks_per_dollar_annual": 1734.4
         },
         "Max": {
           "output_tokens_per_task": 203918,
           "score_pct": 53.8,
           "monthly_tasks": 96239.7,
           "cost_per_task_usd": 0.001039,
-          "tasks_per_dollar": 962.4
+          "tasks_per_dollar": 962.4,
+          "cost_per_task_annual_usd": 0.001039,
+          "tasks_per_dollar_annual": 962.4
         }
       },
       "task_rank": 13,
       "cohort_raw_rank": 11,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "annual_task_rank": 13,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "glm_coding_max_cn_old_offpeak",
@@ -778,6 +984,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
+      "annual_fee_usd": 830.28,
+      "effective_monthly_fee_usd": 69.19,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -788,6 +997,8 @@
       "monthly_tasks": 266183.6,
       "cost_per_task_usd": 0.00026,
       "tasks_per_dollar": 3847.1,
+      "cost_per_task_annual_usd": 0.00026,
+      "tasks_per_dollar_annual": 3847.1,
       "raw_usd_per_mtok": 0.00385,
       "raw_token_rank": 21,
       "confidence": "high",
@@ -799,12 +1010,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 266183.6,
           "cost_per_task_usd": 0.00026,
-          "tasks_per_dollar": 3847.1
+          "tasks_per_dollar": 3847.1,
+          "cost_per_task_annual_usd": 0.00026,
+          "tasks_per_dollar_annual": 3847.1
         }
       },
       "task_rank": 14,
       "cohort_raw_rank": 6,
-      "rank_delta": -8
+      "rank_delta": -8,
+      "annual_task_rank": 14,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -813,6 +1028,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
+      "annual_fee_usd": 2400.0,
+      "effective_monthly_fee_usd": 200.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-sol",
       "benchmarked_model_name": "GPT-5.6 Sol",
       "benchmark_status": "available",
@@ -823,6 +1041,8 @@
       "monthly_tasks": 698214.8,
       "cost_per_task_usd": 0.000286,
       "tasks_per_dollar": 3491.1,
+      "cost_per_task_annual_usd": 0.000286,
+      "tasks_per_dollar_annual": 3491.1,
       "raw_usd_per_mtok": 0.01623,
       "raw_token_rank": 80,
       "confidence": "high",
@@ -834,40 +1054,52 @@
           "score_pct": 45.4,
           "monthly_tasks": 1224408.7,
           "cost_per_task_usd": 0.000163,
-          "tasks_per_dollar": 6122.0
+          "tasks_per_dollar": 6122.0,
+          "cost_per_task_annual_usd": 0.000163,
+          "tasks_per_dollar_annual": 6122.0
         },
         "Medium": {
           "output_tokens_per_task": 17645,
           "score_pct": 61.1,
           "monthly_tasks": 698214.8,
           "cost_per_task_usd": 0.000286,
-          "tasks_per_dollar": 3491.1
+          "tasks_per_dollar": 3491.1,
+          "cost_per_task_annual_usd": 0.000286,
+          "tasks_per_dollar_annual": 3491.1
         },
         "High": {
           "output_tokens_per_task": 27700,
           "score_pct": 69.4,
           "monthly_tasks": 444765.3,
           "cost_per_task_usd": 0.00045,
-          "tasks_per_dollar": 2223.8
+          "tasks_per_dollar": 2223.8,
+          "cost_per_task_annual_usd": 0.00045,
+          "tasks_per_dollar_annual": 2223.8
         },
         "Extra High": {
           "output_tokens_per_task": 39449,
           "score_pct": 70.7,
           "monthly_tasks": 312302.0,
           "cost_per_task_usd": 0.00064,
-          "tasks_per_dollar": 1561.5
+          "tasks_per_dollar": 1561.5,
+          "cost_per_task_annual_usd": 0.00064,
+          "tasks_per_dollar_annual": 1561.5
         },
         "Max": {
           "output_tokens_per_task": 58786,
           "score_pct": 72.7,
           "monthly_tasks": 209573.7,
           "cost_per_task_usd": 0.000954,
-          "tasks_per_dollar": 1047.9
+          "tasks_per_dollar": 1047.9,
+          "cost_per_task_annual_usd": 0.000954,
+          "tasks_per_dollar_annual": 1047.9
         }
       },
       "task_rank": 15,
       "cohort_raw_rank": 38,
-      "rank_delta": 23
+      "rank_delta": 23,
+      "annual_task_rank": 15,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "glm_coding_max_cn_old_mid",
@@ -876,6 +1108,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
+      "annual_fee_usd": 830.28,
+      "effective_monthly_fee_usd": 69.19,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -886,6 +1121,8 @@
       "monthly_tasks": 199626.6,
       "cost_per_task_usd": 0.000347,
       "tasks_per_dollar": 2885.2,
+      "cost_per_task_annual_usd": 0.000347,
+      "tasks_per_dollar_annual": 2885.2,
       "raw_usd_per_mtok": 0.00514,
       "raw_token_rank": 27,
       "confidence": "high",
@@ -897,12 +1134,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 199626.6,
           "cost_per_task_usd": 0.000347,
-          "tasks_per_dollar": 2885.2
+          "tasks_per_dollar": 2885.2,
+          "cost_per_task_annual_usd": 0.000347,
+          "tasks_per_dollar_annual": 2885.2
         }
       },
       "task_rank": 16,
       "cohort_raw_rank": 12,
-      "rank_delta": -4
+      "rank_delta": -4,
+      "annual_task_rank": 16,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "glm_coding_lite_cn_old_offpeak",
@@ -911,6 +1152,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
+      "annual_fee_usd": 86.76,
+      "effective_monthly_fee_usd": 7.23,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -921,6 +1165,8 @@
       "monthly_tasks": 19009.9,
       "cost_per_task_usd": 0.00038,
       "tasks_per_dollar": 2629.3,
+      "cost_per_task_annual_usd": 0.00038,
+      "tasks_per_dollar_annual": 2629.3,
       "raw_usd_per_mtok": 0.00563,
       "raw_token_rank": 30,
       "confidence": "high",
@@ -932,12 +1178,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 19009.9,
           "cost_per_task_usd": 0.00038,
-          "tasks_per_dollar": 2629.3
+          "tasks_per_dollar": 2629.3,
+          "cost_per_task_annual_usd": 0.00038,
+          "tasks_per_dollar_annual": 2629.3
         }
       },
       "task_rank": 17,
       "cohort_raw_rank": 13,
-      "rank_delta": -4
+      "rank_delta": -4,
+      "annual_task_rank": 17,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "glm_coding_pro_cn_old_peak",
@@ -946,6 +1196,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
+      "annual_fee_usd": 263.76,
+      "effective_monthly_fee_usd": 21.98,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -956,6 +1209,8 @@
       "monthly_tasks": 57044.6,
       "cost_per_task_usd": 0.000385,
       "tasks_per_dollar": 2595.3,
+      "cost_per_task_annual_usd": 0.000385,
+      "tasks_per_dollar_annual": 2595.3,
       "raw_usd_per_mtok": 0.00571,
       "raw_token_rank": 31,
       "confidence": "high",
@@ -967,12 +1222,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 57044.6,
           "cost_per_task_usd": 0.000385,
-          "tasks_per_dollar": 2595.3
+          "tasks_per_dollar": 2595.3,
+          "cost_per_task_annual_usd": 0.000385,
+          "tasks_per_dollar_annual": 2595.3
         }
       },
       "task_rank": 18,
       "cohort_raw_rank": 14,
-      "rank_delta": -4
+      "rank_delta": -4,
+      "annual_task_rank": 18,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "chatgpt_pro_20x",
@@ -981,6 +1240,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
+      "annual_fee_usd": 2400.0,
+      "effective_monthly_fee_usd": 200.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.5",
       "benchmarked_model_name": "GPT-5.5",
       "benchmark_status": "available",
@@ -991,6 +1253,8 @@
       "monthly_tasks": 512867.6,
       "cost_per_task_usd": 0.00039,
       "tasks_per_dollar": 2564.3,
+      "cost_per_task_annual_usd": 0.00039,
+      "tasks_per_dollar_annual": 2564.3,
       "raw_usd_per_mtok": 0.02081,
       "raw_token_rank": 92,
       "confidence": "medium",
@@ -1002,33 +1266,43 @@
           "score_pct": 27.0,
           "monthly_tasks": 1065365.9,
           "cost_per_task_usd": 0.000188,
-          "tasks_per_dollar": 5326.8
+          "tasks_per_dollar": 5326.8,
+          "cost_per_task_annual_usd": 0.000188,
+          "tasks_per_dollar_annual": 5326.8
         },
         "Medium": {
           "output_tokens_per_task": 18737,
           "score_pct": 54.0,
           "monthly_tasks": 512867.6,
           "cost_per_task_usd": 0.00039,
-          "tasks_per_dollar": 2564.3
+          "tasks_per_dollar": 2564.3,
+          "cost_per_task_annual_usd": 0.00039,
+          "tasks_per_dollar_annual": 2564.3
         },
         "High": {
           "output_tokens_per_task": 30378,
           "score_pct": 64.4,
           "monthly_tasks": 316334.2,
           "cost_per_task_usd": 0.000632,
-          "tasks_per_dollar": 1581.7
+          "tasks_per_dollar": 1581.7,
+          "cost_per_task_annual_usd": 0.000632,
+          "tasks_per_dollar_annual": 1581.7
         },
         "Extra High": {
           "output_tokens_per_task": 44492,
           "score_pct": 67.0,
           "monthly_tasks": 215984.9,
           "cost_per_task_usd": 0.000926,
-          "tasks_per_dollar": 1079.9
+          "tasks_per_dollar": 1079.9,
+          "cost_per_task_annual_usd": 0.000926,
+          "tasks_per_dollar_annual": 1079.9
         }
       },
       "task_rank": 19,
       "cohort_raw_rank": 49,
-      "rank_delta": 30
+      "rank_delta": 30,
+      "annual_task_rank": 20,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "claude_max_20x",
@@ -1037,6 +1311,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
+      "annual_fee_usd": 2400.0,
+      "effective_monthly_fee_usd": 200.0,
+      "annual_discount_pct": 0.0,
       "served_model": "claude-opus-5",
       "benchmarked_model_name": "Claude Opus 5",
       "benchmark_status": "available",
@@ -1047,6 +1324,8 @@
       "monthly_tasks": 469553.8,
       "cost_per_task_usd": 0.000426,
       "tasks_per_dollar": 2347.8,
+      "cost_per_task_annual_usd": 0.000426,
+      "tasks_per_dollar_annual": 2347.8,
       "raw_usd_per_mtok": 0.01274,
       "raw_token_rank": 67,
       "confidence": "medium",
@@ -1058,40 +1337,52 @@
           "score_pct": 58.1,
           "monthly_tasks": 891387.0,
           "cost_per_task_usd": 0.000224,
-          "tasks_per_dollar": 4456.9
+          "tasks_per_dollar": 4456.9,
+          "cost_per_task_annual_usd": 0.000224,
+          "tasks_per_dollar_annual": 4456.9
         },
         "Medium": {
           "output_tokens_per_task": 33436,
           "score_pct": 68.9,
           "monthly_tasks": 469553.8,
           "cost_per_task_usd": 0.000426,
-          "tasks_per_dollar": 2347.8
+          "tasks_per_dollar": 2347.8,
+          "cost_per_task_annual_usd": 0.000426,
+          "tasks_per_dollar_annual": 2347.8
         },
         "High": {
           "output_tokens_per_task": 59856,
           "score_pct": 72.8,
           "monthly_tasks": 262296.2,
           "cost_per_task_usd": 0.000762,
-          "tasks_per_dollar": 1311.5
+          "tasks_per_dollar": 1311.5,
+          "cost_per_task_annual_usd": 0.000762,
+          "tasks_per_dollar_annual": 1311.5
         },
         "Extra High": {
           "output_tokens_per_task": 87322,
           "score_pct": 73.2,
           "monthly_tasks": 179794.3,
           "cost_per_task_usd": 0.001112,
-          "tasks_per_dollar": 899.0
+          "tasks_per_dollar": 899.0,
+          "cost_per_task_annual_usd": 0.001112,
+          "tasks_per_dollar_annual": 899.0
         },
         "Max": {
           "output_tokens_per_task": 113366,
           "score_pct": 73.6,
           "monthly_tasks": 138489.5,
           "cost_per_task_usd": 0.001444,
-          "tasks_per_dollar": 692.4
+          "tasks_per_dollar": 692.4,
+          "cost_per_task_annual_usd": 0.001444,
+          "tasks_per_dollar_annual": 692.4
         }
       },
       "task_rank": 20,
       "cohort_raw_rank": 29,
-      "rank_delta": 9
+      "rank_delta": 9,
+      "annual_task_rank": 22,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "claude_max_5x",
@@ -1100,6 +1391,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "claude-opus-5",
       "benchmarked_model_name": "Claude Opus 5",
       "benchmark_status": "available",
@@ -1110,6 +1404,8 @@
       "monthly_tasks": 234776.9,
       "cost_per_task_usd": 0.000426,
       "tasks_per_dollar": 2347.8,
+      "cost_per_task_annual_usd": 0.000426,
+      "tasks_per_dollar_annual": 2347.8,
       "raw_usd_per_mtok": 0.01274,
       "raw_token_rank": 68,
       "confidence": "medium",
@@ -1121,40 +1417,52 @@
           "score_pct": 58.1,
           "monthly_tasks": 445693.5,
           "cost_per_task_usd": 0.000224,
-          "tasks_per_dollar": 4456.9
+          "tasks_per_dollar": 4456.9,
+          "cost_per_task_annual_usd": 0.000224,
+          "tasks_per_dollar_annual": 4456.9
         },
         "Medium": {
           "output_tokens_per_task": 33436,
           "score_pct": 68.9,
           "monthly_tasks": 234776.9,
           "cost_per_task_usd": 0.000426,
-          "tasks_per_dollar": 2347.8
+          "tasks_per_dollar": 2347.8,
+          "cost_per_task_annual_usd": 0.000426,
+          "tasks_per_dollar_annual": 2347.8
         },
         "High": {
           "output_tokens_per_task": 59856,
           "score_pct": 72.8,
           "monthly_tasks": 131148.1,
           "cost_per_task_usd": 0.000762,
-          "tasks_per_dollar": 1311.5
+          "tasks_per_dollar": 1311.5,
+          "cost_per_task_annual_usd": 0.000762,
+          "tasks_per_dollar_annual": 1311.5
         },
         "Extra High": {
           "output_tokens_per_task": 87322,
           "score_pct": 73.2,
           "monthly_tasks": 89897.2,
           "cost_per_task_usd": 0.001112,
-          "tasks_per_dollar": 899.0
+          "tasks_per_dollar": 899.0,
+          "cost_per_task_annual_usd": 0.001112,
+          "tasks_per_dollar_annual": 899.0
         },
         "Max": {
           "output_tokens_per_task": 113366,
           "score_pct": 73.6,
           "monthly_tasks": 69244.7,
           "cost_per_task_usd": 0.001444,
-          "tasks_per_dollar": 692.4
+          "tasks_per_dollar": 692.4,
+          "cost_per_task_annual_usd": 0.001444,
+          "tasks_per_dollar_annual": 692.4
         }
       },
       "task_rank": 21,
       "cohort_raw_rank": 30,
-      "rank_delta": 9
+      "rank_delta": 9,
+      "annual_task_rank": 23,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "claude_pro",
@@ -1163,6 +1471,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 200.0,
+      "effective_monthly_fee_usd": 16.67,
+      "annual_discount_pct": 16.7,
       "served_model": "claude-opus-4.8",
       "benchmarked_model_name": "Claude Opus 4.8",
       "benchmark_status": "available",
@@ -1173,6 +1484,8 @@
       "monthly_tasks": 43331.2,
       "cost_per_task_usd": 0.000462,
       "tasks_per_dollar": 2166.6,
+      "cost_per_task_annual_usd": 0.000385,
+      "tasks_per_dollar_annual": 2599.9,
       "raw_usd_per_mtok": 0.01259,
       "raw_token_rank": 66,
       "confidence": "medium",
@@ -1184,40 +1497,52 @@
           "score_pct": 40.8,
           "monthly_tasks": 62789.1,
           "cost_per_task_usd": 0.000319,
-          "tasks_per_dollar": 3139.5
+          "tasks_per_dollar": 3139.5,
+          "cost_per_task_annual_usd": 0.000265,
+          "tasks_per_dollar_annual": 3767.3
         },
         "Medium": {
           "output_tokens_per_task": 36648,
           "score_pct": 48.7,
           "monthly_tasks": 43331.2,
           "cost_per_task_usd": 0.000462,
-          "tasks_per_dollar": 2166.6
+          "tasks_per_dollar": 2166.6,
+          "cost_per_task_annual_usd": 0.000385,
+          "tasks_per_dollar_annual": 2599.9
         },
         "High": {
           "output_tokens_per_task": 44476,
           "score_pct": 51.8,
           "monthly_tasks": 35704.6,
           "cost_per_task_usd": 0.00056,
-          "tasks_per_dollar": 1785.2
+          "tasks_per_dollar": 1785.2,
+          "cost_per_task_annual_usd": 0.000467,
+          "tasks_per_dollar_annual": 2142.3
         },
         "Extra High": {
           "output_tokens_per_task": 77961,
           "score_pct": 54.4,
           "monthly_tasks": 20369.2,
           "cost_per_task_usd": 0.000982,
-          "tasks_per_dollar": 1018.5
+          "tasks_per_dollar": 1018.5,
+          "cost_per_task_annual_usd": 0.000818,
+          "tasks_per_dollar_annual": 1222.1
         },
         "Max": {
           "output_tokens_per_task": 129180,
           "score_pct": 59.0,
           "monthly_tasks": 12292.9,
           "cost_per_task_usd": 0.001627,
-          "tasks_per_dollar": 614.6
+          "tasks_per_dollar": 614.6,
+          "cost_per_task_annual_usd": 0.001356,
+          "tasks_per_dollar_annual": 737.6
         }
       },
       "task_rank": 22,
       "cohort_raw_rank": 28,
-      "rank_delta": 6
+      "rank_delta": 6,
+      "annual_task_rank": 19,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "claude_max_20x",
@@ -1226,6 +1551,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
+      "annual_fee_usd": 2400.0,
+      "effective_monthly_fee_usd": 200.0,
+      "annual_discount_pct": 0.0,
       "served_model": "claude-opus-4.8",
       "benchmarked_model_name": "Claude Opus 4.8",
       "benchmark_status": "available",
@@ -1236,6 +1564,8 @@
       "monthly_tasks": 428399.9,
       "cost_per_task_usd": 0.000467,
       "tasks_per_dollar": 2142.0,
+      "cost_per_task_annual_usd": 0.000467,
+      "tasks_per_dollar_annual": 2142.0,
       "raw_usd_per_mtok": 0.01274,
       "raw_token_rank": 69,
       "confidence": "low",
@@ -1247,40 +1577,52 @@
           "score_pct": 40.8,
           "monthly_tasks": 620774.2,
           "cost_per_task_usd": 0.000322,
-          "tasks_per_dollar": 3103.9
+          "tasks_per_dollar": 3103.9,
+          "cost_per_task_annual_usd": 0.000322,
+          "tasks_per_dollar_annual": 3103.9
         },
         "Medium": {
           "output_tokens_per_task": 36648,
           "score_pct": 48.7,
           "monthly_tasks": 428399.9,
           "cost_per_task_usd": 0.000467,
-          "tasks_per_dollar": 2142.0
+          "tasks_per_dollar": 2142.0,
+          "cost_per_task_annual_usd": 0.000467,
+          "tasks_per_dollar_annual": 2142.0
         },
         "High": {
           "output_tokens_per_task": 44476,
           "score_pct": 51.8,
           "monthly_tasks": 352999.4,
           "cost_per_task_usd": 0.000567,
-          "tasks_per_dollar": 1765.0
+          "tasks_per_dollar": 1765.0,
+          "cost_per_task_annual_usd": 0.000567,
+          "tasks_per_dollar_annual": 1765.0
         },
         "Extra High": {
           "output_tokens_per_task": 77961,
           "score_pct": 54.4,
           "monthly_tasks": 201382.7,
           "cost_per_task_usd": 0.000993,
-          "tasks_per_dollar": 1006.9
+          "tasks_per_dollar": 1006.9,
+          "cost_per_task_annual_usd": 0.000993,
+          "tasks_per_dollar_annual": 1006.9
         },
         "Max": {
           "output_tokens_per_task": 129180,
           "score_pct": 59.0,
           "monthly_tasks": 121535.8,
           "cost_per_task_usd": 0.001646,
-          "tasks_per_dollar": 607.7
+          "tasks_per_dollar": 607.7,
+          "cost_per_task_annual_usd": 0.001646,
+          "tasks_per_dollar_annual": 607.7
         }
       },
       "task_rank": 23,
       "cohort_raw_rank": 31,
-      "rank_delta": 8
+      "rank_delta": 8,
+      "annual_task_rank": 24,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "ollama_pro",
@@ -1289,6 +1631,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 200.0,
+      "effective_monthly_fee_usd": 16.67,
+      "annual_discount_pct": 16.7,
       "served_model": "deepseek-v4-flash",
       "benchmarked_model_name": "DeepSeek V4 Flash",
       "benchmark_status": "available",
@@ -1299,6 +1644,8 @@
       "monthly_tasks": 41413.7,
       "cost_per_task_usd": 0.000483,
       "tasks_per_dollar": 2070.7,
+      "cost_per_task_annual_usd": 0.000402,
+      "tasks_per_dollar_annual": 2484.8,
       "raw_usd_per_mtok": 0.00462,
       "raw_token_rank": 22,
       "confidence": "medium",
@@ -1310,12 +1657,16 @@
           "score_pct": 53.3,
           "monthly_tasks": 41413.7,
           "cost_per_task_usd": 0.000483,
-          "tasks_per_dollar": 2070.7
+          "tasks_per_dollar": 2070.7,
+          "cost_per_task_annual_usd": 0.000402,
+          "tasks_per_dollar_annual": 2484.8
         }
       },
       "task_rank": 24,
       "cohort_raw_rank": 7,
-      "rank_delta": -17
+      "rank_delta": -17,
+      "annual_task_rank": 21,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "ollama_max",
@@ -1324,6 +1675,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "deepseek-v4-flash",
       "benchmarked_model_name": "DeepSeek V4 Flash",
       "benchmark_status": "available",
@@ -1334,6 +1688,8 @@
       "monthly_tasks": 207070.4,
       "cost_per_task_usd": 0.000483,
       "tasks_per_dollar": 2070.7,
+      "cost_per_task_annual_usd": 0.000483,
+      "tasks_per_dollar_annual": 2070.7,
       "raw_usd_per_mtok": 0.00462,
       "raw_token_rank": 23,
       "confidence": "medium",
@@ -1345,12 +1701,16 @@
           "score_pct": 53.3,
           "monthly_tasks": 207070.4,
           "cost_per_task_usd": 0.000483,
-          "tasks_per_dollar": 2070.7
+          "tasks_per_dollar": 2070.7,
+          "cost_per_task_annual_usd": 0.000483,
+          "tasks_per_dollar_annual": 2070.7
         }
       },
       "task_rank": 25,
       "cohort_raw_rank": 8,
-      "rank_delta": -17
+      "rank_delta": -17,
+      "annual_task_rank": 26,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "glm_coding_lite_cn_old_mid",
@@ -1359,6 +1719,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
+      "annual_fee_usd": 86.76,
+      "effective_monthly_fee_usd": 7.23,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -1369,6 +1732,8 @@
       "monthly_tasks": 14253.8,
       "cost_per_task_usd": 0.000507,
       "tasks_per_dollar": 1971.5,
+      "cost_per_task_annual_usd": 0.000507,
+      "tasks_per_dollar_annual": 1971.5,
       "raw_usd_per_mtok": 0.00751,
       "raw_token_rank": 35,
       "confidence": "high",
@@ -1380,12 +1745,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 14253.8,
           "cost_per_task_usd": 0.000507,
-          "tasks_per_dollar": 1971.5
+          "tasks_per_dollar": 1971.5,
+          "cost_per_task_annual_usd": 0.000507,
+          "tasks_per_dollar_annual": 1971.5
         }
       },
       "task_rank": 26,
       "cohort_raw_rank": 15,
-      "rank_delta": -11
+      "rank_delta": -11,
+      "annual_task_rank": 27,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "glm_coding_max_cn_old_peak",
@@ -1394,6 +1763,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
+      "annual_fee_usd": 830.28,
+      "effective_monthly_fee_usd": 69.19,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -1404,6 +1776,8 @@
       "monthly_tasks": 133084.4,
       "cost_per_task_usd": 0.00052,
       "tasks_per_dollar": 1923.5,
+      "cost_per_task_annual_usd": 0.00052,
+      "tasks_per_dollar_annual": 1923.5,
       "raw_usd_per_mtok": 0.0077,
       "raw_token_rank": 37,
       "confidence": "high",
@@ -1415,12 +1789,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 133084.4,
           "cost_per_task_usd": 0.00052,
-          "tasks_per_dollar": 1923.5
+          "tasks_per_dollar": 1923.5,
+          "cost_per_task_annual_usd": 0.00052,
+          "tasks_per_dollar_annual": 1923.5
         }
       },
       "task_rank": 27,
       "cohort_raw_rank": 16,
-      "rank_delta": -11
+      "rank_delta": -11,
+      "annual_task_rank": 28,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "chatgpt_plus",
@@ -1429,6 +1807,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 240.0,
+      "effective_monthly_fee_usd": 20.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-sol",
       "benchmarked_model_name": "GPT-5.6 Sol",
       "benchmark_status": "available",
@@ -1439,6 +1820,8 @@
       "monthly_tasks": 34910.7,
       "cost_per_task_usd": 0.000573,
       "tasks_per_dollar": 1745.5,
+      "cost_per_task_annual_usd": 0.000573,
+      "tasks_per_dollar_annual": 1745.5,
       "raw_usd_per_mtok": 0.03247,
       "raw_token_rank": 114,
       "confidence": "medium",
@@ -1450,40 +1833,52 @@
           "score_pct": 45.4,
           "monthly_tasks": 61220.4,
           "cost_per_task_usd": 0.000327,
-          "tasks_per_dollar": 3061.0
+          "tasks_per_dollar": 3061.0,
+          "cost_per_task_annual_usd": 0.000327,
+          "tasks_per_dollar_annual": 3061.0
         },
         "Medium": {
           "output_tokens_per_task": 17645,
           "score_pct": 61.1,
           "monthly_tasks": 34910.7,
           "cost_per_task_usd": 0.000573,
-          "tasks_per_dollar": 1745.5
+          "tasks_per_dollar": 1745.5,
+          "cost_per_task_annual_usd": 0.000573,
+          "tasks_per_dollar_annual": 1745.5
         },
         "High": {
           "output_tokens_per_task": 27700,
           "score_pct": 69.4,
           "monthly_tasks": 22238.3,
           "cost_per_task_usd": 0.000899,
-          "tasks_per_dollar": 1111.9
+          "tasks_per_dollar": 1111.9,
+          "cost_per_task_annual_usd": 0.000899,
+          "tasks_per_dollar_annual": 1111.9
         },
         "Extra High": {
           "output_tokens_per_task": 39449,
           "score_pct": 70.7,
           "monthly_tasks": 15615.1,
           "cost_per_task_usd": 0.001281,
-          "tasks_per_dollar": 780.8
+          "tasks_per_dollar": 780.8,
+          "cost_per_task_annual_usd": 0.001281,
+          "tasks_per_dollar_annual": 780.8
         },
         "Max": {
           "output_tokens_per_task": 58786,
           "score_pct": 72.7,
           "monthly_tasks": 10478.7,
           "cost_per_task_usd": 0.001909,
-          "tasks_per_dollar": 523.9
+          "tasks_per_dollar": 523.9,
+          "cost_per_task_annual_usd": 0.001909,
+          "tasks_per_dollar_annual": 523.9
         }
       },
       "task_rank": 28,
       "cohort_raw_rank": 63,
-      "rank_delta": 35
+      "rank_delta": 35,
+      "annual_task_rank": 30,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -1492,6 +1887,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-sol",
       "benchmarked_model_name": "GPT-5.6 Sol",
       "benchmark_status": "available",
@@ -1502,6 +1900,8 @@
       "monthly_tasks": 174553.7,
       "cost_per_task_usd": 0.000573,
       "tasks_per_dollar": 1745.5,
+      "cost_per_task_annual_usd": 0.000573,
+      "tasks_per_dollar_annual": 1745.5,
       "raw_usd_per_mtok": 0.03247,
       "raw_token_rank": 115,
       "confidence": "medium",
@@ -1513,40 +1913,52 @@
           "score_pct": 45.4,
           "monthly_tasks": 306102.2,
           "cost_per_task_usd": 0.000327,
-          "tasks_per_dollar": 3061.0
+          "tasks_per_dollar": 3061.0,
+          "cost_per_task_annual_usd": 0.000327,
+          "tasks_per_dollar_annual": 3061.0
         },
         "Medium": {
           "output_tokens_per_task": 17645,
           "score_pct": 61.1,
           "monthly_tasks": 174553.7,
           "cost_per_task_usd": 0.000573,
-          "tasks_per_dollar": 1745.5
+          "tasks_per_dollar": 1745.5,
+          "cost_per_task_annual_usd": 0.000573,
+          "tasks_per_dollar_annual": 1745.5
         },
         "High": {
           "output_tokens_per_task": 27700,
           "score_pct": 69.4,
           "monthly_tasks": 111191.3,
           "cost_per_task_usd": 0.000899,
-          "tasks_per_dollar": 1111.9
+          "tasks_per_dollar": 1111.9,
+          "cost_per_task_annual_usd": 0.000899,
+          "tasks_per_dollar_annual": 1111.9
         },
         "Extra High": {
           "output_tokens_per_task": 39449,
           "score_pct": 70.7,
           "monthly_tasks": 78075.5,
           "cost_per_task_usd": 0.001281,
-          "tasks_per_dollar": 780.8
+          "tasks_per_dollar": 780.8,
+          "cost_per_task_annual_usd": 0.001281,
+          "tasks_per_dollar_annual": 780.8
         },
         "Max": {
           "output_tokens_per_task": 58786,
           "score_pct": 72.7,
           "monthly_tasks": 52393.4,
           "cost_per_task_usd": 0.001909,
-          "tasks_per_dollar": 523.9
+          "tasks_per_dollar": 523.9,
+          "cost_per_task_annual_usd": 0.001909,
+          "tasks_per_dollar_annual": 523.9
         }
       },
       "task_rank": 29,
       "cohort_raw_rank": 64,
-      "rank_delta": 35
+      "rank_delta": 35,
+      "annual_task_rank": 31,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "command_code_goat",
@@ -1555,6 +1967,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -1565,6 +1980,8 @@
       "monthly_tasks": 17316.4,
       "cost_per_task_usd": 0.000577,
       "tasks_per_dollar": 1731.6,
+      "cost_per_task_annual_usd": 0.000577,
+      "tasks_per_dollar_annual": 1731.6,
       "raw_usd_per_mtok": 0.00856,
       "raw_token_rank": 41,
       "confidence": "medium",
@@ -1576,12 +1993,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 17316.4,
           "cost_per_task_usd": 0.000577,
-          "tasks_per_dollar": 1731.6
+          "tasks_per_dollar": 1731.6,
+          "cost_per_task_annual_usd": 0.000577,
+          "tasks_per_dollar_annual": 1731.6
         }
       },
       "task_rank": 30,
       "cohort_raw_rank": 18,
-      "rank_delta": -12
+      "rank_delta": -12,
+      "annual_task_rank": 32,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_max_cn_new_offpeak",
@@ -1590,6 +2011,9 @@
       "price": 1078.0,
       "currency": "CNY",
       "price_usd": 159.03,
+      "annual_fee_usd": 1526.69,
+      "effective_monthly_fee_usd": 127.22,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -1600,6 +2024,8 @@
       "monthly_tasks": 266183.6,
       "cost_per_task_usd": 0.000597,
       "tasks_per_dollar": 1673.8,
+      "cost_per_task_annual_usd": 0.000478,
+      "tasks_per_dollar_annual": 2092.2,
       "raw_usd_per_mtok": 0.00885,
       "raw_token_rank": 43,
       "confidence": "high",
@@ -1611,12 +2037,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 266183.6,
           "cost_per_task_usd": 0.000597,
-          "tasks_per_dollar": 1673.8
+          "tasks_per_dollar": 1673.8,
+          "cost_per_task_annual_usd": 0.000478,
+          "tasks_per_dollar_annual": 2092.2
         }
       },
       "task_rank": 31,
       "cohort_raw_rank": 20,
-      "rank_delta": -11
+      "rank_delta": -11,
+      "annual_task_rank": 25,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "glm_coding_pro_cn_old_offpeak",
@@ -1625,6 +2055,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
+      "annual_fee_usd": 263.76,
+      "effective_monthly_fee_usd": 21.98,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -1635,6 +2068,8 @@
       "monthly_tasks": 33887.9,
       "cost_per_task_usd": 0.000649,
       "tasks_per_dollar": 1541.8,
+      "cost_per_task_annual_usd": 0.000649,
+      "tasks_per_dollar_annual": 1541.8,
       "raw_usd_per_mtok": 0.00865,
       "raw_token_rank": 42,
       "confidence": "high",
@@ -1646,12 +2081,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 33887.9,
           "cost_per_task_usd": 0.000649,
-          "tasks_per_dollar": 1541.8
+          "tasks_per_dollar": 1541.8,
+          "cost_per_task_annual_usd": 0.000649,
+          "tasks_per_dollar_annual": 1541.8
         }
       },
       "task_rank": 32,
       "cohort_raw_rank": 19,
-      "rank_delta": -13
+      "rank_delta": -13,
+      "annual_task_rank": 35,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "glm_coding_pro_cn_new_offpeak",
@@ -1660,6 +2099,9 @@
       "price": 538.0,
       "currency": "CNY",
       "price_usd": 79.37,
+      "annual_fee_usd": 761.95,
+      "effective_monthly_fee_usd": 63.5,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -1670,6 +2112,8 @@
       "monthly_tasks": 114074.5,
       "cost_per_task_usd": 0.000696,
       "tasks_per_dollar": 1437.2,
+      "cost_per_task_annual_usd": 0.000557,
+      "tasks_per_dollar_annual": 1796.6,
       "raw_usd_per_mtok": 0.01031,
       "raw_token_rank": 48,
       "confidence": "high",
@@ -1681,12 +2125,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 114074.5,
           "cost_per_task_usd": 0.000696,
-          "tasks_per_dollar": 1437.2
+          "tasks_per_dollar": 1437.2,
+          "cost_per_task_annual_usd": 0.000557,
+          "tasks_per_dollar_annual": 1796.6
         }
       },
       "task_rank": 33,
       "cohort_raw_rank": 21,
-      "rank_delta": -12
+      "rank_delta": -12,
+      "annual_task_rank": 29,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "glm_coding_lite_cn_old_peak",
@@ -1695,6 +2143,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
+      "annual_fee_usd": 86.76,
+      "effective_monthly_fee_usd": 7.23,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -1705,6 +2156,8 @@
       "monthly_tasks": 9512.4,
       "cost_per_task_usd": 0.00076,
       "tasks_per_dollar": 1315.7,
+      "cost_per_task_annual_usd": 0.00076,
+      "tasks_per_dollar_annual": 1315.7,
       "raw_usd_per_mtok": 0.01126,
       "raw_token_rank": 52,
       "confidence": "high",
@@ -1716,12 +2169,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 9512.4,
           "cost_per_task_usd": 0.00076,
-          "tasks_per_dollar": 1315.7
+          "tasks_per_dollar": 1315.7,
+          "cost_per_task_annual_usd": 0.00076,
+          "tasks_per_dollar_annual": 1315.7
         }
       },
       "task_rank": 34,
       "cohort_raw_rank": 22,
-      "rank_delta": -12
+      "rank_delta": -12,
+      "annual_task_rank": 38,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "ollama_pro",
@@ -1730,6 +2187,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 200.0,
+      "effective_monthly_fee_usd": 16.67,
+      "annual_discount_pct": 16.7,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -1740,6 +2200,8 @@
       "monthly_tasks": 25975.3,
       "cost_per_task_usd": 0.00077,
       "tasks_per_dollar": 1298.8,
+      "cost_per_task_annual_usd": 0.000642,
+      "tasks_per_dollar_annual": 1558.5,
       "raw_usd_per_mtok": 0.01141,
       "raw_token_rank": 55,
       "confidence": "medium",
@@ -1751,12 +2213,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 25975.3,
           "cost_per_task_usd": 0.00077,
-          "tasks_per_dollar": 1298.8
+          "tasks_per_dollar": 1298.8,
+          "cost_per_task_annual_usd": 0.000642,
+          "tasks_per_dollar_annual": 1558.5
         }
       },
       "task_rank": 35,
       "cohort_raw_rank": 23,
-      "rank_delta": -12
+      "rank_delta": -12,
+      "annual_task_rank": 34,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "ollama_max",
@@ -1765,6 +2231,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -1775,6 +2244,8 @@
       "monthly_tasks": 129876.6,
       "cost_per_task_usd": 0.00077,
       "tasks_per_dollar": 1298.8,
+      "cost_per_task_annual_usd": 0.00077,
+      "tasks_per_dollar_annual": 1298.8,
       "raw_usd_per_mtok": 0.01141,
       "raw_token_rank": 56,
       "confidence": "medium",
@@ -1786,12 +2257,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 129876.6,
           "cost_per_task_usd": 0.00077,
-          "tasks_per_dollar": 1298.8
+          "tasks_per_dollar": 1298.8,
+          "cost_per_task_annual_usd": 0.00077,
+          "tasks_per_dollar_annual": 1298.8
         }
       },
       "task_rank": 36,
       "cohort_raw_rank": 24,
-      "rank_delta": -12
+      "rank_delta": -12,
+      "annual_task_rank": 39,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "chatgpt_plus",
@@ -1800,6 +2275,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 240.0,
+      "effective_monthly_fee_usd": 20.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.5",
       "benchmarked_model_name": "GPT-5.5",
       "benchmark_status": "available",
@@ -1810,6 +2288,8 @@
       "monthly_tasks": 25644.4,
       "cost_per_task_usd": 0.00078,
       "tasks_per_dollar": 1282.2,
+      "cost_per_task_annual_usd": 0.00078,
+      "tasks_per_dollar_annual": 1282.2,
       "raw_usd_per_mtok": 0.04162,
       "raw_token_rank": 124,
       "confidence": "medium",
@@ -1821,33 +2301,43 @@
           "score_pct": 27.0,
           "monthly_tasks": 53270.5,
           "cost_per_task_usd": 0.000375,
-          "tasks_per_dollar": 2663.5
+          "tasks_per_dollar": 2663.5,
+          "cost_per_task_annual_usd": 0.000375,
+          "tasks_per_dollar_annual": 2663.5
         },
         "Medium": {
           "output_tokens_per_task": 18737,
           "score_pct": 54.0,
           "monthly_tasks": 25644.4,
           "cost_per_task_usd": 0.00078,
-          "tasks_per_dollar": 1282.2
+          "tasks_per_dollar": 1282.2,
+          "cost_per_task_annual_usd": 0.00078,
+          "tasks_per_dollar_annual": 1282.2
         },
         "High": {
           "output_tokens_per_task": 30378,
           "score_pct": 64.4,
           "monthly_tasks": 15817.4,
           "cost_per_task_usd": 0.001264,
-          "tasks_per_dollar": 790.9
+          "tasks_per_dollar": 790.9,
+          "cost_per_task_annual_usd": 0.001264,
+          "tasks_per_dollar_annual": 790.9
         },
         "Extra High": {
           "output_tokens_per_task": 44492,
           "score_pct": 67.0,
           "monthly_tasks": 10799.7,
           "cost_per_task_usd": 0.001852,
-          "tasks_per_dollar": 540.0
+          "tasks_per_dollar": 540.0,
+          "cost_per_task_annual_usd": 0.001852,
+          "tasks_per_dollar_annual": 540.0
         }
       },
       "task_rank": 37,
       "cohort_raw_rank": 70,
-      "rank_delta": 33
+      "rank_delta": 33,
+      "annual_task_rank": 40,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "chatgpt_pro_5x",
@@ -1856,6 +2346,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.5",
       "benchmarked_model_name": "GPT-5.5",
       "benchmark_status": "available",
@@ -1866,6 +2359,8 @@
       "monthly_tasks": 128216.9,
       "cost_per_task_usd": 0.00078,
       "tasks_per_dollar": 1282.2,
+      "cost_per_task_annual_usd": 0.00078,
+      "tasks_per_dollar_annual": 1282.2,
       "raw_usd_per_mtok": 0.04163,
       "raw_token_rank": 125,
       "confidence": "medium",
@@ -1877,33 +2372,43 @@
           "score_pct": 27.0,
           "monthly_tasks": 266341.5,
           "cost_per_task_usd": 0.000375,
-          "tasks_per_dollar": 2663.4
+          "tasks_per_dollar": 2663.4,
+          "cost_per_task_annual_usd": 0.000375,
+          "tasks_per_dollar_annual": 2663.4
         },
         "Medium": {
           "output_tokens_per_task": 18737,
           "score_pct": 54.0,
           "monthly_tasks": 128216.9,
           "cost_per_task_usd": 0.00078,
-          "tasks_per_dollar": 1282.2
+          "tasks_per_dollar": 1282.2,
+          "cost_per_task_annual_usd": 0.00078,
+          "tasks_per_dollar_annual": 1282.2
         },
         "High": {
           "output_tokens_per_task": 30378,
           "score_pct": 64.4,
           "monthly_tasks": 79083.5,
           "cost_per_task_usd": 0.001264,
-          "tasks_per_dollar": 790.8
+          "tasks_per_dollar": 790.8,
+          "cost_per_task_annual_usd": 0.001264,
+          "tasks_per_dollar_annual": 790.8
         },
         "Extra High": {
           "output_tokens_per_task": 44492,
           "score_pct": 67.0,
           "monthly_tasks": 53996.2,
           "cost_per_task_usd": 0.001852,
-          "tasks_per_dollar": 540.0
+          "tasks_per_dollar": 540.0,
+          "cost_per_task_annual_usd": 0.001852,
+          "tasks_per_dollar_annual": 540.0
         }
       },
       "task_rank": 38,
       "cohort_raw_rank": 71,
-      "rank_delta": 33
+      "rank_delta": 33,
+      "annual_task_rank": 41,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "glm_coding_max_cn_new_mid",
@@ -1912,6 +2417,9 @@
       "price": 1078.0,
       "currency": "CNY",
       "price_usd": 159.03,
+      "annual_fee_usd": 1526.69,
+      "effective_monthly_fee_usd": 127.22,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -1922,6 +2430,8 @@
       "monthly_tasks": 199626.6,
       "cost_per_task_usd": 0.000797,
       "tasks_per_dollar": 1255.3,
+      "cost_per_task_annual_usd": 0.000637,
+      "tasks_per_dollar_annual": 1569.1,
       "raw_usd_per_mtok": 0.0118,
       "raw_token_rank": 63,
       "confidence": "high",
@@ -1933,12 +2443,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 199626.6,
           "cost_per_task_usd": 0.000797,
-          "tasks_per_dollar": 1255.3
+          "tasks_per_dollar": 1255.3,
+          "cost_per_task_annual_usd": 0.000637,
+          "tasks_per_dollar_annual": 1569.1
         }
       },
       "task_rank": 39,
       "cohort_raw_rank": 27,
-      "rank_delta": -12
+      "rank_delta": -12,
+      "annual_task_rank": 33,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "glm_coding_pro_cn_old_mid",
@@ -1947,6 +2461,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
+      "annual_fee_usd": 263.76,
+      "effective_monthly_fee_usd": 21.98,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -1957,6 +2474,8 @@
       "monthly_tasks": 25415.9,
       "cost_per_task_usd": 0.000865,
       "tasks_per_dollar": 1156.3,
+      "cost_per_task_annual_usd": 0.000865,
+      "tasks_per_dollar_annual": 1156.3,
       "raw_usd_per_mtok": 0.01154,
       "raw_token_rank": 60,
       "confidence": "high",
@@ -1968,12 +2487,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 25415.9,
           "cost_per_task_usd": 0.000865,
-          "tasks_per_dollar": 1156.3
+          "tasks_per_dollar": 1156.3,
+          "cost_per_task_annual_usd": 0.000865,
+          "tasks_per_dollar_annual": 1156.3
         }
       },
       "task_rank": 40,
       "cohort_raw_rank": 25,
-      "rank_delta": -15
+      "rank_delta": -15,
+      "annual_task_rank": 42,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_max_cn_old_offpeak",
@@ -1982,6 +2505,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
+      "annual_fee_usd": 830.28,
+      "effective_monthly_fee_usd": 69.19,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -1992,6 +2518,8 @@
       "monthly_tasks": 79062.9,
       "cost_per_task_usd": 0.000875,
       "tasks_per_dollar": 1142.7,
+      "cost_per_task_annual_usd": 0.000875,
+      "tasks_per_dollar_annual": 1142.7,
       "raw_usd_per_mtok": 0.01168,
       "raw_token_rank": 62,
       "confidence": "high",
@@ -2003,12 +2531,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 79062.9,
           "cost_per_task_usd": 0.000875,
-          "tasks_per_dollar": 1142.7
+          "tasks_per_dollar": 1142.7,
+          "cost_per_task_annual_usd": 0.000875,
+          "tasks_per_dollar_annual": 1142.7
         }
       },
       "task_rank": 41,
       "cohort_raw_rank": 26,
-      "rank_delta": -15
+      "rank_delta": -15,
+      "annual_task_rank": 43,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "cursor_ultra",
@@ -2017,6 +2549,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
+      "annual_fee_usd": 2400.0,
+      "effective_monthly_fee_usd": 200.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.5",
       "benchmarked_model_name": "Grok 4.5",
       "benchmark_status": "available",
@@ -2027,6 +2562,8 @@
       "monthly_tasks": 225897.8,
       "cost_per_task_usd": 0.000885,
       "tasks_per_dollar": 1129.5,
+      "cost_per_task_annual_usd": 0.000885,
+      "tasks_per_dollar_annual": 1129.5,
       "raw_usd_per_mtok": 0.02585,
       "raw_token_rank": 104,
       "confidence": "medium",
@@ -2038,12 +2575,16 @@
           "score_pct": 53.8,
           "monthly_tasks": 225897.8,
           "cost_per_task_usd": 0.000885,
-          "tasks_per_dollar": 1129.5
+          "tasks_per_dollar": 1129.5,
+          "cost_per_task_annual_usd": 0.000885,
+          "tasks_per_dollar_annual": 1129.5
         }
       },
       "task_rank": 42,
       "cohort_raw_rank": 56,
-      "rank_delta": 14
+      "rank_delta": 14,
+      "annual_task_rank": 44,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_lite_cn_new_offpeak",
@@ -2052,6 +2593,9 @@
       "price": 118.0,
       "currency": "CNY",
       "price_usd": 17.41,
+      "annual_fee_usd": 167.14,
+      "effective_monthly_fee_usd": 13.93,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -2062,6 +2606,8 @@
       "monthly_tasks": 19009.9,
       "cost_per_task_usd": 0.000916,
       "tasks_per_dollar": 1091.9,
+      "cost_per_task_annual_usd": 0.000733,
+      "tasks_per_dollar_annual": 1364.9,
       "raw_usd_per_mtok": 0.01357,
       "raw_token_rank": 73,
       "confidence": "high",
@@ -2073,12 +2619,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 19009.9,
           "cost_per_task_usd": 0.000916,
-          "tasks_per_dollar": 1091.9
+          "tasks_per_dollar": 1091.9,
+          "cost_per_task_annual_usd": 0.000733,
+          "tasks_per_dollar_annual": 1364.9
         }
       },
       "task_rank": 43,
       "cohort_raw_rank": 32,
-      "rank_delta": -11
+      "rank_delta": -11,
+      "annual_task_rank": 36,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "glm_coding_pro_cn_new_mid",
@@ -2087,6 +2637,9 @@
       "price": 538.0,
       "currency": "CNY",
       "price_usd": 79.37,
+      "annual_fee_usd": 761.95,
+      "effective_monthly_fee_usd": 63.5,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -2097,6 +2650,8 @@
       "monthly_tasks": 85552.1,
       "cost_per_task_usd": 0.000928,
       "tasks_per_dollar": 1077.9,
+      "cost_per_task_annual_usd": 0.000742,
+      "tasks_per_dollar_annual": 1347.4,
       "raw_usd_per_mtok": 0.01375,
       "raw_token_rank": 74,
       "confidence": "high",
@@ -2108,12 +2663,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 85552.1,
           "cost_per_task_usd": 0.000928,
-          "tasks_per_dollar": 1077.9
+          "tasks_per_dollar": 1077.9,
+          "cost_per_task_annual_usd": 0.000742,
+          "tasks_per_dollar_annual": 1347.4
         }
       },
       "task_rank": 44,
       "cohort_raw_rank": 33,
-      "rank_delta": -11
+      "rank_delta": -11,
+      "annual_task_rank": 37,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "kimi_allegretto_cn",
@@ -2122,6 +2681,9 @@
       "price": 199.0,
       "currency": "CNY",
       "price_usd": 29.36,
+      "annual_fee_usd": 352.32,
+      "effective_monthly_fee_usd": 29.36,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "benchmark_status": "available",
@@ -2132,6 +2694,8 @@
       "monthly_tasks": 29008.0,
       "cost_per_task_usd": 0.001012,
       "tasks_per_dollar": 988.0,
+      "cost_per_task_annual_usd": 0.001012,
+      "tasks_per_dollar_annual": 988.0,
       "raw_usd_per_mtok": 0.01872,
       "raw_token_rank": 89,
       "confidence": "medium",
@@ -2143,12 +2707,16 @@
           "score_pct": 30.5,
           "monthly_tasks": 29008.0,
           "cost_per_task_usd": 0.001012,
-          "tasks_per_dollar": 988.0
+          "tasks_per_dollar": 988.0,
+          "cost_per_task_annual_usd": 0.001012,
+          "tasks_per_dollar_annual": 988.0
         }
       },
       "task_rank": 45,
       "cohort_raw_rank": 46,
-      "rank_delta": 1
+      "rank_delta": 1,
+      "annual_task_rank": 47,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_max_cn_old_mid",
@@ -2157,6 +2725,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
+      "annual_fee_usd": 830.28,
+      "effective_monthly_fee_usd": 69.19,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -2167,6 +2738,8 @@
       "monthly_tasks": 59303.8,
       "cost_per_task_usd": 0.001167,
       "tasks_per_dollar": 857.1,
+      "cost_per_task_annual_usd": 0.001167,
+      "tasks_per_dollar_annual": 857.1,
       "raw_usd_per_mtok": 0.01557,
       "raw_token_rank": 79,
       "confidence": "high",
@@ -2178,12 +2751,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 59303.8,
           "cost_per_task_usd": 0.001167,
-          "tasks_per_dollar": 857.1
+          "tasks_per_dollar": 857.1,
+          "cost_per_task_annual_usd": 0.001167,
+          "tasks_per_dollar_annual": 857.1
         }
       },
       "task_rank": 46,
       "cohort_raw_rank": 37,
-      "rank_delta": -9
+      "rank_delta": -9,
+      "annual_task_rank": 49,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "kimi_allegro_cn",
@@ -2192,6 +2769,9 @@
       "price": 699.0,
       "currency": "CNY",
       "price_usd": 103.12,
+      "annual_fee_usd": 1237.44,
+      "effective_monthly_fee_usd": 103.12,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "benchmark_status": "available",
@@ -2202,6 +2782,8 @@
       "monthly_tasks": 87024.1,
       "cost_per_task_usd": 0.001185,
       "tasks_per_dollar": 843.9,
+      "cost_per_task_annual_usd": 0.001185,
+      "tasks_per_dollar_annual": 843.9,
       "raw_usd_per_mtok": 0.02192,
       "raw_token_rank": 94,
       "confidence": "medium",
@@ -2213,12 +2795,16 @@
           "score_pct": 30.5,
           "monthly_tasks": 87024.1,
           "cost_per_task_usd": 0.001185,
-          "tasks_per_dollar": 843.9
+          "tasks_per_dollar": 843.9,
+          "cost_per_task_annual_usd": 0.001185,
+          "tasks_per_dollar_annual": 843.9
         }
       },
       "task_rank": 47,
       "cohort_raw_rank": 51,
-      "rank_delta": 4
+      "rank_delta": 4,
+      "annual_task_rank": 50,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "glm_coding_max_cn_new_peak",
@@ -2227,6 +2813,9 @@
       "price": 1078.0,
       "currency": "CNY",
       "price_usd": 159.03,
+      "annual_fee_usd": 1526.69,
+      "effective_monthly_fee_usd": 127.22,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -2237,6 +2826,8 @@
       "monthly_tasks": 133084.4,
       "cost_per_task_usd": 0.001195,
       "tasks_per_dollar": 836.9,
+      "cost_per_task_annual_usd": 0.000956,
+      "tasks_per_dollar_annual": 1046.1,
       "raw_usd_per_mtok": 0.01771,
       "raw_token_rank": 86,
       "confidence": "high",
@@ -2248,12 +2839,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 133084.4,
           "cost_per_task_usd": 0.001195,
-          "tasks_per_dollar": 836.9
+          "tasks_per_dollar": 836.9,
+          "cost_per_task_annual_usd": 0.000956,
+          "tasks_per_dollar_annual": 1046.1
         }
       },
       "task_rank": 48,
       "cohort_raw_rank": 43,
-      "rank_delta": -5
+      "rank_delta": -5,
+      "annual_task_rank": 45,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "glm_coding_lite_cn_new_mid",
@@ -2262,6 +2857,9 @@
       "price": 118.0,
       "currency": "CNY",
       "price_usd": 17.41,
+      "annual_fee_usd": 167.14,
+      "effective_monthly_fee_usd": 13.93,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -2272,6 +2870,8 @@
       "monthly_tasks": 14253.8,
       "cost_per_task_usd": 0.001221,
       "tasks_per_dollar": 818.7,
+      "cost_per_task_annual_usd": 0.000977,
+      "tasks_per_dollar_annual": 1023.4,
       "raw_usd_per_mtok": 0.0181,
       "raw_token_rank": 87,
       "confidence": "high",
@@ -2283,12 +2883,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 14253.8,
           "cost_per_task_usd": 0.001221,
-          "tasks_per_dollar": 818.7
+          "tasks_per_dollar": 818.7,
+          "cost_per_task_annual_usd": 0.000977,
+          "tasks_per_dollar_annual": 1023.4
         }
       },
       "task_rank": 49,
       "cohort_raw_rank": 44,
-      "rank_delta": -5
+      "rank_delta": -5,
+      "annual_task_rank": 46,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "cursor_ultra",
@@ -2297,6 +2901,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
+      "annual_fee_usd": 2400.0,
+      "effective_monthly_fee_usd": 200.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "benchmark_status": "available",
@@ -2307,6 +2914,8 @@
       "monthly_tasks": 159243.4,
       "cost_per_task_usd": 0.001256,
       "tasks_per_dollar": 796.2,
+      "cost_per_task_annual_usd": 0.001256,
+      "tasks_per_dollar_annual": 796.2,
       "raw_usd_per_mtok": 0.02585,
       "raw_token_rank": 103,
       "confidence": "medium",
@@ -2318,33 +2927,43 @@
           "score_pct": 41.6,
           "monthly_tasks": 517975.5,
           "cost_per_task_usd": 0.000386,
-          "tasks_per_dollar": 2589.9
+          "tasks_per_dollar": 2589.9,
+          "cost_per_task_annual_usd": 0.000386,
+          "tasks_per_dollar_annual": 2589.9
         },
         "Medium": {
           "output_tokens_per_task": 48586,
           "score_pct": 67.5,
           "monthly_tasks": 159243.4,
           "cost_per_task_usd": 0.001256,
-          "tasks_per_dollar": 796.2
+          "tasks_per_dollar": 796.2,
+          "cost_per_task_annual_usd": 0.001256,
+          "tasks_per_dollar_annual": 796.2
         },
         "High": {
           "output_tokens_per_task": 60060,
           "score_pct": 65.2,
           "monthly_tasks": 128821.2,
           "cost_per_task_usd": 0.001553,
-          "tasks_per_dollar": 644.1
+          "tasks_per_dollar": 644.1,
+          "cost_per_task_annual_usd": 0.001553,
+          "tasks_per_dollar_annual": 644.1
         },
         "Extra High": {
           "output_tokens_per_task": 71285,
           "score_pct": 66.7,
           "monthly_tasks": 108536.2,
           "cost_per_task_usd": 0.001843,
-          "tasks_per_dollar": 542.7
+          "tasks_per_dollar": 542.7,
+          "cost_per_task_annual_usd": 0.001843,
+          "tasks_per_dollar_annual": 542.7
         }
       },
       "task_rank": 50,
       "cohort_raw_rank": 57,
-      "rank_delta": 7
+      "rank_delta": 7,
+      "annual_task_rank": 52,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_lite_cn_old_offpeak",
@@ -2353,6 +2972,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
+      "annual_fee_usd": 86.76,
+      "effective_monthly_fee_usd": 7.23,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -2363,6 +2985,8 @@
       "monthly_tasks": 5643.5,
       "cost_per_task_usd": 0.001281,
       "tasks_per_dollar": 780.6,
+      "cost_per_task_annual_usd": 0.001281,
+      "tasks_per_dollar_annual": 780.6,
       "raw_usd_per_mtok": 0.01709,
       "raw_token_rank": 84,
       "confidence": "high",
@@ -2374,12 +2998,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 5643.5,
           "cost_per_task_usd": 0.001281,
-          "tasks_per_dollar": 780.6
+          "tasks_per_dollar": 780.6,
+          "cost_per_task_annual_usd": 0.001281,
+          "tasks_per_dollar_annual": 780.6
         }
       },
       "task_rank": 51,
       "cohort_raw_rank": 41,
-      "rank_delta": -10
+      "rank_delta": -10,
+      "annual_task_rank": 53,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_pro_cn_old_peak",
@@ -2388,6 +3016,9 @@
       "price": 149.0,
       "currency": "CNY",
       "price_usd": 21.98,
+      "annual_fee_usd": 263.76,
+      "effective_monthly_fee_usd": 21.98,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -2398,6 +3029,8 @@
       "monthly_tasks": 16944.0,
       "cost_per_task_usd": 0.001297,
       "tasks_per_dollar": 770.9,
+      "cost_per_task_annual_usd": 0.001297,
+      "tasks_per_dollar_annual": 770.9,
       "raw_usd_per_mtok": 0.01731,
       "raw_token_rank": 85,
       "confidence": "high",
@@ -2409,12 +3042,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 16944.0,
           "cost_per_task_usd": 0.001297,
-          "tasks_per_dollar": 770.9
+          "tasks_per_dollar": 770.9,
+          "cost_per_task_annual_usd": 0.001297,
+          "tasks_per_dollar_annual": 770.9
         }
       },
       "task_rank": 52,
       "cohort_raw_rank": 42,
-      "rank_delta": -10
+      "rank_delta": -10,
+      "annual_task_rank": 54,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_pro_cn_new_peak",
@@ -2423,6 +3060,9 @@
       "price": 538.0,
       "currency": "CNY",
       "price_usd": 79.37,
+      "annual_fee_usd": 761.95,
+      "effective_monthly_fee_usd": 63.5,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -2433,6 +3073,8 @@
       "monthly_tasks": 57044.6,
       "cost_per_task_usd": 0.001391,
       "tasks_per_dollar": 718.7,
+      "cost_per_task_annual_usd": 0.001113,
+      "tasks_per_dollar_annual": 898.4,
       "raw_usd_per_mtok": 0.02061,
       "raw_token_rank": 91,
       "confidence": "high",
@@ -2444,12 +3086,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 57044.6,
           "cost_per_task_usd": 0.001391,
-          "tasks_per_dollar": 718.7
+          "tasks_per_dollar": 718.7,
+          "cost_per_task_annual_usd": 0.001113,
+          "tasks_per_dollar_annual": 898.4
         }
       },
       "task_rank": 53,
       "cohort_raw_rank": 48,
-      "rank_delta": -5
+      "rank_delta": -5,
+      "annual_task_rank": 48,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "cursor_pro_plus",
@@ -2458,6 +3104,9 @@
       "price": 60.0,
       "currency": "USD",
       "price_usd": 60.0,
+      "annual_fee_usd": 720.0,
+      "effective_monthly_fee_usd": 60.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "benchmark_status": "available",
@@ -2468,6 +3117,8 @@
       "monthly_tasks": 42464.9,
       "cost_per_task_usd": 0.001413,
       "tasks_per_dollar": 707.7,
+      "cost_per_task_annual_usd": 0.001413,
+      "tasks_per_dollar_annual": 707.7,
       "raw_usd_per_mtok": 0.02908,
       "raw_token_rank": 110,
       "confidence": "medium",
@@ -2479,33 +3130,43 @@
           "score_pct": 41.6,
           "monthly_tasks": 138126.8,
           "cost_per_task_usd": 0.000434,
-          "tasks_per_dollar": 2302.1
+          "tasks_per_dollar": 2302.1,
+          "cost_per_task_annual_usd": 0.000434,
+          "tasks_per_dollar_annual": 2302.1
         },
         "Medium": {
           "output_tokens_per_task": 48586,
           "score_pct": 67.5,
           "monthly_tasks": 42464.9,
           "cost_per_task_usd": 0.001413,
-          "tasks_per_dollar": 707.7
+          "tasks_per_dollar": 707.7,
+          "cost_per_task_annual_usd": 0.001413,
+          "tasks_per_dollar_annual": 707.7
         },
         "High": {
           "output_tokens_per_task": 60060,
           "score_pct": 65.2,
           "monthly_tasks": 34352.3,
           "cost_per_task_usd": 0.001747,
-          "tasks_per_dollar": 572.5
+          "tasks_per_dollar": 572.5,
+          "cost_per_task_annual_usd": 0.001747,
+          "tasks_per_dollar_annual": 572.5
         },
         "Extra High": {
           "output_tokens_per_task": 71285,
           "score_pct": 66.7,
           "monthly_tasks": 28943.0,
           "cost_per_task_usd": 0.002073,
-          "tasks_per_dollar": 482.4
+          "tasks_per_dollar": 482.4,
+          "cost_per_task_annual_usd": 0.002073,
+          "tasks_per_dollar_annual": 482.4
         }
       },
       "task_rank": 54,
       "cohort_raw_rank": 61,
-      "rank_delta": 7
+      "rank_delta": 7,
+      "annual_task_rank": 55,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "ollama_pro",
@@ -2514,6 +3175,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 200.0,
+      "effective_monthly_fee_usd": 16.67,
+      "annual_discount_pct": 16.7,
       "served_model": "deepseek-v4-pro",
       "benchmarked_model_name": "DeepSeek V4 Pro",
       "benchmark_status": "available",
@@ -2524,6 +3188,8 @@
       "monthly_tasks": 13925.0,
       "cost_per_task_usd": 0.001436,
       "tasks_per_dollar": 696.2,
+      "cost_per_task_annual_usd": 0.001197,
+      "tasks_per_dollar_annual": 835.5,
       "raw_usd_per_mtok": 0.01419,
       "raw_token_rank": 76,
       "confidence": "medium",
@@ -2535,12 +3201,16 @@
           "score_pct": 62.8,
           "monthly_tasks": 13925.0,
           "cost_per_task_usd": 0.001436,
-          "tasks_per_dollar": 696.2
+          "tasks_per_dollar": 696.2,
+          "cost_per_task_annual_usd": 0.001197,
+          "tasks_per_dollar_annual": 835.5
         }
       },
       "task_rank": 55,
       "cohort_raw_rank": 35,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "annual_task_rank": 51,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "ollama_max",
@@ -2549,6 +3219,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "deepseek-v4-pro",
       "benchmarked_model_name": "DeepSeek V4 Pro",
       "benchmark_status": "available",
@@ -2559,6 +3232,8 @@
       "monthly_tasks": 69626.7,
       "cost_per_task_usd": 0.001436,
       "tasks_per_dollar": 696.3,
+      "cost_per_task_annual_usd": 0.001436,
+      "tasks_per_dollar_annual": 696.3,
       "raw_usd_per_mtok": 0.01419,
       "raw_token_rank": 77,
       "confidence": "medium",
@@ -2570,12 +3245,16 @@
           "score_pct": 62.8,
           "monthly_tasks": 69626.7,
           "cost_per_task_usd": 0.001436,
-          "tasks_per_dollar": 696.3
+          "tasks_per_dollar": 696.3,
+          "cost_per_task_annual_usd": 0.001436,
+          "tasks_per_dollar_annual": 696.3
         }
       },
       "task_rank": 56,
       "cohort_raw_rank": 36,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "annual_task_rank": 56,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "kimi_allegretto_cn",
@@ -2584,6 +3263,9 @@
       "price": 199.0,
       "currency": "CNY",
       "price_usd": 29.36,
+      "annual_fee_usd": 352.32,
+      "effective_monthly_fee_usd": 29.36,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k3",
       "benchmarked_model_name": "Kimi K3",
       "benchmark_status": "available",
@@ -2594,6 +3276,8 @@
       "monthly_tasks": 19248.4,
       "cost_per_task_usd": 0.001525,
       "tasks_per_dollar": 655.6,
+      "cost_per_task_annual_usd": 0.001525,
+      "tasks_per_dollar_annual": 655.6,
       "raw_usd_per_mtok": 0.02023,
       "raw_token_rank": 90,
       "confidence": "medium",
@@ -2605,12 +3289,16 @@
           "score_pct": 68.5,
           "monthly_tasks": 19248.4,
           "cost_per_task_usd": 0.001525,
-          "tasks_per_dollar": 655.6
+          "tasks_per_dollar": 655.6,
+          "cost_per_task_annual_usd": 0.001525,
+          "tasks_per_dollar_annual": 655.6
         }
       },
       "task_rank": 57,
       "cohort_raw_rank": 47,
-      "rank_delta": -10
+      "rank_delta": -10,
+      "annual_task_rank": 58,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "opencode_go",
@@ -2619,6 +3307,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -2629,6 +3320,8 @@
       "monthly_tasks": 6494.2,
       "cost_per_task_usd": 0.00154,
       "tasks_per_dollar": 649.4,
+      "cost_per_task_annual_usd": 0.00154,
+      "tasks_per_dollar_annual": 649.4,
       "raw_usd_per_mtok": 0.02282,
       "raw_token_rank": 97,
       "confidence": "medium",
@@ -2640,12 +3333,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 6494.2,
           "cost_per_task_usd": 0.00154,
-          "tasks_per_dollar": 649.4
+          "tasks_per_dollar": 649.4,
+          "cost_per_task_annual_usd": 0.00154,
+          "tasks_per_dollar_annual": 649.4
         }
       },
       "task_rank": 58,
       "cohort_raw_rank": 53,
-      "rank_delta": -5
+      "rank_delta": -5,
+      "annual_task_rank": 59,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "glm_coding_lite_cn_old_mid",
@@ -2654,6 +3351,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
+      "annual_fee_usd": 86.76,
+      "effective_monthly_fee_usd": 7.23,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -2664,6 +3364,8 @@
       "monthly_tasks": 4229.3,
       "cost_per_task_usd": 0.001709,
       "tasks_per_dollar": 585.0,
+      "cost_per_task_annual_usd": 0.001709,
+      "tasks_per_dollar_annual": 585.0,
       "raw_usd_per_mtok": 0.0228,
       "raw_token_rank": 96,
       "confidence": "high",
@@ -2675,12 +3377,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 4229.3,
           "cost_per_task_usd": 0.001709,
-          "tasks_per_dollar": 585.0
+          "tasks_per_dollar": 585.0,
+          "cost_per_task_annual_usd": 0.001709,
+          "tasks_per_dollar_annual": 585.0
         }
       },
       "task_rank": 59,
       "cohort_raw_rank": 52,
-      "rank_delta": -7
+      "rank_delta": -7,
+      "annual_task_rank": 62,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "glm_coding_max_cn_old_peak",
@@ -2689,6 +3395,9 @@
       "price": 469.0,
       "currency": "CNY",
       "price_usd": 69.19,
+      "annual_fee_usd": 830.28,
+      "effective_monthly_fee_usd": 69.19,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -2699,6 +3408,8 @@
       "monthly_tasks": 39531.4,
       "cost_per_task_usd": 0.00175,
       "tasks_per_dollar": 571.3,
+      "cost_per_task_annual_usd": 0.00175,
+      "tasks_per_dollar_annual": 571.3,
       "raw_usd_per_mtok": 0.02335,
       "raw_token_rank": 100,
       "confidence": "high",
@@ -2710,12 +3421,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 39531.4,
           "cost_per_task_usd": 0.00175,
-          "tasks_per_dollar": 571.3
+          "tasks_per_dollar": 571.3,
+          "cost_per_task_annual_usd": 0.00175,
+          "tasks_per_dollar_annual": 571.3
         }
       },
       "task_rank": 60,
       "cohort_raw_rank": 54,
-      "rank_delta": -6
+      "rank_delta": -6,
+      "annual_task_rank": 63,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "command_code_goat",
@@ -2724,6 +3439,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gpt-5.6-sol",
       "benchmarked_model_name": "GPT-5.6 Sol",
       "benchmark_status": "available",
@@ -2734,6 +3452,8 @@
       "monthly_tasks": 5667.3,
       "cost_per_task_usd": 0.001765,
       "tasks_per_dollar": 566.7,
+      "cost_per_task_annual_usd": 0.001765,
+      "tasks_per_dollar_annual": 566.7,
       "raw_usd_per_mtok": 0.1,
       "raw_token_rank": 162,
       "confidence": "medium",
@@ -2745,40 +3465,52 @@
           "score_pct": 45.4,
           "monthly_tasks": 9938.4,
           "cost_per_task_usd": 0.001006,
-          "tasks_per_dollar": 993.8
+          "tasks_per_dollar": 993.8,
+          "cost_per_task_annual_usd": 0.001006,
+          "tasks_per_dollar_annual": 993.8
         },
         "Medium": {
           "output_tokens_per_task": 17645,
           "score_pct": 61.1,
           "monthly_tasks": 5667.3,
           "cost_per_task_usd": 0.001765,
-          "tasks_per_dollar": 566.7
+          "tasks_per_dollar": 566.7,
+          "cost_per_task_annual_usd": 0.001765,
+          "tasks_per_dollar_annual": 566.7
         },
         "High": {
           "output_tokens_per_task": 27700,
           "score_pct": 69.4,
           "monthly_tasks": 3610.1,
           "cost_per_task_usd": 0.00277,
-          "tasks_per_dollar": 361.0
+          "tasks_per_dollar": 361.0,
+          "cost_per_task_annual_usd": 0.00277,
+          "tasks_per_dollar_annual": 361.0
         },
         "Extra High": {
           "output_tokens_per_task": 39449,
           "score_pct": 70.7,
           "monthly_tasks": 2534.9,
           "cost_per_task_usd": 0.003945,
-          "tasks_per_dollar": 253.5
+          "tasks_per_dollar": 253.5,
+          "cost_per_task_annual_usd": 0.003945,
+          "tasks_per_dollar_annual": 253.5
         },
         "Max": {
           "output_tokens_per_task": 58786,
           "score_pct": 72.7,
           "monthly_tasks": 1701.1,
           "cost_per_task_usd": 0.005879,
-          "tasks_per_dollar": 170.1
+          "tasks_per_dollar": 170.1,
+          "cost_per_task_annual_usd": 0.005879,
+          "tasks_per_dollar_annual": 170.1
         }
       },
       "task_rank": 61,
       "cohort_raw_rank": 99,
-      "rank_delta": 38
+      "rank_delta": 38,
+      "annual_task_rank": 64,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "kimi_allegro_cn",
@@ -2787,6 +3519,9 @@
       "price": 699.0,
       "currency": "CNY",
       "price_usd": 103.12,
+      "annual_fee_usd": 1237.44,
+      "effective_monthly_fee_usd": 103.12,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k3",
       "benchmarked_model_name": "Kimi K3",
       "benchmark_status": "available",
@@ -2797,6 +3532,8 @@
       "monthly_tasks": 57745.1,
       "cost_per_task_usd": 0.001786,
       "tasks_per_dollar": 560.0,
+      "cost_per_task_annual_usd": 0.001786,
+      "tasks_per_dollar_annual": 560.0,
       "raw_usd_per_mtok": 0.02369,
       "raw_token_rank": 102,
       "confidence": "medium",
@@ -2808,12 +3545,16 @@
           "score_pct": 68.5,
           "monthly_tasks": 57745.1,
           "cost_per_task_usd": 0.001786,
-          "tasks_per_dollar": 560.0
+          "tasks_per_dollar": 560.0,
+          "cost_per_task_annual_usd": 0.001786,
+          "tasks_per_dollar_annual": 560.0
         }
       },
       "task_rank": 62,
       "cohort_raw_rank": 55,
-      "rank_delta": -7
+      "rank_delta": -7,
+      "annual_task_rank": 65,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "glm_coding_lite_cn_new_peak",
@@ -2822,6 +3563,9 @@
       "price": 118.0,
       "currency": "CNY",
       "price_usd": 17.41,
+      "annual_fee_usd": 167.14,
+      "effective_monthly_fee_usd": 13.93,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3-flash",
       "benchmarked_model_name": "GLM-5.3 Flash",
       "benchmark_status": "available",
@@ -2832,6 +3576,8 @@
       "monthly_tasks": 9512.4,
       "cost_per_task_usd": 0.00183,
       "tasks_per_dollar": 546.4,
+      "cost_per_task_annual_usd": 0.001464,
+      "tasks_per_dollar_annual": 683.0,
       "raw_usd_per_mtok": 0.02711,
       "raw_token_rank": 106,
       "confidence": "high",
@@ -2843,12 +3589,16 @@
           "score_pct": 63.4,
           "monthly_tasks": 9512.4,
           "cost_per_task_usd": 0.00183,
-          "tasks_per_dollar": 546.4
+          "tasks_per_dollar": 546.4,
+          "cost_per_task_annual_usd": 0.001464,
+          "tasks_per_dollar_annual": 683.0
         }
       },
       "task_rank": 63,
       "cohort_raw_rank": 59,
-      "rank_delta": -4
+      "rank_delta": -4,
+      "annual_task_rank": 57,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "opencode_go",
@@ -2857,6 +3607,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "benchmark_status": "available",
@@ -2867,6 +3620,8 @@
       "monthly_tasks": 5052.4,
       "cost_per_task_usd": 0.001979,
       "tasks_per_dollar": 505.2,
+      "cost_per_task_annual_usd": 0.001979,
+      "tasks_per_dollar_annual": 505.2,
       "raw_usd_per_mtok": 0.03662,
       "raw_token_rank": 120,
       "confidence": "medium",
@@ -2878,12 +3633,16 @@
           "score_pct": 30.5,
           "monthly_tasks": 5052.4,
           "cost_per_task_usd": 0.001979,
-          "tasks_per_dollar": 505.2
+          "tasks_per_dollar": 505.2,
+          "cost_per_task_annual_usd": 0.001979,
+          "tasks_per_dollar_annual": 505.2
         }
       },
       "task_rank": 64,
       "cohort_raw_rank": 67,
-      "rank_delta": 3
+      "rank_delta": 3,
+      "annual_task_rank": 67,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "command_code_goat",
@@ -2892,6 +3651,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "benchmark_status": "available",
@@ -2902,6 +3664,8 @@
       "monthly_tasks": 5052.4,
       "cost_per_task_usd": 0.001979,
       "tasks_per_dollar": 505.2,
+      "cost_per_task_annual_usd": 0.001979,
+      "tasks_per_dollar_annual": 505.2,
       "raw_usd_per_mtok": 0.03662,
       "raw_token_rank": 121,
       "confidence": "medium",
@@ -2913,12 +3677,16 @@
           "score_pct": 30.5,
           "monthly_tasks": 5052.4,
           "cost_per_task_usd": 0.001979,
-          "tasks_per_dollar": 505.2
+          "tasks_per_dollar": 505.2,
+          "cost_per_task_annual_usd": 0.001979,
+          "tasks_per_dollar_annual": 505.2
         }
       },
       "task_rank": 65,
       "cohort_raw_rank": 68,
-      "rank_delta": 3
+      "rank_delta": 3,
+      "annual_task_rank": 68,
+      "annual_rank_shift": -3
     },
     {
       "plan_id": "glm_coding_max_cn_new_offpeak",
@@ -2927,6 +3695,9 @@
       "price": 1078.0,
       "currency": "CNY",
       "price_usd": 159.03,
+      "annual_fee_usd": 1526.69,
+      "effective_monthly_fee_usd": 127.22,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -2937,6 +3708,8 @@
       "monthly_tasks": 79062.9,
       "cost_per_task_usd": 0.002011,
       "tasks_per_dollar": 497.2,
+      "cost_per_task_annual_usd": 0.001609,
+      "tasks_per_dollar_annual": 621.4,
       "raw_usd_per_mtok": 0.02684,
       "raw_token_rank": 105,
       "confidence": "high",
@@ -2948,12 +3721,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 79062.9,
           "cost_per_task_usd": 0.002011,
-          "tasks_per_dollar": 497.2
+          "tasks_per_dollar": 497.2,
+          "cost_per_task_annual_usd": 0.001609,
+          "tasks_per_dollar_annual": 621.4
         }
       },
       "task_rank": 66,
       "cohort_raw_rank": 58,
-      "rank_delta": -8
+      "rank_delta": -8,
+      "annual_task_rank": 60,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "supergrok_heavy",
@@ -2962,6 +3739,9 @@
       "price": 300.0,
       "currency": "USD",
       "price_usd": 300.0,
+      "annual_fee_usd": 3600.0,
+      "effective_monthly_fee_usd": 300.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.5",
       "benchmarked_model_name": "Grok 4.5",
       "benchmark_status": "available",
@@ -2972,6 +3752,8 @@
       "monthly_tasks": 148613.1,
       "cost_per_task_usd": 0.002019,
       "tasks_per_dollar": 495.4,
+      "cost_per_task_annual_usd": 0.002019,
+      "tasks_per_dollar_annual": 495.4,
       "raw_usd_per_mtok": 0.05894,
       "raw_token_rank": 144,
       "confidence": "medium",
@@ -2983,12 +3765,16 @@
           "score_pct": 53.8,
           "monthly_tasks": 148613.1,
           "cost_per_task_usd": 0.002019,
-          "tasks_per_dollar": 495.4
+          "tasks_per_dollar": 495.4,
+          "cost_per_task_annual_usd": 0.002019,
+          "tasks_per_dollar_annual": 495.4
         }
       },
       "task_rank": 67,
       "cohort_raw_rank": 83,
-      "rank_delta": 16
+      "rank_delta": 16,
+      "annual_task_rank": 69,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "supergrok",
@@ -2997,6 +3783,9 @@
       "price": 30.0,
       "currency": "USD",
       "price_usd": 30.0,
+      "annual_fee_usd": 300.0,
+      "effective_monthly_fee_usd": 25.0,
+      "annual_discount_pct": 16.7,
       "served_model": "grok-4.5",
       "benchmarked_model_name": "Grok 4.5",
       "benchmark_status": "available",
@@ -3007,6 +3796,8 @@
       "monthly_tasks": 14861.3,
       "cost_per_task_usd": 0.002019,
       "tasks_per_dollar": 495.4,
+      "cost_per_task_annual_usd": 0.001682,
+      "tasks_per_dollar_annual": 594.5,
       "raw_usd_per_mtok": 0.05894,
       "raw_token_rank": 145,
       "confidence": "medium",
@@ -3018,12 +3809,16 @@
           "score_pct": 53.8,
           "monthly_tasks": 14861.3,
           "cost_per_task_usd": 0.002019,
-          "tasks_per_dollar": 495.4
+          "tasks_per_dollar": 495.4,
+          "cost_per_task_annual_usd": 0.001682,
+          "tasks_per_dollar_annual": 594.5
         }
       },
       "task_rank": 68,
       "cohort_raw_rank": 84,
-      "rank_delta": 16
+      "rank_delta": 16,
+      "annual_task_rank": 61,
+      "annual_rank_shift": 7
     },
     {
       "plan_id": "cursor_pro",
@@ -3032,6 +3827,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 240.0,
+      "effective_monthly_fee_usd": 20.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "benchmark_status": "available",
@@ -3042,6 +3840,8 @@
       "monthly_tasks": 9673.6,
       "cost_per_task_usd": 0.002067,
       "tasks_per_dollar": 483.7,
+      "cost_per_task_annual_usd": 0.002067,
+      "tasks_per_dollar_annual": 483.7,
       "raw_usd_per_mtok": 0.04255,
       "raw_token_rank": 127,
       "confidence": "medium",
@@ -3053,33 +3853,43 @@
           "score_pct": 41.6,
           "monthly_tasks": 31465.5,
           "cost_per_task_usd": 0.000636,
-          "tasks_per_dollar": 1573.3
+          "tasks_per_dollar": 1573.3,
+          "cost_per_task_annual_usd": 0.000636,
+          "tasks_per_dollar_annual": 1573.3
         },
         "Medium": {
           "output_tokens_per_task": 48586,
           "score_pct": 67.5,
           "monthly_tasks": 9673.6,
           "cost_per_task_usd": 0.002067,
-          "tasks_per_dollar": 483.7
+          "tasks_per_dollar": 483.7,
+          "cost_per_task_annual_usd": 0.002067,
+          "tasks_per_dollar_annual": 483.7
         },
         "High": {
           "output_tokens_per_task": 60060,
           "score_pct": 65.2,
           "monthly_tasks": 7825.5,
           "cost_per_task_usd": 0.002556,
-          "tasks_per_dollar": 391.3
+          "tasks_per_dollar": 391.3,
+          "cost_per_task_annual_usd": 0.002556,
+          "tasks_per_dollar_annual": 391.3
         },
         "Extra High": {
           "output_tokens_per_task": 71285,
           "score_pct": 66.7,
           "monthly_tasks": 6593.3,
           "cost_per_task_usd": 0.003033,
-          "tasks_per_dollar": 329.7
+          "tasks_per_dollar": 329.7,
+          "cost_per_task_annual_usd": 0.003033,
+          "tasks_per_dollar_annual": 329.7
         }
       },
       "task_rank": 69,
       "cohort_raw_rank": 73,
-      "rank_delta": 4
+      "rank_delta": 4,
+      "annual_task_rank": 70,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "command_code_goat",
@@ -3088,6 +3898,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.2",
       "benchmarked_model_name": "GLM-5.2",
       "benchmark_status": "available",
@@ -3098,6 +3911,8 @@
       "monthly_tasks": 4781.8,
       "cost_per_task_usd": 0.002091,
       "tasks_per_dollar": 478.2,
+      "cost_per_task_annual_usd": 0.002091,
+      "tasks_per_dollar_annual": 478.2,
       "raw_usd_per_mtok": 0.04272,
       "raw_token_rank": 128,
       "confidence": "medium",
@@ -3109,19 +3924,25 @@
           "score_pct": 36.3,
           "monthly_tasks": 4781.8,
           "cost_per_task_usd": 0.002091,
-          "tasks_per_dollar": 478.2
+          "tasks_per_dollar": 478.2,
+          "cost_per_task_annual_usd": 0.002091,
+          "tasks_per_dollar_annual": 478.2
         },
         "Max": {
           "output_tokens_per_task": 75760,
           "score_pct": 43.8,
           "monthly_tasks": 3090.0,
           "cost_per_task_usd": 0.003236,
-          "tasks_per_dollar": 309.0
+          "tasks_per_dollar": 309.0,
+          "cost_per_task_annual_usd": 0.003236,
+          "tasks_per_dollar_annual": 309.0
         }
       },
       "task_rank": 70,
       "cohort_raw_rank": 74,
-      "rank_delta": 4
+      "rank_delta": 4,
+      "annual_task_rank": 71,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "command_code_goat",
@@ -3130,6 +3951,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "deepseek-v4-pro",
       "benchmarked_model_name": "DeepSeek V4 Pro",
       "benchmark_status": "available",
@@ -3140,6 +3964,8 @@
       "monthly_tasks": 4641.7,
       "cost_per_task_usd": 0.002154,
       "tasks_per_dollar": 464.2,
+      "cost_per_task_annual_usd": 0.002154,
+      "tasks_per_dollar_annual": 464.2,
       "raw_usd_per_mtok": 0.02129,
       "raw_token_rank": 93,
       "confidence": "medium",
@@ -3151,12 +3977,16 @@
           "score_pct": 62.8,
           "monthly_tasks": 4641.7,
           "cost_per_task_usd": 0.002154,
-          "tasks_per_dollar": 464.2
+          "tasks_per_dollar": 464.2,
+          "cost_per_task_annual_usd": 0.002154,
+          "tasks_per_dollar_annual": 464.2
         }
       },
       "task_rank": 71,
       "cohort_raw_rank": 50,
-      "rank_delta": -21
+      "rank_delta": -21,
+      "annual_task_rank": 73,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_pro_cn_new_offpeak",
@@ -3165,6 +3995,9 @@
       "price": 538.0,
       "currency": "CNY",
       "price_usd": 79.37,
+      "annual_fee_usd": 761.95,
+      "effective_monthly_fee_usd": 63.5,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -3175,6 +4008,8 @@
       "monthly_tasks": 33887.9,
       "cost_per_task_usd": 0.002342,
       "tasks_per_dollar": 427.0,
+      "cost_per_task_annual_usd": 0.001874,
+      "tasks_per_dollar_annual": 533.7,
       "raw_usd_per_mtok": 0.03125,
       "raw_token_rank": 111,
       "confidence": "high",
@@ -3186,12 +4021,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 33887.9,
           "cost_per_task_usd": 0.002342,
-          "tasks_per_dollar": 427.0
+          "tasks_per_dollar": 427.0,
+          "cost_per_task_annual_usd": 0.001874,
+          "tasks_per_dollar_annual": 533.7
         }
       },
       "task_rank": 72,
       "cohort_raw_rank": 62,
-      "rank_delta": -10
+      "rank_delta": -10,
+      "annual_task_rank": 66,
+      "annual_rank_shift": 6
     },
     {
       "plan_id": "supergrok_plus",
@@ -3200,6 +4039,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "benchmark_status": "available",
@@ -3210,6 +4052,8 @@
       "monthly_tasks": 41987.4,
       "cost_per_task_usd": 0.002382,
       "tasks_per_dollar": 419.9,
+      "cost_per_task_annual_usd": 0.002382,
+      "tasks_per_dollar_annual": 419.9,
       "raw_usd_per_mtok": 0.04902,
       "raw_token_rank": 133,
       "confidence": "medium",
@@ -3221,33 +4065,43 @@
           "score_pct": 41.6,
           "monthly_tasks": 136573.6,
           "cost_per_task_usd": 0.000732,
-          "tasks_per_dollar": 1365.7
+          "tasks_per_dollar": 1365.7,
+          "cost_per_task_annual_usd": 0.000732,
+          "tasks_per_dollar_annual": 1365.7
         },
         "Medium": {
           "output_tokens_per_task": 48586,
           "score_pct": 67.5,
           "monthly_tasks": 41987.4,
           "cost_per_task_usd": 0.002382,
-          "tasks_per_dollar": 419.9
+          "tasks_per_dollar": 419.9,
+          "cost_per_task_annual_usd": 0.002382,
+          "tasks_per_dollar_annual": 419.9
         },
         "High": {
           "output_tokens_per_task": 60060,
           "score_pct": 65.2,
           "monthly_tasks": 33966.0,
           "cost_per_task_usd": 0.002944,
-          "tasks_per_dollar": 339.7
+          "tasks_per_dollar": 339.7,
+          "cost_per_task_annual_usd": 0.002944,
+          "tasks_per_dollar_annual": 339.7
         },
         "Extra High": {
           "output_tokens_per_task": 71285,
           "score_pct": 66.7,
           "monthly_tasks": 28617.5,
           "cost_per_task_usd": 0.003494,
-          "tasks_per_dollar": 286.2
+          "tasks_per_dollar": 286.2,
+          "cost_per_task_annual_usd": 0.003494,
+          "tasks_per_dollar_annual": 286.2
         }
       },
       "task_rank": 73,
       "cohort_raw_rank": 76,
-      "rank_delta": 3
+      "rank_delta": 3,
+      "annual_task_rank": 74,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "opencode_go",
@@ -3256,6 +4110,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.2",
       "benchmarked_model_name": "GLM-5.2",
       "benchmark_status": "available",
@@ -3266,6 +4123,8 @@
       "monthly_tasks": 4099.6,
       "cost_per_task_usd": 0.002439,
       "tasks_per_dollar": 410.0,
+      "cost_per_task_annual_usd": 0.002439,
+      "tasks_per_dollar_annual": 410.0,
       "raw_usd_per_mtok": 0.04983,
       "raw_token_rank": 134,
       "confidence": "medium",
@@ -3277,19 +4136,25 @@
           "score_pct": 36.3,
           "monthly_tasks": 4099.6,
           "cost_per_task_usd": 0.002439,
-          "tasks_per_dollar": 410.0
+          "tasks_per_dollar": 410.0,
+          "cost_per_task_annual_usd": 0.002439,
+          "tasks_per_dollar_annual": 410.0
         },
         "Max": {
           "output_tokens_per_task": 75760,
           "score_pct": 43.8,
           "monthly_tasks": 2649.2,
           "cost_per_task_usd": 0.003775,
-          "tasks_per_dollar": 264.9
+          "tasks_per_dollar": 264.9,
+          "cost_per_task_annual_usd": 0.003775,
+          "tasks_per_dollar_annual": 264.9
         }
       },
       "task_rank": 74,
       "cohort_raw_rank": 77,
-      "rank_delta": 3
+      "rank_delta": 3,
+      "annual_task_rank": 76,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "kimi_moderato_cn",
@@ -3298,6 +4163,9 @@
       "price": 99.0,
       "currency": "CNY",
       "price_usd": 14.6,
+      "annual_fee_usd": 175.2,
+      "effective_monthly_fee_usd": 14.6,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "benchmark_status": "available",
@@ -3308,6 +4176,8 @@
       "monthly_tasks": 5809.0,
       "cost_per_task_usd": 0.002513,
       "tasks_per_dollar": 397.9,
+      "cost_per_task_annual_usd": 0.002513,
+      "tasks_per_dollar_annual": 397.9,
       "raw_usd_per_mtok": 0.04651,
       "raw_token_rank": 131,
       "confidence": "medium",
@@ -3319,12 +4189,16 @@
           "score_pct": 30.5,
           "monthly_tasks": 5809.0,
           "cost_per_task_usd": 0.002513,
-          "tasks_per_dollar": 397.9
+          "tasks_per_dollar": 397.9,
+          "cost_per_task_annual_usd": 0.002513,
+          "tasks_per_dollar_annual": 397.9
         }
       },
       "task_rank": 75,
       "cohort_raw_rank": 75,
-      "rank_delta": 0
+      "rank_delta": 0,
+      "annual_task_rank": 79,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "glm_coding_lite_cn_old_peak",
@@ -3333,6 +4207,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
+      "annual_fee_usd": 86.76,
+      "effective_monthly_fee_usd": 7.23,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -3343,6 +4220,8 @@
       "monthly_tasks": 2828.4,
       "cost_per_task_usd": 0.002556,
       "tasks_per_dollar": 391.2,
+      "cost_per_task_annual_usd": 0.002556,
+      "tasks_per_dollar_annual": 391.2,
       "raw_usd_per_mtok": 0.0341,
       "raw_token_rank": 117,
       "confidence": "high",
@@ -3354,12 +4233,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 2828.4,
           "cost_per_task_usd": 0.002556,
-          "tasks_per_dollar": 391.2
+          "tasks_per_dollar": 391.2,
+          "cost_per_task_annual_usd": 0.002556,
+          "tasks_per_dollar_annual": 391.2
         }
       },
       "task_rank": 76,
       "cohort_raw_rank": 65,
-      "rank_delta": -11
+      "rank_delta": -11,
+      "annual_task_rank": 80,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "glm_coding_max_cn_new_mid",
@@ -3368,6 +4251,9 @@
       "price": 1078.0,
       "currency": "CNY",
       "price_usd": 159.03,
+      "annual_fee_usd": 1526.69,
+      "effective_monthly_fee_usd": 127.22,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -3378,6 +4264,8 @@
       "monthly_tasks": 59303.8,
       "cost_per_task_usd": 0.002682,
       "tasks_per_dollar": 372.9,
+      "cost_per_task_annual_usd": 0.002145,
+      "tasks_per_dollar_annual": 466.1,
       "raw_usd_per_mtok": 0.03578,
       "raw_token_rank": 118,
       "confidence": "high",
@@ -3389,12 +4277,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 59303.8,
           "cost_per_task_usd": 0.002682,
-          "tasks_per_dollar": 372.9
+          "tasks_per_dollar": 372.9,
+          "cost_per_task_annual_usd": 0.002145,
+          "tasks_per_dollar_annual": 466.1
         }
       },
       "task_rank": 77,
       "cohort_raw_rank": 66,
-      "rank_delta": -11
+      "rank_delta": -11,
+      "annual_task_rank": 72,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "supergrok",
@@ -3403,6 +4295,9 @@
       "price": 30.0,
       "currency": "USD",
       "price_usd": 30.0,
+      "annual_fee_usd": 300.0,
+      "effective_monthly_fee_usd": 25.0,
+      "annual_discount_pct": 16.7,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "benchmark_status": "available",
@@ -3413,6 +4308,8 @@
       "monthly_tasks": 10476.3,
       "cost_per_task_usd": 0.002864,
       "tasks_per_dollar": 349.2,
+      "cost_per_task_annual_usd": 0.002386,
+      "tasks_per_dollar_annual": 419.1,
       "raw_usd_per_mtok": 0.05894,
       "raw_token_rank": 142,
       "confidence": "high",
@@ -3424,33 +4321,43 @@
           "score_pct": 41.6,
           "monthly_tasks": 34076.5,
           "cost_per_task_usd": 0.00088,
-          "tasks_per_dollar": 1135.9
+          "tasks_per_dollar": 1135.9,
+          "cost_per_task_annual_usd": 0.000734,
+          "tasks_per_dollar_annual": 1363.1
         },
         "Medium": {
           "output_tokens_per_task": 48586,
           "score_pct": 67.5,
           "monthly_tasks": 10476.3,
           "cost_per_task_usd": 0.002864,
-          "tasks_per_dollar": 349.2
+          "tasks_per_dollar": 349.2,
+          "cost_per_task_annual_usd": 0.002386,
+          "tasks_per_dollar_annual": 419.1
         },
         "High": {
           "output_tokens_per_task": 60060,
           "score_pct": 65.2,
           "monthly_tasks": 8474.9,
           "cost_per_task_usd": 0.00354,
-          "tasks_per_dollar": 282.5
+          "tasks_per_dollar": 282.5,
+          "cost_per_task_annual_usd": 0.00295,
+          "tasks_per_dollar_annual": 339.0
         },
         "Extra High": {
           "output_tokens_per_task": 71285,
           "score_pct": 66.7,
           "monthly_tasks": 7140.4,
           "cost_per_task_usd": 0.004201,
-          "tasks_per_dollar": 238.0
+          "tasks_per_dollar": 238.0,
+          "cost_per_task_annual_usd": 0.003501,
+          "tasks_per_dollar_annual": 285.6
         }
       },
       "task_rank": 78,
       "cohort_raw_rank": 85,
-      "rank_delta": 7
+      "rank_delta": 7,
+      "annual_task_rank": 75,
+      "annual_rank_shift": 3
     },
     {
       "plan_id": "supergrok_heavy",
@@ -3459,6 +4366,9 @@
       "price": 300.0,
       "currency": "USD",
       "price_usd": 300.0,
+      "annual_fee_usd": 3600.0,
+      "effective_monthly_fee_usd": 300.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "benchmark_status": "available",
@@ -3469,6 +4379,8 @@
       "monthly_tasks": 104762.7,
       "cost_per_task_usd": 0.002864,
       "tasks_per_dollar": 349.2,
+      "cost_per_task_annual_usd": 0.002864,
+      "tasks_per_dollar_annual": 349.2,
       "raw_usd_per_mtok": 0.05894,
       "raw_token_rank": 143,
       "confidence": "medium",
@@ -3480,33 +4392,43 @@
           "score_pct": 41.6,
           "monthly_tasks": 340764.5,
           "cost_per_task_usd": 0.00088,
-          "tasks_per_dollar": 1135.9
+          "tasks_per_dollar": 1135.9,
+          "cost_per_task_annual_usd": 0.00088,
+          "tasks_per_dollar_annual": 1135.9
         },
         "Medium": {
           "output_tokens_per_task": 48586,
           "score_pct": 67.5,
           "monthly_tasks": 104762.7,
           "cost_per_task_usd": 0.002864,
-          "tasks_per_dollar": 349.2
+          "tasks_per_dollar": 349.2,
+          "cost_per_task_annual_usd": 0.002864,
+          "tasks_per_dollar_annual": 349.2
         },
         "High": {
           "output_tokens_per_task": 60060,
           "score_pct": 65.2,
           "monthly_tasks": 84748.6,
           "cost_per_task_usd": 0.00354,
-          "tasks_per_dollar": 282.5
+          "tasks_per_dollar": 282.5,
+          "cost_per_task_annual_usd": 0.00354,
+          "tasks_per_dollar_annual": 282.5
         },
         "Extra High": {
           "output_tokens_per_task": 71285,
           "score_pct": 66.7,
           "monthly_tasks": 71403.5,
           "cost_per_task_usd": 0.004201,
-          "tasks_per_dollar": 238.0
+          "tasks_per_dollar": 238.0,
+          "cost_per_task_annual_usd": 0.004201,
+          "tasks_per_dollar_annual": 238.0
         }
       },
       "task_rank": 79,
       "cohort_raw_rank": 86,
-      "rank_delta": 7
+      "rank_delta": 7,
+      "annual_task_rank": 81,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "opencode_go",
@@ -3515,6 +4437,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "deepseek-v4-pro",
       "benchmarked_model_name": "DeepSeek V4 Pro",
       "benchmark_status": "available",
@@ -3525,6 +4450,8 @@
       "monthly_tasks": 3481.7,
       "cost_per_task_usd": 0.002872,
       "tasks_per_dollar": 348.2,
+      "cost_per_task_annual_usd": 0.002872,
+      "tasks_per_dollar_annual": 348.2,
       "raw_usd_per_mtok": 0.02838,
       "raw_token_rank": 109,
       "confidence": "medium",
@@ -3536,12 +4463,16 @@
           "score_pct": 62.8,
           "monthly_tasks": 3481.7,
           "cost_per_task_usd": 0.002872,
-          "tasks_per_dollar": 348.2
+          "tasks_per_dollar": 348.2,
+          "cost_per_task_annual_usd": 0.002872,
+          "tasks_per_dollar_annual": 348.2
         }
       },
       "task_rank": 80,
       "cohort_raw_rank": 60,
-      "rank_delta": -20
+      "rank_delta": -20,
+      "annual_task_rank": 82,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_lite_cn_new_offpeak",
@@ -3550,6 +4481,9 @@
       "price": 118.0,
       "currency": "CNY",
       "price_usd": 17.41,
+      "annual_fee_usd": 167.14,
+      "effective_monthly_fee_usd": 13.93,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -3560,6 +4494,8 @@
       "monthly_tasks": 5643.5,
       "cost_per_task_usd": 0.003085,
       "tasks_per_dollar": 324.2,
+      "cost_per_task_annual_usd": 0.002468,
+      "tasks_per_dollar_annual": 405.2,
       "raw_usd_per_mtok": 0.04115,
       "raw_token_rank": 123,
       "confidence": "high",
@@ -3571,12 +4507,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 5643.5,
           "cost_per_task_usd": 0.003085,
-          "tasks_per_dollar": 324.2
+          "tasks_per_dollar": 324.2,
+          "cost_per_task_annual_usd": 0.002468,
+          "tasks_per_dollar_annual": 405.2
         }
       },
       "task_rank": 81,
       "cohort_raw_rank": 69,
-      "rank_delta": -12
+      "rank_delta": -12,
+      "annual_task_rank": 77,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "glm_coding_pro_cn_new_mid",
@@ -3585,6 +4525,9 @@
       "price": 538.0,
       "currency": "CNY",
       "price_usd": 79.37,
+      "annual_fee_usd": 761.95,
+      "effective_monthly_fee_usd": 63.5,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -3595,6 +4538,8 @@
       "monthly_tasks": 25415.9,
       "cost_per_task_usd": 0.003123,
       "tasks_per_dollar": 320.2,
+      "cost_per_task_annual_usd": 0.002498,
+      "tasks_per_dollar_annual": 400.3,
       "raw_usd_per_mtok": 0.04166,
       "raw_token_rank": 126,
       "confidence": "high",
@@ -3606,12 +4551,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 25415.9,
           "cost_per_task_usd": 0.003123,
-          "tasks_per_dollar": 320.2
+          "tasks_per_dollar": 320.2,
+          "cost_per_task_annual_usd": 0.002498,
+          "tasks_per_dollar_annual": 400.3
         }
       },
       "task_rank": 82,
       "cohort_raw_rank": 72,
-      "rank_delta": -10
+      "rank_delta": -10,
+      "annual_task_rank": 78,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "cursor_ultra_fast",
@@ -3620,6 +4569,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
+      "annual_fee_usd": 2400.0,
+      "effective_monthly_fee_usd": 200.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "benchmark_status": "available",
@@ -3630,6 +4582,8 @@
       "monthly_tasks": 63269.3,
       "cost_per_task_usd": 0.003161,
       "tasks_per_dollar": 316.3,
+      "cost_per_task_annual_usd": 0.003161,
+      "tasks_per_dollar_annual": 316.3,
       "raw_usd_per_mtok": 0.06506,
       "raw_token_rank": 147,
       "confidence": "high",
@@ -3641,33 +4595,43 @@
           "score_pct": 41.6,
           "monthly_tasks": 205797.7,
           "cost_per_task_usd": 0.000972,
-          "tasks_per_dollar": 1029.0
+          "tasks_per_dollar": 1029.0,
+          "cost_per_task_annual_usd": 0.000972,
+          "tasks_per_dollar_annual": 1029.0
         },
         "Medium": {
           "output_tokens_per_task": 48586,
           "score_pct": 67.5,
           "monthly_tasks": 63269.3,
           "cost_per_task_usd": 0.003161,
-          "tasks_per_dollar": 316.3
+          "tasks_per_dollar": 316.3,
+          "cost_per_task_annual_usd": 0.003161,
+          "tasks_per_dollar_annual": 316.3
         },
         "High": {
           "output_tokens_per_task": 60060,
           "score_pct": 65.2,
           "monthly_tasks": 51182.2,
           "cost_per_task_usd": 0.003908,
-          "tasks_per_dollar": 255.9
+          "tasks_per_dollar": 255.9,
+          "cost_per_task_annual_usd": 0.003908,
+          "tasks_per_dollar_annual": 255.9
         },
         "Extra High": {
           "output_tokens_per_task": 71285,
           "score_pct": 66.7,
           "monthly_tasks": 43122.7,
           "cost_per_task_usd": 0.004638,
-          "tasks_per_dollar": 215.6
+          "tasks_per_dollar": 215.6,
+          "cost_per_task_annual_usd": 0.004638,
+          "tasks_per_dollar_annual": 215.6
         }
       },
       "task_rank": 83,
       "cohort_raw_rank": 88,
-      "rank_delta": 5
+      "rank_delta": 5,
+      "annual_task_rank": 83,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "supergrok_lite",
@@ -3676,6 +4640,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "benchmark_status": "available",
@@ -3686,6 +4653,8 @@
       "monthly_tasks": 3087.3,
       "cost_per_task_usd": 0.003239,
       "tasks_per_dollar": 308.7,
+      "cost_per_task_annual_usd": 0.003239,
+      "tasks_per_dollar_annual": 308.7,
       "raw_usd_per_mtok": 0.06667,
       "raw_token_rank": 148,
       "confidence": "low",
@@ -3697,33 +4666,43 @@
           "score_pct": 41.6,
           "monthly_tasks": 10042.2,
           "cost_per_task_usd": 0.000996,
-          "tasks_per_dollar": 1004.2
+          "tasks_per_dollar": 1004.2,
+          "cost_per_task_annual_usd": 0.000996,
+          "tasks_per_dollar_annual": 1004.2
         },
         "Medium": {
           "output_tokens_per_task": 48586,
           "score_pct": 67.5,
           "monthly_tasks": 3087.3,
           "cost_per_task_usd": 0.003239,
-          "tasks_per_dollar": 308.7
+          "tasks_per_dollar": 308.7,
+          "cost_per_task_annual_usd": 0.003239,
+          "tasks_per_dollar_annual": 308.7
         },
         "High": {
           "output_tokens_per_task": 60060,
           "score_pct": 65.2,
           "monthly_tasks": 2497.5,
           "cost_per_task_usd": 0.004004,
-          "tasks_per_dollar": 249.8
+          "tasks_per_dollar": 249.8,
+          "cost_per_task_annual_usd": 0.004004,
+          "tasks_per_dollar_annual": 249.8
         },
         "Extra High": {
           "output_tokens_per_task": 71285,
           "score_pct": 66.7,
           "monthly_tasks": 2104.2,
           "cost_per_task_usd": 0.004752,
-          "tasks_per_dollar": 210.4
+          "tasks_per_dollar": 210.4,
+          "cost_per_task_annual_usd": 0.004752,
+          "tasks_per_dollar_annual": 210.4
         }
       },
       "task_rank": 84,
       "cohort_raw_rank": 89,
-      "rank_delta": 5
+      "rank_delta": 5,
+      "annual_task_rank": 85,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "kimi_moderato_cn",
@@ -3732,6 +4711,9 @@
       "price": 99.0,
       "currency": "CNY",
       "price_usd": 14.6,
+      "annual_fee_usd": 175.2,
+      "effective_monthly_fee_usd": 14.6,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k3",
       "benchmarked_model_name": "Kimi K3",
       "benchmark_status": "available",
@@ -3742,6 +4724,8 @@
       "monthly_tasks": 3847.0,
       "cost_per_task_usd": 0.003795,
       "tasks_per_dollar": 263.5,
+      "cost_per_task_annual_usd": 0.003795,
+      "tasks_per_dollar_annual": 263.5,
       "raw_usd_per_mtok": 0.05036,
       "raw_token_rank": 136,
       "confidence": "medium",
@@ -3753,12 +4737,16 @@
           "score_pct": 68.5,
           "monthly_tasks": 3847.0,
           "cost_per_task_usd": 0.003795,
-          "tasks_per_dollar": 263.5
+          "tasks_per_dollar": 263.5,
+          "cost_per_task_annual_usd": 0.003795,
+          "tasks_per_dollar_annual": 263.5
         }
       },
       "task_rank": 85,
       "cohort_raw_rank": 78,
-      "rank_delta": -7
+      "rank_delta": -7,
+      "annual_task_rank": 89,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "claude_max_5x",
@@ -3767,6 +4755,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "claude-fable-5",
       "benchmarked_model_name": "Claude Fable 5",
       "benchmark_status": "available",
@@ -3777,6 +4768,8 @@
       "monthly_tasks": 25674.2,
       "cost_per_task_usd": 0.003895,
       "tasks_per_dollar": 256.7,
+      "cost_per_task_annual_usd": 0.003895,
+      "tasks_per_dollar_annual": 256.7,
       "raw_usd_per_mtok": 0.10828,
       "raw_token_rank": 164,
       "confidence": "low",
@@ -3788,40 +4781,52 @@
           "score_pct": 59.6,
           "monthly_tasks": 41340.3,
           "cost_per_task_usd": 0.002419,
-          "tasks_per_dollar": 413.4
+          "tasks_per_dollar": 413.4,
+          "cost_per_task_annual_usd": 0.002419,
+          "tasks_per_dollar_annual": 413.4
         },
         "Medium": {
           "output_tokens_per_task": 35970,
           "score_pct": 65.4,
           "monthly_tasks": 25674.2,
           "cost_per_task_usd": 0.003895,
-          "tasks_per_dollar": 256.7
+          "tasks_per_dollar": 256.7,
+          "cost_per_task_annual_usd": 0.003895,
+          "tasks_per_dollar_annual": 256.7
         },
         "High": {
           "output_tokens_per_task": 52624,
           "score_pct": 68.6,
           "monthly_tasks": 17549.0,
           "cost_per_task_usd": 0.005698,
-          "tasks_per_dollar": 175.5
+          "tasks_per_dollar": 175.5,
+          "cost_per_task_annual_usd": 0.005698,
+          "tasks_per_dollar_annual": 175.5
         },
         "Extra High": {
           "output_tokens_per_task": 76036,
           "score_pct": 69.9,
           "monthly_tasks": 12145.6,
           "cost_per_task_usd": 0.008233,
-          "tasks_per_dollar": 121.5
+          "tasks_per_dollar": 121.5,
+          "cost_per_task_annual_usd": 0.008233,
+          "tasks_per_dollar_annual": 121.5
         },
         "Max": {
           "output_tokens_per_task": 115631,
           "score_pct": 69.7,
           "monthly_tasks": 7986.6,
           "cost_per_task_usd": 0.012521,
-          "tasks_per_dollar": 79.9
+          "tasks_per_dollar": 79.9,
+          "cost_per_task_annual_usd": 0.012521,
+          "tasks_per_dollar_annual": 79.9
         }
       },
       "task_rank": 86,
       "cohort_raw_rank": 100,
-      "rank_delta": 14
+      "rank_delta": 14,
+      "annual_task_rank": 90,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "ollama_max",
@@ -3830,6 +4835,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "benchmark_status": "available",
@@ -3840,6 +4848,8 @@
       "monthly_tasks": 25265.5,
       "cost_per_task_usd": 0.003958,
       "tasks_per_dollar": 252.7,
+      "cost_per_task_annual_usd": 0.003958,
+      "tasks_per_dollar_annual": 252.7,
       "raw_usd_per_mtok": 0.07322,
       "raw_token_rank": 150,
       "confidence": "medium",
@@ -3851,12 +4861,16 @@
           "score_pct": 30.5,
           "monthly_tasks": 25265.5,
           "cost_per_task_usd": 0.003958,
-          "tasks_per_dollar": 252.7
+          "tasks_per_dollar": 252.7,
+          "cost_per_task_annual_usd": 0.003958,
+          "tasks_per_dollar_annual": 252.7
         }
       },
       "task_rank": 87,
       "cohort_raw_rank": 90,
-      "rank_delta": 3
+      "rank_delta": 3,
+      "annual_task_rank": 91,
+      "annual_rank_shift": -4
     },
     {
       "plan_id": "ollama_pro",
@@ -3865,6 +4879,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 200.0,
+      "effective_monthly_fee_usd": 16.67,
+      "annual_discount_pct": 16.7,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "benchmark_status": "available",
@@ -3875,6 +4892,8 @@
       "monthly_tasks": 5052.4,
       "cost_per_task_usd": 0.003959,
       "tasks_per_dollar": 252.6,
+      "cost_per_task_annual_usd": 0.003299,
+      "tasks_per_dollar_annual": 303.1,
       "raw_usd_per_mtok": 0.07323,
       "raw_token_rank": 151,
       "confidence": "medium",
@@ -3886,12 +4905,16 @@
           "score_pct": 30.5,
           "monthly_tasks": 5052.4,
           "cost_per_task_usd": 0.003959,
-          "tasks_per_dollar": 252.6
+          "tasks_per_dollar": 252.6,
+          "cost_per_task_annual_usd": 0.003299,
+          "tasks_per_dollar_annual": 303.1
         }
       },
       "task_rank": 88,
       "cohort_raw_rank": 91,
-      "rank_delta": 3
+      "rank_delta": 3,
+      "annual_task_rank": 87,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "glm_coding_max_cn_new_peak",
@@ -3900,6 +4923,9 @@
       "price": 1078.0,
       "currency": "CNY",
       "price_usd": 159.03,
+      "annual_fee_usd": 1526.69,
+      "effective_monthly_fee_usd": 127.22,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -3910,6 +4936,8 @@
       "monthly_tasks": 39531.4,
       "cost_per_task_usd": 0.004023,
       "tasks_per_dollar": 248.6,
+      "cost_per_task_annual_usd": 0.003218,
+      "tasks_per_dollar_annual": 310.7,
       "raw_usd_per_mtok": 0.05367,
       "raw_token_rank": 139,
       "confidence": "high",
@@ -3921,12 +4949,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 39531.4,
           "cost_per_task_usd": 0.004023,
-          "tasks_per_dollar": 248.6
+          "tasks_per_dollar": 248.6,
+          "cost_per_task_annual_usd": 0.003218,
+          "tasks_per_dollar_annual": 310.7
         }
       },
       "task_rank": 89,
       "cohort_raw_rank": 81,
-      "rank_delta": -8
+      "rank_delta": -8,
+      "annual_task_rank": 84,
+      "annual_rank_shift": 5
     },
     {
       "plan_id": "glm_coding_lite_cn_new_mid",
@@ -3935,6 +4967,9 @@
       "price": 118.0,
       "currency": "CNY",
       "price_usd": 17.41,
+      "annual_fee_usd": 167.14,
+      "effective_monthly_fee_usd": 13.93,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -3945,6 +4980,8 @@
       "monthly_tasks": 4229.3,
       "cost_per_task_usd": 0.004117,
       "tasks_per_dollar": 242.9,
+      "cost_per_task_annual_usd": 0.003293,
+      "tasks_per_dollar_annual": 303.7,
       "raw_usd_per_mtok": 0.05491,
       "raw_token_rank": 140,
       "confidence": "high",
@@ -3956,12 +4993,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 4229.3,
           "cost_per_task_usd": 0.004117,
-          "tasks_per_dollar": 242.9
+          "tasks_per_dollar": 242.9,
+          "cost_per_task_annual_usd": 0.003293,
+          "tasks_per_dollar_annual": 303.7
         }
       },
       "task_rank": 90,
       "cohort_raw_rank": 82,
-      "rank_delta": -8
+      "rank_delta": -8,
+      "annual_task_rank": 86,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "command_code_goat",
@@ -3970,6 +5011,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gemini-3.7-flash",
       "benchmarked_model_name": "Gemini 3.7 Flash",
       "benchmark_status": "available",
@@ -3980,6 +5024,8 @@
       "monthly_tasks": 2229.6,
       "cost_per_task_usd": 0.004485,
       "tasks_per_dollar": 223.0,
+      "cost_per_task_annual_usd": 0.004485,
+      "tasks_per_dollar_annual": 223.0,
       "raw_usd_per_mtok": 0.05118,
       "raw_token_rank": 138,
       "confidence": "medium",
@@ -3991,26 +5037,34 @@
           "score_pct": 53.8,
           "monthly_tasks": 2668.7,
           "cost_per_task_usd": 0.003747,
-          "tasks_per_dollar": 266.9
+          "tasks_per_dollar": 266.9,
+          "cost_per_task_annual_usd": 0.003747,
+          "tasks_per_dollar_annual": 266.9
         },
         "Medium": {
           "output_tokens_per_task": 87640,
           "score_pct": 65.5,
           "monthly_tasks": 2229.6,
           "cost_per_task_usd": 0.004485,
-          "tasks_per_dollar": 223.0
+          "tasks_per_dollar": 223.0,
+          "cost_per_task_annual_usd": 0.004485,
+          "tasks_per_dollar_annual": 223.0
         },
         "High": {
           "output_tokens_per_task": 99819,
           "score_pct": 65.3,
           "monthly_tasks": 1957.5,
           "cost_per_task_usd": 0.005108,
-          "tasks_per_dollar": 195.8
+          "tasks_per_dollar": 195.8,
+          "cost_per_task_annual_usd": 0.005108,
+          "tasks_per_dollar_annual": 195.8
         }
       },
       "task_rank": 91,
       "cohort_raw_rank": 79,
-      "rank_delta": -12
+      "rank_delta": -12,
+      "annual_task_rank": 93,
+      "annual_rank_shift": -2
     },
     {
       "plan_id": "glm_coding_pro_cn_new_peak",
@@ -4019,6 +5073,9 @@
       "price": 538.0,
       "currency": "CNY",
       "price_usd": 79.37,
+      "annual_fee_usd": 761.95,
+      "effective_monthly_fee_usd": 63.5,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -4029,6 +5086,8 @@
       "monthly_tasks": 16944.0,
       "cost_per_task_usd": 0.004684,
       "tasks_per_dollar": 213.5,
+      "cost_per_task_annual_usd": 0.003747,
+      "tasks_per_dollar_annual": 266.9,
       "raw_usd_per_mtok": 0.06249,
       "raw_token_rank": 146,
       "confidence": "high",
@@ -4040,12 +5099,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 16944.0,
           "cost_per_task_usd": 0.004684,
-          "tasks_per_dollar": 213.5
+          "tasks_per_dollar": 213.5,
+          "cost_per_task_annual_usd": 0.003747,
+          "tasks_per_dollar_annual": 266.9
         }
       },
       "task_rank": 92,
       "cohort_raw_rank": 87,
-      "rank_delta": -5
+      "rank_delta": -5,
+      "annual_task_rank": 88,
+      "annual_rank_shift": 4
     },
     {
       "plan_id": "ollama_pro",
@@ -4054,6 +5117,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 200.0,
+      "effective_monthly_fee_usd": 16.67,
+      "annual_discount_pct": 16.7,
       "served_model": "glm-5.2",
       "benchmarked_model_name": "GLM-5.2",
       "benchmark_status": "available",
@@ -4064,6 +5130,8 @@
       "monthly_tasks": 4099.6,
       "cost_per_task_usd": 0.004879,
       "tasks_per_dollar": 205.0,
+      "cost_per_task_annual_usd": 0.004065,
+      "tasks_per_dollar_annual": 246.0,
       "raw_usd_per_mtok": 0.09965,
       "raw_token_rank": 159,
       "confidence": "medium",
@@ -4075,19 +5143,25 @@
           "score_pct": 36.3,
           "monthly_tasks": 4099.6,
           "cost_per_task_usd": 0.004879,
-          "tasks_per_dollar": 205.0
+          "tasks_per_dollar": 205.0,
+          "cost_per_task_annual_usd": 0.004065,
+          "tasks_per_dollar_annual": 246.0
         },
         "Max": {
           "output_tokens_per_task": 75760,
           "score_pct": 43.8,
           "monthly_tasks": 2649.2,
           "cost_per_task_usd": 0.00755,
-          "tasks_per_dollar": 132.5
+          "tasks_per_dollar": 132.5,
+          "cost_per_task_annual_usd": 0.006291,
+          "tasks_per_dollar_annual": 158.9
         }
       },
       "task_rank": 93,
       "cohort_raw_rank": 95,
-      "rank_delta": 2
+      "rank_delta": 2,
+      "annual_task_rank": 92,
+      "annual_rank_shift": 1
     },
     {
       "plan_id": "ollama_max",
@@ -4096,6 +5170,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.2",
       "benchmarked_model_name": "GLM-5.2",
       "benchmark_status": "available",
@@ -4106,6 +5183,8 @@
       "monthly_tasks": 20493.9,
       "cost_per_task_usd": 0.004879,
       "tasks_per_dollar": 204.9,
+      "cost_per_task_annual_usd": 0.004879,
+      "tasks_per_dollar_annual": 204.9,
       "raw_usd_per_mtok": 0.09967,
       "raw_token_rank": 161,
       "confidence": "medium",
@@ -4117,19 +5196,25 @@
           "score_pct": 36.3,
           "monthly_tasks": 20493.9,
           "cost_per_task_usd": 0.004879,
-          "tasks_per_dollar": 204.9
+          "tasks_per_dollar": 204.9,
+          "cost_per_task_annual_usd": 0.004879,
+          "tasks_per_dollar_annual": 204.9
         },
         "Max": {
           "output_tokens_per_task": 75760,
           "score_pct": 43.8,
           "monthly_tasks": 13243.1,
           "cost_per_task_usd": 0.007551,
-          "tasks_per_dollar": 132.4
+          "tasks_per_dollar": 132.4,
+          "cost_per_task_annual_usd": 0.007551,
+          "tasks_per_dollar_annual": 132.4
         }
       },
       "task_rank": 94,
       "cohort_raw_rank": 97,
-      "rank_delta": 3
+      "rank_delta": 3,
+      "annual_task_rank": 94,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "kimi_andante_cn",
@@ -4138,6 +5223,9 @@
       "price": 49.0,
       "currency": "CNY",
       "price_usd": 7.23,
+      "annual_fee_usd": 86.76,
+      "effective_monthly_fee_usd": 7.23,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k2.7-code",
       "benchmarked_model_name": "Kimi K2.7 Code",
       "benchmark_status": "available",
@@ -4148,6 +5236,8 @@
       "monthly_tasks": 1443.0,
       "cost_per_task_usd": 0.00501,
       "tasks_per_dollar": 199.6,
+      "cost_per_task_annual_usd": 0.00501,
+      "tasks_per_dollar_annual": 199.6,
       "raw_usd_per_mtok": 0.09267,
       "raw_token_rank": 155,
       "confidence": "medium",
@@ -4159,12 +5249,16 @@
           "score_pct": 30.5,
           "monthly_tasks": 1443.0,
           "cost_per_task_usd": 0.00501,
-          "tasks_per_dollar": 199.6
+          "tasks_per_dollar": 199.6,
+          "cost_per_task_annual_usd": 0.00501,
+          "tasks_per_dollar_annual": 199.6
         }
       },
       "task_rank": 95,
       "cohort_raw_rank": 93,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "annual_task_rank": 96,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "claude_max_20x",
@@ -4173,6 +5267,9 @@
       "price": 200.0,
       "currency": "USD",
       "price_usd": 200.0,
+      "annual_fee_usd": 2400.0,
+      "effective_monthly_fee_usd": 200.0,
+      "annual_discount_pct": 0.0,
       "served_model": "claude-fable-5",
       "benchmarked_model_name": "Claude Fable 5",
       "benchmark_status": "available",
@@ -4183,6 +5280,8 @@
       "monthly_tasks": 33575.2,
       "cost_per_task_usd": 0.005957,
       "tasks_per_dollar": 167.9,
+      "cost_per_task_annual_usd": 0.005957,
+      "tasks_per_dollar_annual": 167.9,
       "raw_usd_per_mtok": 0.1656,
       "raw_token_rank": 171,
       "confidence": "low",
@@ -4194,40 +5293,52 @@
           "score_pct": 59.6,
           "monthly_tasks": 54062.4,
           "cost_per_task_usd": 0.003699,
-          "tasks_per_dollar": 270.3
+          "tasks_per_dollar": 270.3,
+          "cost_per_task_annual_usd": 0.003699,
+          "tasks_per_dollar_annual": 270.3
         },
         "Medium": {
           "output_tokens_per_task": 35970,
           "score_pct": 65.4,
           "monthly_tasks": 33575.2,
           "cost_per_task_usd": 0.005957,
-          "tasks_per_dollar": 167.9
+          "tasks_per_dollar": 167.9,
+          "cost_per_task_annual_usd": 0.005957,
+          "tasks_per_dollar_annual": 167.9
         },
         "High": {
           "output_tokens_per_task": 52624,
           "score_pct": 68.6,
           "monthly_tasks": 22949.6,
           "cost_per_task_usd": 0.008715,
-          "tasks_per_dollar": 114.7
+          "tasks_per_dollar": 114.7,
+          "cost_per_task_annual_usd": 0.008715,
+          "tasks_per_dollar_annual": 114.7
         },
         "Extra High": {
           "output_tokens_per_task": 76036,
           "score_pct": 69.9,
           "monthly_tasks": 15883.3,
           "cost_per_task_usd": 0.012592,
-          "tasks_per_dollar": 79.4
+          "tasks_per_dollar": 79.4,
+          "cost_per_task_annual_usd": 0.012592,
+          "tasks_per_dollar_annual": 79.4
         },
         "Max": {
           "output_tokens_per_task": 115631,
           "score_pct": 69.7,
           "monthly_tasks": 10444.4,
           "cost_per_task_usd": 0.019149,
-          "tasks_per_dollar": 52.2
+          "tasks_per_dollar": 52.2,
+          "cost_per_task_annual_usd": 0.019149,
+          "tasks_per_dollar_annual": 52.2
         }
       },
       "task_rank": 96,
       "cohort_raw_rank": 105,
-      "rank_delta": 9
+      "rank_delta": 9,
+      "annual_task_rank": 97,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "glm_coding_lite_cn_new_peak",
@@ -4236,6 +5347,9 @@
       "price": 118.0,
       "currency": "CNY",
       "price_usd": 17.41,
+      "annual_fee_usd": 167.14,
+      "effective_monthly_fee_usd": 13.93,
+      "annual_discount_pct": 20.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -4246,6 +5360,8 @@
       "monthly_tasks": 2828.4,
       "cost_per_task_usd": 0.006155,
       "tasks_per_dollar": 162.5,
+      "cost_per_task_annual_usd": 0.004924,
+      "tasks_per_dollar_annual": 203.1,
       "raw_usd_per_mtok": 0.08211,
       "raw_token_rank": 154,
       "confidence": "high",
@@ -4257,12 +5373,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 2828.4,
           "cost_per_task_usd": 0.006155,
-          "tasks_per_dollar": 162.5
+          "tasks_per_dollar": 162.5,
+          "cost_per_task_annual_usd": 0.004924,
+          "tasks_per_dollar_annual": 203.1
         }
       },
       "task_rank": 97,
       "cohort_raw_rank": 92,
-      "rank_delta": -5
+      "rank_delta": -5,
+      "annual_task_rank": 95,
+      "annual_rank_shift": 2
     },
     {
       "plan_id": "command_code_goat",
@@ -4271,6 +5391,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "gemini-3.8-flash",
       "benchmarked_model_name": "Gemini 3.8 Flash",
       "benchmark_status": "available",
@@ -4281,6 +5404,8 @@
       "monthly_tasks": 1621.7,
       "cost_per_task_usd": 0.006166,
       "tasks_per_dollar": 162.2,
+      "cost_per_task_annual_usd": 0.006166,
+      "tasks_per_dollar_annual": 162.2,
       "raw_usd_per_mtok": 0.05118,
       "raw_token_rank": 137,
       "confidence": "medium",
@@ -4292,19 +5417,25 @@
           "score_pct": 71.0,
           "monthly_tasks": 1621.7,
           "cost_per_task_usd": 0.006166,
-          "tasks_per_dollar": 162.2
+          "tasks_per_dollar": 162.2,
+          "cost_per_task_annual_usd": 0.006166,
+          "tasks_per_dollar_annual": 162.2
         },
         "High": {
           "output_tokens_per_task": 138377,
           "score_pct": 73.8,
           "monthly_tasks": 1412.1,
           "cost_per_task_usd": 0.007082,
-          "tasks_per_dollar": 141.2
+          "tasks_per_dollar": 141.2,
+          "cost_per_task_annual_usd": 0.007082,
+          "tasks_per_dollar_annual": 141.2
         }
       },
       "task_rank": 98,
       "cohort_raw_rank": 80,
-      "rank_delta": -18
+      "rank_delta": -18,
+      "annual_task_rank": 98,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "ollama_pro",
@@ -4313,6 +5444,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 200.0,
+      "effective_monthly_fee_usd": 16.67,
+      "annual_discount_pct": 16.7,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -4323,6 +5457,8 @@
       "monthly_tasks": 2677.7,
       "cost_per_task_usd": 0.007469,
       "tasks_per_dollar": 133.9,
+      "cost_per_task_annual_usd": 0.006224,
+      "tasks_per_dollar_annual": 160.7,
       "raw_usd_per_mtok": 0.09965,
       "raw_token_rank": 158,
       "confidence": "medium",
@@ -4334,12 +5470,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 2677.7,
           "cost_per_task_usd": 0.007469,
-          "tasks_per_dollar": 133.9
+          "tasks_per_dollar": 133.9,
+          "cost_per_task_annual_usd": 0.006224,
+          "tasks_per_dollar_annual": 160.7
         }
       },
       "task_rank": 99,
       "cohort_raw_rank": 96,
-      "rank_delta": -3
+      "rank_delta": -3,
+      "annual_task_rank": 99,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "ollama_max",
@@ -4348,6 +5488,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -4358,6 +5501,8 @@
       "monthly_tasks": 13385.7,
       "cost_per_task_usd": 0.007471,
       "tasks_per_dollar": 133.9,
+      "cost_per_task_annual_usd": 0.007471,
+      "tasks_per_dollar_annual": 133.9,
       "raw_usd_per_mtok": 0.09967,
       "raw_token_rank": 160,
       "confidence": "medium",
@@ -4369,12 +5514,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 13385.7,
           "cost_per_task_usd": 0.007471,
-          "tasks_per_dollar": 133.9
+          "tasks_per_dollar": 133.9,
+          "cost_per_task_annual_usd": 0.007471,
+          "tasks_per_dollar_annual": 133.9
         }
       },
       "task_rank": 100,
       "cohort_raw_rank": 98,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "annual_task_rank": 100,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "command_code_goat",
@@ -4383,6 +5532,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "muse-spark-1.2",
       "benchmarked_model_name": "Muse Spark 1.2",
       "benchmark_status": "available",
@@ -4393,6 +5545,8 @@
       "monthly_tasks": 1309.5,
       "cost_per_task_usd": 0.007636,
       "tasks_per_dollar": 131.0,
+      "cost_per_task_annual_usd": 0.007636,
+      "tasks_per_dollar_annual": 131.0,
       "raw_usd_per_mtok": 0.09398,
       "raw_token_rank": 157,
       "confidence": "medium",
@@ -4404,12 +5558,16 @@
           "score_pct": 54.9,
           "monthly_tasks": 1309.5,
           "cost_per_task_usd": 0.007636,
-          "tasks_per_dollar": 131.0
+          "tasks_per_dollar": 131.0,
+          "cost_per_task_annual_usd": 0.007636,
+          "tasks_per_dollar_annual": 131.0
         }
       },
       "task_rank": 101,
       "cohort_raw_rank": 94,
-      "rank_delta": -7
+      "rank_delta": -7,
+      "annual_task_rank": 101,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "command_code_goat",
@@ -4418,6 +5576,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.5",
       "benchmarked_model_name": "Grok 4.5",
       "benchmark_status": "available",
@@ -4428,6 +5589,8 @@
       "monthly_tasks": 1059.9,
       "cost_per_task_usd": 0.009435,
       "tasks_per_dollar": 106.0,
+      "cost_per_task_annual_usd": 0.009435,
+      "tasks_per_dollar_annual": 106.0,
       "raw_usd_per_mtok": 0.27548,
       "raw_token_rank": 180,
       "confidence": "medium",
@@ -4439,12 +5602,16 @@
           "score_pct": 53.8,
           "monthly_tasks": 1059.9,
           "cost_per_task_usd": 0.009435,
-          "tasks_per_dollar": 106.0
+          "tasks_per_dollar": 106.0,
+          "cost_per_task_annual_usd": 0.009435,
+          "tasks_per_dollar_annual": 106.0
         }
       },
       "task_rank": 102,
       "cohort_raw_rank": 110,
-      "rank_delta": 8
+      "rank_delta": 8,
+      "annual_task_rank": 103,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "ollama_max",
@@ -4453,6 +5620,9 @@
       "price": 100.0,
       "currency": "USD",
       "price_usd": 100.0,
+      "annual_fee_usd": 1200.0,
+      "effective_monthly_fee_usd": 100.0,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k3",
       "benchmarked_model_name": "Kimi K3",
       "benchmark_status": "available",
@@ -4463,6 +5633,8 @@
       "monthly_tasks": 9718.4,
       "cost_per_task_usd": 0.01029,
       "tasks_per_dollar": 97.2,
+      "cost_per_task_annual_usd": 0.01029,
+      "tasks_per_dollar_annual": 97.2,
       "raw_usd_per_mtok": 0.1365,
       "raw_token_rank": 165,
       "confidence": "medium",
@@ -4474,12 +5646,16 @@
           "score_pct": 68.5,
           "monthly_tasks": 9718.4,
           "cost_per_task_usd": 0.01029,
-          "tasks_per_dollar": 97.2
+          "tasks_per_dollar": 97.2,
+          "cost_per_task_annual_usd": 0.01029,
+          "tasks_per_dollar_annual": 97.2
         }
       },
       "task_rank": 103,
       "cohort_raw_rank": 101,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "annual_task_rank": 104,
+      "annual_rank_shift": -1
     },
     {
       "plan_id": "ollama_pro",
@@ -4488,6 +5664,9 @@
       "price": 20.0,
       "currency": "USD",
       "price_usd": 20.0,
+      "annual_fee_usd": 200.0,
+      "effective_monthly_fee_usd": 16.67,
+      "annual_discount_pct": 16.7,
       "served_model": "kimi-k3",
       "benchmarked_model_name": "Kimi K3",
       "benchmark_status": "available",
@@ -4498,6 +5677,8 @@
       "monthly_tasks": 1943.4,
       "cost_per_task_usd": 0.010291,
       "tasks_per_dollar": 97.2,
+      "cost_per_task_annual_usd": 0.008576,
+      "tasks_per_dollar_annual": 116.6,
       "raw_usd_per_mtok": 0.13652,
       "raw_token_rank": 166,
       "confidence": "medium",
@@ -4509,12 +5690,16 @@
           "score_pct": 68.5,
           "monthly_tasks": 1943.4,
           "cost_per_task_usd": 0.010291,
-          "tasks_per_dollar": 97.2
+          "tasks_per_dollar": 97.2,
+          "cost_per_task_annual_usd": 0.008576,
+          "tasks_per_dollar_annual": 116.6
         }
       },
       "task_rank": 104,
       "cohort_raw_rank": 102,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "annual_task_rank": 102,
+      "annual_rank_shift": 2
     },
     {
       "plan_id": "command_code_goat",
@@ -4523,6 +5708,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -4533,6 +5721,8 @@
       "monthly_tasks": 892.6,
       "cost_per_task_usd": 0.011204,
       "tasks_per_dollar": 89.3,
+      "cost_per_task_annual_usd": 0.011204,
+      "tasks_per_dollar_annual": 89.3,
       "raw_usd_per_mtok": 0.14948,
       "raw_token_rank": 168,
       "confidence": "medium",
@@ -4544,12 +5734,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 892.6,
           "cost_per_task_usd": 0.011204,
-          "tasks_per_dollar": 89.3
+          "tasks_per_dollar": 89.3,
+          "cost_per_task_annual_usd": 0.011204,
+          "tasks_per_dollar_annual": 89.3
         }
       },
       "task_rank": 105,
       "cohort_raw_rank": 103,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "annual_task_rank": 105,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "command_code_goat",
@@ -4558,6 +5752,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "benchmark_status": "available",
@@ -4568,6 +5765,8 @@
       "monthly_tasks": 747.1,
       "cost_per_task_usd": 0.013385,
       "tasks_per_dollar": 74.7,
+      "cost_per_task_annual_usd": 0.013385,
+      "tasks_per_dollar_annual": 74.7,
       "raw_usd_per_mtok": 0.27548,
       "raw_token_rank": 181,
       "confidence": "medium",
@@ -4579,33 +5778,43 @@
           "score_pct": 41.6,
           "monthly_tasks": 2430.2,
           "cost_per_task_usd": 0.004115,
-          "tasks_per_dollar": 243.0
+          "tasks_per_dollar": 243.0,
+          "cost_per_task_annual_usd": 0.004115,
+          "tasks_per_dollar_annual": 243.0
         },
         "Medium": {
           "output_tokens_per_task": 48586,
           "score_pct": 67.5,
           "monthly_tasks": 747.1,
           "cost_per_task_usd": 0.013385,
-          "tasks_per_dollar": 74.7
+          "tasks_per_dollar": 74.7,
+          "cost_per_task_annual_usd": 0.013385,
+          "tasks_per_dollar_annual": 74.7
         },
         "High": {
           "output_tokens_per_task": 60060,
           "score_pct": 65.2,
           "monthly_tasks": 604.4,
           "cost_per_task_usd": 0.016545,
-          "tasks_per_dollar": 60.4
+          "tasks_per_dollar": 60.4,
+          "cost_per_task_annual_usd": 0.016545,
+          "tasks_per_dollar_annual": 60.4
         },
         "Extra High": {
           "output_tokens_per_task": 71285,
           "score_pct": 66.7,
           "monthly_tasks": 509.2,
           "cost_per_task_usd": 0.019638,
-          "tasks_per_dollar": 50.9
+          "tasks_per_dollar": 50.9,
+          "cost_per_task_annual_usd": 0.019638,
+          "tasks_per_dollar_annual": 50.9
         }
       },
       "task_rank": 106,
       "cohort_raw_rank": 111,
-      "rank_delta": 5
+      "rank_delta": 5,
+      "annual_task_rank": 106,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "command_code_goat",
@@ -4614,6 +5823,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "qwen3.8-max",
       "benchmarked_model_name": "Qwen3.8 Max",
       "benchmark_status": "available",
@@ -4624,6 +5836,8 @@
       "monthly_tasks": 724.4,
       "cost_per_task_usd": 0.013804,
       "tasks_per_dollar": 72.4,
+      "cost_per_task_annual_usd": 0.013804,
+      "tasks_per_dollar_annual": 72.4,
       "raw_usd_per_mtok": 0.15385,
       "raw_token_rank": 169,
       "confidence": "medium",
@@ -4635,12 +5849,16 @@
           "score_pct": 57.5,
           "monthly_tasks": 724.4,
           "cost_per_task_usd": 0.013804,
-          "tasks_per_dollar": 72.4
+          "tasks_per_dollar": 72.4,
+          "cost_per_task_annual_usd": 0.013804,
+          "tasks_per_dollar_annual": 72.4
         }
       },
       "task_rank": 107,
       "cohort_raw_rank": 104,
-      "rank_delta": -3
+      "rank_delta": -3,
+      "annual_task_rank": 107,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "opencode_go",
@@ -4649,6 +5867,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "glm-5.3",
       "benchmarked_model_name": "GLM-5.3",
       "benchmark_status": "available",
@@ -4659,6 +5880,8 @@
       "monthly_tasks": 669.8,
       "cost_per_task_usd": 0.014931,
       "tasks_per_dollar": 67.0,
+      "cost_per_task_annual_usd": 0.014931,
+      "tasks_per_dollar_annual": 67.0,
       "raw_usd_per_mtok": 0.1992,
       "raw_token_rank": 174,
       "confidence": "medium",
@@ -4670,12 +5893,16 @@
           "score_pct": 69.0,
           "monthly_tasks": 669.8,
           "cost_per_task_usd": 0.014931,
-          "tasks_per_dollar": 67.0
+          "tasks_per_dollar": 67.0,
+          "cost_per_task_annual_usd": 0.014931,
+          "tasks_per_dollar_annual": 67.0
         }
       },
       "task_rank": 108,
       "cohort_raw_rank": 106,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "annual_task_rank": 108,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "command_code_goat",
@@ -4684,6 +5911,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k3",
       "benchmarked_model_name": "Kimi K3",
       "benchmark_status": "available",
@@ -4694,6 +5924,8 @@
       "monthly_tasks": 647.4,
       "cost_per_task_usd": 0.015447,
       "tasks_per_dollar": 64.7,
+      "cost_per_task_annual_usd": 0.015447,
+      "tasks_per_dollar_annual": 64.7,
       "raw_usd_per_mtok": 0.20492,
       "raw_token_rank": 175,
       "confidence": "medium",
@@ -4705,12 +5937,16 @@
           "score_pct": 68.5,
           "monthly_tasks": 647.4,
           "cost_per_task_usd": 0.015447,
-          "tasks_per_dollar": 64.7
+          "tasks_per_dollar": 64.7,
+          "cost_per_task_annual_usd": 0.015447,
+          "tasks_per_dollar_annual": 64.7
         }
       },
       "task_rank": 109,
       "cohort_raw_rank": 107,
-      "rank_delta": -2
+      "rank_delta": -2,
+      "annual_task_rank": 109,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "opencode_go",
@@ -4719,6 +5955,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "grok-4.6",
       "benchmarked_model_name": "Grok 4.6",
       "benchmark_status": "available",
@@ -4729,6 +5968,8 @@
       "monthly_tasks": 559.8,
       "cost_per_task_usd": 0.017862,
       "tasks_per_dollar": 56.0,
+      "cost_per_task_annual_usd": 0.017862,
+      "tasks_per_dollar_annual": 56.0,
       "raw_usd_per_mtok": 0.36765,
       "raw_token_rank": 183,
       "confidence": "medium",
@@ -4740,33 +5981,43 @@
           "score_pct": 41.6,
           "monthly_tasks": 1821.0,
           "cost_per_task_usd": 0.005492,
-          "tasks_per_dollar": 182.1
+          "tasks_per_dollar": 182.1,
+          "cost_per_task_annual_usd": 0.005492,
+          "tasks_per_dollar_annual": 182.1
         },
         "Medium": {
           "output_tokens_per_task": 48586,
           "score_pct": 67.5,
           "monthly_tasks": 559.8,
           "cost_per_task_usd": 0.017862,
-          "tasks_per_dollar": 56.0
+          "tasks_per_dollar": 56.0,
+          "cost_per_task_annual_usd": 0.017862,
+          "tasks_per_dollar_annual": 56.0
         },
         "High": {
           "output_tokens_per_task": 60060,
           "score_pct": 65.2,
           "monthly_tasks": 452.9,
           "cost_per_task_usd": 0.022081,
-          "tasks_per_dollar": 45.3
+          "tasks_per_dollar": 45.3,
+          "cost_per_task_annual_usd": 0.022081,
+          "tasks_per_dollar_annual": 45.3
         },
         "Extra High": {
           "output_tokens_per_task": 71285,
           "score_pct": 66.7,
           "monthly_tasks": 381.6,
           "cost_per_task_usd": 0.026208,
-          "tasks_per_dollar": 38.2
+          "tasks_per_dollar": 38.2,
+          "cost_per_task_annual_usd": 0.026208,
+          "tasks_per_dollar_annual": 38.2
         }
       },
       "task_rank": 110,
       "cohort_raw_rank": 112,
-      "rank_delta": 2
+      "rank_delta": 2,
+      "annual_task_rank": 110,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "opencode_go",
@@ -4775,6 +6026,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "qwen3.8-max",
       "benchmarked_model_name": "Qwen3.8 Max",
       "benchmark_status": "available",
@@ -4785,6 +6039,8 @@
       "monthly_tasks": 542.7,
       "cost_per_task_usd": 0.018425,
       "tasks_per_dollar": 54.3,
+      "cost_per_task_annual_usd": 0.018425,
+      "tasks_per_dollar_annual": 54.3,
       "raw_usd_per_mtok": 0.20534,
       "raw_token_rank": 176,
       "confidence": "medium",
@@ -4796,12 +6052,16 @@
           "score_pct": 57.5,
           "monthly_tasks": 542.7,
           "cost_per_task_usd": 0.018425,
-          "tasks_per_dollar": 54.3
+          "tasks_per_dollar": 54.3,
+          "cost_per_task_annual_usd": 0.018425,
+          "tasks_per_dollar_annual": 54.3
         }
       },
       "task_rank": 111,
       "cohort_raw_rank": 108,
-      "rank_delta": -3
+      "rank_delta": -3,
+      "annual_task_rank": 111,
+      "annual_rank_shift": 0
     },
     {
       "plan_id": "opencode_go",
@@ -4810,6 +6070,9 @@
       "price": 10.0,
       "currency": "USD",
       "price_usd": 10.0,
+      "annual_fee_usd": 120.0,
+      "effective_monthly_fee_usd": 10.0,
+      "annual_discount_pct": 0.0,
       "served_model": "kimi-k3",
       "benchmarked_model_name": "Kimi K3",
       "benchmark_status": "available",
@@ -4820,6 +6083,8 @@
       "monthly_tasks": 485.5,
       "cost_per_task_usd": 0.020596,
       "tasks_per_dollar": 48.6,
+      "cost_per_task_annual_usd": 0.020596,
+      "tasks_per_dollar_annual": 48.6,
       "raw_usd_per_mtok": 0.27322,
       "raw_token_rank": 179,
       "confidence": "medium",
@@ -4831,12 +6096,16 @@
           "score_pct": 68.5,
           "monthly_tasks": 485.5,
           "cost_per_task_usd": 0.020596,
-          "tasks_per_dollar": 48.6
+          "tasks_per_dollar": 48.6,
+          "cost_per_task_annual_usd": 0.020596,
+          "tasks_per_dollar_annual": 48.6
         }
       },
       "task_rank": 112,
       "cohort_raw_rank": 109,
-      "rank_delta": -3
+      "rank_delta": -3,
+      "annual_task_rank": 112,
+      "annual_rank_shift": 0
     }
   ]
 }

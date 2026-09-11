@@ -130,7 +130,37 @@ def build_markdown_tables():
         b_align = ["center", "left", "left", "right", "right", "right", "right", "right"]
         band_tables[band_name] = format_table(b_rows, b_headers, b_align)
 
-    # 4. Unbenchmarked Models Summary Table
+    # 4. Annual Discount Comparison Table
+    # Filter to plans that offer explicit annual discounts or distinct annual pricing
+    ann_plans = [r for r in rankings if r.get("annual_discount_pct", 0) > 0]
+    # Deduplicate by plan_name and served_model
+    ann_headers = [
+        "Plan Name", "Served Model", "Monthly Fee", "Annual Total",
+        "Eff. Monthly", "Discount", "Monthly Rank", "Annual Rank", "Shift",
+        "Monthly $/Task", "Annual $/Task"
+    ]
+    ann_align = ["left", "left", "right", "right", "right", "center", "center", "center", "center", "right", "right"]
+    ann_rows = []
+    # Sort by annual_task_rank
+    for r in sorted(ann_plans, key=lambda x: x["annual_task_rank"]):
+        shift = r.get("annual_rank_shift", 0)
+        shift_str = f"▲ +{shift}" if shift > 0 else (f"▼ {shift}" if shift < 0 else "—")
+        ann_rows.append([
+            r["plan_name"],
+            r["served_model"],
+            f"${r['price_usd']:.2f}",
+            f"${r['annual_fee_usd']:.2f}",
+            f"${r['effective_monthly_fee_usd']:.2f}",
+            f"-{r['annual_discount_pct']:.1f}%",
+            f"#{r['task_rank']}",
+            f"#{r['annual_task_rank']}",
+            shift_str,
+            f"${r['cost_per_task_usd']:.5f}",
+            f"${r['cost_per_task_annual_usd']:.5f}"
+        ])
+    ann_md = format_table(ann_rows, ann_headers, ann_align)
+
+    # 5. Unbenchmarked Models Summary Table
     # Load model-token-consumption map to distinguish truly-pending models from
     # API-only rows for benchmarked models (which have monthly_tokens=0 but the
     # model IS in DeepSWE — those should NOT appear in this table).
@@ -166,6 +196,7 @@ def build_markdown_tables():
         "deepswe_table": cb_md,
         "main_ranking_table": main_md,
         "band_tables": band_tables,
+        "annual_discount_table": ann_md,
         "unbenchmarked_table": unbench_md
     }
 
