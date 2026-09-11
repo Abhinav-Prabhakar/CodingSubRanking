@@ -36,8 +36,8 @@ To find the true purchasing power of an AI coding subscription, we adjust for ou
    $$Cost_{\text{task}} = \frac{P_{\text{monthly}}}{N_{\text{tasks}}} = \frac{P_{\text{monthly}} \times C_{\text{task}}}{T_{\text{monthly}}}$$
    *(What you actually pay per completed task)*
 
-3. **Tasks per Dollar Spent ($Tasks_{\$}$)**:
-   $$Tasks_{\$} = \frac{N_{\text{tasks}}}{P_{\text{monthly}}} = \frac{1}{Cost_{\text{task}}}$$
+3. **Tasks per Dollar Spent ($Tasks_{\textdollar}$)**:
+   $$Tasks_{\textdollar} = \frac{N_{\text{tasks}}}{P_{\text{monthly}}} = \frac{1}{Cost_{\text{task}}}$$
    *(The true efficiency metric: completed tasks delivered per dollar)*
 
 ---
