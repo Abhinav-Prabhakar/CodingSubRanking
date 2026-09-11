@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodingSubRanks — Task-Adjusted AI Coding Subscription Rankings</title>
+<meta name="description" content="Real subscription economics for AI coding: monthly fee ÷ usable tasks. Powered by CursorBench 4.0 token-consumption data and real-api-pricing quotas.">
+<meta property="og:title" content="CodingSubRanks — Task-Adjusted AI Coding Subscription Rankings">
+<meta property="og:description" content="What does your AI coding subscription actually buy? Effective cost per task, tasks per dollar, and monthly task capacity — computed from real quotas and measured token consumption.">
+<meta property="og:type" content="website">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><defs><linearGradient id="g" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="rgb(240,100,19)"/><stop offset="1" stop-color="rgb(254,171,48)"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(%23g)"/><g fill="white"><rect x="7" y="17" width="4" height="8" rx="2"/><rect x="14" y="12" width="4" height="13" rx="2"/><rect x="21" y="7" width="4" height="18" rx="2"/></g></svg>'>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* Colors */
+  --color-amber-flame: #f06413;
+  --gradient-amber-flame: linear-gradient(0deg, rgb(240, 100, 19) -29.375%, rgb(254, 171, 48) 100%);
+  --color-honey-glow: #feab30;
+  --color-signal-blue: #0088ff;
+  --color-bright-blue: #1c95ff;
+  --color-pure-white: #ffffff;
+  --color-snow-gray: #f5f5f7;
+  --color-mist: #f0f0f0;
+  --color-silver: #d0d0d3;
+  --color-pewter: #ababb0;
+  --color-smoke: #6e6e73;
+  --color-charcoal: #272727;
+  --color-ink: #101010;
+  --color-true-black: #000000;
+  --color-vivid-green: #34c759;
+  --color-electric-magenta: #cb30e0;
+  --color-alert-red: #ff383c;
+
+  /* Typography */
+  --font-system-ui: system-ui, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Radii */
+  --radius-card: 20px;
+  --radius-container: 24px;
+  --radius-full: 100px;
+
+  /* Shadow */
+  --shadow-xl: rgba(16, 16, 16, 0.1) 0px 0px 30px 0px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-system-ui);
+  background: var(--color-pure-white);
+  color: var(--color-ink);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: rgba(254, 171, 48, 0.35); }
+a { color: var(--color-signal-blue); text-decoration: none; }
+a:hover { color: var(--color-bright-blue); }
+button { font-family: var(--font-system-ui); cursor: pointer; }
+:focus-visible { outline: 2px solid var(--color-signal-blue); outline-offset: 2px; border-radius: 4px; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+section { scroll-margin-top: 88px; }
+.sec { padding: 100px 0; }
+.sec-white { background: var(--color-pure-white); }
+.sec-gray { background: var(--color-snow-gray); }
+
+/* ---------- Amber gradient brand accent ---------- */
+.amber-text {
+  background: var(--gradient-amber-flame);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+@supports not (background-clip: text) {
+  .amber-text { background: none; -webkit-text-fill-color: currentColor; color: var(--color-amber-flame); }
+}
+
+/* ---------- Type scale ---------- */
+.t-display {
+  font-size: clamp(44px, 7vw, 80px);
+  line-height: 1.02;
+  letter-spacing: -0.013em;
+  font-weight: 700;
+}
+.t-heading-lg {
+  font-size: clamp(34px, 5vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -0.013em;
+  font-weight: 700;
+}
+.t-heading {
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 44px;
+  letter-spacing: -0.24px;
+  font-weight: 700;
+}
+.t-heading-sm { font-size: 22px; line-height: 28px; font-weight: 600; }
+.t-sub { font-size: 18px; line-height: 26px; font-weight: 400; color: var(--color-smoke); }
+.t-body { font-size: 16px; line-height: 24px; color: var(--color-smoke); }
+.t-caption { font-size: 14px; line-height: 18px; letter-spacing: -0.41px; }
+
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; line-height: 18px; letter-spacing: 0.6px;
+  text-transform: uppercase; color: var(--color-smoke); font-weight: 600;
+  margin-bottom: 20px;
+}
+.eyebrow::before {
+  content: ""; width: 8px; height: 8px; border-radius: 100px; background: var(--dot, var(--color-signal-blue));
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border: none; border-radius: var(--radius-full);
+  font-size: 16px; font-weight: 600; line-height: 1;
+  transition: background .2s ease, color .2s ease, transform .15s ease;
+  text-decoration: none; white-space: nowrap;
+}
+.btn-primary { background: var(--color-signal-blue); color: #fff; padding: 12px 24px; }
+.btn-primary:hover { background: var(--color-bright-blue); color: #fff; }
+.btn-primary:active { transform: scale(0.98); }
+.btn-ghost {
+  background: transparent; color: var(--color-ink);
+  border: 1px solid var(--color-silver); padding: 12px 28px; font-weight: 600;
+}
+.btn-ghost:hover { border-color: var(--color-ink); color: var(--color-true-black); }
+.btn-sm { padding: 9px 18px; font-size: 15px; }
+
+/* ---------- Navigation ---------- */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  transition: box-shadow .25s ease;
+}
+.nav.scrolled { box-shadow: var(--shadow-xl); }
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
+  height: 64px; display: flex; align-items: center; gap: 24px;
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; color: var(--color-true-black); font-weight: 600; font-size: 18px; }
+.nav-logo:hover { color: var(--color-true-black); }
+.nav-links { display: flex; gap: 30px; margin: 0 auto; }
+.nav-links a { color: var(--color-true-black); font-size: 16px; font-weight: 400; }
+.nav-links a:hover { color: var(--color-signal-blue); }
+.nav-cta { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+.nav-links + .nav-cta { margin-left: 0; }
+
+/* ---------- Hero ---------- */
+.hero { background: var(--color-pure-white); padding: 140px 0 100px; text-align: center; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--color-mist); border-radius: var(--radius-full);
+  padding: 8px 18px; font-size: 14px; line-height: 18px; letter-spacing: -0.1px;
+  color: var(--color-smoke); font-weight: 500; margin-bottom: 32px;
+}
+.hero-badge .dot { width: 8px; height: 8px; border-radius: 100px; background: var(--color-vivid-green); }
+.hero h1 { max-width: 900px; margin: 0 auto 24px; }
+.hero .t-sub { max-width: 640px; margin: 0 auto 40px; }
+.hero-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+/* Hero showcase — composed window + floating cards */
+.showcase { position: relative; max-width: 980px; margin: 80px auto 0; text-align: left; }
+.window {
+  background: var(--color-pure-white);
+  border-radius: var(--radius-container);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+}
+.window-bar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 14px 20px; background: var(--color-snow-gray);
+}
+.window-bar .l { width: 12px; height: 12px; border-radius: 100px; }
+.window-bar .l.r { background: #ff5f57; } .window-bar .l.y { background: #febc2e; } .window-bar .l.g { background: #28c840; }
+.window-title { margin: 0 auto; font-size: 14px; color: var(--color-smoke); letter-spacing: -0.1px; }
+.window-body { padding: 24px 28px 28px; }
+.mini-row { display: grid; grid-template-columns: 28px minmax(150px, 1.4fr) minmax(120px, 1fr) 90px 2fr; gap: 14px; align-items: center; padding: 11px 0; }
+.mini-row + .mini-row { border-top: 1px solid rgba(16,16,16,0.05); }
+.mini-row.head { padding: 0 0 10px; font-size: 13px; letter-spacing: 0.3px; text-transform: uppercase; color: var(--color-pewter); font-weight: 600; }
+.mini-row .rk { font-weight: 700; color: var(--color-pewter); font-size: 14px; }
+.mini-row:first-of-type .rk { color: var(--color-ink); }
+.mini-row .pl { font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mini-row .md { font-family: var(--font-mono); font-size: 12.5px; color: var(--color-smoke); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mini-row .val { font-weight: 600; font-size: 15px; text-align: right; font-variant-numeric: tabular-nums; }
+.mini-track { height: 8px; border-radius: 100px; background: var(--color-mist); overflow: hidden; }
+.mini-fill { height: 100%; border-radius: 100px; background: var(--color-silver); }
+.mini-row.first .mini-fill { background: var(--color-charcoal); }
+.window-foot { padding: 14px 28px; border-top: 1px solid rgba(16,16,16,0.05); font-size: 13px; color: var(--color-pewter); display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+.float-card {
+  position: absolute; background: var(--color-pure-white);
+  border-radius: var(--radius-card); box-shadow: var(--shadow-xl);
+  padding: 20px 24px; z-index: 2;
+}
+.float-card .lbl { font-size: 13px; letter-spacing: 0.3px; text-transform: uppercase; font-weight: 600; color: var(--color-pewter); margin-bottom: 6px; }
+.float-card .big { font-size: 32px; line-height: 36px; font-weight: 700; letter-spacing: -0.5px; font-variant-numeric: tabular-nums; }
+.float-card .sub { font-size: 14px; color: var(--color-smoke); margin-top: 4px; font-family: var(--font-mono); font-size: 12.5px; }
+.fc-cost { top: -28px; right: -20px; }
+.fc-spread { bottom: -34px; left: -28px; width: 300px; }
+.spread-row { display: flex; align-items: center; gap: 10px; margin-top: 10px; }
+.spread-row .name { font-family: var(--font-mono); font-size: 12px; color: var(--color-smoke); width: 108px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.spread-row .track { flex: 1; height: 8px; border-radius: 100px; background: var(--color-mist); }
+.spread-row .fill { height: 100%; border-radius: 100px; background: var(--color-silver); }
+.spread-row .num { font-size: 13px; font-weight: 600; width: 52px; text-align: right; font-variant-numeric: tabular-nums; }
+.fc-spread .cap { margin-top: 12px; font-size: 14px; color: var(--color-smoke); }
+
+/* ---------- Credits bar ---------- */
+.credits { padding: 8px 0 72px; }
+.credits-inner {
+  display: flex; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap;
+  font-family: var(--font-inter); font-size: 14px; letter-spacing: -0.41px; color: var(--color-pewter);
+}
+.credits-inner .sep { width: 4px; height: 4px; border-radius: 100px; background: var(--color-silver); }
+
+/* ---------- Feature cards ---------- */
+.card {
+  background: var(--color-snow-gray);
+  border-radius: var(--radius-card);
+  padding: 30px;
+}
+.sec-gray .card { background: var(--color-pure-white); box-shadow: var(--shadow-xl); }
+.card h3 { font-size: 22px; line-height: 28px; font-weight: 600; margin-bottom: 12px; }
+.card p { font-size: 16px; line-height: 24px; color: var(--color-smoke); }
+
+/* ---------- Verbosity chart ---------- */
+.chart-card { margin-top: 60px; padding: 36px; }
+.chart-title { font-size: 22px; font-weight: 600; margin-bottom: 4px; }
+.chart-sub { font-size: 14px; color: var(--color-smoke); margin-bottom: 28px; }
+.vrow { display: grid; grid-template-columns: 210px 1fr 76px; gap: 16px; align-items: center; padding: 9px 0; }
+.vrow .name { font-size: 15px; font-weight: 500; color: var(--color-ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vrow .track { height: 12px; border-radius: 100px; background: var(--color-mist); }
+.vrow .fill { height: 100%; border-radius: 100px; background: var(--color-silver); min-width: 3px; }
+.vrow .num { text-align: right; font-size: 15px; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--color-smoke); }
+.vrow .num.good { color: var(--color-vivid-green); }
+.vrow .num.bad { color: var(--color-alert-red); }
+.chart-note { margin-top: 24px; font-size: 14px; color: var(--color-pewter); }
+
+/* ---------- Method formulas ---------- */
+.formula-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 60px; }
+.formula { text-align: center; padding: 36px 28px; }
+.formula .f-name { font-size: 15px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--color-smoke); margin-bottom: 24px; }
+.formula .f-math {
+  font-size: 26px; font-weight: 600; letter-spacing: -0.3px;
+  display: inline-flex; align-items: center; gap: 12px; color: var(--color-ink);
+  font-variant-numeric: tabular-nums;
+}
+.formula .frac { display: inline-flex; flex-direction: column; align-items: center; gap: 4px; vertical-align: middle; }
+.formula .frac .den { border-top: 2px solid var(--color-ink); padding-top: 4px; }
+.formula .frac span { display: block; padding: 0 8px; }
+.formula .var { font-style: italic; font-weight: 600; }
+.formula .f-desc { margin-top: 24px; font-size: 15px; line-height: 22px; color: var(--color-smoke); }
+.formula .f-sub { display: inline; font-size: 0.62em; vertical-align: sub; }
+
+/* ---------- Stats strip ---------- */
+.stats { padding: 80px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; text-align: center; }
+.stat .n { font-size: clamp(34px, 4vw, 48px); line-height: 1.1; font-weight: 700; letter-spacing: -0.013em; font-variant-numeric: tabular-nums; }
+.stat .l { margin-top: 8px; font-size: 15px; color: var(--color-smoke); }
+
+/* ---------- Ranking controls ---------- */
+.sec-head { max-width: 720px; }
+.sec-head .t-sub { margin-top: 16px; }
+.controls { display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: center; margin: 48px 0 24px; }
+.ctrl-group { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.ctrl-label { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-pewter); }
+.pills { display: inline-flex; background: var(--color-mist); border-radius: var(--radius-full); padding: 4px; gap: 2px; }
+.pills button {
+  border: none; background: transparent; border-radius: var(--radius-full);
+  padding: 8px 16px; font-size: 14px; font-weight: 500; color: var(--color-smoke);
+  transition: background .2s, color .2s; white-space: nowrap;
+}
+.pills button:hover { color: var(--color-ink); }
+.pills button.on { background: var(--color-signal-blue); color: #fff; font-weight: 600; }
+.search {
+  border: 1px solid var(--color-silver); border-radius: var(--radius-full);
+  padding: 10px 20px; font-size: 15px; font-family: var(--font-system-ui);
+  width: 240px; background: var(--color-pure-white); color: var(--color-ink);
+}
+.search::placeholder { color: var(--color-pewter); }
+.search:focus { outline: none; border-color: var(--color-signal-blue); }
+.ctrl-note { width: 100%; font-size: 14px; color: var(--color-signal-blue); font-weight: 500; display: none; }
+.ctrl-note.show { display: block; }
+
+/* ---------- Ranking table ---------- */
+.table-card { background: var(--color-pure-white); border-radius: var(--radius-container); box-shadow: var(--shadow-xl); overflow: hidden; }
+.sec-gray .table-card { box-shadow: var(--shadow-xl); background: var(--color-pure-white); }
+.table-summary { padding: 20px 28px 0; font-size: 14px; color: var(--color-pewter); }
+.table-scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 1020px; }
+thead th {
+  font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600;
+  color: var(--color-pewter); text-align: right; padding: 20px 14px 12px;
+  border-bottom: 1px solid rgba(16,16,16,0.06); white-space: nowrap;
+}
+thead th.al { text-align: left; }
+thead th.sortable { cursor: pointer; user-select: none; }
+thead th.sortable:hover { color: var(--color-ink); }
+thead th .arr { font-size: 10px; margin-left: 3px; }
+tbody td {
+  padding: 13px 14px; font-size: 15px; text-align: right;
+  border-bottom: 1px solid rgba(16,16,16,0.045); white-space: nowrap;
+  font-variant-numeric: tabular-nums; color: var(--color-ink);
+}
+tbody td.al { text-align: left; }
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover td { background: rgba(16,16,16,0.025); }
+td.rank { font-weight: 700; color: var(--color-pewter); width: 52px; }
+tr.top td.rank { color: var(--color-ink); }
+tr.no1 td.rank { color: var(--color-amber-flame); }
+td.plan { font-weight: 600; }
+td.model { font-family: var(--font-mono); font-size: 12.5px; color: var(--color-smoke); }
+td.model code { background: var(--color-mist); border-radius: 8px; padding: 3px 8px; }
+td.cpt { font-weight: 600; }
+#bench-table { min-width: 800px; }
+.tokcell { display: inline-flex; align-items: center; gap: 10px; justify-content: flex-end; width: 100%; }
+.tokcell .track { width: 130px; height: 8px; border-radius: 100px; background: var(--color-mist); flex-shrink: 0; }
+.tokcell .fill { display: block; height: 100%; border-radius: 100px; background: var(--color-silver); }
+.tokcell .num { min-width: 58px; }
+.shift-up { color: var(--color-vivid-green); font-weight: 600; }
+.shift-dn { color: var(--color-alert-red); font-weight: 600; }
+.shift-flat { color: var(--color-pewter); }
+.table-foot { padding: 16px 28px 22px; font-size: 13px; color: var(--color-pewter); line-height: 20px; }
+.empty-row td { text-align: center; color: var(--color-pewter); padding: 40px 0; }
+
+/* ---------- Takeaways ---------- */
+.take-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 60px; }
+.take .kicker { font-size: 14px; font-weight: 600; letter-spacing: 0.4px; text-transform: uppercase; color: var(--accent, var(--color-signal-blue)); margin-bottom: 12px; }
+.take p code { font-family: var(--font-mono); font-size: 12.5px; background: rgba(16,16,16,0.045); border-radius: 8px; padding: 2px 6px; color: var(--color-ink); }
+.take .hl { color: var(--color-ink); font-weight: 500; }
+
+/* ---------- Bands ---------- */
+.band-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 60px; }
+.band { padding: 30px; display: flex; flex-direction: column; }
+.band .b-range { font-size: 14px; font-weight: 600; letter-spacing: 0.4px; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+.band h3 { margin-bottom: 4px; }
+.band .b-for { font-size: 14px; color: var(--color-smoke); margin-bottom: 20px; }
+.band ol { list-style: none; margin: 0 0 20px; }
+.band li { display: flex; align-items: baseline; gap: 10px; padding: 10px 0; border-top: 1px solid rgba(16,16,16,0.05); }
+.band li .r { font-weight: 700; color: var(--color-pewter); font-size: 13px; width: 24px; }
+.band li .p { font-weight: 600; font-size: 15px; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.band li .p .m { display: block; font-family: var(--font-mono); font-weight: 400; font-size: 11.5px; color: var(--color-smoke); overflow: hidden; text-overflow: ellipsis; }
+.band li .t { font-weight: 600; font-size: 15px; font-variant-numeric: tabular-nums; }
+.band .b-more {
+  margin-top: auto; align-self: flex-start; border: 1px solid var(--color-silver); background: transparent;
+  border-radius: var(--radius-full); padding: 8px 18px; font-size: 14px; font-weight: 500; color: var(--color-smoke);
+  transition: border-color .2s, color .2s;
+}
+.band .b-more:hover { border-color: var(--color-ink); color: var(--color-ink); }
+
+/* ---------- Pending ---------- */
+.pending-head { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
+.count-chip {
+  display: inline-flex; align-items: center; gap: 8px; background: var(--color-pure-white);
+  box-shadow: var(--shadow-xl); border-radius: var(--radius-full); padding: 8px 18px;
+  font-size: 14px; font-weight: 600; color: var(--color-ink);
+}
+.count-chip .dot { width: 8px; height: 8px; border-radius: 100px; background: var(--color-alert-red); }
+.chip-cloud {
+  margin-top: 40px; background: var(--color-snow-gray); border-radius: var(--radius-container);
+  padding: 36px;
+  display: flex; flex-wrap: wrap; gap: 12px;
+}
+.m-chip {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--color-mist); border-radius: var(--radius-full);
+  padding: 8px 16px; font-family: var(--font-mono); font-size: 13px; color: var(--color-ink);
+  background: var(--color-pure-white);
+}
+.m-chip .dot { width: 6px; height: 6px; border-radius: 100px; background: var(--color-alert-red); flex-shrink: 0; }
+.pending-notes { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.pending-notes .card { padding: 24px 30px; }
+.pending-notes p { font-size: 15px; line-height: 22px; }
+.pending-notes p code { font-family: var(--font-mono); font-size: 12.5px; background: rgba(16,16,16,0.045); border-radius: 8px; padding: 2px 6px; color: var(--color-ink); }
+
+/* ---------- Reproduce ---------- */
+.pipeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 60px 0 40px; }
+.pipe { position: relative; padding: 22px 24px; }
+.pipe .step { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-pewter); margin-bottom: 8px; }
+.pipe .name { font-family: var(--font-mono); font-size: 13px; color: var(--color-ink); word-break: break-all; }
+.code-card {
+  position: relative; background: var(--color-charcoal); border-radius: var(--radius-container);
+  padding: 32px 36px; font-family: var(--font-mono); font-size: 15px; line-height: 26px;
+  color: #f5f5f7; overflow-x: auto;
+}
+.code-card .cm { color: #ababb0; }
+.code-card .pr { color: var(--color-signal-blue); user-select: none; }
+.copy-btn {
+  position: absolute; top: 20px; right: 20px;
+  background: rgba(255,255,255,0.08); color: #f5f5f7; border: none;
+  border-radius: var(--radius-full); padding: 8px 16px; font-size: 13px; font-weight: 600;
+  transition: background .2s;
+}
+.copy-btn:hover { background: rgba(255,255,255,0.16); }
+.copy-btn.done { background: rgba(52, 199, 89, 0.25); color: #fff; }
+
+/* ---------- Closing CTA ---------- */
+.closing { text-align: center; padding: 120px 0; }
+.closing .t-sub { max-width: 560px; margin: 20px auto 40px; }
+.closing .hero-ctas { margin-top: 0; }
+
+/* ---------- Footer ---------- */
+.footer { background: var(--color-snow-gray); padding: 72px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; }
+.footer .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 18px; color: var(--color-true-black); margin-bottom: 16px; }
+.footer p { font-size: 15px; line-height: 23px; color: var(--color-smoke); max-width: 380px; }
+.footer h4 { font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--color-pewter); margin-bottom: 16px; }
+.footer ul { list-style: none; }
+.footer li { margin-bottom: 10px; }
+.footer li a { font-size: 15px; color: var(--color-smoke); }
+.footer li a:hover { color: var(--color-signal-blue); }
+.footer-bottom {
+  margin-top: 60px; padding-top: 24px; font-size: 13px; color: var(--color-pewter);
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.footer-bottom .formula { font-family: var(--font-mono); font-size: 12px; }
+
+/* ---------- Reveal ---------- */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1080px) {
+  .nav-links { display: none; }
+  .fc-cost { right: 8px; }
+  .fc-spread { left: 0; }
+}
+@media (max-width: 900px) {
+  .sec { padding: 72px 0; }
+  .hero { padding: 120px 0 72px; }
+  .formula-grid, .take-grid, .band-grid { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 40px 20px; }
+  .pipeline { grid-template-columns: repeat(2, 1fr); }
+  .pending-notes { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .float-card { position: static; width: auto !important; margin-top: 20px; }
+  .showcase { margin-top: 56px; }
+  .vrow { grid-template-columns: 130px 1fr 68px; }
+  .mini-row { grid-template-columns: 24px 1.3fr 1fr 80px 1.4fr; gap: 10px; }
+  .search { width: 100%; }
+}
+@media (max-width: 560px) {
+  .mini-row .md { display: none; }
+  .mini-row { grid-template-columns: 24px 1.4fr 84px 1.2fr; }
+  .pipeline { grid-template-columns: 1fr; }
+  .btn { width: 100%; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top" aria-label="CodingSubRanks home">
+      <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="rgb(240,100,19)"/><stop offset="1" stop-color="rgb(254,171,48)"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#lg)"/><g fill="#fff"><rect x="7" y="17" width="4" height="8" rx="2"/><rect x="14" y="12" width="4" height="13" rx="2"/><rect x="21" y="7" width="4" height="18" rx="2"/></g></svg>
+      CodingSubRanks
+    </a>
+    <div class="nav-links">
+      <a href="#problem">Problem</a>
+      <a href="#method">Method</a>
+      <a href="#ranking">Ranking</a>
+      <a href="#bands">Bands</a>
+      <a href="#pending">Pending</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary btn-sm" href="#ranking">View rankings</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="top">
+  <div class="container">
+    <span class="hero-badge"><span class="dot"></span> CursorBench 4.0 × real-api-pricing · Updated Sep 2026</span>
+    <h1 class="t-heading-lg">Sticker price is a mirage.<br>Here's what a task <span class="amber-text">really costs.</span></h1>
+    <p class="t-sub">We combine real subscription token quotas with measured output-token consumption per task, so you can see what each AI coding plan actually delivers: tasks per month, effective cost per task, and tasks per dollar.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="#ranking">See the rankings</a>
+      <a class="btn btn-ghost" href="#method">How it works</a>
+    </div>
+
+    <!-- Composed showcase -->
+    <div class="showcase reveal">
+      <div class="window">
+        <div class="window-bar"><span class="l r"></span><span class="l y"></span><span class="l g"></span><span class="window-title">Task-Adjusted Rankings — tasks per $1</span></div>
+        <div class="window-body">
+          <div class="mini-row head"><span>#</span><span>Plan</span><span>Model</span><span style="text-align:right">Tasks / $1</span><span></span></div>
+          <div class="mini-row first"><span class="rk">1</span><span class="pl">ChatGPT Pro 20x</span><span class="md">gpt-5.6-luna</span><span class="val">98,287</span><span class="mini-track"><span class="mini-fill" style="width:100%"></span></span></div>
+          <div class="mini-row"><span class="rk">2</span><span class="pl">ChatGPT Plus</span><span class="md">gpt-5.6-luna</span><span class="val">49,143</span><span class="mini-track"><span class="mini-fill" style="width:50%"></span></span></div>
+          <div class="mini-row"><span class="rk">3</span><span class="pl">ChatGPT Pro 5x</span><span class="md">gpt-5.6-luna</span><span class="val">49,144</span><span class="mini-track"><span class="mini-fill" style="width:50%"></span></span></div>
+          <div class="mini-row"><span class="rk">4</span><span class="pl">OpenCode Go</span><span class="md">muse-spark-1.3-contrib</span><span class="val">45,863</span><span class="mini-track"><span class="mini-fill" style="width:47%"></span></span></div>
+          <div class="mini-row"><span class="rk">5</span><span class="pl">Command Code GOAT</span><span class="md">muse-spark-1.3-contrib</span><span class="val">15,288</span><span class="mini-track"><span class="mini-fill" style="width:16%"></span></span></div>
+        </div>
+        <div class="window-foot"><span>Baseline: Medium reasoning effort</span><span>Source: CursorBench 4.0 consumption × real quotas</span></div>
+      </div>
+
+      <div class="float-card fc-cost">
+        <div class="lbl">Effective cost / task</div>
+        <div class="big">$0.00001</div>
+        <div class="sub">ChatGPT Pro 20x · gpt-5.6-luna</div>
+      </div>
+      <div class="float-card fc-spread">
+        <div class="lbl">Tokens for the same task</div>
+        <div class="spread-row"><span class="name">gpt-5.6-luna</span><span class="track"><span class="fill" style="width:4.7%"></span></span><span class="num" style="color:var(--color-vivid-green)">7,642</span></div>
+        <div class="spread-row"><span class="name">gemini-3.8-flash</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="num" style="color:var(--color-alert-red)">162,565</span></div>
+        <div class="cap">Up to <strong style="color:var(--color-ink)">21×</strong> more output tokens for the identical workload.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ CREDITS / SOCIAL PROOF ============ -->
+<div class="credits">
+  <div class="container credits-inner">
+    <span>Built on FeiZhuLulu/real-api-pricing</span><span class="sep"></span>
+    <span>Token consumption: CursorBench 4.0</span><span class="sep"></span>
+    <span>196 plan × model points</span><span class="sep"></span>
+    <span>Community saturation tests</span><span class="sep"></span>
+    <span>MIT Licensed</span>
+  </div>
+</div>
+
+<!-- ============ PROBLEM ============ -->
+<section class="sec sec-gray" id="problem">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="--dot: var(--color-alert-red)">The problem</span>
+      <h2 class="t-display amber-text">Raw $/MTok misleads.</h2>
+      <p class="t-sub" style="margin-top:24px">Token-price comparisons assume every model spends the same tokens to do the same job. In practice, the most concise configs finish a complex task with <strong style="color:var(--color-ink)">5–10K output tokens</strong>, while verbose configs burn <strong style="color:var(--color-ink)">120–160K</strong> — a <strong style="color:var(--color-ink)">15–20× swing</strong> that raw pricing never sees.</p>
+    </div>
+    <div class="card chart-card reveal">
+      <div class="chart-title">Output tokens per task — the same benchmark workload</div>
+      <div class="chart-sub">CursorBench 4.0 · median completion tokens per task · baseline tiers</div>
+      <div id="verbosity-chart"></div>
+      <div class="chart-note">A verbose model doesn't just cost more per task — it drains the same monthly token pool faster, shrinking your plan's real task capacity.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ METHOD ============ -->
+<section class="sec sec-white" id="method">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="--dot: var(--color-signal-blue)">The method</span>
+      <h2 class="t-heading">The task-adjusted formulation</h2>
+      <p class="t-sub">Three numbers turn a raw token quota into purchasing power you can actually compare.</p>
+    </div>
+    <div class="formula-grid">
+      <div class="card formula reveal">
+        <div class="f-name">Monthly task capacity</div>
+        <div class="f-math">
+          <span class="var">N<span class="f-sub">tasks</span></span><span>=</span>
+          <span class="frac"><span class="var">T<span class="f-sub">monthly</span></span><span class="den var">C<span class="f-sub">task</span></span></span>
+        </div>
+        <p class="f-desc">How many real tasks your monthly token pool can actually solve.</p>
+      </div>
+      <div class="card formula reveal">
+        <div class="f-name">Effective cost per task</div>
+        <div class="f-math">
+          <span class="var">Cost<span class="f-sub">task</span></span><span>=</span>
+          <span class="frac"><span class="var">P<span class="f-sub">monthly</span></span><span class="den var">N<span class="f-sub">tasks</span></span></span>
+        </div>
+        <p class="f-desc">What you actually pay per completed task — fee divided by real capacity.</p>
+      </div>
+      <div class="card formula reveal">
+        <div class="f-name">Tasks per dollar</div>
+        <div class="f-math">
+          <span class="var">Tasks<span class="f-sub">$</span></span><span>=</span>
+          <span class="frac"><span>1</span><span class="den var">Cost<span class="f-sub">task</span></span></span>
+        </div>
+        <p class="f-desc">The true efficiency metric: completed tasks delivered per dollar spent.</p>
+      </div>
+    </div>
+    <p class="t-caption reveal" style="margin-top:32px; color: var(--color-pewter)">Where T = monthly usable tokens, C = output tokens consumed per task (CursorBench 4.0), P = monthly plan fee. Baseline ranking uses the Medium reasoning tier (Standard for Composer 2.5) — switch tiers live in the <a href="#ranking">ranking below</a>.</p>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="sec sec-gray stats" id="stats">
+  <div class="container stats-grid">
+    <div class="stat reveal"><div class="n"><span data-count="196">0</span></div><div class="l">plan × model points analyzed</div></div>
+    <div class="stat reveal"><div class="n"><span data-count="39">0</span></div><div class="l">subscription plans ranked</div></div>
+    <div class="stat reveal"><div class="n"><span data-count="43">0</span></div><div class="l">CursorBench 4.0 model configs</div></div>
+    <div class="stat reveal"><div class="n"><span data-count="98287">0</span></div><div class="l">tasks per $1 on the best plan</div></div>
+  </div>
+</section>
+
+<!-- ============ BENCHMARK DATA ============ -->
+<section class="sec sec-white" id="benchmark">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="--dot: var(--color-signal-blue)">Raw input data</span>
+      <h2 class="t-heading">CursorBench 4.0 — token consumption per task</h2>
+      <p class="t-sub">All 43 evaluated model configurations, extracted from Cursor's empirical benchmark of ambiguous, multi-file engineering tasks. This consumption data drives every ranking on this page.</p>
+    </div>
+    <div class="table-card reveal">
+      <div class="table-scroll">
+        <table id="bench-table" aria-label="CursorBench 4.0 results by model configuration">
+          <thead>
+            <tr>
+              <th class="al" scope="col">Rank</th>
+              <th class="al" scope="col">Model &amp; effort tier</th>
+              <th scope="col">Score</th>
+              <th scope="col">API cost/task</th>
+              <th class="al" scope="col">Output tokens/task</th>
+              <th scope="col">Steps/task</th>
+            </tr>
+          </thead>
+          <tbody id="bench-body"></tbody>
+        </table>
+      </div>
+      <div class="table-foot">Source: <a href="https://cursor.com/cursorbench" target="_blank" rel="noopener">cursor.com/cursorbench</a> · Score = CursorBench benchmark result · API cost/task is the measured cost of one benchmark task · token bars scaled to the most verbose config</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RANKING ============ -->
+<section class="sec sec-gray" id="ranking">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="--dot: var(--color-vivid-green)">The rankings</span>
+      <h2 class="t-heading">All benchmarked plans, ranked by real value</h2>
+      <p class="t-sub">Ranked primarily by effective cost per task — cheapest completed task first. <strong style="color:var(--color-ink)">Shift vs raw</strong> shows how each plan moves once verbosity is priced in.</p>
+    </div>
+
+    <div class="controls reveal">
+      <div class="ctrl-group">
+        <span class="ctrl-label">Metric</span>
+        <div class="pills" id="metric-pills" role="group" aria-label="Ranking metric">
+          <button class="on" data-metric="task" aria-pressed="true">Task-adjusted</button>
+          <button data-metric="raw" aria-pressed="false">Raw $/MTok</button>
+        </div>
+      </div>
+      <div class="ctrl-group">
+        <span class="ctrl-label">Effort</span>
+        <div class="pills" id="effort-pills" role="group" aria-label="Reasoning effort tier">
+          <button data-effort="Low">Low</button>
+          <button class="on" data-effort="Medium" aria-pressed="true">Medium</button>
+          <button data-effort="High">High</button>
+          <button data-effort="Extra High">Extra&nbsp;High</button>
+          <button data-effort="Max">Max</button>
+        </div>
+      </div>
+      <div class="ctrl-group">
+        <span class="ctrl-label">Band</span>
+        <div class="pills" id="band-pills" role="group" aria-label="Price band">
+          <button class="on" data-band="all" aria-pressed="true">All</button>
+          <button data-band="budget" aria-pressed="false">$0–30</button>
+          <button data-band="pro" aria-pressed="false">$30–100</button>
+          <button data-band="power" aria-pressed="false">$100–300</button>
+        </div>
+      </div>
+      <input class="search" id="search" type="search" placeholder="Search plan or model…" aria-label="Search plans and models">
+      <span class="ctrl-note" id="effort-note">Live recomputation from CursorBench token data — this view differs from the README's Medium baseline. Families without a selected tier use their nearest available tier.</span>
+    </div>
+
+    <div class="table-card reveal">
+      <div class="table-summary" id="table-summary"></div>
+      <div class="table-scroll">
+        <table aria-describedby="table-summary">
+          <thead>
+            <tr>
+              <th class="al" scope="col">Rank</th>
+              <th class="al" scope="col" title="raw rank − task rank; ▲ = better value than raw price suggests">Shift</th>
+              <th class="al" scope="col">Plan</th>
+              <th class="al" scope="col">Served model</th>
+              <th class="al" scope="col">Fee/mo</th>
+              <th class="sortable" data-key="tok" scope="col">Tok/task<span class="arr"></span></th>
+              <th class="sortable" data-key="tasks" scope="col">Tasks/mo<span class="arr"></span></th>
+              <th class="sortable" data-key="cpt" scope="col">Cost/task<span class="arr"></span></th>
+              <th class="sortable" data-key="tpd" scope="col">Tasks/$1<span class="arr"></span></th>
+              <th class="sortable" data-key="raw" scope="col">Raw $/MTok<span class="arr"></span></th>
+            </tr>
+          </thead>
+          <tbody id="rank-body"></tbody>
+        </table>
+      </div>
+      <div class="table-foot">▲ jumped up · ▼ dropped down vs the raw $/MTok ranking of the same plans · Cost/task = monthly fee ÷ monthly tasks · <span id="foot-baseline">baseline: Medium reasoning effort (Standard for Composer 2.5)</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TAKEAWAYS ============ -->
+<section class="sec sec-white" id="takeaways">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="--dot: var(--color-electric-magenta)">Key takeaways</span>
+      <h2 class="t-heading">What the shift reveals</h2>
+    </div>
+    <div class="take-grid">
+      <div class="card take reveal" style="--accent: var(--color-alert-red)">
+        <div class="kicker">The verbosity penalty</div>
+        <h3>Big allowance ≠ real value</h3>
+        <p><code>gemini-3.8-flash</code> offers tens of billions of tokens and tops raw $/MTok charts — but at <span class="hl">128,364 output tokens per task</span>, its effective task cost falls behind far leaner models.</p>
+      </div>
+      <div class="card take reveal" style="--accent: var(--color-signal-blue)">
+        <div class="kicker">The coding workhorses</div>
+        <h3>Concise models, huge pools</h3>
+        <p>ChatGPT's <code>gpt-5.6-luna</code> &amp; <code>gpt-5.6-terra</code> pair big monthly pools with <span class="hl">~7,300–7,600 tokens/task</span> for industry-leading yields, while <code>composer-2.5</code> balances at <span class="hl">17,347 tokens — 5,000+ tasks per dollar</span> on Cursor Ultra.</p>
+      </div>
+      <div class="card take reveal" style="--accent: var(--color-electric-magenta)">
+        <div class="kicker">Quality at moderate overhead</div>
+        <h3>The premium sweet spot</h3>
+        <p>Sonnet 5 (<span class="hl">39,114 tok/task</span>) and Opus 5 (<span class="hl">45,272 tok/task</span>) trade some efficiency for benchmark quality — climbing past more verbose competitors on effective cost per task.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BANDS ============ -->
+<section class="sec sec-gray" id="bands">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="--dot: var(--color-honey-glow)">By budget</span>
+      <h2 class="t-heading">Best value in every price band</h2>
+      <p class="t-sub">Top plans per monthly fee range, at the Medium baseline. Figures show tasks delivered per dollar.</p>
+    </div>
+    <div class="band-grid" id="band-grid"></div>
+  </div>
+</section>
+
+<!-- ============ PENDING ============ -->
+<section class="sec sec-white" id="pending">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="--dot: var(--color-alert-red)">Coverage gaps</span>
+      <h2 class="t-heading">Models awaiting benchmark</h2>
+      <div class="pending-head">
+        <span class="count-chip"><span class="dot"></span> 40 models</span>
+        <span class="count-chip"><span class="dot"></span> 157 plans pending</span>
+      </div>
+      <p class="t-sub" style="margin-top:20px">These models from the real-api-pricing dataset have <strong style="color:var(--color-ink)">no CursorBench 4.0 evaluation</strong> — their output tokens per task are unknown, so they're flagged <span style="color:var(--color-alert-red); font-weight:600">[Pending CursorBench]</span> and excluded from the ranking.</p>
+    </div>
+    <div class="chip-cloud reveal" id="chip-cloud"></div>
+    <div class="pending-notes">
+      <div class="card reveal">
+        <h3>API-only rows are excluded by design</h3>
+        <p>API-only plans for benchmarked models (e.g. "Claude Opus 5 API") carry no monthly token quota, so they can't be ranked as subscriptions — their absence is intentional, not a coverage gap.</p>
+      </div>
+      <div class="card reveal">
+        <h3>How a pending model joins the ranking</h3>
+        <p>When CursorBench or a community saturation run publishes completion-token figures for DeepSeek, Kimi, GLM, Qwen, StepFun or MiniMax: update <code>data/model-token-consumption.json</code> and re-run <code>compute_task_ranking.py</code> — the ranking integrates them seamlessly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REPRODUCE ============ -->
+<section class="sec sec-gray" id="reproduce">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow" style="--dot: var(--color-vivid-green)">Reproducibility</span>
+      <h2 class="t-heading">Regenerate everything yourself</h2>
+      <p class="t-sub">The full pipeline is four scripts. Every number on this page can be rebuilt from raw sources.</p>
+    </div>
+    <div class="pipeline">
+      <div class="card pipe reveal"><div class="step">01 · Extract</div><div class="name">extract_cursorbench.py</div></div>
+      <div class="card pipe reveal"><div class="step">02 · Map</div><div class="name">build_model_consumption_map.py</div></div>
+      <div class="card pipe reveal"><div class="step">03 · Compute</div><div class="name">compute_task_ranking.py</div></div>
+      <div class="card pipe reveal"><div class="step">04 · Report</div><div class="name">build_readme.py</div></div>
+    </div>
+    <div class="code-card reveal">
+      <button class="copy-btn" id="copy-btn" type="button">Copy</button>
+      <pre id="code-block"><span class="cm"># regenerate the dataset, rankings and report</span>
+<span class="pr">$</span> python3 scripts/extract_cursorbench.py
+<span class="pr">$</span> python3 scripts/build_model_consumption_map.py
+<span class="pr">$</span> python3 scripts/compute_task_ranking.py
+<span class="pr">$</span> python3 scripts/build_readme.py</pre>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="sec sec-white closing" id="closing">
+  <div class="container reveal">
+    <h2 class="t-display amber-text">Know what your subscription really buys.</h2>
+    <p class="t-sub">Every figure here is derived from public benchmarks and community saturation tests — and every calculation is one command away.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="https://github.com/Abhinav-Prabhakar/CodingSubRanks" target="_blank" rel="noopener">Star on GitHub</a>
+      <a class="btn btn-ghost" href="../BUILD.md">Read the build guide</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand">
+          <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg2" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="rgb(240,100,19)"/><stop offset="1" stop-color="rgb(254,171,48)"/></linearGradient></defs><rect width="32" height="32" rx="8" fill="url(#lg2)"/><g fill="#fff"><rect x="7" y="17" width="4" height="8" rx="2"/><rect x="14" y="12" width="4" height="13" rx="2"/><rect x="21" y="7" width="4" height="18" rx="2"/></g></svg>
+          CodingSubRanks
+        </div>
+        <p>Task-adjusted economics for AI coding subscriptions. Because a token you can't use efficiently is a token you paid for anyway.</p>
+      </div>
+      <div>
+        <h4>Data &amp; credits</h4>
+        <ul>
+          <li><a href="https://cursor.com/cursorbench" target="_blank" rel="noopener">CursorBench 4.0 ↗</a></li>
+          <li><a href="https://github.com/FeiZhuLulu/real-api-pricing" target="_blank" rel="noopener">FeiZhuLulu/real-api-pricing ↗</a></li>
+          <li><a href="../CREDITS.md">CREDITS.md</a></li>
+          <li><a href="../SOURCES.md">SOURCES.md</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <ul>
+          <li><a href="https://github.com/Abhinav-Prabhakar/CodingSubRanks" target="_blank" rel="noopener">GitHub repository ↗</a></li>
+          <li><a href="../BUILD.md">BUILD.md</a></li>
+          <li><a href="../LICENSE">MIT License</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CodingSubRanks · Not affiliated with any model provider. Figures are estimates from community-measured data — verify quotas with your provider.</span>
+      <span class="formula">Cost/task = (Fee × Tokens-per-task) ÷ Monthly tokens</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ================= Embedded data (from derived/task-ranking.json, data/cursorbench.json) ================= */
+const ROWS = [{"p":"ChatGPT Pro 20x","m":"gpt-5.6-luna","fee":200.0,"tok":7642,"mtok":150222000000,"tasks":19657419.5,"cpt":1e-05,"tpd":98287.1,"raw":0.00133,"craw":2},{"p":"ChatGPT Plus","m":"gpt-5.6-luna","fee":20.0,"tok":7642,"mtok":7511000000,"tasks":982857.9,"cpt":2e-05,"tpd":49142.9,"raw":0.00266,"craw":4},{"p":"ChatGPT Pro 5x","m":"gpt-5.6-luna","fee":100.0,"tok":7642,"mtok":37556000000,"tasks":4914420.3,"cpt":2e-05,"tpd":49144.2,"raw":0.00266,"craw":5},{"p":"OpenCode Go","m":"muse-spark-1.3-contributor","fee":10.0,"tok":27255,"mtok":12500000000,"tasks":458631.4,"cpt":2.2e-05,"tpd":45863.1,"raw":0.0008,"craw":1},{"p":"ChatGPT Pro 20x","m":"gpt-5.6-terra","fee":200.0,"tok":7307,"mtok":24024000000,"tasks":3287806.2,"cpt":6.1e-05,"tpd":16439.0,"raw":0.00833,"craw":9},{"p":"Command Code GOAT","m":"muse-spark-1.3-contributor","fee":10.0,"tok":27255,"mtok":4166700000,"tasks":152878.4,"cpt":6.5e-05,"tpd":15287.8,"raw":0.0024,"craw":3},{"p":"Command Code GOAT","m":"gpt-5.6-luna","fee":10.0,"tok":7642,"mtok":714300000,"tasks":93470.3,"cpt":0.000107,"tpd":9347.0,"raw":0.014,"craw":14},{"p":"ChatGPT Plus","m":"gpt-5.6-terra","fee":20.0,"tok":7307,"mtok":1201200000,"tasks":164390.3,"cpt":0.000122,"tpd":8219.5,"raw":0.01665,"craw":17},{"p":"ChatGPT Pro 5x","m":"gpt-5.6-terra","fee":100.0,"tok":7307,"mtok":6006000000,"tasks":821951.6,"cpt":0.000122,"tpd":8219.5,"raw":0.01665,"craw":18},{"p":"OpenCode Go","m":"gpt-5.6-luna","fee":10.0,"tok":7642,"mtok":535700000,"tasks":70099.5,"cpt":0.000143,"tpd":7009.9,"raw":0.01867,"craw":19},{"p":"ChatGPT Pro 20x","m":"gpt-5.6-sol","fee":200.0,"tok":10111,"mtok":12320000000,"tasks":1218474.9,"cpt":0.000164,"tpd":6092.4,"raw":0.01623,"craw":15},{"p":"Cursor Ultra (Standard)","m":"composer-2.5","fee":200.0,"tok":17347,"mtok":19892600000,"tasks":1146745.8,"cpt":0.000174,"tpd":5733.7,"raw":0.01005,"craw":10},{"p":"Cursor Pro+ (Standard)","m":"composer-2.5","fee":60.0,"tok":17347,"mtok":5304700000,"tasks":305799.3,"cpt":0.000196,"tpd":5096.7,"raw":0.01131,"craw":11},{"p":"Claude Pro","m":"claude-sonnet-5","fee":20.0,"tok":39114,"mtok":3970000000,"tasks":101498.2,"cpt":0.000197,"tpd":5074.9,"raw":0.00504,"craw":6},{"p":"Claude Max 20x (9/14+)","m":"claude-sonnet-5","fee":200.0,"tok":39114,"mtok":39250000000,"tasks":1003477.0,"cpt":0.000199,"tpd":5017.4,"raw":0.0051,"craw":7},{"p":"Claude Max 5x (9/14+)","m":"claude-sonnet-5","fee":100.0,"tok":39114,"mtok":19625000000,"tasks":501738.5,"cpt":0.000199,"tpd":5017.4,"raw":0.0051,"craw":8},{"p":"Cursor Pro (Standard)","m":"composer-2.5","fee":20.0,"tok":17347,"mtok":1208400000,"tasks":69660.5,"cpt":0.000287,"tpd":3483.0,"raw":0.01655,"craw":16},{"p":"ChatGPT Plus","m":"gpt-5.6-sol","fee":20.0,"tok":10111,"mtok":616000000,"tasks":60923.7,"cpt":0.000328,"tpd":3046.2,"raw":0.03247,"craw":24},{"p":"ChatGPT Pro 5x","m":"gpt-5.6-sol","fee":100.0,"tok":10111,"mtok":3080000000,"tasks":304618.7,"cpt":0.000328,"tpd":3046.2,"raw":0.03247,"craw":25},{"p":"Cursor Ultra (Composer Fast)","m":"composer-2.5","fee":200.0,"tok":17347,"mtok":7058700000,"tasks":406911.9,"cpt":0.000492,"tpd":2034.6,"raw":0.02833,"craw":21},{"p":"Cursor Pro+ (Composer Fast)","m":"composer-2.5","fee":60.0,"tok":17347,"mtok":1882300000,"tasks":108508.7,"cpt":0.000553,"tpd":1808.5,"raw":0.03188,"craw":23},{"p":"Claude Max 20x (9/14+)","m":"claude-opus-5","fee":200.0,"tok":45272,"mtok":15700000000,"tasks":346792.7,"cpt":0.000577,"tpd":1734.0,"raw":0.01274,"craw":12},{"p":"Claude Max 5x (9/14+)","m":"claude-opus-5","fee":100.0,"tok":45272,"mtok":7850000000,"tasks":173396.4,"cpt":0.000577,"tpd":1734.0,"raw":0.01274,"craw":13},{"p":"Cursor Ultra","m":"grok-4.6","fee":200.0,"tok":24893,"mtok":7737000000,"tasks":310810.3,"cpt":0.000643,"tpd":1554.1,"raw":0.02585,"craw":20},{"p":"Cursor Pro+","m":"grok-4.6","fee":60.0,"tok":24893,"mtok":2063200000,"tasks":82882.7,"cpt":0.000724,"tpd":1381.4,"raw":0.02908,"craw":22},{"p":"Cursor Pro (Composer Fast)","m":"composer-2.5","fee":20.0,"tok":17347,"mtok":428800000,"tasks":24719.0,"cpt":0.000809,"tpd":1235.9,"raw":0.04664,"craw":27},{"p":"Command Code GOAT","m":"gpt-5.6-sol","fee":10.0,"tok":10111,"mtok":100000000,"tasks":9890.2,"cpt":0.001011,"tpd":989.0,"raw":0.1,"craw":35},{"p":"Cursor Pro","m":"grok-4.6","fee":20.0,"tok":24893,"mtok":470000000,"tasks":18880.8,"cpt":0.001059,"tpd":944.0,"raw":0.04255,"craw":26},{"p":"SuperGrok Plus","m":"grok-4.6","fee":100.0,"tok":24893,"mtok":2040000000,"tasks":81950.7,"cpt":0.00122,"tpd":819.5,"raw":0.04902,"craw":28},{"p":"SuperGrok","m":"grok-4.6","fee":30.0,"tok":24893,"mtok":509000000,"tasks":20447.5,"cpt":0.001467,"tpd":681.6,"raw":0.05894,"craw":30},{"p":"SuperGrok Heavy","m":"grok-4.6","fee":300.0,"tok":24893,"mtok":5090000000,"tasks":204475.2,"cpt":0.001467,"tpd":681.6,"raw":0.05894,"craw":31},{"p":"Cursor Ultra (Fast)","m":"grok-4.6","fee":200.0,"tok":24893,"mtok":3074000000,"tasks":123488.5,"cpt":0.00162,"tpd":617.4,"raw":0.06506,"craw":32},{"p":"SuperGrok Lite","m":"grok-4.6","fee":10.0,"tok":24893,"mtok":150000000,"tasks":6025.8,"cpt":0.00166,"tpd":602.6,"raw":0.06667,"craw":33},{"p":"Command Code GOAT","m":"muse-spark-1.3","fee":10.0,"tok":27255,"mtok":106400000,"tasks":3903.9,"cpt":0.002562,"tpd":390.4,"raw":0.09398,"craw":34},{"p":"Claude Max 5x (9/14+)","m":"claude-fable-5","fee":100.0,"tok":45411,"mtok":923500000,"tasks":20336.5,"cpt":0.004917,"tpd":203.4,"raw":0.10828,"craw":36},{"p":"Command Code GOAT","m":"gemini-3.8-flash","fee":10.0,"tok":128364,"mtok":195400000,"tasks":1522.2,"cpt":0.006569,"tpd":152.2,"raw":0.05118,"craw":29},{"p":"Command Code GOAT","m":"grok-4.6","fee":10.0,"tok":24893,"mtok":36300000,"tasks":1458.2,"cpt":0.006858,"tpd":145.8,"raw":0.27548,"craw":38},{"p":"Claude Max 20x (9/14+)","m":"claude-fable-5","fee":200.0,"tok":45411,"mtok":1207700000,"tasks":26594.9,"cpt":0.00752,"tpd":133.0,"raw":0.1656,"craw":37},{"p":"OpenCode Go","m":"grok-4.6","fee":10.0,"tok":24893,"mtok":27200000,"tasks":1092.7,"cpt":0.009152,"tpd":109.3,"raw":0.36765,"craw":39}];
+
+const BENCH = [{"r":1,"n":"Fable 5.1 Max","s":51.8,"c":17.28,"t":117236,"st":128},{"r":2,"n":"Fable 5.1 Extra High","s":51.6,"c":13.01,"t":87294,"st":101},{"r":3,"n":"Fable 5.1 High","s":49.2,"c":9.08,"t":58438,"st":77},{"r":4,"n":"Fable 5.1 Medium","s":46.8,"c":7.05,"t":45411,"st":63},{"r":5,"n":"Opus 5 Max","s":46.6,"c":11.95,"t":85384,"st":106},{"r":6,"n":"Opus 5 Extra High","s":46.1,"c":11.43,"t":80094,"st":103},{"r":7,"n":"Fable 5.1 Low","s":45.1,"c":5.44,"t":34795,"st":51},{"r":8,"n":"Opus 5 High","s":44.7,"c":9.0,"t":61405,"st":86},{"r":9,"n":"Opus 5 Medium","s":43.3,"c":6.94,"t":45272,"st":72},{"r":10,"n":"GPT-5.6 Sol Max","s":41.7,"c":8.23,"t":42944,"st":99},{"r":11,"n":"Muse Spark 1.3 Max","s":41.6,"c":2.64,"t":52005,"st":98},{"r":12,"n":"Grok 4.6 Extra High","s":41.4,"c":6.1,"t":49814,"st":56},{"r":13,"n":"GPT-5.6 Terra Max","s":41.3,"c":5.14,"t":60814,"st":107},{"r":14,"n":"Opus 5 Low","s":40.7,"c":4.87,"t":31995,"st":57},{"r":15,"n":"Grok 4.6 High","s":40.4,"c":5.2,"t":41387,"st":48},{"r":16,"n":"Gemini 3.8 Flash High","s":39.6,"c":4.7,"t":162565,"st":324},{"r":17,"n":"GPT-5.6 Sol Extra High","s":37.7,"c":4.4,"t":24729,"st":55},{"r":18,"n":"Muse Spark 1.3 Extra High","s":37.5,"c":2.1,"t":40891,"st":83},{"r":19,"n":"Gemini 3.8 Flash Medium","s":37.3,"c":4.06,"t":128364,"st":290},{"r":20,"n":"Grok 4.6 Medium","s":36.1,"c":3.48,"t":24893,"st":40},{"r":21,"n":"GPT-5.6 Luna Max","s":35.9,"c":1.03,"t":87284,"st":208},{"r":22,"n":"GPT-5.6 Sol High","s":35.7,"c":2.85,"t":16174,"st":41},{"r":23,"n":"Sonnet 5 Max","s":34.1,"c":7.17,"t":149257,"st":140},{"r":24,"n":"GPT-5.6 Terra Extra High","s":33.6,"c":1.81,"t":23436,"st":43},{"r":25,"n":"Grok 4.6 Low","s":33.4,"c":2.25,"t":16307,"st":32},{"r":26,"n":"Muse Spark 1.3 High","s":33.4,"c":1.66,"t":30654,"st":69},{"r":27,"n":"GPT-5.6 Luna Extra High","s":33.0,"c":0.44,"t":40598,"st":98},{"r":28,"n":"Muse Spark 1.3 Medium","s":32.6,"c":1.49,"t":27255,"st":64},{"r":29,"n":"Sonnet 5 Extra High","s":32.0,"c":4.55,"t":83373,"st":102},{"r":30,"n":"GPT-5.6 Sol Medium","s":31.1,"c":1.77,"t":10111,"st":32},{"r":31,"n":"Sonnet 5 High","s":30.8,"c":3.48,"t":61146,"st":85},{"r":32,"n":"GPT-5.6 Terra High","s":30.7,"c":1.11,"t":13162,"st":33},{"r":33,"n":"GPT-5.6 Luna High","s":29.4,"c":0.25,"t":23368,"st":64},{"r":34,"n":"Muse Spark 1.3 Low","s":29.3,"c":0.93,"t":17483,"st":47},{"r":35,"n":"Sonnet 5 Medium","s":28.0,"c":2.31,"t":39114,"st":65},{"r":36,"n":"Composer 2.5","s":27.7,"c":0.68,"t":17347,"st":41},{"r":37,"n":"GPT-5.6 Terra Medium","s":27.6,"c":0.64,"t":7307,"st":25},{"r":38,"n":"GPT-5.6 Terra Low","s":25.2,"c":0.52,"t":5914,"st":23},{"r":39,"n":"GPT-5.6 Sol Low","s":24.6,"c":0.87,"t":4885,"st":21},{"r":40,"n":"Muse Spark 1.3 Minimal","s":24.3,"c":0.56,"t":10620,"st":34},{"r":41,"n":"Sonnet 5 Low","s":24.1,"c":1.39,"t":23772,"st":46},{"r":42,"n":"GPT-5.6 Luna Medium","s":22.2,"c":0.08,"t":7642,"st":32},{"r":43,"n":"GPT-5.6 Luna Low","s":16.0,"c":0.03,"t":3288,"st":18}];
+
+const PENDING = ["claude-opus-4.8","deepseek-v4-flash","deepseek-v4-flash-fast","deepseek-v4-pro","deepseek-v4.1-flash","gemini-3.7-flash","glm-5.1","glm-5.2","glm-5.2-fast","glm-5.3","glm-5.3-flash","gpt-5.5","grok-4.5","hy3","hy4-preview","inkling","inkling-small","kimi-k2.6","kimi-k2.7-code","kimi-k2.7-code-highspeed","kimi-k3","longcat-2.0","mimo-v2.5","mimo-v2.5-pro","minimax-m2.5","minimax-m2.7","minimax-m3","muse-spark-1.2","muse-spark-1.2-contributor","nemotron-3-ultra","omen-alpha","qwen3.6-plus","qwen3.7-max","qwen3.7-plus","qwen3.8-27b","qwen3.8-flash","qwen3.8-max","qwen3.8-max-0902","step-3.5-flash","step-3.7-flash"];
+
+/* Per-family CursorBench 4.0 output tokens per task & score, by reasoning effort */
+const TIERS = {
+  "gpt-5.6-luna":   { "Low":{"t":3288,"s":16.0}, "Medium":{"t":7642,"s":22.2}, "High":{"t":23368,"s":29.4}, "Extra High":{"t":40598,"s":33.0}, "Max":{"t":87284,"s":35.9} },
+  "gpt-5.6-terra":  { "Low":{"t":5914,"s":25.2}, "Medium":{"t":7307,"s":27.6}, "High":{"t":13162,"s":30.7}, "Extra High":{"t":23436,"s":33.6}, "Max":{"t":60814,"s":41.3} },
+  "gpt-5.6-sol":    { "Low":{"t":4885,"s":24.6}, "Medium":{"t":10111,"s":31.1}, "High":{"t":16174,"s":35.7}, "Extra High":{"t":24729,"s":37.7}, "Max":{"t":42944,"s":41.7} },
+  "muse-spark-1.3": { "Low":{"t":17483,"s":29.3}, "Medium":{"t":27255,"s":32.6}, "High":{"t":30654,"s":33.4}, "Extra High":{"t":40891,"s":37.5}, "Max":{"t":52005,"s":41.6} },
+  "muse-spark-1.3-contributor": { "Low":{"t":17483,"s":29.3}, "Medium":{"t":27255,"s":32.6}, "High":{"t":30654,"s":33.4}, "Extra High":{"t":40891,"s":37.5}, "Max":{"t":52005,"s":41.6} },
+  "grok-4.6":       { "Low":{"t":16307,"s":33.4}, "Medium":{"t":24893,"s":36.1}, "High":{"t":41387,"s":40.4}, "Extra High":{"t":49814,"s":41.4} },
+  "claude-sonnet-5":{ "Low":{"t":23772,"s":24.1}, "Medium":{"t":39114,"s":28.0}, "High":{"t":61146,"s":30.8}, "Extra High":{"t":83373,"s":32.0}, "Max":{"t":149257,"s":34.1} },
+  "claude-opus-5":  { "Low":{"t":31995,"s":40.7}, "Medium":{"t":45272,"s":43.3}, "High":{"t":61405,"s":44.7}, "Extra High":{"t":80094,"s":46.1}, "Max":{"t":85384,"s":46.6} },
+  "claude-fable-5": { "Low":{"t":34795,"s":45.1}, "Medium":{"t":45411,"s":46.8}, "High":{"t":58438,"s":49.2}, "Extra High":{"t":87294,"s":51.6}, "Max":{"t":117236,"s":51.8} },
+  "gemini-3.8-flash": { "Medium":{"t":128364,"s":37.3}, "High":{"t":162565,"s":39.6} },
+  "composer-2.5":   { "Standard":{"t":17347,"s":27.7} }
+};
+const TIER_ORDER = ["Low","Medium","High","Extra High","Max"];
+
+/* ================= Helpers ================= */
+const $ = s => document.querySelector(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
+/* round half to even — matches the Python-generated README figures (e.g. 20,336.5 → 20,336) */
+function roundHalfEven(n) {
+  const f = Math.floor(n);
+  if (n - f === 0.5) return f % 2 === 0 ? f : f + 1;
+  return Math.round(n);
+}
+const fmtI = n => roundHalfEven(n).toLocaleString("en-US");
+const fmtD = (n,d=1) => n.toLocaleString("en-US",{minimumFractionDigits:d,maximumFractionDigits:d});
+/* README convention is 5 decimals; at non-Medium tiers some tasks dip below
+   $0.000005, so fall back to 8 decimals (trailing zeros trimmed) to avoid $0.00000 */
+const fmtMoney5 = n => {
+  if (n > 0 && n < 0.000005) return "$" + n.toFixed(8).replace(/(\.\d\d\d\d\d\d\d\d)0+$/, "$1");
+  return "$" + n.toFixed(5);
+};
+const fmtFee = n => "$" + (n % 1 ? n.toFixed(2) : n);
+const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function pickTier(fam, effort) {
+  if (fam[effort]) return { tier: effort, tok: fam[effort].t };
+  const req = TIER_ORDER.indexOf(effort);
+  let best = null, bestD = Infinity;
+  for (const k of Object.keys(fam)) {
+    const i = TIER_ORDER.indexOf(k);
+    const d = i === -1 ? 0.5 : Math.abs(i - req); // 'Standard' sits nearest to everything
+    if (d < bestD) { bestD = d; best = k; }
+  }
+  return { tier: best, tok: fam[best].t };
+}
+
+const state = { effort: "Medium", metric: "task", band: "all", q: "", sortKey: null, sortDir: 1 };
+
+/* Build the full model at the current effort tier.
+   At Medium this reproduces the README baseline exactly (stored values + stable tie-break). */
+function buildModel(effort) {
+  const rows = ROWS.map((r, i) => {
+    if (effort === "Medium") {
+      return { ...r, tok: r.tok, tasks: r.tasks, cpt: r.cpt, tpd: r.tpd, i };
+    }
+    const { tok } = pickTier(TIERS[r.m] || {}, effort);
+    const tasks = r.mtok / tok;
+    const cpt = r.fee / tasks;
+    return { ...r, tok, tasks, cpt, tpd: 1 / cpt, i };
+  });
+  const byCpt = [...rows].sort((a, b) => a.cpt - b.cpt || a.i - b.i);
+  byCpt.forEach((r, idx) => { r.taskRank = idx + 1; r.delta = r.craw - r.taskRank; });
+  return rows;
+}
+
+function inBand(r, band) {
+  if (band === "budget") return r.fee <= 30;
+  if (band === "pro") return r.fee > 30 && r.fee <= 100;
+  if (band === "power") return r.fee > 100 && r.fee <= 300;
+  return true;
+}
+
+/* ================= Ranking table ================= */
+function renderTable() {
+  const rows = buildModel(state.effort);
+  let view = rows.filter(r => inBand(r, state.band));
+  if (state.q) {
+    const q = state.q.toLowerCase();
+    view = view.filter(r => r.p.toLowerCase().includes(q) || r.m.toLowerCase().includes(q));
+  }
+  if (state.metric === "task") {
+    view.sort((a, b) => (state.sortKey ? (a[state.sortKey] - b[state.sortKey]) * state.sortDir : a.taskRank - b.taskRank));
+  } else {
+    view.sort((a, b) => (state.sortKey ? (a[state.sortKey] - b[state.sortKey]) * state.sortDir : a.raw - b.raw || a.i - b.i));
+  }
+
+  const tbody = $("#rank-body");
+  const frag = document.createDocumentFragment();
+  if (!view.length) {
+    const tr = document.createElement("tr");
+    tr.className = "empty-row";
+    tr.innerHTML = '<td colspan="10">No plans match — clear the search or pick another band.</td>';
+    frag.appendChild(tr);
+  }
+  view.forEach(r => {
+    const tr = document.createElement("tr");
+    if (r.taskRank === 1) tr.className = "top no1";
+    else if (r.taskRank <= 3) tr.className = "top";
+    const shift = r.delta > 0
+      ? `<span class="shift-up" title="raw rank #${r.craw} → task-adjusted #${r.taskRank}">▲ +${r.delta}</span>`
+      : r.delta < 0
+        ? `<span class="shift-dn" title="raw rank #${r.craw} → task-adjusted #${r.taskRank}">▼ −${-r.delta}</span>`
+        : '<span class="shift-flat" title="same rank on both metrics">—</span>';
+    tr.innerHTML =
+      `<td class="al rank">#${state.metric === "task" ? r.taskRank : r.craw}</td>` +
+      `<td class="al">${shift}</td>` +
+      `<td class="al plan">${r.p}</td>` +
+      `<td class="al model"><code>${r.m}</code></td>` +
+      `<td>${fmtFee(r.fee)}</td>` +
+      `<td>${fmtI(r.tok)}</td>` +
+      `<td>${fmtI(r.tasks)}</td>` +
+      `<td class="cpt">${fmtMoney5(r.cpt)}</td>` +
+      `<td>${fmtD(r.tpd)}</td>` +
+      `<td>${fmtMoney5(r.raw)}</td>`;
+    frag.appendChild(tr);
+  });
+  tbody.replaceChildren(frag);
+
+  const metricTxt = state.metric === "task"
+    ? "ranked by effective cost per task"
+    : "ranked by raw token price — watch the order flip once verbosity is ignored";
+  $("#table-summary").textContent = `Showing ${view.length} of ${ROWS.length} plans · ${metricTxt}`;
+  $$("#metric-pills button").forEach(b => {
+    const on = b.dataset.metric === state.metric;
+    b.classList.toggle("on", on); b.setAttribute("aria-pressed", on);
+  });
+  $$(".sortable").forEach(th => {
+    const active = th.dataset.key === state.sortKey;
+    th.querySelector(".arr").textContent = active ? (state.sortDir === 1 ? "▲" : "▼") : "";
+    th.setAttribute("aria-sort", active ? (state.sortDir === 1 ? "ascending" : "descending") : "none");
+  });
+  const off = state.effort !== "Medium";
+  $("#effort-note").classList.toggle("show", off);
+  $("#foot-baseline").textContent = off
+    ? `baseline: live ${state.effort}-tier recomputation`
+    : "baseline: Medium reasoning effort (Standard for Composer 2.5)";
+  $$("#effort-pills button").forEach(b => {
+    const on = b.dataset.effort === state.effort;
+    b.classList.toggle("on", on); b.setAttribute("aria-pressed", on);
+  });
+  $$("#band-pills button").forEach(b => {
+    const on = b.dataset.band === state.band;
+    b.classList.toggle("on", on); b.setAttribute("aria-pressed", on);
+  });
+}
+
+$("#metric-pills").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  state.metric = b.dataset.metric; state.sortKey = null; renderTable();
+});
+$("#effort-pills").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  state.effort = b.dataset.effort; state.sortKey = null; renderTable();
+});
+$("#band-pills").addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  state.band = b.dataset.band; renderTable();
+});
+$$(".sortable").forEach(th => th.addEventListener("click", () => {
+  const k = th.dataset.key;
+  if (state.sortKey === k) { state.sortDir *= -1; } else { state.sortKey = k; state.sortDir = 1; }
+  renderTable();
+}));
+let searchT;
+$("#search").addEventListener("input", e => {
+  clearTimeout(searchT);
+  searchT = setTimeout(() => { state.q = e.target.value.trim(); renderTable(); }, 120);
+});
+
+/* ================= CursorBench table ================= */
+(function renderBench() {
+  const max = 162565;
+  $("#bench-body").innerHTML = BENCH.map(b => {
+    const cls = b.t <= 12000 ? "shift-up" : b.t >= 80000 ? "shift-dn" : "";
+    return `<tr>
+      <td class="al rank">${b.r}</td>
+      <td class="al plan">${b.n}</td>
+      <td>${b.s.toFixed(1)}%</td>
+      <td>$${b.c.toFixed(2)}</td>
+      <td class="al"><span class="tokcell"><span class="track"><span class="fill" style="width:${(b.t / max * 100).toFixed(1)}%"></span></span><span class="num ${cls}">${fmtI(b.t)}</span></span></td>
+      <td>${b.st}</td>
+    </tr>`;
+  }).join("");
+})();
+
+/* ================= Verbosity chart ================= */
+(function renderVerbosity() {
+  const data = [
+    { name: "GPT-5.6 Terra (Medium)", tok: 7307 },
+    { name: "GPT-5.6 Luna (Medium)", tok: 7642 },
+    { name: "GPT-5.6 Sol (Medium)", tok: 10111 },
+    { name: "Composer 2.5", tok: 17347 },
+    { name: "Grok 4.6 (Medium)", tok: 24893 },
+    { name: "Sonnet 5 (Medium)", tok: 39114 },
+    { name: "Opus 5 (Medium)", tok: 45272 },
+    { name: "Fable 5.1 (Medium)", tok: 45411 },
+    { name: "Gemini 3.8 Flash (High)", tok: 162565 }
+  ];
+  const max = 162565;
+  $("#verbosity-chart").innerHTML = data.map(d => {
+    const cls = d.tok <= 12000 ? "good" : d.tok >= 80000 ? "bad" : "";
+    return `<div class="vrow"><span class="name">${d.name}</span><span class="track"><span class="fill" style="width:${(d.tok / max * 100).toFixed(1)}%"></span></span><span class="num ${cls}">${fmtI(d.tok)}</span></div>`;
+  }).join("");
+})();
+
+/* ================= Price bands ================= */
+(function renderBands() {
+  const bands = [
+    { key: "budget", label: "Budget · $0–$30 / mo", accent: "var(--color-vivid-green)", for: "Individual developers, students & freelancers" },
+    { key: "pro", label: "Pro · $30–$100 / mo", accent: "var(--color-signal-blue)", for: "Professional engineers & daily power users" },
+    { key: "power", label: "Power · $100–$300 / mo", accent: "var(--color-electric-magenta)", for: "Heavy agentic automation & team plans" }
+  ];
+  const rows = buildModel("Medium");
+  $("#band-grid").innerHTML = bands.map(b => {
+    const list = rows.filter(r => inBand(r, b.key));
+    const top5 = list.slice(0, 5);
+    return `<div class="card band reveal" style="--accent:${b.accent}">
+      <div class="b-range">${b.label}</div>
+      <h3>${top5[0].p}</h3>
+      <div class="b-for">${b.for}</div>
+      <ol>${top5.map((r, i) => `<li><span class="r">#${i + 1}</span><span class="p">${r.p}<span class="m">${r.m}</span></span><span class="t">${fmtD(r.tpd)}</span></li>`).join("")}</ol>
+      <button class="b-more" data-goto-band="${b.key}">All ${list.length} plans →</button>
+    </div>`;
+  }).join("");
+  $$("#band-grid [data-goto-band]").forEach(btn => btn.addEventListener("click", () => {
+    state.band = btn.dataset.gotoBand; state.sortKey = null;
+    renderTable();
+    $("#ranking").scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+  }));
+})();
+
+/* ================= Pending chips ================= */
+$("#chip-cloud").innerHTML = PENDING.map(m => `<span class="m-chip"><span class="dot"></span>${m}</span>`).join("");
+
+/* ================= Copy button ================= */
+$("#copy-btn").addEventListener("click", async () => {
+  const text = $("#code-block").innerText.replace(/^\$ /gm, "");
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch {
+    const ta = document.createElement("textarea");
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    document.execCommand("copy"); ta.remove();
+  }
+  const btn = $("#copy-btn");
+  btn.textContent = "Copied ✓"; btn.classList.add("done");
+  setTimeout(() => { btn.textContent = "Copy"; btn.classList.remove("done"); }, 1600);
+});
+
+/* ================= Nav shadow ================= */
+window.addEventListener("scroll", () => {
+  $("#nav").classList.toggle("scrolled", window.scrollY > 8);
+}, { passive: true });
+
+/* ================= Reveal on scroll ================= */
+const revealIO = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); revealIO.unobserve(en.target); } });
+}, { threshold: 0.12 });
+$$(".reveal").forEach(el => revealIO.observe(el));
+
+/* ================= Count-up stats ================= */
+function countUp(el) {
+  const target = +el.dataset.count;
+  if (reduced) { el.textContent = fmtI(target); return; }
+  const t0 = performance.now(), dur = 1400;
+  function tick(t) {
+    const p = Math.min((t - t0) / dur, 1);
+    const eased = 1 - Math.pow(1 - p, 3);
+    el.textContent = fmtI(target * eased);
+    if (p < 1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+const statIO = new IntersectionObserver(entries => {
+  entries.forEach(en => { if (en.isIntersecting) { countUp(en.target); statIO.unobserve(en.target); } });
+}, { threshold: 0.5 });
+$$("[data-count]").forEach(el => statIO.observe(el));
+
+/* ================= Initial render ================= */
+renderTable();
+</script>
+</body>
+</html>
