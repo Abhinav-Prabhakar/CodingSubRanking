@@ -6,7 +6,8 @@
     "reference_data": "FeiZhuLulu/real-api-pricing",
     "annual_pricing_rules": "12x monthly default; Claude Pro ($200/yr), SuperGrok ($300/yr), Ollama Pro ($200/yr), GLM Global USD ($56/mo Pro, 30% off annual), GLM CN new plans (20% off)",
     "total_benchmarked_plans": 130,
-    "total_unbenchmarked_plans": 84
+    "total_unbenchmarked_plans": 84,
+    "total_all_efforts_configurations": 260
   },
   "rankings": [
     {

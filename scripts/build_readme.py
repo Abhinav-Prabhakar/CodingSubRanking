@@ -56,7 +56,7 @@ To find the true purchasing power of an AI coding subscription, we adjust for ou
 4. **Annual Billing & Discount Dynamics**:
    For providers without differentiated annual rates (e.g. OpenAI), the annual price is simply $12 \\times P_{{\\text{{monthly}}}}$ ($0\\%$ discount, same effective monthly rate). For providers offering annual commitments:
    - **Claude Pro (Anthropic)**: \\$200/year (\\$16.67/mo effective, $\\sim$16.7% discount).
-   - **GLM Coding Plans (Zhipu)**: 20% annual discount on new-customer tiers (Lite ¥94.4/mo, Pro ¥430.4/mo, Max ¥862.4/mo).
+   - **GLM Coding Plans (Zhipu)**: 30% annual discount on global USD plans (\\$56/mo Pro down from \\$80/mo, \\$12.60/mo Lite, \\$117.60/mo Max) and 20% on new-customer CN tiers.
    - **SuperGrok (xAI)**: \\$300/year (\\$25/mo effective, 16.7% discount).
    - **Ollama Pro**: \\$200/year (\\$16.67/mo effective, 16.7% discount).
    Effective cost per task under annual billing drops proportionally:
@@ -84,6 +84,9 @@ The column **Shift vs Raw** indicates the ranking change compared to the traditi
 - **▼ -X**: Model is verbose and dropped **down** X spots in cost-effectiveness.
 
 {tables['main_ranking_table']}
+
+> [!NOTE]
+> **Looking for all reasoning effort configurations?** We evaluate and rank all **260 plan × effort combinations** across Low, Medium, High, Extra High, and Max tiers. See the complete export in [`derived/task-ranking-all-efforts.csv`](derived/task-ranking-all-efforts.csv) and [`derived/task-ranking-all-efforts.json`](derived/task-ranking-all-efforts.json), or toggle the **"All"** effort filter in the interactive web interface (`web/index.html`).
 
 ---
 

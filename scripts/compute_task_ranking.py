@@ -182,6 +182,67 @@ def compute_task_rankings():
         # Shift vs monthly task rank (positive = climbed higher under annual pricing due to discount)
         p["annual_rank_shift"] = p["task_rank"] - rank
 
+    # Compute All-Efforts dataset (all combinations of benchmarked plans x available effort tiers)
+    tier_order = ["Low", "Medium", "High", "Extra High", "Max"]
+    all_efforts_points = []
+    for p in benchmarked_points:
+        m_info = model_map.get(p["served_model"], {})
+        tiers_dict = m_info.get("all_tiers", {})
+        scores_dict = m_info.get("all_scores", {})
+        sorted_tiers = sorted(tiers_dict.keys(), key=lambda t: tier_order.index(t) if t in tier_order else 99)
+        for t_name in sorted_tiers:
+            t_tokens = tiers_dict[t_name]
+            t_score = scores_dict.get(t_name)
+            t_tasks = p["monthly_tokens"] / t_tokens
+            t_cost = p["price_usd"] / t_tasks
+            t_tpd = t_tasks / p["price_usd"]
+            t_cost_ann = p["effective_monthly_fee_usd"] / t_tasks
+            t_tpd_ann = t_tasks / p["effective_monthly_fee_usd"]
+            all_efforts_points.append({
+                "plan_id": p["plan_id"],
+                "plan_name": p["plan_name"],
+                "billing": p["billing"],
+                "price": p["price"],
+                "currency": p["currency"],
+                "price_usd": p["price_usd"],
+                "annual_fee_usd": p["annual_fee_usd"],
+                "effective_monthly_fee_usd": p["effective_monthly_fee_usd"],
+                "annual_discount_pct": p["annual_discount_pct"],
+                "served_model": p["served_model"],
+                "benchmarked_model_name": p["benchmarked_model_name"],
+                "effort_tier": t_name,
+                "benchmark_score_pct": t_score,
+                "output_tokens_per_task": t_tokens,
+                "monthly_tokens": p["monthly_tokens"],
+                "monthly_tasks": round(t_tasks, 1),
+                "cost_per_task_usd": round(t_cost, 6),
+                "tasks_per_dollar": round(t_tpd, 1),
+                "cost_per_task_annual_usd": round(t_cost_ann, 6),
+                "tasks_per_dollar_annual": round(t_tpd_ann, 1),
+                "raw_usd_per_mtok": p["raw_usd_per_mtok"],
+                "confidence": p["confidence"],
+                "chart_tier": p["chart_tier"],
+                "source": p["source"]
+            })
+
+    # Rank all-efforts points by cost_per_task_usd
+    all_efforts_points.sort(key=lambda x: x["cost_per_task_usd"])
+    for rank, p in enumerate(all_efforts_points, 1):
+        p["task_rank"] = rank
+
+    all_by_raw = sorted(all_efforts_points, key=lambda x: (x["raw_usd_per_mtok"], x["cost_per_task_usd"]))
+    all_raw_order = {f"{p['plan_id']}__{p['served_model']}__{p['effort_tier']}": idx + 1 for idx, p in enumerate(all_by_raw)}
+    for p in all_efforts_points:
+        key = f"{p['plan_id']}__{p['served_model']}__{p['effort_tier']}"
+        cohort_raw_rank = all_raw_order[key]
+        p["cohort_raw_rank"] = cohort_raw_rank
+        p["rank_delta"] = cohort_raw_rank - p["task_rank"]
+
+    all_by_ann = sorted(all_efforts_points, key=lambda x: x["cost_per_task_annual_usd"])
+    for rank, p in enumerate(all_by_ann, 1):
+        p["annual_task_rank"] = rank
+        p["annual_rank_shift"] = p["task_rank"] - rank
+
     # Save benchmarked ranking
     out_json = DERIVED_DIR / "task-ranking.json"
     with open(out_json, "w", encoding="utf-8") as f:
@@ -193,7 +254,8 @@ def compute_task_rankings():
                 "reference_data": "FeiZhuLulu/real-api-pricing",
                 "annual_pricing_rules": "12x monthly default; Claude Pro ($200/yr), SuperGrok ($300/yr), Ollama Pro ($200/yr), GLM Global USD ($56/mo Pro, 30% off annual), GLM CN new plans (20% off)",
                 "total_benchmarked_plans": len(benchmarked_points),
-                "total_unbenchmarked_plans": len(unbenchmarked_points)
+                "total_unbenchmarked_plans": len(unbenchmarked_points),
+                "total_all_efforts_configurations": len(all_efforts_points)
             },
             "rankings": benchmarked_points
         }, f, indent=2, ensure_ascii=False)
@@ -215,6 +277,35 @@ def compute_task_rankings():
         writer.writerows(benchmarked_points)
     print(f"Saved {len(benchmarked_points)} task-ranked points to {out_csv}")
 
+    # Save all-efforts JSON & CSV
+    out_all_json = DERIVED_DIR / "task-ranking-all-efforts.json"
+    with open(out_all_json, "w", encoding="utf-8") as f:
+        json.dump({
+            "metadata": {
+                "benchmark": "DeepSWE v1.1 (deepswe.datacurve.ai)",
+                "metric": "Output token consumption (median output tokens / task) across all evaluated reasoning tiers",
+                "reference_data": "FeiZhuLulu/real-api-pricing",
+                "total_configurations": len(all_efforts_points)
+            },
+            "rankings": all_efforts_points
+        }, f, indent=2, ensure_ascii=False)
+    print(f"Saved {len(all_efforts_points)} all-efforts points to {out_all_json}")
+
+    csv_fields_all = [
+        "task_rank", "cohort_raw_rank", "rank_delta", "annual_task_rank", "annual_rank_shift",
+        "plan_name", "price_usd", "effective_monthly_fee_usd", "annual_fee_usd", "annual_discount_pct",
+        "served_model", "effort_tier", "output_tokens_per_task", "benchmark_score_pct",
+        "monthly_tokens", "monthly_tasks", "cost_per_task_usd", "tasks_per_dollar",
+        "cost_per_task_annual_usd", "tasks_per_dollar_annual",
+        "raw_usd_per_mtok", "confidence", "plan_id"
+    ]
+    out_all_csv = DERIVED_DIR / "task-ranking-all-efforts.csv"
+    with open(out_all_csv, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=csv_fields_all, extrasaction="ignore")
+        writer.writeheader()
+        writer.writerows(all_efforts_points)
+    print(f"Saved {len(all_efforts_points)} all-efforts points to {out_all_csv}")
+
     # Save unbenchmarked models
     unbench_json = DERIVED_DIR / "unbenchmarked-models.json"
     with open(unbench_json, "w", encoding="utf-8") as f:
@@ -228,7 +319,7 @@ def compute_task_rankings():
         writer.writerows(unbenchmarked_points)
     print(f"Saved {len(unbenchmarked_points)} unbenchmarked points to {unbench_csv}")
 
-    return benchmarked_points, unbenchmarked_points
+    return benchmarked_points, unbenchmarked_points, all_efforts_points
 
 
 if __name__ == "__main__":

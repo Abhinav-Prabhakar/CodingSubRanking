@@ -248,7 +248,7 @@ section { scroll-margin-top: 84px; }
 .table-pad { padding: 28px 30px 10px; }
 .table-summary { font-size: 14px; line-height: 18px; letter-spacing: -0.41px; color: var(--color-pewter); }
 .table-scroll { overflow-x: auto; }
-table { border-collapse: collapse; width: 100%; min-width: 1040px; }
+table { border-collapse: collapse; width: 100%; min-width: 1080px; }
 #bench-table { min-width: 860px; }
 thead th {
   font-size: 12px; font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase;
@@ -272,8 +272,22 @@ td.plan { font-weight: 600; }
 td.model { font-family: var(--font-mono); font-size: 12px; color: var(--color-smoke); }
 td.model code { background: var(--color-mist); border-radius: 8px; padding: 3px 8px; }
 .card-lift td.model code { background: var(--color-snow-gray); }
+td.effort { width: 90px; }
+.tier-pill {
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 11.5px; font-weight: 500; color: var(--color-smoke);
+  background: var(--color-mist); border-radius: var(--radius-full);
+  padding: 2px 9px; white-space: nowrap;
+}
+.card-snow .tier-pill { background: var(--color-pure-white); border: 1px solid rgba(16,16,16,0.08); }
+.card-lift .tier-pill { background: var(--color-snow-gray); }
 td.cpt { font-weight: 600; }
-.fee-disc { display: inline-flex; align-items: center; gap: 4px; margin-left: 6px; font-size: 11px; font-weight: 600; color: var(--color-vivid-green); background: rgba(52,199,89,0.12); border-radius: var(--radius-full); padding: 1px 7px; vertical-align: middle; }
+.fee-disc {
+  display: inline-flex; align-items: center; gap: 4px; margin-left: 6px;
+  font-size: 11px; font-weight: 600; color: var(--color-vivid-green);
+  border: 1px solid var(--color-vivid-green); background: transparent;
+  border-radius: var(--radius-full); padding: 1px 7px; vertical-align: middle;
+}
 .shift-up { color: var(--color-vivid-green); font-weight: 600; }
 .shift-dn { color: var(--color-alert-red); font-weight: 600; }
 .shift-flat { color: var(--color-pewter); }
@@ -632,6 +646,7 @@ td.cpt { font-weight: 600; }
       <div class="ctrl-group">
         <span class="ctrl-label">Effort</span>
         <div class="pills" id="effort-pills" role="group" aria-label="Reasoning effort tier">
+          <button data-effort="All">All</button>
           <button data-effort="Low">Low</button>
           <button class="on" data-effort="Medium" aria-pressed="true">Medium</button>
           <button data-effort="High">High</button>
@@ -643,7 +658,7 @@ td.cpt { font-weight: 600; }
         <span class="ctrl-label">Billing</span>
         <div class="pills" id="cycle-pills" role="group" aria-label="Billing cycle">
           <button class="on" data-cycle="monthly" aria-pressed="true">Monthly</button>
-          <button data-cycle="annual" aria-pressed="false">Annual <span style="font-size:11px;opacity:0.85;margin-left:2px;">(up to −30%)</span></button>
+          <button data-cycle="annual" aria-pressed="false">Annual</button>
         </div>
       </div>
       <div class="ctrl-group">
@@ -655,7 +670,7 @@ td.cpt { font-weight: 600; }
           <button data-band="power" aria-pressed="false">$100–300</button>
         </div>
       </div>
-      <input class="search" id="search" type="search" placeholder="Search plan or model…" aria-label="Search plans and models">
+      <input class="search" id="search" type="search" placeholder="Search plan, model or effort…" aria-label="Search plans and models">
       <span class="ctrl-note" id="effort-note">Live recomputation from DeepSWE token data — this view differs from the README’s Medium baseline. Models without the selected tier use their nearest available tier.</span>
     </div>
 
@@ -669,6 +684,7 @@ td.cpt { font-weight: 600; }
               <th class="al" scope="col" title="raw rank − task rank; ▲ = better value than raw price suggests">Shift</th>
               <th class="al" scope="col">Plan</th>
               <th class="al" scope="col">Served model</th>
+              <th class="al" scope="col">Effort</th>
               <th class="al" id="th-fee" scope="col">Fee/mo</th>
               <th class="sortable" data-key="tok" scope="col">Tok/task<span class="arr"></span></th>
               <th class="sortable" data-key="tasks" scope="col">Tasks/mo<span class="arr"></span></th>
@@ -1151,25 +1167,82 @@ const state = { effort: "Medium", metric: "task", cycle: "monthly", band: "all",
 /* Build the full model at the current effort tier and billing cycle. */
 function buildModel(effort, cycle = state.cycle) {
   const isAnn = cycle === "annual";
+  if (effort === "All") {
+    const rows = [];
+    ROWS.forEach((r, i) => {
+      const fee = isAnn ? (r.feeAnn != null ? r.feeAnn : r.fee) : r.fee;
+      const fam = TIERS[r.m] || {};
+      const tierKeys = Object.keys(fam);
+      // Sort tiers: Low, Medium, High, Extra High, Max, followed by others
+      tierKeys.sort((a, b) => {
+        const ia = TIER_ORDER.indexOf(a);
+        const ib = TIER_ORDER.indexOf(b);
+        return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+      });
+      if (tierKeys.length === 0) {
+        rows.push({
+          ...r,
+          tier: "Standard",
+          curFee: fee,
+          crawRank: r.craw,
+          i
+        });
+      } else {
+        tierKeys.forEach(tName => {
+          const tData = fam[tName];
+          const tok = tData.t;
+          const tasks = r.mtok / tok;
+          const cpt = fee / tasks;
+          const tpd = 1 / cpt;
+          rows.push({
+            ...r,
+            tier: tName,
+            tok,
+            score: tData.s,
+            tasks,
+            cpt,
+            tpd,
+            curFee: fee,
+            i
+          });
+        });
+      }
+    });
+
+    // Rank by raw $/MTok across all configurations
+    const byRaw = [...rows].sort((a, b) => a.raw - b.raw || a.cpt - b.cpt || a.i - b.i);
+    byRaw.forEach((r, idx) => { r.crawRank = idx + 1; });
+
+    // Rank by task cost
+    const byCpt = [...rows].sort((a, b) => a.cpt - b.cpt || a.i - b.i);
+    byCpt.forEach((r, idx) => {
+      r.taskRank = idx + 1;
+      r.delta = r.crawRank - r.taskRank;
+    });
+    return rows;
+  }
+
+  // Single-tier mode
   const rows = ROWS.map((r, i) => {
     const fee = isAnn ? (r.feeAnn != null ? r.feeAnn : r.fee) : r.fee;
     if (effort === "Medium") {
       const cpt = isAnn ? (r.cptAnn != null ? r.cptAnn : r.cpt) : r.cpt;
       const tpd = isAnn ? (r.tpdAnn != null ? r.tpdAnn : r.tpd) : r.tpd;
-      return { ...r, curFee: fee, cpt, tpd, i };
+      const tier = (TIERS[r.m] && TIERS[r.m]["Medium"]) ? "Medium" : pickTier(TIERS[r.m] || {}, "Medium").tier;
+      return { ...r, tier, curFee: fee, cpt, tpd, crawRank: r.craw, i };
     }
-    const { tok } = pickTier(TIERS[r.m] || {}, effort);
+    const { tier, tok } = pickTier(TIERS[r.m] || {}, effort);
     const tasks = r.mtok / tok;
     const cpt = fee / tasks;
-    return { ...r, curFee: fee, tok, tasks, cpt, tpd: 1 / cpt, i };
+    return { ...r, tier, curFee: fee, tok, tasks, cpt, tpd: 1 / cpt, crawRank: r.craw, i };
   });
   const byCpt = [...rows].sort((a, b) => a.cpt - b.cpt || a.i - b.i);
-  byCpt.forEach((r, idx) => { r.taskRank = idx + 1; r.delta = r.craw - r.taskRank; });
+  byCpt.forEach((r, idx) => { r.taskRank = idx + 1; r.delta = r.crawRank - r.taskRank; });
   return rows;
 }
 
-function inBand(r, band, cycle = state.cycle) {
-  const fee = cycle === "annual" ? (r.feeAnn != null ? r.feeAnn : r.fee) : r.fee;
+function inBand(r, band) {
+  const fee = r.curFee;
   if (band === "budget") return fee <= 30;
   if (band === "pro") return fee > 30 && fee <= 100;
   if (band === "power") return fee > 100 && fee <= 300;
@@ -1180,15 +1253,15 @@ function inBand(r, band, cycle = state.cycle) {
 function renderTable() {
   const isAnn = state.cycle === "annual";
   const rows = buildModel(state.effort, state.cycle);
-  let view = rows.filter(r => inBand(r, state.band, state.cycle));
+  let view = rows.filter(r => inBand(r, state.band));
   if (state.q) {
     const q = state.q.toLowerCase();
-    view = view.filter(r => r.p.toLowerCase().includes(q) || r.m.toLowerCase().includes(q));
+    view = view.filter(r => r.p.toLowerCase().includes(q) || r.m.toLowerCase().includes(q) || (r.tier && r.tier.toLowerCase().includes(q)));
   }
   if (state.metric === "task") {
     view.sort((a, b) => (state.sortKey ? (a[state.sortKey] - b[state.sortKey]) * state.sortDir : a.taskRank - b.taskRank));
   } else {
-    view.sort((a, b) => (state.sortKey ? (a[state.sortKey] - b[state.sortKey]) * state.sortDir : a.raw - b.raw || a.i - b.i));
+    view.sort((a, b) => (state.sortKey ? (a[state.sortKey] - b[state.sortKey]) * state.sortDir : a.raw - b.raw || a.taskRank - b.taskRank));
   }
 
   const tbody = $("#rank-body");
@@ -1196,7 +1269,7 @@ function renderTable() {
   if (!view.length) {
     const tr = document.createElement("tr");
     tr.className = "empty-row";
-    tr.innerHTML = '<td colspan="10">No plans match — clear the search or pick another band.</td>';
+    tr.innerHTML = '<td colspan="11">No plans match — clear the search or pick another band.</td>';
     frag.appendChild(tr);
   }
   view.forEach(r => {
@@ -1204,9 +1277,9 @@ function renderTable() {
     if (r.taskRank === 1) tr.className = "top";
     else if (r.taskRank <= 3) tr.className = "top";
     const shift = r.delta > 0
-      ? `<span class="shift-up" title="raw rank #${r.craw} → task-adjusted #${r.taskRank}">▲ +${r.delta}</span>`
+      ? `<span class="shift-up" title="raw rank #${r.crawRank} → task-adjusted #${r.taskRank}">▲ +${r.delta}</span>`
       : r.delta < 0
-        ? `<span class="shift-dn" title="raw rank #${r.craw} → task-adjusted #${r.taskRank}">▼ −${-r.delta}</span>`
+        ? `<span class="shift-dn" title="raw rank #${r.crawRank} → task-adjusted #${r.taskRank}">▼ −${-r.delta}</span>`
         : '<span class="shift-flat" title="same rank on both metrics">—</span>';
     
     let feeHtml = fmtFee(r.fee);
@@ -1220,10 +1293,11 @@ function renderTable() {
     }
 
     tr.innerHTML =
-      `<td class="al rank">#${state.metric === "task" ? r.taskRank : r.craw}</td>` +
+      `<td class="al rank">#${state.metric === "task" ? r.taskRank : r.crawRank}</td>` +
       `<td class="al">${shift}</td>` +
       `<td class="al plan">${r.p}</td>` +
       `<td class="al model"><code>${r.m}</code></td>` +
+      `<td class="al effort"><span class="tier-pill">${r.tier}</span></td>` +
       `<td class="al">${feeHtml}</td>` +
       `<td>${fmtI(r.tok)}</td>` +
       `<td>${fmtI(r.tasks)}</td>` +
@@ -1240,7 +1314,12 @@ function renderTable() {
   const metricTxt = state.metric === "task"
     ? `ranked by effective cost per task (${isAnn ? "annual commitment" : "monthly billing"})`
     : "ranked by raw token price — switch back to watch the order flip once verbosity is priced in";
-  $("#table-summary").textContent = `Showing ${view.length} of ${ROWS.length} plans · ${metricTxt}`;
+  
+  const countLabel = state.effort === "All"
+    ? `Showing ${view.length} configurations across ${ROWS.length} plans`
+    : `Showing ${view.length} of ${ROWS.length} plans`;
+  $("#table-summary").textContent = `${countLabel} · ${metricTxt}`;
+
   $$("#metric-pills button").forEach(b => {
     const on = b.dataset.metric === state.metric;
     b.classList.toggle("on", on); b.setAttribute("aria-pressed", on);
@@ -1254,11 +1333,19 @@ function renderTable() {
     th.querySelector(".arr").textContent = active ? (state.sortDir === 1 ? "▲" : "▼") : "";
     th.setAttribute("aria-sort", active ? (state.sortDir === 1 ? "ascending" : "descending") : "none");
   });
+
   const off = state.effort !== "Medium";
   $("#effort-note").classList.toggle("show", off);
-  $("#foot-baseline").textContent = off
-    ? `baseline: live ${state.effort}-tier recomputation (${isAnn ? "annual commitment" : "monthly billing"})`
-    : `baseline: Medium reasoning effort (nearest available tier per model; ${isAnn ? "annual commitment" : "monthly billing"})`;
+  if (state.effort === "All") {
+    $("#effort-note").textContent = "All evaluated reasoning effort tiers (Low to Max) displayed across all benchmarked plans — 260 plan × effort configurations live recomputed.";
+    $("#foot-baseline").textContent = `view: all evaluated effort tiers (260 configurations; ${isAnn ? "annual commitment" : "monthly billing"})`;
+  } else if (off) {
+    $("#effort-note").textContent = `Live recomputation at ${state.effort} effort tier — models without ${state.effort} use their nearest available tier.`;
+    $("#foot-baseline").textContent = `baseline: live ${state.effort}-tier recomputation (${isAnn ? "annual commitment" : "monthly billing"})`;
+  } else {
+    $("#foot-baseline").textContent = `baseline: Medium reasoning effort (nearest available tier per model; ${isAnn ? "annual commitment" : "monthly billing"})`;
+  }
+
   $$("#effort-pills button").forEach(b => {
     const on = b.dataset.effort === state.effort;
     b.classList.toggle("on", on); b.setAttribute("aria-pressed", on);
