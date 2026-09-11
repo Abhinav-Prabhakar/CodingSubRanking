@@ -22,7 +22,7 @@ def generate_readme():
 ### Attributions & Upstream Credits
 This project directly builds upon and extends the empirical work of:
 - **[FeiZhuLulu/real-api-pricing](https://github.com/FeiZhuLulu/real-api-pricing)**: The original project that pioneered real AI subscription economics, documenting monthly token quotas, saturation tests, and dollar-per-token metrics across dozens of AI providers. Full credit to [FeiZhuLulu](https://github.com/FeiZhuLulu) and community contributors. See [CREDITS.md](CREDITS.md) and [SOURCES.md](SOURCES.md).
-- **[CursorBench 4.0](https://cursor.com/cursorbench)**: Cursor's empirical benchmark evaluating AI coding agents on ambiguous, multi-file software engineering tasks from real coding sessions. We extract the **output token consumption** (completion tokens per task) directly from CursorBench.
+- **[DeepSWE v1.1](https://deepswe.datacurve.ai/) ([Datacurve](https://datacurve.ai))**: A contamination-free, long-horizon software engineering benchmark (113 original tasks across 91 repos, 5 languages, all models run on the same mini-swe-agent harness). We extract the **median output tokens per task** directly from the public [leaderboard artifact](https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json).
 
 ---
 
@@ -34,8 +34,8 @@ $$\\text{{Real Unit Price}} = \\frac{{\\text{{Monthly Fee}}}}{{\\text{{Monthly U
 While this was a major leap forward over comparing sticker prices, it made an implicit assumption: **that all LLMs consume an equal number of tokens to accomplish the same job.**
 
 In real-world agentic software development, this assumption fails drastically:
-- Some models are highly concise, requiring only **7,000 – 10,000 output tokens** to inspect, edit, test, and complete a complex task.
-- Other models are heavily verbose or require expansive reasoning steps, consuming **120,000 – 160,000 output tokens** for the same workload — a **15× to 20× difference in token consumption**.
+- Some model configurations are highly concise, requiring only **3,000 – 19,000 output tokens** to inspect, edit, test, and complete a complex task.
+- Other configurations are heavily verbose or require expansive reasoning steps, consuming **115,000 – 204,000 output tokens** for the same workload — up to a **~65× difference in token consumption** (DeepSWE v1.1 medians: `gpt-5.6-luna` Low = 3,059 vs `claude-sonnet-5` Max = 203,918).
 
 ### The Task-Adjusted Formulation
 
@@ -55,14 +55,14 @@ To find the true purchasing power of an AI coding subscription, we adjust for ou
 
 ---
 
-## 2. CursorBench 4.0 Token Consumption Data
+## 2. DeepSWE v1.1 Token Consumption Data
 
-Below is the complete dataset extracted directly from [CursorBench 4.0](https://cursor.com/cursorbench). For each model configuration, it records the benchmark score, average cost, steps, and specifically the **Output Tokens / Task** (median completion tokens):
+Below is the complete dataset extracted directly from [DeepSWE v1.1](https://deepswe.datacurve.ai/) (Datacurve). For each of the 70 evaluated configurations (28 models × reasoning effort tiers), it records the benchmark score (Pass@1), average API cost, steps, and specifically the **Output Tokens / Task** (median output tokens, the consumption figure used throughout this project):
 
-{tables['cursorbench_table']}
+{tables['deepswe_table']}
 
 > [!NOTE]
-> For models evaluated across multiple reasoning effort tiers (Low, Medium, High, Extra High, Max), our standard baseline ranking adopts the **Medium** tier (or **Standard** tier for Composer 2.5) to ensure consistent, balanced comparisons across all subscriptions. Full breakdowns across all tiers are exported in `derived/task-ranking.json`.
+> For models evaluated across multiple reasoning effort tiers (Low, Medium, High, Extra High, Max), our standard baseline ranking adopts the **Medium** tier — or the **nearest available tier** for models that were not evaluated at Medium (e.g. `glm-5.3`, `kimi-k3`, and `deepseek-v4-*` were only run at Max; `muse-spark-1.2` at Extra High; `kimi-k2.7-code` has a single Standard configuration). Full breakdowns across all tiers are exported in `derived/task-ranking.json`.
 
 ---
 
@@ -81,13 +81,17 @@ The column **Shift vs Raw** indicates the ranking change compared to the traditi
 ## 4. Key Takeaways & Ranking Shifts
 
 1. **The Verbosity Penalty**:
-   - Models with large raw token allowances like `gemini-3.8-flash` offer tens of billions of tokens, ranking high on raw $/MTok charts. However, at **128,364 output tokens/task**, its effective task cost drops behind more token-efficient models.
-   - Conversely, models like `gpt-5.6-luna` (**7,642 tokens/task**) and `gpt-5.6-terra` (**7,307 tokens/task**) show extreme token efficiency, providing tens of thousands of tasks per dollar.
+   - Models with large raw token allowances like `gemini-3.8-flash` offer tens of billions of tokens, ranking high on raw $/MTok charts. However, at **120,488 median output tokens/task** (Medium tier), its effective task cost falls behind far more token-efficient models.
+   - Conversely, `gpt-5.6-luna` (**7,918 tokens/task**) and `gpt-5.6-terra` (**11,453 tokens/task**) pair DeepSWE-grade competence with extreme token efficiency — `gpt-5.6-terra` plans climb up to **+39 spots** once verbosity is priced in, and Luna plans hold the entire top tier at **47,000 – 95,000 tasks per dollar**.
 
 2. **The Sweet Spot of Coding Workhorses**:
    - **ChatGPT Pro 20x / 5x / Plus (Luna & Terra)** achieve industry-leading task yields due to high monthly pools paired with low completion overhead.
-   - **Composer 2.5** on Cursor Ultra / Pro+ achieves a very balanced **17,347 tokens/task**, jumping into the top tier of developer efficiency at over **5,000 tasks per dollar**.
-   - **Sonnet 5** (**39,114 tokens/task**) and **Opus 5** (**45,272 tokens/task**) offer high quality at moderate token overhead, climbing past more verbose competitors.
+   - **GLM Coding Pro (`glm-5.3-flash`)** breaks into the top 10 at **67,491 tokens/task** on the strength of its enormous quota — despite mid-pack DeepSWE efficiency (63.4% Pass@1 at Max).
+   - **Sonnet 5** (**50,414 tokens/task**) and **Opus 5** (**33,436 tokens/task**) offer high quality at moderate token overhead, climbing past more verbose competitors.
+
+3. **Coverage Flip vs CursorBench**:
+   - DeepSWE covers **21 model families with subscription plans** (vs 11 under CursorBench 4.0): DeepSeek V4, Kimi K3 / K2.7 Code, GLM-5.2 / 5.3, Qwen3.8 Max, Claude Opus 4.8, GPT-5.5, Grok 4.5 and Muse Spark 1.2 all enter the ranking for the first time.
+   - **Composer 2.5** (Cursor) and **Muse Spark 1.3 / 1.3-contributor** have no DeepSWE evaluation yet and are now flagged `[Pending DeepSWE]` — plan rows switch from ranked to pending accordingly.
 
 ---
 
@@ -112,14 +116,14 @@ For heavy agentic automation and team subscriptions:
 
 ## 6. Unbenchmarked Models (Marked for Future Evaluation)
 
-The following models from the `real-api-pricing` dataset have **no CursorBench 4.0 evaluation** at all — meaning their output token consumption per task is unknown. Their ranking values are left empty (`null`) and flagged as **`[Pending CursorBench]`**:
+The following models from the `real-api-pricing` dataset have **no DeepSWE v1.1 evaluation** at all — meaning their output token consumption per task is unknown. Their ranking values are left empty (`null`) and flagged as **`[Pending DeepSWE]`**:
 
-> **Note**: API-only rows (e.g. "Claude Opus 5 API") for models that **are** in CursorBench are intentionally excluded from ranking because they carry no monthly token quota — not because the model itself is unevaluated.
+> **Note**: API-only rows (e.g. "Claude Opus 5 API") for models that **are** in DeepSWE are intentionally excluded from ranking because they carry no monthly token quota — not because the model itself is unevaluated.
 
 {tables['unbenchmarked_table']}
 
 > [!IMPORTANT]
-> When CursorBench or community saturation benchmarks release completion token figures for DeepSeek, Kimi, GLM, Qwen, StepFun, or MiniMax, simply update `data/model-token-consumption.json` and re-run `python3 scripts/compute_task_ranking.py` to seamlessly integrate them into the ranking.
+> When DeepSWE or community saturation benchmarks release completion token figures for Composer, Muse Spark 1.3, DeepSeek V4.1, MiniMax, StepFun, Qwen3.7, or any other pending model, simply update `data/model-token-consumption.json` and re-run `python3 scripts/compute_task_ranking.py` to seamlessly integrate them into the ranking.
 
 ---
 
@@ -130,14 +134,14 @@ Everything has been structured so that the data pipeline is completely reproduci
 ```
 CodingSubRanks/
 ├── README.md                      # Primary comprehensive markdown report (this file)
-├── CREDITS.md                     # Formal attribution to FeiZhuLulu/real-api-pricing & Cursor
+├── CREDITS.md                     # Formal attribution to FeiZhuLulu/real-api-pricing & Datacurve
 ├── SOURCES.md                     # Data sources and methodology documentation
 ├── BUILD.md                       # Instructions to reproduce the calculations
 ├── LICENSE                        # MIT License
 ├── data/
 │   ├── adopted.csv                # Upstream subscription data (196 plan × model points)
-│   ├── cursorbench.json           # Raw extracted CursorBench 4.0 benchmark records
-│   ├── cursorbench.csv            # Tabular CursorBench 4.0 records
+│   ├── deepswe.json               # Raw DeepSWE v1.1 leaderboard artifact (70 configs)
+│   ├── deepswe-configs.json       # Normalized per-config records (tokens, score, cost, steps)
 │   ├── model-token-consumption.json # Canonical mapping with reasoning tiers & null placeholders
 │   └── conventions.json           # Currency rates and conversion conventions
 ├── derived/
@@ -146,19 +150,20 @@ CodingSubRanks/
 │   ├── unbenchmarked-models.json  # Catalog of models awaiting eval
 │   └── unbenchmarked-models.csv   # Tabular catalog of pending models
 ├── scripts/
-│   ├── extract_cursorbench.py     # Parser for CursorBench 4.0
+│   ├── extract_deepswe.py         # Fetcher/parser for DeepSWE v1.1 leaderboard artifact
 │   ├── build_model_consumption_map.py # Builder for canonical model mapping
 │   ├── compute_task_ranking.py    # Core ranking calculation engine
 │   ├── generate_markdown_report.py # Markdown table formatter
 │   └── build_readme.py            # Automated README generator
 └── web/
+    ├── index.html                 # Static showcase page (GitHub Pages)
     ├── schema.json                # JSON Schema data contract for web UI
     └── README.md                  # Web frontend staging documentation
 ```
 
 To regenerate the entire dataset and documentation:
 ```bash
-python3 scripts/extract_cursorbench.py
+python3 scripts/extract_deepswe.py
 python3 scripts/build_model_consumption_map.py
 python3 scripts/compute_task_ranking.py
 python3 scripts/build_readme.py

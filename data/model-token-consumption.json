@@ -1,683 +1,723 @@
 {
   "claude-fable-5": {
     "model_id": "claude-fable-5",
-    "cursorbench_status": "available",
-    "benchmarked_name": "Fable 5.1",
+    "deepswe_status": "available",
+    "benchmarked_name": "Claude Fable 5",
     "default_tier": "Medium",
-    "default_output_tokens_per_task": 45411,
-    "default_score_pct": 46.8,
+    "default_output_tokens_per_task": 35970,
+    "default_score_pct": 65.4,
     "all_tiers": {
-      "Max": 117236,
-      "Extra High": 87294,
-      "High": 58438,
-      "Medium": 45411,
-      "Low": 34795
+      "Low": 22339,
+      "Medium": 35970,
+      "High": 52624,
+      "Extra High": 76036,
+      "Max": 115631
     },
     "all_scores": {
-      "Max": 51.8,
-      "Extra High": 51.6,
-      "High": 49.2,
-      "Medium": 46.8,
-      "Low": 45.1
+      "Low": 59.6,
+      "Medium": 65.4,
+      "High": 68.6,
+      "Extra High": 69.9,
+      "Max": 69.7
     },
-    "note": "CursorBench 4.0 data available across 5 tier(s)"
+    "note": "DeepSWE v1.1 data available across 5 tier(s); baseline = Medium"
   },
   "claude-opus-4.8": {
     "model_id": "claude-opus-4.8",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "Claude Opus 4.8",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 36648,
+    "default_score_pct": 48.7,
+    "all_tiers": {
+      "Low": 25291,
+      "Medium": 36648,
+      "High": 44476,
+      "Extra High": 77961,
+      "Max": 129180
+    },
+    "all_scores": {
+      "Low": 40.8,
+      "Medium": 48.7,
+      "High": 51.8,
+      "Extra High": 54.4,
+      "Max": 59.0
+    },
+    "note": "DeepSWE v1.1 data available across 5 tier(s); baseline = Medium"
   },
   "claude-opus-5": {
     "model_id": "claude-opus-5",
-    "cursorbench_status": "available",
-    "benchmarked_name": "Opus 5",
+    "deepswe_status": "available",
+    "benchmarked_name": "Claude Opus 5",
     "default_tier": "Medium",
-    "default_output_tokens_per_task": 45272,
-    "default_score_pct": 43.3,
+    "default_output_tokens_per_task": 33436,
+    "default_score_pct": 68.9,
     "all_tiers": {
-      "Max": 85384,
-      "Extra High": 80094,
-      "High": 61405,
-      "Medium": 45272,
-      "Low": 31995
+      "Low": 17613,
+      "Medium": 33436,
+      "High": 59856,
+      "Extra High": 87322,
+      "Max": 113366
     },
     "all_scores": {
-      "Max": 46.6,
-      "Extra High": 46.1,
-      "High": 44.7,
-      "Medium": 43.3,
-      "Low": 40.7
+      "Low": 58.1,
+      "Medium": 68.9,
+      "High": 72.8,
+      "Extra High": 73.2,
+      "Max": 73.6
     },
-    "note": "CursorBench 4.0 data available across 5 tier(s)"
+    "note": "DeepSWE v1.1 data available across 5 tier(s); baseline = Medium"
   },
   "claude-sonnet-5": {
     "model_id": "claude-sonnet-5",
-    "cursorbench_status": "available",
-    "benchmarked_name": "Sonnet 5",
+    "deepswe_status": "available",
+    "benchmarked_name": "Claude Sonnet 5",
     "default_tier": "Medium",
-    "default_output_tokens_per_task": 39114,
-    "default_score_pct": 28.0,
+    "default_output_tokens_per_task": 50414,
+    "default_score_pct": 39.8,
     "all_tiers": {
-      "Max": 149257,
-      "Extra High": 83373,
-      "High": 61146,
-      "Medium": 39114,
-      "Low": 23772
+      "Low": 31478,
+      "Medium": 50414,
+      "High": 77993,
+      "Extra High": 113150,
+      "Max": 203918
     },
     "all_scores": {
-      "Max": 34.1,
-      "Extra High": 32.0,
-      "High": 30.8,
-      "Medium": 28.0,
-      "Low": 24.1
+      "Low": 30.5,
+      "Medium": 39.8,
+      "High": 48.2,
+      "Extra High": 49.7,
+      "Max": 53.8
     },
-    "note": "CursorBench 4.0 data available across 5 tier(s)"
+    "note": "DeepSWE v1.1 data available across 5 tier(s); baseline = Medium"
   },
   "composer-2.5": {
     "model_id": "composer-2.5",
-    "cursorbench_status": "available",
-    "benchmarked_name": "Composer 2.5",
-    "default_tier": "Standard",
-    "default_output_tokens_per_task": 17347,
-    "default_score_pct": 27.7,
-    "all_tiers": {
-      "Standard": 17347
-    },
-    "all_scores": {
-      "Standard": 27.7
-    },
-    "note": "CursorBench 4.0 data available across 1 tier(s)"
+    "deepswe_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "deepseek-v4-flash": {
     "model_id": "deepseek-v4-flash",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "DeepSeek V4 Flash",
+    "default_tier": "Max",
+    "default_output_tokens_per_task": 104492,
+    "default_score_pct": 53.3,
+    "all_tiers": {
+      "Max": 104492
+    },
+    "all_scores": {
+      "Max": 53.3
+    },
+    "note": "DeepSWE v1.1 data available across 1 tier(s); baseline = Max (nearest to Medium)"
   },
   "deepseek-v4-flash-fast": {
     "model_id": "deepseek-v4-flash-fast",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "deepseek-v4-pro": {
     "model_id": "deepseek-v4-pro",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "DeepSeek V4 Pro",
+    "default_tier": "Max",
+    "default_output_tokens_per_task": 101214,
+    "default_score_pct": 62.8,
+    "all_tiers": {
+      "Max": 101214
+    },
+    "all_scores": {
+      "Max": 62.8
+    },
+    "note": "DeepSWE v1.1 data available across 1 tier(s); baseline = Max (nearest to Medium)"
   },
   "deepseek-v4.1-flash": {
     "model_id": "deepseek-v4.1-flash",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "gemini-3.7-flash": {
     "model_id": "gemini-3.7-flash",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "Gemini 3.7 Flash",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 87640,
+    "default_score_pct": 65.5,
+    "all_tiers": {
+      "Low": 73220,
+      "Medium": 87640,
+      "High": 99819
+    },
+    "all_scores": {
+      "Low": 53.8,
+      "Medium": 65.5,
+      "High": 65.3
+    },
+    "note": "DeepSWE v1.1 data available across 3 tier(s); baseline = Medium"
   },
   "gemini-3.8-flash": {
     "model_id": "gemini-3.8-flash",
-    "cursorbench_status": "available",
+    "deepswe_status": "available",
     "benchmarked_name": "Gemini 3.8 Flash",
     "default_tier": "Medium",
-    "default_output_tokens_per_task": 128364,
-    "default_score_pct": 37.3,
+    "default_output_tokens_per_task": 120488,
+    "default_score_pct": 71.0,
     "all_tiers": {
-      "High": 162565,
-      "Medium": 128364
+      "Medium": 120488,
+      "High": 138377
     },
     "all_scores": {
-      "High": 39.6,
-      "Medium": 37.3
+      "Medium": 71.0,
+      "High": 73.8
     },
-    "note": "CursorBench 4.0 data available across 2 tier(s)"
+    "note": "DeepSWE v1.1 data available across 2 tier(s); baseline = Medium"
   },
   "glm-5.1": {
     "model_id": "glm-5.1",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "glm-5.2": {
     "model_id": "glm-5.2",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "GLM-5.2",
+    "default_tier": "High",
+    "default_output_tokens_per_task": 48956,
+    "default_score_pct": 36.3,
+    "all_tiers": {
+      "High": 48956,
+      "Max": 75760
+    },
+    "all_scores": {
+      "High": 36.3,
+      "Max": 43.8
+    },
+    "note": "DeepSWE v1.1 data available across 2 tier(s); baseline = High (nearest to Medium)"
   },
   "glm-5.2-fast": {
     "model_id": "glm-5.2-fast",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "glm-5.3": {
     "model_id": "glm-5.3",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "GLM-5.3",
+    "default_tier": "Max",
+    "default_output_tokens_per_task": 74953,
+    "default_score_pct": 69.0,
+    "all_tiers": {
+      "Max": 74953
+    },
+    "all_scores": {
+      "Max": 69.0
+    },
+    "note": "DeepSWE v1.1 data available across 1 tier(s); baseline = Max (nearest to Medium)"
   },
   "glm-5.3-flash": {
     "model_id": "glm-5.3-flash",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "GLM-5.3 Flash",
+    "default_tier": "Max",
+    "default_output_tokens_per_task": 67491,
+    "default_score_pct": 63.4,
+    "all_tiers": {
+      "Max": 67491
+    },
+    "all_scores": {
+      "Max": 63.4
+    },
+    "note": "DeepSWE v1.1 data available across 1 tier(s); baseline = Max (nearest to Medium)"
   },
   "gpt-5.5": {
     "model_id": "gpt-5.5",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "GPT-5.5",
+    "default_tier": "Medium",
+    "default_output_tokens_per_task": 18737,
+    "default_score_pct": 54.0,
+    "all_tiers": {
+      "Low": 9020,
+      "Medium": 18737,
+      "High": 30378,
+      "Extra High": 44492
+    },
+    "all_scores": {
+      "Low": 27.0,
+      "Medium": 54.0,
+      "High": 64.4,
+      "Extra High": 67.0
+    },
+    "note": "DeepSWE v1.1 data available across 4 tier(s); baseline = Medium"
   },
   "gpt-5.6-luna": {
     "model_id": "gpt-5.6-luna",
-    "cursorbench_status": "available",
+    "deepswe_status": "available",
     "benchmarked_name": "GPT-5.6 Luna",
     "default_tier": "Medium",
-    "default_output_tokens_per_task": 7642,
-    "default_score_pct": 22.2,
+    "default_output_tokens_per_task": 7918,
+    "default_score_pct": 11.3,
     "all_tiers": {
-      "Max": 87284,
-      "Extra High": 40598,
-      "High": 23368,
-      "Medium": 7642,
-      "Low": 3288
+      "Low": 3059,
+      "Medium": 7918,
+      "High": 24818,
+      "Extra High": 42374,
+      "Max": 70253
     },
     "all_scores": {
-      "Max": 35.9,
-      "Extra High": 33.0,
-      "High": 29.4,
-      "Medium": 22.2,
-      "Low": 16.0
+      "Low": 1.5,
+      "Medium": 11.3,
+      "High": 44.2,
+      "Extra High": 56.9,
+      "Max": 67.2
     },
-    "note": "CursorBench 4.0 data available across 5 tier(s)"
+    "note": "DeepSWE v1.1 data available across 5 tier(s); baseline = Medium"
   },
   "gpt-5.6-sol": {
     "model_id": "gpt-5.6-sol",
-    "cursorbench_status": "available",
+    "deepswe_status": "available",
     "benchmarked_name": "GPT-5.6 Sol",
     "default_tier": "Medium",
-    "default_output_tokens_per_task": 10111,
-    "default_score_pct": 31.1,
+    "default_output_tokens_per_task": 17645,
+    "default_score_pct": 61.1,
     "all_tiers": {
-      "Max": 42944,
-      "Extra High": 24729,
-      "High": 16174,
-      "Medium": 10111,
-      "Low": 4885
+      "Low": 10062,
+      "Medium": 17645,
+      "High": 27700,
+      "Extra High": 39449,
+      "Max": 58786
     },
     "all_scores": {
-      "Max": 41.7,
-      "Extra High": 37.7,
-      "High": 35.7,
-      "Medium": 31.1,
-      "Low": 24.6
+      "Low": 45.4,
+      "Medium": 61.1,
+      "High": 69.4,
+      "Extra High": 70.7,
+      "Max": 72.7
     },
-    "note": "CursorBench 4.0 data available across 5 tier(s)"
+    "note": "DeepSWE v1.1 data available across 5 tier(s); baseline = Medium"
   },
   "gpt-5.6-terra": {
     "model_id": "gpt-5.6-terra",
-    "cursorbench_status": "available",
+    "deepswe_status": "available",
     "benchmarked_name": "GPT-5.6 Terra",
     "default_tier": "Medium",
-    "default_output_tokens_per_task": 7307,
-    "default_score_pct": 27.6,
+    "default_output_tokens_per_task": 11453,
+    "default_score_pct": 35.1,
     "all_tiers": {
-      "Max": 60814,
-      "Extra High": 23436,
-      "High": 13162,
-      "Medium": 7307,
-      "Low": 5914
+      "Low": 8265,
+      "Medium": 11453,
+      "High": 20866,
+      "Extra High": 38006,
+      "Max": 70835
     },
     "all_scores": {
-      "Max": 41.3,
-      "Extra High": 33.6,
-      "High": 30.7,
-      "Medium": 27.6,
-      "Low": 25.2
+      "Low": 24.1,
+      "Medium": 35.1,
+      "High": 53.8,
+      "Extra High": 60.2,
+      "Max": 69.6
     },
-    "note": "CursorBench 4.0 data available across 5 tier(s)"
+    "note": "DeepSWE v1.1 data available across 5 tier(s); baseline = Medium"
   },
   "grok-4.5": {
     "model_id": "grok-4.5",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "Grok 4.5",
+    "default_tier": "High",
+    "default_output_tokens_per_task": 34250,
+    "default_score_pct": 53.8,
+    "all_tiers": {
+      "High": 34250
+    },
+    "all_scores": {
+      "High": 53.8
+    },
+    "note": "DeepSWE v1.1 data available across 1 tier(s); baseline = High (nearest to Medium)"
   },
   "grok-4.6": {
     "model_id": "grok-4.6",
-    "cursorbench_status": "available",
+    "deepswe_status": "available",
     "benchmarked_name": "Grok 4.6",
     "default_tier": "Medium",
-    "default_output_tokens_per_task": 24893,
-    "default_score_pct": 36.1,
+    "default_output_tokens_per_task": 48586,
+    "default_score_pct": 67.5,
     "all_tiers": {
-      "Extra High": 49814,
-      "High": 41387,
-      "Medium": 24893,
-      "Low": 16307
+      "Low": 14937,
+      "Medium": 48586,
+      "High": 60060,
+      "Extra High": 71285
     },
     "all_scores": {
-      "Extra High": 41.4,
-      "High": 40.4,
-      "Medium": 36.1,
-      "Low": 33.4
+      "Low": 41.6,
+      "Medium": 67.5,
+      "High": 65.2,
+      "Extra High": 66.7
     },
-    "note": "CursorBench 4.0 data available across 4 tier(s)"
+    "note": "DeepSWE v1.1 data available across 4 tier(s); baseline = Medium"
   },
   "hy3": {
     "model_id": "hy3",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "hy4-preview": {
     "model_id": "hy4-preview",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "inkling": {
     "model_id": "inkling",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "inkling-small": {
     "model_id": "inkling-small",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "kimi-k2.6": {
     "model_id": "kimi-k2.6",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "kimi-k2.7-code": {
     "model_id": "kimi-k2.7-code",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "Kimi K2.7 Code",
+    "default_tier": "Standard",
+    "default_output_tokens_per_task": 54054,
+    "default_score_pct": 30.5,
+    "all_tiers": {
+      "Standard": 54054
+    },
+    "all_scores": {
+      "Standard": 30.5
+    },
+    "note": "DeepSWE v1.1 data available across 1 tier(s); baseline = Standard (nearest to Medium)"
   },
   "kimi-k2.7-code-highspeed": {
     "model_id": "kimi-k2.7-code-highspeed",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "kimi-k3": {
     "model_id": "kimi-k3",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "Kimi K3",
+    "default_tier": "Max",
+    "default_output_tokens_per_task": 75383,
+    "default_score_pct": 68.5,
+    "all_tiers": {
+      "Max": 75383
+    },
+    "all_scores": {
+      "Max": 68.5
+    },
+    "note": "DeepSWE v1.1 data available across 1 tier(s); baseline = Max (nearest to Medium)"
   },
   "longcat-2.0": {
     "model_id": "longcat-2.0",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "mimo-v2.5": {
     "model_id": "mimo-v2.5",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "mimo-v2.5-pro": {
     "model_id": "mimo-v2.5-pro",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "minimax-m2.5": {
     "model_id": "minimax-m2.5",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "minimax-m2.7": {
     "model_id": "minimax-m2.7",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "minimax-m3": {
     "model_id": "minimax-m3",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "muse-spark-1.2": {
     "model_id": "muse-spark-1.2",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "Muse Spark 1.2",
+    "default_tier": "Extra High",
+    "default_output_tokens_per_task": 81250,
+    "default_score_pct": 54.9,
+    "all_tiers": {
+      "Extra High": 81250
+    },
+    "all_scores": {
+      "Extra High": 54.9
+    },
+    "note": "DeepSWE v1.1 data available across 1 tier(s); baseline = Extra High (nearest to Medium)"
   },
   "muse-spark-1.2-contributor": {
     "model_id": "muse-spark-1.2-contributor",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "muse-spark-1.3": {
     "model_id": "muse-spark-1.3",
-    "cursorbench_status": "available",
-    "benchmarked_name": "Muse Spark 1.3",
-    "default_tier": "Medium",
-    "default_output_tokens_per_task": 27255,
-    "default_score_pct": 32.6,
-    "all_tiers": {
-      "Max": 52005,
-      "Extra High": 40891,
-      "High": 30654,
-      "Medium": 27255,
-      "Low": 17483,
-      "Minimal": 10620
-    },
-    "all_scores": {
-      "Max": 41.6,
-      "Extra High": 37.5,
-      "High": 33.4,
-      "Medium": 32.6,
-      "Low": 29.3,
-      "Minimal": 24.3
-    },
-    "note": "CursorBench 4.0 data available across 6 tier(s)"
+    "deepswe_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "muse-spark-1.3-contributor": {
     "model_id": "muse-spark-1.3-contributor",
-    "cursorbench_status": "available",
-    "benchmarked_name": "Muse Spark 1.3",
-    "default_tier": "Medium",
-    "default_output_tokens_per_task": 27255,
-    "default_score_pct": 32.6,
-    "all_tiers": {
-      "Max": 52005,
-      "Extra High": 40891,
-      "High": 30654,
-      "Medium": 27255,
-      "Low": 17483,
-      "Minimal": 10620
-    },
-    "all_scores": {
-      "Max": 41.6,
-      "Extra High": 37.5,
-      "High": 33.4,
-      "Medium": 32.6,
-      "Low": 29.3,
-      "Minimal": 24.3
-    },
-    "note": "CursorBench 4.0 data available across 6 tier(s)"
+    "deepswe_status": "pending",
+    "benchmarked_name": null,
+    "default_tier": null,
+    "default_output_tokens_per_task": null,
+    "default_score_pct": null,
+    "all_tiers": {},
+    "all_scores": {},
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "nemotron-3-ultra": {
     "model_id": "nemotron-3-ultra",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "omen-alpha": {
     "model_id": "omen-alpha",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "qwen3.6-plus": {
     "model_id": "qwen3.6-plus",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "qwen3.7-max": {
     "model_id": "qwen3.7-max",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "qwen3.7-plus": {
     "model_id": "qwen3.7-plus",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "qwen3.8-27b": {
     "model_id": "qwen3.8-27b",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "qwen3.8-flash": {
     "model_id": "qwen3.8-flash",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "qwen3.8-max": {
     "model_id": "qwen3.8-max",
-    "cursorbench_status": "pending",
-    "benchmarked_name": null,
-    "default_tier": null,
-    "default_output_tokens_per_task": null,
-    "default_score_pct": null,
-    "all_tiers": {},
-    "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "deepswe_status": "available",
+    "benchmarked_name": "Qwen3.8 Max",
+    "default_tier": "Extra High",
+    "default_output_tokens_per_task": 89729,
+    "default_score_pct": 57.5,
+    "all_tiers": {
+      "Extra High": 89729
+    },
+    "all_scores": {
+      "Extra High": 57.5
+    },
+    "note": "DeepSWE v1.1 data available across 1 tier(s); baseline = Extra High (nearest to Medium)"
   },
   "qwen3.8-max-0902": {
     "model_id": "qwen3.8-max-0902",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "step-3.5-flash": {
     "model_id": "step-3.5-flash",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   },
   "step-3.7-flash": {
     "model_id": "step-3.7-flash",
-    "cursorbench_status": "pending",
+    "deepswe_status": "pending",
     "benchmarked_name": null,
     "default_tier": null,
     "default_output_tokens_per_task": null,
     "default_score_pct": null,
     "all_tiers": {},
     "all_scores": {},
-    "note": "Not evaluated on CursorBench 4.0; marked pending"
+    "note": "Not evaluated on DeepSWE v1.1; marked pending"
   }
 }

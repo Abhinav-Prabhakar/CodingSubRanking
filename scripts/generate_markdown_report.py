@@ -58,17 +58,17 @@ def build_markdown_tables():
     with open(DERIVED_DIR / "unbenchmarked-models.json", "r", encoding="utf-8") as f:
         unbenchmarked = json.load(f)
 
-    with open(DATA_DIR / "cursorbench.json", "r", encoding="utf-8") as f:
-        cb_list = json.load(f)
+    with open(DATA_DIR / "deepswe-configs.json", "r", encoding="utf-8") as f:
+        dswe_list = json.load(f)
 
-    # 1. CursorBench Summary Table
-    cb_headers = ["Rank", "Model & Effort Tier", "CursorBench Score", "Cost / Task", "Output Tokens / Task", "Steps / Task"]
+    # 1. DeepSWE Summary Table
+    cb_headers = ["Rank", "Model & Effort Tier", "DeepSWE Score (Pass@1)", "Cost / Task", "Output Tokens / Task (median)", "Steps / Task"]
     cb_align = ["center", "left", "right", "right", "right", "right"]
     cb_rows = []
-    for entry in cb_list:
+    for entry in dswe_list:
         cb_rows.append([
             f"#{entry['rank']}",
-            entry["display_name"],
+            f"{entry['display_name']} {entry['reasoning_effort']}",
             f"{entry['score_pct']:.1f}%",
             f"${entry['cost_usd_per_task']:.2f}",
             f"{entry['output_tokens_per_task']:,}",
@@ -133,7 +133,7 @@ def build_markdown_tables():
     # 4. Unbenchmarked Models Summary Table
     # Load model-token-consumption map to distinguish truly-pending models from
     # API-only rows for benchmarked models (which have monthly_tokens=0 but the
-    # model IS in CursorBench — those should NOT appear in this table).
+    # model IS in DeepSWE — those should NOT appear in this table).
     with open(DATA_DIR / "model-token-consumption.json", "r", encoding="utf-8") as f:
         model_map = json.load(f)
 
@@ -141,13 +141,13 @@ def build_markdown_tables():
     unbench_by_model = {}
     for u in unbenchmarked:
         m = u["served_model"]
-        if model_map.get(m, {}).get("cursorbench_status", "pending") != "pending":
-            continue  # Skip API-only rows for CursorBench-benchmarked models
+        if model_map.get(m, {}).get("deepswe_status", "pending") != "pending":
+            continue  # Skip API-only rows for DeepSWE-benchmarked models
         if m not in unbench_by_model:
             unbench_by_model[m] = []
         unbench_by_model[m].append(u["plan_name"])
 
-    unbench_headers = ["Served Model", "Plans Offering This Model", "CursorBench Status", "Action Plan"]
+    unbench_headers = ["Served Model", "Plans Offering This Model", "DeepSWE Status", "Action Plan"]
     unbench_align = ["left", "left", "center", "left"]
     unbench_rows = []
     for m in sorted(unbench_by_model.keys()):
@@ -157,13 +157,13 @@ def build_markdown_tables():
         unbench_rows.append([
             f"`{m}`",
             plans_str,
-            "⚠️ [Pending CursorBench]",
-            "Awaiting evaluation in CursorBench or community saturation run"
+            "⚠️ [Pending DeepSWE]",
+            "Awaiting evaluation in DeepSWE or community saturation run"
         ])
     unbench_md = format_table(unbench_rows, unbench_headers, unbench_align)
 
     return {
-        "cursorbench_table": cb_md,
+        "deepswe_table": cb_md,
         "main_ranking_table": main_md,
         "band_tables": band_tables,
         "unbenchmarked_table": unbench_md

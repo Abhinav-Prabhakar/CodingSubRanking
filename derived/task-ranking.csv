@@ -1,40 +1,113 @@
-task_rank,cohort_raw_rank,rank_delta,plan_name,price_usd,served_model,output_tokens_per_task,cursorbench_score_pct,monthly_tokens,monthly_tasks,cost_per_task_usd,tasks_per_dollar,raw_usd_per_mtok,confidence,plan_id
-1,2,1,ChatGPT Pro 20x,200.0,gpt-5.6-luna,7642,22.2,150222000000,19657419.5,1e-05,98287.1,0.00133,medium,chatgpt_pro_20x
-2,4,2,ChatGPT Plus,20.0,gpt-5.6-luna,7642,22.2,7511000000,982857.9,2e-05,49142.9,0.00266,high,chatgpt_plus
-3,5,2,ChatGPT Pro 5x,100.0,gpt-5.6-luna,7642,22.2,37556000000,4914420.3,2e-05,49144.2,0.00266,medium,chatgpt_pro_5x
-4,1,-3,OpenCode Go,10.0,muse-spark-1.3-contributor,27255,32.6,12500000000,458631.4,2.2e-05,45863.1,0.0008,medium,opencode_go
-5,9,4,ChatGPT Pro 20x,200.0,gpt-5.6-terra,7307,27.6,24024000000,3287806.2,6.1e-05,16439.0,0.00833,medium,chatgpt_pro_20x
-6,3,-3,Command Code GOAT,10.0,muse-spark-1.3-contributor,27255,32.6,4166700000,152878.4,6.5e-05,15287.8,0.0024,medium,command_code_goat
-7,14,7,Command Code GOAT,10.0,gpt-5.6-luna,7642,22.2,714300000,93470.3,0.000107,9347.0,0.014,medium,command_code_goat
-8,17,9,ChatGPT Plus,20.0,gpt-5.6-terra,7307,27.6,1201200000,164390.3,0.000122,8219.5,0.01665,medium,chatgpt_plus
-9,18,9,ChatGPT Pro 5x,100.0,gpt-5.6-terra,7307,27.6,6006000000,821951.6,0.000122,8219.5,0.01665,medium,chatgpt_pro_5x
-10,19,9,OpenCode Go,10.0,gpt-5.6-luna,7642,22.2,535700000,70099.5,0.000143,7009.9,0.01867,medium,opencode_go
-11,15,4,ChatGPT Pro 20x,200.0,gpt-5.6-sol,10111,31.1,12320000000,1218474.9,0.000164,6092.4,0.01623,high,chatgpt_pro_20x
-12,10,-2,Cursor Ultra (Standard),200.0,composer-2.5,17347,27.7,19892600000,1146745.8,0.000174,5733.7,0.01005,medium,cursor_ultra
-13,11,-2,Cursor Pro+ (Standard),60.0,composer-2.5,17347,27.7,5304700000,305799.3,0.000196,5096.7,0.01131,low,cursor_pro_plus
-14,6,-8,Claude Pro,20.0,claude-sonnet-5,39114,28.0,3970000000,101498.2,0.000197,5074.9,0.00504,medium,claude_pro
-15,7,-8,Claude Max 20x (9/14+),200.0,claude-sonnet-5,39114,28.0,39250000000,1003477.0,0.000199,5017.4,0.0051,medium,claude_max_20x
-16,8,-8,Claude Max 5x (9/14+),100.0,claude-sonnet-5,39114,28.0,19625000000,501738.5,0.000199,5017.4,0.0051,low,claude_max_5x
-17,16,-1,Cursor Pro (Standard),20.0,composer-2.5,17347,27.7,1208400000,69660.5,0.000287,3483.0,0.01655,medium,cursor_pro
-18,24,6,ChatGPT Plus,20.0,gpt-5.6-sol,10111,31.1,616000000,60923.7,0.000328,3046.2,0.03247,medium,chatgpt_plus
-19,25,6,ChatGPT Pro 5x,100.0,gpt-5.6-sol,10111,31.1,3080000000,304618.7,0.000328,3046.2,0.03247,medium,chatgpt_pro_5x
-20,21,1,Cursor Ultra (Composer Fast),200.0,composer-2.5,17347,27.7,7058700000,406911.9,0.000492,2034.6,0.02833,medium,cursor_ultra_composer_fast
-21,23,2,Cursor Pro+ (Composer Fast),60.0,composer-2.5,17347,27.7,1882300000,108508.7,0.000553,1808.5,0.03188,low,cursor_pro_plus_composer_fast
-22,12,-10,Claude Max 20x (9/14+),200.0,claude-opus-5,45272,43.3,15700000000,346792.7,0.000577,1734.0,0.01274,medium,claude_max_20x
-23,13,-10,Claude Max 5x (9/14+),100.0,claude-opus-5,45272,43.3,7850000000,173396.4,0.000577,1734.0,0.01274,medium,claude_max_5x
-24,20,-4,Cursor Ultra,200.0,grok-4.6,24893,36.1,7737000000,310810.3,0.000643,1554.1,0.02585,medium,cursor_ultra
-25,22,-3,Cursor Pro+,60.0,grok-4.6,24893,36.1,2063200000,82882.7,0.000724,1381.4,0.02908,medium,cursor_pro_plus
-26,27,1,Cursor Pro (Composer Fast),20.0,composer-2.5,17347,27.7,428800000,24719.0,0.000809,1235.9,0.04664,medium,cursor_pro_composer_fast
-27,35,8,Command Code GOAT,10.0,gpt-5.6-sol,10111,31.1,100000000,9890.2,0.001011,989.0,0.1,medium,command_code_goat
-28,26,-2,Cursor Pro,20.0,grok-4.6,24893,36.1,470000000,18880.8,0.001059,944.0,0.04255,medium,cursor_pro
-29,28,-1,SuperGrok Plus,100.0,grok-4.6,24893,36.1,2040000000,81950.7,0.00122,819.5,0.04902,medium,supergrok_plus
-30,30,0,SuperGrok,30.0,grok-4.6,24893,36.1,509000000,20447.5,0.001467,681.6,0.05894,high,supergrok
-31,31,0,SuperGrok Heavy,300.0,grok-4.6,24893,36.1,5090000000,204475.2,0.001467,681.6,0.05894,medium,supergrok_heavy
-32,32,0,Cursor Ultra (Fast),200.0,grok-4.6,24893,36.1,3074000000,123488.5,0.00162,617.4,0.06506,high,cursor_ultra_fast
-33,33,0,SuperGrok Lite,10.0,grok-4.6,24893,36.1,150000000,6025.8,0.00166,602.6,0.06667,low,supergrok_lite
-34,34,0,Command Code GOAT,10.0,muse-spark-1.3,27255,32.6,106400000,3903.9,0.002562,390.4,0.09398,medium,command_code_goat
-35,36,1,Claude Max 5x (9/14+),100.0,claude-fable-5,45411,46.8,923500000,20336.5,0.004917,203.4,0.10828,low,claude_max_5x
-36,29,-7,Command Code GOAT,10.0,gemini-3.8-flash,128364,37.3,195400000,1522.2,0.006569,152.2,0.05118,medium,command_code_goat
-37,38,1,Command Code GOAT,10.0,grok-4.6,24893,36.1,36300000,1458.2,0.006858,145.8,0.27548,medium,command_code_goat
-38,37,-1,Claude Max 20x (9/14+),200.0,claude-fable-5,45411,46.8,1207700000,26594.9,0.00752,133.0,0.1656,low,claude_max_20x
-39,39,0,OpenCode Go,10.0,grok-4.6,24893,36.1,27200000,1092.7,0.009152,109.3,0.36765,medium,opencode_go
+task_rank,cohort_raw_rank,rank_delta,plan_name,price_usd,served_model,output_tokens_per_task,benchmark_score_pct,monthly_tokens,monthly_tasks,cost_per_task_usd,tasks_per_dollar,raw_usd_per_mtok,confidence,plan_id
+1,1,0,ChatGPT Pro 20x,200.0,gpt-5.6-luna,7918,11.3,150222000000,18972215.2,1.1e-05,94861.1,0.00133,medium,chatgpt_pro_20x
+2,2,0,ChatGPT Plus,20.0,gpt-5.6-luna,7918,11.3,7511000000,948598.1,2.1e-05,47429.9,0.00266,high,chatgpt_plus
+3,3,0,ChatGPT Pro 5x,100.0,gpt-5.6-luna,7918,11.3,37556000000,4743116.9,2.1e-05,47431.2,0.00266,medium,chatgpt_pro_5x
+4,17,13,ChatGPT Pro 20x,200.0,gpt-5.6-terra,11453,35.1,24024000000,2097616.3,9.5e-05,10488.1,0.00833,medium,chatgpt_pro_20x
+5,34,29,Command Code GOAT,10.0,gpt-5.6-luna,7918,11.3,714300000,90212.2,0.000111,9021.2,0.014,medium,command_code_goat
+6,45,39,OpenCode Go,10.0,gpt-5.6-luna,7918,11.3,535700000,67656.0,0.000148,6765.6,0.01867,medium,opencode_go
+7,39,32,ChatGPT Plus,20.0,gpt-5.6-terra,11453,35.1,1201200000,104880.8,0.000191,5244.0,0.01665,medium,chatgpt_plus
+8,40,32,ChatGPT Pro 5x,100.0,gpt-5.6-terra,11453,35.1,6006000000,524404.1,0.000191,5244.0,0.01665,medium,chatgpt_pro_5x
+9,4,-5,GLM Coding Pro (老客 ¥149) 闲时,21.98,glm-5.3-flash,67491,63.4,7699000000,114074.5,0.000193,5189.9,0.00285,high,glm_coding_pro_cn_old_offpeak
+10,9,-1,Claude Pro,20.0,claude-sonnet-5,50414,39.8,3970000000,78748.0,0.000254,3937.4,0.00504,medium,claude_pro
+11,5,-6,GLM Coding Pro (老客 ¥149) 中间值,21.98,glm-5.3-flash,67491,63.4,5774000000,85552.1,0.000257,3892.3,0.00381,high,glm_coding_pro_cn_old_mid
+12,10,-2,Claude Max 20x (9/14+),200.0,claude-sonnet-5,50414,39.8,39250000000,778553.6,0.000257,3892.8,0.0051,medium,claude_max_20x
+13,11,-2,Claude Max 5x (9/14+),100.0,claude-sonnet-5,50414,39.8,19625000000,389276.8,0.000257,3892.8,0.0051,low,claude_max_5x
+14,6,-8,GLM Coding Max (老客 ¥469) 闲时,69.19,glm-5.3-flash,67491,63.4,17965000000,266183.6,0.00026,3847.1,0.00385,high,glm_coding_max_cn_old_offpeak
+15,38,23,ChatGPT Pro 20x,200.0,gpt-5.6-sol,17645,61.1,12320000000,698214.8,0.000286,3491.1,0.01623,high,chatgpt_pro_20x
+16,12,-4,GLM Coding Max (老客 ¥469) 中间值,69.19,glm-5.3-flash,67491,63.4,13473000000,199626.6,0.000347,2885.2,0.00514,high,glm_coding_max_cn_old_mid
+17,13,-4,GLM Coding Lite (老客 ¥49) 闲时,7.23,glm-5.3-flash,67491,63.4,1283000000,19009.9,0.00038,2629.3,0.00563,high,glm_coding_lite_cn_old_offpeak
+18,14,-4,GLM Coding Pro (老客 ¥149) 忙时,21.98,glm-5.3-flash,67491,63.4,3850000000,57044.6,0.000385,2595.3,0.00571,high,glm_coding_pro_cn_old_peak
+19,49,30,ChatGPT Pro 20x,200.0,gpt-5.5,18737,54.0,9609600000,512867.6,0.00039,2564.3,0.02081,medium,chatgpt_pro_20x
+20,29,9,Claude Max 20x (9/14+),200.0,claude-opus-5,33436,68.9,15700000000,469553.8,0.000426,2347.8,0.01274,medium,claude_max_20x
+21,30,9,Claude Max 5x (9/14+),100.0,claude-opus-5,33436,68.9,7850000000,234776.9,0.000426,2347.8,0.01274,medium,claude_max_5x
+22,28,6,Claude Pro,20.0,claude-opus-4.8,36648,48.7,1588000000,43331.2,0.000462,2166.6,0.01259,medium,claude_pro
+23,31,8,Claude Max 20x (9/14+),200.0,claude-opus-4.8,36648,48.7,15700000000,428399.9,0.000467,2142.0,0.01274,low,claude_max_20x
+24,7,-17,Ollama Pro,20.0,deepseek-v4-flash,104492,53.3,4327400000,41413.7,0.000483,2070.7,0.00462,medium,ollama_pro
+25,8,-17,Ollama Max,100.0,deepseek-v4-flash,104492,53.3,21637200000,207070.4,0.000483,2070.7,0.00462,medium,ollama_max
+26,15,-11,GLM Coding Lite (老客 ¥49) 中间值,7.23,glm-5.3-flash,67491,63.4,962000000,14253.8,0.000507,1971.5,0.00751,high,glm_coding_lite_cn_old_mid
+27,16,-11,GLM Coding Max (老客 ¥469) 忙时,69.19,glm-5.3-flash,67491,63.4,8982000000,133084.4,0.00052,1923.5,0.0077,high,glm_coding_max_cn_old_peak
+28,63,35,ChatGPT Plus,20.0,gpt-5.6-sol,17645,61.1,616000000,34910.7,0.000573,1745.5,0.03247,medium,chatgpt_plus
+29,64,35,ChatGPT Pro 5x,100.0,gpt-5.6-sol,17645,61.1,3080000000,174553.7,0.000573,1745.5,0.03247,medium,chatgpt_pro_5x
+30,18,-12,Command Code GOAT,10.0,glm-5.3-flash,67491,63.4,1168700000,17316.4,0.000577,1731.6,0.00856,medium,command_code_goat
+31,20,-11,GLM Coding Max (新客 ¥1078) 闲时,159.03,glm-5.3-flash,67491,63.4,17965000000,266183.6,0.000597,1673.8,0.00885,high,glm_coding_max_cn_new_offpeak
+32,19,-13,GLM Coding Pro (老客 ¥149) 闲时,21.98,glm-5.3,74953,69.0,2540000000,33887.9,0.000649,1541.8,0.00865,high,glm_coding_pro_cn_old_offpeak
+33,21,-12,GLM Coding Pro (新客 ¥538) 闲时,79.37,glm-5.3-flash,67491,63.4,7699000000,114074.5,0.000696,1437.2,0.01031,high,glm_coding_pro_cn_new_offpeak
+34,22,-12,GLM Coding Lite (老客 ¥49) 忙时,7.23,glm-5.3-flash,67491,63.4,642000000,9512.4,0.00076,1315.7,0.01126,high,glm_coding_lite_cn_old_peak
+35,23,-12,Ollama Pro,20.0,glm-5.3-flash,67491,63.4,1753100000,25975.3,0.00077,1298.8,0.01141,medium,ollama_pro
+36,24,-12,Ollama Max,100.0,glm-5.3-flash,67491,63.4,8765500000,129876.6,0.00077,1298.8,0.01141,medium,ollama_max
+37,70,33,ChatGPT Plus,20.0,gpt-5.5,18737,54.0,480500000,25644.4,0.00078,1282.2,0.04162,medium,chatgpt_plus
+38,71,33,ChatGPT Pro 5x,100.0,gpt-5.5,18737,54.0,2402400000,128216.9,0.00078,1282.2,0.04163,medium,chatgpt_pro_5x
+39,27,-12,GLM Coding Max (新客 ¥1078) 中间值,159.03,glm-5.3-flash,67491,63.4,13473000000,199626.6,0.000797,1255.3,0.0118,high,glm_coding_max_cn_new_mid
+40,25,-15,GLM Coding Pro (老客 ¥149) 中间值,21.98,glm-5.3,74953,69.0,1905000000,25415.9,0.000865,1156.3,0.01154,high,glm_coding_pro_cn_old_mid
+41,26,-15,GLM Coding Max (老客 ¥469) 闲时,69.19,glm-5.3,74953,69.0,5926000000,79062.9,0.000875,1142.7,0.01168,high,glm_coding_max_cn_old_offpeak
+42,56,14,Cursor Ultra,200.0,grok-4.5,34250,53.8,7737000000,225897.8,0.000885,1129.5,0.02585,medium,cursor_ultra
+43,32,-11,GLM Coding Lite (新客 ¥118) 闲时,17.41,glm-5.3-flash,67491,63.4,1283000000,19009.9,0.000916,1091.9,0.01357,high,glm_coding_lite_cn_new_offpeak
+44,33,-11,GLM Coding Pro (新客 ¥538) 中间值,79.37,glm-5.3-flash,67491,63.4,5774000000,85552.1,0.000928,1077.9,0.01375,high,glm_coding_pro_cn_new_mid
+45,46,1,Kimi 会员 199,29.36,kimi-k2.7-code,54054,30.5,1568000000,29008.0,0.001012,988.0,0.01872,medium,kimi_allegretto_cn
+46,37,-9,GLM Coding Max (老客 ¥469) 中间值,69.19,glm-5.3,74953,69.0,4445000000,59303.8,0.001167,857.1,0.01557,high,glm_coding_max_cn_old_mid
+47,51,4,Kimi 会员 699,103.12,kimi-k2.7-code,54054,30.5,4704000000,87024.1,0.001185,843.9,0.02192,medium,kimi_allegro_cn
+48,43,-5,GLM Coding Max (新客 ¥1078) 忙时,159.03,glm-5.3-flash,67491,63.4,8982000000,133084.4,0.001195,836.9,0.01771,high,glm_coding_max_cn_new_peak
+49,44,-5,GLM Coding Lite (新客 ¥118) 中间值,17.41,glm-5.3-flash,67491,63.4,962000000,14253.8,0.001221,818.7,0.0181,high,glm_coding_lite_cn_new_mid
+50,57,7,Cursor Ultra,200.0,grok-4.6,48586,67.5,7737000000,159243.4,0.001256,796.2,0.02585,medium,cursor_ultra
+51,41,-10,GLM Coding Lite (老客 ¥49) 闲时,7.23,glm-5.3,74953,69.0,423000000,5643.5,0.001281,780.6,0.01709,high,glm_coding_lite_cn_old_offpeak
+52,42,-10,GLM Coding Pro (老客 ¥149) 忙时,21.98,glm-5.3,74953,69.0,1270000000,16944.0,0.001297,770.9,0.01731,high,glm_coding_pro_cn_old_peak
+53,48,-5,GLM Coding Pro (新客 ¥538) 忙时,79.37,glm-5.3-flash,67491,63.4,3850000000,57044.6,0.001391,718.7,0.02061,high,glm_coding_pro_cn_new_peak
+54,61,7,Cursor Pro+,60.0,grok-4.6,48586,67.5,2063200000,42464.9,0.001413,707.7,0.02908,medium,cursor_pro_plus
+55,35,-20,Ollama Pro,20.0,deepseek-v4-pro,101214,62.8,1409400000,13925.0,0.001436,696.2,0.01419,medium,ollama_pro
+56,36,-20,Ollama Max,100.0,deepseek-v4-pro,101214,62.8,7047200000,69626.7,0.001436,696.3,0.01419,medium,ollama_max
+57,47,-10,Kimi 会员 199,29.36,kimi-k3,75383,68.5,1451000000,19248.4,0.001525,655.6,0.02023,medium,kimi_allegretto_cn
+58,53,-5,OpenCode Go,10.0,glm-5.3-flash,67491,63.4,438300000,6494.2,0.00154,649.4,0.02282,medium,opencode_go
+59,52,-7,GLM Coding Lite (老客 ¥49) 中间值,7.23,glm-5.3,74953,69.0,317000000,4229.3,0.001709,585.0,0.0228,high,glm_coding_lite_cn_old_mid
+60,54,-6,GLM Coding Max (老客 ¥469) 忙时,69.19,glm-5.3,74953,69.0,2963000000,39531.4,0.00175,571.3,0.02335,high,glm_coding_max_cn_old_peak
+61,99,38,Command Code GOAT,10.0,gpt-5.6-sol,17645,61.1,100000000,5667.3,0.001765,566.7,0.1,medium,command_code_goat
+62,55,-7,Kimi 会员 699,103.12,kimi-k3,75383,68.5,4353000000,57745.1,0.001786,560.0,0.02369,medium,kimi_allegro_cn
+63,59,-4,GLM Coding Lite (新客 ¥118) 忙时,17.41,glm-5.3-flash,67491,63.4,642000000,9512.4,0.00183,546.4,0.02711,high,glm_coding_lite_cn_new_peak
+64,67,3,OpenCode Go,10.0,kimi-k2.7-code,54054,30.5,273100000,5052.4,0.001979,505.2,0.03662,medium,opencode_go
+65,68,3,Command Code GOAT,10.0,kimi-k2.7-code,54054,30.5,273100000,5052.4,0.001979,505.2,0.03662,medium,command_code_goat
+66,58,-8,GLM Coding Max (新客 ¥1078) 闲时,159.03,glm-5.3,74953,69.0,5926000000,79062.9,0.002011,497.2,0.02684,high,glm_coding_max_cn_new_offpeak
+67,83,16,SuperGrok Heavy,300.0,grok-4.5,34250,53.8,5090000000,148613.1,0.002019,495.4,0.05894,medium,supergrok_heavy
+68,84,16,SuperGrok,30.0,grok-4.5,34250,53.8,509000000,14861.3,0.002019,495.4,0.05894,medium,supergrok
+69,73,4,Cursor Pro,20.0,grok-4.6,48586,67.5,470000000,9673.6,0.002067,483.7,0.04255,medium,cursor_pro
+70,74,4,Command Code GOAT,10.0,glm-5.2,48956,36.3,234100000,4781.8,0.002091,478.2,0.04272,medium,command_code_goat
+71,50,-21,Command Code GOAT,10.0,deepseek-v4-pro,101214,62.8,469800000,4641.7,0.002154,464.2,0.02129,medium,command_code_goat
+72,62,-10,GLM Coding Pro (新客 ¥538) 闲时,79.37,glm-5.3,74953,69.0,2540000000,33887.9,0.002342,427.0,0.03125,high,glm_coding_pro_cn_new_offpeak
+73,76,3,SuperGrok Plus,100.0,grok-4.6,48586,67.5,2040000000,41987.4,0.002382,419.9,0.04902,medium,supergrok_plus
+74,77,3,OpenCode Go,10.0,glm-5.2,48956,36.3,200700000,4099.6,0.002439,410.0,0.04983,medium,opencode_go
+75,75,0,Kimi 会员 99,14.6,kimi-k2.7-code,54054,30.5,314000000,5809.0,0.002513,397.9,0.04651,medium,kimi_moderato_cn
+76,65,-11,GLM Coding Lite (老客 ¥49) 忙时,7.23,glm-5.3,74953,69.0,212000000,2828.4,0.002556,391.2,0.0341,high,glm_coding_lite_cn_old_peak
+77,66,-11,GLM Coding Max (新客 ¥1078) 中间值,159.03,glm-5.3,74953,69.0,4445000000,59303.8,0.002682,372.9,0.03578,high,glm_coding_max_cn_new_mid
+78,85,7,SuperGrok,30.0,grok-4.6,48586,67.5,509000000,10476.3,0.002864,349.2,0.05894,high,supergrok
+79,86,7,SuperGrok Heavy,300.0,grok-4.6,48586,67.5,5090000000,104762.7,0.002864,349.2,0.05894,medium,supergrok_heavy
+80,60,-20,OpenCode Go,10.0,deepseek-v4-pro,101214,62.8,352400000,3481.7,0.002872,348.2,0.02838,medium,opencode_go
+81,69,-12,GLM Coding Lite (新客 ¥118) 闲时,17.41,glm-5.3,74953,69.0,423000000,5643.5,0.003085,324.2,0.04115,high,glm_coding_lite_cn_new_offpeak
+82,72,-10,GLM Coding Pro (新客 ¥538) 中间值,79.37,glm-5.3,74953,69.0,1905000000,25415.9,0.003123,320.2,0.04166,high,glm_coding_pro_cn_new_mid
+83,88,5,Cursor Ultra (Fast),200.0,grok-4.6,48586,67.5,3074000000,63269.3,0.003161,316.3,0.06506,high,cursor_ultra_fast
+84,89,5,SuperGrok Lite,10.0,grok-4.6,48586,67.5,150000000,3087.3,0.003239,308.7,0.06667,low,supergrok_lite
+85,78,-7,Kimi 会员 99,14.6,kimi-k3,75383,68.5,290000000,3847.0,0.003795,263.5,0.05036,medium,kimi_moderato_cn
+86,100,14,Claude Max 5x (9/14+),100.0,claude-fable-5,35970,65.4,923500000,25674.2,0.003895,256.7,0.10828,low,claude_max_5x
+87,90,3,Ollama Max,100.0,kimi-k2.7-code,54054,30.5,1365700000,25265.5,0.003958,252.7,0.07322,medium,ollama_max
+88,91,3,Ollama Pro,20.0,kimi-k2.7-code,54054,30.5,273100000,5052.4,0.003959,252.6,0.07323,medium,ollama_pro
+89,81,-8,GLM Coding Max (新客 ¥1078) 忙时,159.03,glm-5.3,74953,69.0,2963000000,39531.4,0.004023,248.6,0.05367,high,glm_coding_max_cn_new_peak
+90,82,-8,GLM Coding Lite (新客 ¥118) 中间值,17.41,glm-5.3,74953,69.0,317000000,4229.3,0.004117,242.9,0.05491,high,glm_coding_lite_cn_new_mid
+91,79,-12,Command Code GOAT,10.0,gemini-3.7-flash,87640,65.5,195400000,2229.6,0.004485,223.0,0.05118,medium,command_code_goat
+92,87,-5,GLM Coding Pro (新客 ¥538) 忙时,79.37,glm-5.3,74953,69.0,1270000000,16944.0,0.004684,213.5,0.06249,high,glm_coding_pro_cn_new_peak
+93,95,2,Ollama Pro,20.0,glm-5.2,48956,36.3,200700000,4099.6,0.004879,205.0,0.09965,medium,ollama_pro
+94,97,3,Ollama Max,100.0,glm-5.2,48956,36.3,1003300000,20493.9,0.004879,204.9,0.09967,medium,ollama_max
+95,93,-2,Kimi 会员 49,7.23,kimi-k2.7-code,54054,30.5,78000000,1443.0,0.00501,199.6,0.09267,medium,kimi_andante_cn
+96,105,9,Claude Max 20x (9/14+),200.0,claude-fable-5,35970,65.4,1207700000,33575.2,0.005957,167.9,0.1656,low,claude_max_20x
+97,92,-5,GLM Coding Lite (新客 ¥118) 忙时,17.41,glm-5.3,74953,69.0,212000000,2828.4,0.006155,162.5,0.08211,high,glm_coding_lite_cn_new_peak
+98,80,-18,Command Code GOAT,10.0,gemini-3.8-flash,120488,71.0,195400000,1621.7,0.006166,162.2,0.05118,medium,command_code_goat
+99,96,-3,Ollama Pro,20.0,glm-5.3,74953,69.0,200700000,2677.7,0.007469,133.9,0.09965,medium,ollama_pro
+100,98,-2,Ollama Max,100.0,glm-5.3,74953,69.0,1003300000,13385.7,0.007471,133.9,0.09967,medium,ollama_max
+101,94,-7,Command Code GOAT,10.0,muse-spark-1.2,81250,54.9,106400000,1309.5,0.007636,131.0,0.09398,medium,command_code_goat
+102,110,8,Command Code GOAT,10.0,grok-4.5,34250,53.8,36300000,1059.9,0.009435,106.0,0.27548,medium,command_code_goat
+103,101,-2,Ollama Max,100.0,kimi-k3,75383,68.5,732600000,9718.4,0.01029,97.2,0.1365,medium,ollama_max
+104,102,-2,Ollama Pro,20.0,kimi-k3,75383,68.5,146500000,1943.4,0.010291,97.2,0.13652,medium,ollama_pro
+105,103,-2,Command Code GOAT,10.0,glm-5.3,74953,69.0,66900000,892.6,0.011204,89.3,0.14948,medium,command_code_goat
+106,111,5,Command Code GOAT,10.0,grok-4.6,48586,67.5,36300000,747.1,0.013385,74.7,0.27548,medium,command_code_goat
+107,104,-3,Command Code GOAT,10.0,qwen3.8-max,89729,57.5,65000000,724.4,0.013804,72.4,0.15385,medium,command_code_goat
+108,106,-2,OpenCode Go,10.0,glm-5.3,74953,69.0,50200000,669.8,0.014931,67.0,0.1992,medium,opencode_go
+109,107,-2,Command Code GOAT,10.0,kimi-k3,75383,68.5,48800000,647.4,0.015447,64.7,0.20492,medium,command_code_goat
+110,112,2,OpenCode Go,10.0,grok-4.6,48586,67.5,27200000,559.8,0.017862,56.0,0.36765,medium,opencode_go
+111,108,-3,OpenCode Go,10.0,qwen3.8-max,89729,57.5,48700000,542.7,0.018425,54.3,0.20534,medium,opencode_go
+112,109,-3,OpenCode Go,10.0,kimi-k3,75383,68.5,36600000,485.5,0.020596,48.6,0.27322,medium,opencode_go

@@ -9,7 +9,7 @@
 ### Attributions & Upstream Credits
 This project directly builds upon and extends the empirical work of:
 - **[FeiZhuLulu/real-api-pricing](https://github.com/FeiZhuLulu/real-api-pricing)**: The original project that pioneered real AI subscription economics, documenting monthly token quotas, saturation tests, and dollar-per-token metrics across dozens of AI providers. Full credit to [FeiZhuLulu](https://github.com/FeiZhuLulu) and community contributors. See [CREDITS.md](CREDITS.md) and [SOURCES.md](SOURCES.md).
-- **[CursorBench 4.0](https://cursor.com/cursorbench)**: Cursor's empirical benchmark evaluating AI coding agents on ambiguous, multi-file software engineering tasks from real coding sessions. We extract the **output token consumption** (completion tokens per task) directly from CursorBench.
+- **[DeepSWE v1.1](https://deepswe.datacurve.ai/) ([Datacurve](https://datacurve.ai))**: A contamination-free, long-horizon software engineering benchmark (113 original tasks across 91 repos, 5 languages, all models run on the same mini-swe-agent harness). We extract the **median output tokens per task** directly from the public [leaderboard artifact](https://deepswe.datacurve.ai/artifacts/v1.1/leaderboard-live.json).
 
 ---
 
@@ -21,8 +21,8 @@ $$\text{Real Unit Price} = \frac{\text{Monthly Fee}}{\text{Monthly Usable Tokens
 While this was a major leap forward over comparing sticker prices, it made an implicit assumption: **that all LLMs consume an equal number of tokens to accomplish the same job.**
 
 In real-world agentic software development, this assumption fails drastically:
-- Some models are highly concise, requiring only **7,000 – 10,000 output tokens** to inspect, edit, test, and complete a complex task.
-- Other models are heavily verbose or require expansive reasoning steps, consuming **120,000 – 160,000 output tokens** for the same workload — a **15× to 20× difference in token consumption**.
+- Some model configurations are highly concise, requiring only **3,000 – 19,000 output tokens** to inspect, edit, test, and complete a complex task.
+- Other configurations are heavily verbose or require expansive reasoning steps, consuming **115,000 – 204,000 output tokens** for the same workload — up to a **~65× difference in token consumption** (DeepSWE v1.1 medians: `gpt-5.6-luna` Low = 3,059 vs `claude-sonnet-5` Max = 203,918).
 
 ### The Task-Adjusted Formulation
 
@@ -42,58 +42,85 @@ To find the true purchasing power of an AI coding subscription, we adjust for ou
 
 ---
 
-## 2. CursorBench 4.0 Token Consumption Data
+## 2. DeepSWE v1.1 Token Consumption Data
 
-Below is the complete dataset extracted directly from [CursorBench 4.0](https://cursor.com/cursorbench). For each model configuration, it records the benchmark score, average cost, steps, and specifically the **Output Tokens / Task** (median completion tokens):
+Below is the complete dataset extracted directly from [DeepSWE v1.1](https://deepswe.datacurve.ai/) (Datacurve). For each of the 70 evaluated configurations (28 models × reasoning effort tiers), it records the benchmark score (Pass@1), average API cost, steps, and specifically the **Output Tokens / Task** (median output tokens, the consumption figure used throughout this project):
 
-| Rank | Model & Effort Tier       | CursorBench Score | Cost / Task | Output Tokens / Task | Steps / Task |
-| :--: | ------------------------- | ----------------: | ----------: | -------------------: | -----------: |
-|  #1  | Fable 5.1 Max             |             51.8% |      $17.28 |              117,236 |          128 |
-|  #2  | Fable 5.1 Extra High      |             51.6% |      $13.01 |               87,294 |          101 |
-|  #3  | Fable 5.1 High            |             49.2% |       $9.08 |               58,438 |           77 |
-|  #4  | Fable 5.1 Medium          |             46.8% |       $7.05 |               45,411 |           63 |
-|  #5  | Opus 5 Max                |             46.6% |      $11.95 |               85,384 |          106 |
-|  #6  | Opus 5 Extra High         |             46.1% |      $11.43 |               80,094 |          103 |
-|  #7  | Fable 5.1 Low             |             45.1% |       $5.44 |               34,795 |           51 |
-|  #8  | Opus 5 High               |             44.7% |       $9.00 |               61,405 |           86 |
-|  #9  | Opus 5 Medium             |             43.3% |       $6.94 |               45,272 |           72 |
-| #10  | GPT-5.6 Sol Max           |             41.7% |       $8.23 |               42,944 |           99 |
-| #11  | Muse Spark 1.3 Max        |             41.6% |       $2.64 |               52,005 |           98 |
-| #12  | Grok 4.6 Extra High       |             41.4% |       $6.10 |               49,814 |           56 |
-| #13  | GPT-5.6 Terra Max         |             41.3% |       $5.14 |               60,814 |          107 |
-| #14  | Opus 5 Low                |             40.7% |       $4.87 |               31,995 |           57 |
-| #15  | Grok 4.6 High             |             40.4% |       $5.20 |               41,387 |           48 |
-| #16  | Gemini 3.8 Flash High     |             39.6% |       $4.70 |              162,565 |          324 |
-| #17  | GPT-5.6 Sol Extra High    |             37.7% |       $4.40 |               24,729 |           55 |
-| #18  | Muse Spark 1.3 Extra High |             37.5% |       $2.10 |               40,891 |           83 |
-| #19  | Gemini 3.8 Flash Medium   |             37.3% |       $4.06 |              128,364 |          290 |
-| #20  | Grok 4.6 Medium           |             36.1% |       $3.48 |               24,893 |           40 |
-| #21  | GPT-5.6 Luna Max          |             35.9% |       $1.03 |               87,284 |          208 |
-| #22  | GPT-5.6 Sol High          |             35.7% |       $2.85 |               16,174 |           41 |
-| #23  | Sonnet 5 Max              |             34.1% |       $7.17 |              149,257 |          140 |
-| #24  | GPT-5.6 Terra Extra High  |             33.6% |       $1.81 |               23,436 |           43 |
-| #25  | Grok 4.6 Low              |             33.4% |       $2.25 |               16,307 |           32 |
-| #26  | Muse Spark 1.3 High       |             33.4% |       $1.66 |               30,654 |           69 |
-| #27  | GPT-5.6 Luna Extra High   |             33.0% |       $0.44 |               40,598 |           98 |
-| #28  | Muse Spark 1.3 Medium     |             32.6% |       $1.49 |               27,255 |           64 |
-| #29  | Sonnet 5 Extra High       |             32.0% |       $4.55 |               83,373 |          102 |
-| #30  | GPT-5.6 Sol Medium        |             31.1% |       $1.77 |               10,111 |           32 |
-| #31  | Sonnet 5 High             |             30.8% |       $3.48 |               61,146 |           85 |
-| #32  | GPT-5.6 Terra High        |             30.7% |       $1.11 |               13,162 |           33 |
-| #33  | GPT-5.6 Luna High         |             29.4% |       $0.25 |               23,368 |           64 |
-| #34  | Muse Spark 1.3 Low        |             29.3% |       $0.93 |               17,483 |           47 |
-| #35  | Sonnet 5 Medium           |             28.0% |       $2.31 |               39,114 |           65 |
-| #36  | Composer 2.5              |             27.7% |       $0.68 |               17,347 |           41 |
-| #37  | GPT-5.6 Terra Medium      |             27.6% |       $0.64 |                7,307 |           25 |
-| #38  | GPT-5.6 Terra Low         |             25.2% |       $0.52 |                5,914 |           23 |
-| #39  | GPT-5.6 Sol Low           |             24.6% |       $0.87 |                4,885 |           21 |
-| #40  | Muse Spark 1.3 Minimal    |             24.3% |       $0.56 |               10,620 |           34 |
-| #41  | Sonnet 5 Low              |             24.1% |       $1.39 |               23,772 |           46 |
-| #42  | GPT-5.6 Luna Medium       |             22.2% |       $0.08 |                7,642 |           32 |
-| #43  | GPT-5.6 Luna Low          |             16.0% |       $0.03 |                3,288 |           18 |
+| Rank | Model & Effort Tier         | DeepSWE Score (Pass@1) | Cost / Task | Output Tokens / Task (median) | Steps / Task |
+| :--: | --------------------------- | ---------------------: | ----------: | ----------------------------: | -----------: |
+|  #1  | GPT-6 Astra Extra High      |                  74.1% |       $6.52 |                        28,542 |           29 |
+|  #2  | Gemini 3.8 Flash High       |                  73.8% |       $2.36 |                       138,377 |          166 |
+|  #3  | Claude Opus 5 Max           |                  73.6% |      $11.84 |                       113,366 |           99 |
+|  #4  | GPT-6 Astra High            |                  73.2% |       $5.72 |                        25,414 |           27 |
+|  #5  | Claude Opus 5 Extra High    |                  73.2% |       $9.07 |                        87,322 |           89 |
+|  #6  | GPT-6 Astra Max             |                  73.2% |      $12.37 |                        58,618 |           28 |
+|  #7  | GPT-6 Astra Medium          |                  72.8% |       $4.38 |                        19,006 |           26 |
+|  #8  | Claude Opus 5 High          |                  72.8% |       $6.08 |                        59,856 |           73 |
+|  #9  | GPT-5.6 Sol Max             |                  72.7% |       $8.39 |                        58,786 |           61 |
+| #10  | Gemini 3.8 Flash Medium     |                  71.0% |       $1.97 |                       120,488 |          147 |
+| #11  | GPT-5.6 Sol Extra High      |                  70.7% |       $4.70 |                        39,449 |           44 |
+| #12  | Claude Fable 5 Extra High   |                  69.9% |      $13.41 |                        76,036 |           68 |
+| #13  | Claude Fable 5 Max          |                  69.7% |      $21.63 |                       115,631 |           88 |
+| #14  | GPT-5.6 Terra Max           |                  69.6% |       $4.95 |                        70,835 |           76 |
+| #15  | GPT-5.6 Sol High            |                  69.4% |       $3.47 |                        27,700 |           37 |
+| #16  | GLM-5.3 Max                 |                  69.0% |       $3.99 |                        74,953 |          124 |
+| #17  | Claude Opus 5 Medium        |                  68.9% |       $3.29 |                        33,436 |           52 |
+| #18  | Claude Fable 5 High         |                  68.6% |       $9.18 |                        52,624 |           59 |
+| #19  | Kimi K3 Max                 |                  68.5% |       $4.65 |                        75,383 |           98 |
+| #20  | Grok 4.6 Medium             |                  67.5% |       $3.45 |                        48,586 |           70 |
+| #21  | GPT-5.6 Luna Max            |                  67.2% |       $3.03 |                        70,253 |          102 |
+| #22  | GPT-6 Astra Low             |                  67.0% |       $2.19 |                         9,488 |           20 |
+| #23  | GPT-5.5 Extra High          |                  67.0% |       $7.23 |                        44,492 |           82 |
+| #24  | Grok 4.6 Extra High         |                  66.7% |       $5.50 |                        71,285 |           87 |
+| #25  | Gemini 3.7 Flash Medium     |                  65.5% |       $2.03 |                        87,640 |          117 |
+| #26  | Claude Fable 5 Medium       |                  65.4% |       $6.09 |                        35,970 |           48 |
+| #27  | Gemini 3.7 Flash High       |                  65.3% |       $2.18 |                        99,819 |          125 |
+| #28  | Grok 4.6 High               |                  65.2% |       $4.38 |                        60,060 |           79 |
+| #29  | GPT-5.5 High                |                  64.4% |       $5.10 |                        30,378 |           62 |
+| #30  | GLM-5.3 Flash Max           |                  63.4% |       $0.48 |                        67,491 |          123 |
+| #31  | DeepSeek V4 Pro Max         |                  62.8% |       $0.24 |                       101,214 |          155 |
+| #32  | GPT-5.6 Sol Medium          |                  61.1% |       $1.86 |                        17,645 |           31 |
+| #33  | GPT-5.6 Terra Extra High    |                  60.2% |       $2.13 |                        38,006 |           43 |
+| #34  | Claude Fable 5 Low          |                  59.6% |       $3.76 |                        22,339 |           38 |
+| #35  | Claude Opus 4.8 Max         |                  59.0% |      $13.22 |                       129,180 |          120 |
+| #36  | Claude Opus 5 Low           |                  58.1% |       $1.66 |                        17,613 |           36 |
+| #37  | Qwen3.8 Max Extra High      |                  57.5% |       $3.73 |                        89,729 |          111 |
+| #38  | GPT-5.6 Luna Extra High     |                  56.9% |       $1.54 |                        42,374 |           71 |
+| #39  | Muse Spark 1.2 Extra High   |                  54.9% |       $3.70 |                        81,250 |          101 |
+| #40  | Claude Opus 4.8 Extra High  |                  54.4% |       $8.01 |                        77,961 |           95 |
+| #41  | GPT-5.5 Medium              |                  54.0% |       $2.75 |                        18,737 |           46 |
+| #42  | GPT-5.6 Terra High          |                  53.8% |       $1.13 |                        20,866 |           34 |
+| #43  | Gemini 3.7 Flash Low        |                  53.8% |       $1.83 |                        73,220 |          130 |
+| #44  | Grok 4.5 High               |                  53.8% |       $2.42 |                        34,250 |           61 |
+| #45  | Claude Sonnet 5 Max         |                  53.8% |      $26.40 |                       203,918 |          268 |
+| #46  | DeepSeek V4 Flash Max       |                  53.3% |       $0.10 |                       104,492 |          153 |
+| #47  | Muse Spark 1.1 Extra High   |                  53.3% |       $2.36 |                        66,088 |           96 |
+| #48  | Claude Opus 4.8 High        |                  51.8% |       $4.28 |                        44,476 |           72 |
+| #49  | GPT-5.4 Extra High          |                  51.8% |       $5.65 |                        67,234 |           70 |
+| #50  | Claude Sonnet 5 Extra High  |                  49.7% |      $11.89 |                       113,150 |          186 |
+| #51  | Claude Opus 4.8 Medium      |                  48.7% |       $3.44 |                        36,648 |           66 |
+| #52  | Claude Sonnet 5 High        |                  48.2% |       $7.43 |                        77,993 |          147 |
+| #53  | Gemini 3.6 Flash High       |                  46.7% |       $4.42 |                        86,727 |          117 |
+| #54  | GPT-5.6 Sol Low             |                  45.4% |       $1.07 |                        10,062 |           23 |
+| #55  | GPT-5.6 Luna High           |                  44.2% |       $0.78 |                        24,818 |           49 |
+| #56  | GLM-5.2 Max                 |                  43.8% |       $3.92 |                        75,760 |          129 |
+| #57  | Grok 4.6 Low                |                  41.6% |       $1.04 |                        14,937 |           44 |
+| #58  | Claude Opus 4.8 Low         |                  40.8% |       $2.29 |                        25,291 |           54 |
+| #59  | Claude Sonnet 5 Medium      |                  39.8% |       $4.08 |                        50,414 |          108 |
+| #60  | GLM-5.2 High                |                  36.3% |       $2.84 |                        48,956 |          122 |
+| #61  | Gemini 3.5 Flash High       |                  36.1% |       $3.45 |                        68,910 |          105 |
+| #62  | GPT-5.6 Terra Medium        |                  35.1% |       $0.58 |                        11,453 |           25 |
+| #63  | Claude Sonnet 5 Low         |                  30.5% |       $2.19 |                        31,478 |           77 |
+| #64  | Kimi K2.7 Code Standard     |                  30.5% |       $2.82 |                        54,054 |          149 |
+| #65  | Claude Sonnet 4.6 High      |                  29.9% |       $5.52 |                        70,001 |          134 |
+| #66  | GPT-5.5 Low                 |                  27.0% |       $1.20 |                         9,020 |           28 |
+| #67  | GPT-5.6 Terra Low           |                  24.1% |       $0.43 |                         8,265 |           21 |
+| #68  | Gemini 3.1 Pro Preview High |                  11.7% |       $2.14 |                        25,990 |           76 |
+| #69  | GPT-5.6 Luna Medium         |                  11.3% |       $0.22 |                         7,918 |           24 |
+| #70  | GPT-5.6 Luna Low            |                   1.5% |       $0.07 |                         3,059 |           12 |
 
 > [!NOTE]
-> For models evaluated across multiple reasoning effort tiers (Low, Medium, High, Extra High, Max), our standard baseline ranking adopts the **Medium** tier (or **Standard** tier for Composer 2.5) to ensure consistent, balanced comparisons across all subscriptions. Full breakdowns across all tiers are exported in `derived/task-ranking.json`.
+> For models evaluated across multiple reasoning effort tiers (Low, Medium, High, Extra High, Max), our standard baseline ranking adopts the **Medium** tier — or the **nearest available tier** for models that were not evaluated at Medium (e.g. `glm-5.3`, `kimi-k3`, and `deepseek-v4-*` were only run at Max; `muse-spark-1.2` at Extra High; `kimi-k2.7-code` has a single Standard configuration). Full breakdowns across all tiers are exported in `derived/task-ranking.json`.
 
 ---
 
@@ -105,60 +132,137 @@ The column **Shift vs Raw** indicates the ranking change compared to the traditi
 - **▲ +X**: Model is concise and jumped **up** X spots in cost-effectiveness.
 - **▼ -X**: Model is verbose and dropped **down** X spots in cost-effectiveness.
 
-| Rank | Shift vs Raw | Plan Name                    | Served Model               | Fee/mo | Output Tok/Task | Tasks/Month | Cost / Task | Tasks / $1 | Raw $/MTok |
-| :--: | :----------: | ---------------------------- | -------------------------- | -----: | --------------: | ----------: | ----------: | ---------: | ---------: |
-|  #1  |     ▲ +1     | ChatGPT Pro 20x              | gpt-5.6-luna               |   $200 |           7,642 |  19,657,420 |    $0.00001 |   98,287.1 |   $0.00133 |
-|  #2  |     ▲ +2     | ChatGPT Plus                 | gpt-5.6-luna               |    $20 |           7,642 |     982,858 |    $0.00002 |   49,142.9 |   $0.00266 |
-|  #3  |     ▲ +2     | ChatGPT Pro 5x               | gpt-5.6-luna               |   $100 |           7,642 |   4,914,420 |    $0.00002 |   49,144.2 |   $0.00266 |
-|  #4  |     ▼ -3     | OpenCode Go                  | muse-spark-1.3-contributor |    $10 |          27,255 |     458,631 |    $0.00002 |   45,863.1 |   $0.00080 |
-|  #5  |     ▲ +4     | ChatGPT Pro 20x              | gpt-5.6-terra              |   $200 |           7,307 |   3,287,806 |    $0.00006 |   16,439.0 |   $0.00833 |
-|  #6  |     ▼ -3     | Command Code GOAT            | muse-spark-1.3-contributor |    $10 |          27,255 |     152,878 |    $0.00006 |   15,287.8 |   $0.00240 |
-|  #7  |     ▲ +7     | Command Code GOAT            | gpt-5.6-luna               |    $10 |           7,642 |      93,470 |    $0.00011 |    9,347.0 |   $0.01400 |
-|  #8  |     ▲ +9     | ChatGPT Plus                 | gpt-5.6-terra              |    $20 |           7,307 |     164,390 |    $0.00012 |    8,219.5 |   $0.01665 |
-|  #9  |     ▲ +9     | ChatGPT Pro 5x               | gpt-5.6-terra              |   $100 |           7,307 |     821,952 |    $0.00012 |    8,219.5 |   $0.01665 |
-| #10  |     ▲ +9     | OpenCode Go                  | gpt-5.6-luna               |    $10 |           7,642 |      70,100 |    $0.00014 |    7,009.9 |   $0.01867 |
-| #11  |     ▲ +4     | ChatGPT Pro 20x              | gpt-5.6-sol                |   $200 |          10,111 |   1,218,475 |    $0.00016 |    6,092.4 |   $0.01623 |
-| #12  |     ▼ -2     | Cursor Ultra (Standard)      | composer-2.5               |   $200 |          17,347 |   1,146,746 |    $0.00017 |    5,733.7 |   $0.01005 |
-| #13  |     ▼ -2     | Cursor Pro+ (Standard)       | composer-2.5               |    $60 |          17,347 |     305,799 |    $0.00020 |    5,096.7 |   $0.01131 |
-| #14  |     ▼ -8     | Claude Pro                   | claude-sonnet-5            |    $20 |          39,114 |     101,498 |    $0.00020 |    5,074.9 |   $0.00504 |
-| #15  |     ▼ -8     | Claude Max 20x (9/14+)       | claude-sonnet-5            |   $200 |          39,114 |   1,003,477 |    $0.00020 |    5,017.4 |   $0.00510 |
-| #16  |     ▼ -8     | Claude Max 5x (9/14+)        | claude-sonnet-5            |   $100 |          39,114 |     501,738 |    $0.00020 |    5,017.4 |   $0.00510 |
-| #17  |     ▼ -1     | Cursor Pro (Standard)        | composer-2.5               |    $20 |          17,347 |      69,660 |    $0.00029 |    3,483.0 |   $0.01655 |
-| #18  |     ▲ +6     | ChatGPT Plus                 | gpt-5.6-sol                |    $20 |          10,111 |      60,924 |    $0.00033 |    3,046.2 |   $0.03247 |
-| #19  |     ▲ +6     | ChatGPT Pro 5x               | gpt-5.6-sol                |   $100 |          10,111 |     304,619 |    $0.00033 |    3,046.2 |   $0.03247 |
-| #20  |     ▲ +1     | Cursor Ultra (Composer Fast) | composer-2.5               |   $200 |          17,347 |     406,912 |    $0.00049 |    2,034.6 |   $0.02833 |
-| #21  |     ▲ +2     | Cursor Pro+ (Composer Fast)  | composer-2.5               |    $60 |          17,347 |     108,509 |    $0.00055 |    1,808.5 |   $0.03188 |
-| #22  |    ▼ -10     | Claude Max 20x (9/14+)       | claude-opus-5              |   $200 |          45,272 |     346,793 |    $0.00058 |    1,734.0 |   $0.01274 |
-| #23  |    ▼ -10     | Claude Max 5x (9/14+)        | claude-opus-5              |   $100 |          45,272 |     173,396 |    $0.00058 |    1,734.0 |   $0.01274 |
-| #24  |     ▼ -4     | Cursor Ultra                 | grok-4.6                   |   $200 |          24,893 |     310,810 |    $0.00064 |    1,554.1 |   $0.02585 |
-| #25  |     ▼ -3     | Cursor Pro+                  | grok-4.6                   |    $60 |          24,893 |      82,883 |    $0.00072 |    1,381.4 |   $0.02908 |
-| #26  |     ▲ +1     | Cursor Pro (Composer Fast)   | composer-2.5               |    $20 |          17,347 |      24,719 |    $0.00081 |    1,235.9 |   $0.04664 |
-| #27  |     ▲ +8     | Command Code GOAT            | gpt-5.6-sol                |    $10 |          10,111 |       9,890 |    $0.00101 |      989.0 |   $0.10000 |
-| #28  |     ▼ -2     | Cursor Pro                   | grok-4.6                   |    $20 |          24,893 |      18,881 |    $0.00106 |      944.0 |   $0.04255 |
-| #29  |     ▼ -1     | SuperGrok Plus               | grok-4.6                   |   $100 |          24,893 |      81,951 |    $0.00122 |      819.5 |   $0.04902 |
-| #30  |      —       | SuperGrok                    | grok-4.6                   |    $30 |          24,893 |      20,448 |    $0.00147 |      681.6 |   $0.05894 |
-| #31  |      —       | SuperGrok Heavy              | grok-4.6                   |   $300 |          24,893 |     204,475 |    $0.00147 |      681.6 |   $0.05894 |
-| #32  |      —       | Cursor Ultra (Fast)          | grok-4.6                   |   $200 |          24,893 |     123,488 |    $0.00162 |      617.4 |   $0.06506 |
-| #33  |      —       | SuperGrok Lite               | grok-4.6                   |    $10 |          24,893 |       6,026 |    $0.00166 |      602.6 |   $0.06667 |
-| #34  |      —       | Command Code GOAT            | muse-spark-1.3             |    $10 |          27,255 |       3,904 |    $0.00256 |      390.4 |   $0.09398 |
-| #35  |     ▲ +1     | Claude Max 5x (9/14+)        | claude-fable-5             |   $100 |          45,411 |      20,336 |    $0.00492 |      203.4 |   $0.10828 |
-| #36  |     ▼ -7     | Command Code GOAT            | gemini-3.8-flash           |    $10 |         128,364 |       1,522 |    $0.00657 |      152.2 |   $0.05118 |
-| #37  |     ▲ +1     | Command Code GOAT            | grok-4.6                   |    $10 |          24,893 |       1,458 |    $0.00686 |      145.8 |   $0.27548 |
-| #38  |     ▼ -1     | Claude Max 20x (9/14+)       | claude-fable-5             |   $200 |          45,411 |      26,595 |    $0.00752 |      133.0 |   $0.16560 |
-| #39  |      —       | OpenCode Go                  | grok-4.6                   |    $10 |          24,893 |       1,093 |    $0.00915 |      109.3 |   $0.36765 |
+| Rank | Shift vs Raw | Plan Name                     | Served Model      | Fee/mo  | Output Tok/Task | Tasks/Month | Cost / Task | Tasks / $1 | Raw $/MTok |
+| :--: | :----------: | ----------------------------- | ----------------- | ------: | --------------: | ----------: | ----------: | ---------: | ---------: |
+|  #1  |      —       | ChatGPT Pro 20x               | gpt-5.6-luna      |    $200 |           7,918 |  18,972,215 |    $0.00001 |   94,861.1 |   $0.00133 |
+|  #2  |      —       | ChatGPT Plus                  | gpt-5.6-luna      |     $20 |           7,918 |     948,598 |    $0.00002 |   47,429.9 |   $0.00266 |
+|  #3  |      —       | ChatGPT Pro 5x                | gpt-5.6-luna      |    $100 |           7,918 |   4,743,117 |    $0.00002 |   47,431.2 |   $0.00266 |
+|  #4  |    ▲ +13     | ChatGPT Pro 20x               | gpt-5.6-terra     |    $200 |          11,453 |   2,097,616 |    $0.00010 |   10,488.1 |   $0.00833 |
+|  #5  |    ▲ +29     | Command Code GOAT             | gpt-5.6-luna      |     $10 |           7,918 |      90,212 |    $0.00011 |    9,021.2 |   $0.01400 |
+|  #6  |    ▲ +39     | OpenCode Go                   | gpt-5.6-luna      |     $10 |           7,918 |      67,656 |    $0.00015 |    6,765.6 |   $0.01867 |
+|  #7  |    ▲ +32     | ChatGPT Plus                  | gpt-5.6-terra     |     $20 |          11,453 |     104,881 |    $0.00019 |    5,244.0 |   $0.01665 |
+|  #8  |    ▲ +32     | ChatGPT Pro 5x                | gpt-5.6-terra     |    $100 |          11,453 |     524,404 |    $0.00019 |    5,244.0 |   $0.01665 |
+|  #9  |     ▼ -5     | GLM Coding Pro (老客 ¥149) 闲时   | glm-5.3-flash     |  $21.98 |          67,491 |     114,074 |    $0.00019 |    5,189.9 |   $0.00285 |
+| #10  |     ▼ -1     | Claude Pro                    | claude-sonnet-5   |     $20 |          50,414 |      78,748 |    $0.00025 |    3,937.4 |   $0.00504 |
+| #11  |     ▼ -6     | GLM Coding Pro (老客 ¥149) 中间值  | glm-5.3-flash     |  $21.98 |          67,491 |      85,552 |    $0.00026 |    3,892.3 |   $0.00381 |
+| #12  |     ▼ -2     | Claude Max 20x (9/14+)        | claude-sonnet-5   |    $200 |          50,414 |     778,554 |    $0.00026 |    3,892.8 |   $0.00510 |
+| #13  |     ▼ -2     | Claude Max 5x (9/14+)         | claude-sonnet-5   |    $100 |          50,414 |     389,277 |    $0.00026 |    3,892.8 |   $0.00510 |
+| #14  |     ▼ -8     | GLM Coding Max (老客 ¥469) 闲时   | glm-5.3-flash     |  $69.19 |          67,491 |     266,184 |    $0.00026 |    3,847.1 |   $0.00385 |
+| #15  |    ▲ +23     | ChatGPT Pro 20x               | gpt-5.6-sol       |    $200 |          17,645 |     698,215 |    $0.00029 |    3,491.1 |   $0.01623 |
+| #16  |     ▼ -4     | GLM Coding Max (老客 ¥469) 中间值  | glm-5.3-flash     |  $69.19 |          67,491 |     199,627 |    $0.00035 |    2,885.2 |   $0.00514 |
+| #17  |     ▼ -4     | GLM Coding Lite (老客 ¥49) 闲时   | glm-5.3-flash     |   $7.23 |          67,491 |      19,010 |    $0.00038 |    2,629.3 |   $0.00563 |
+| #18  |     ▼ -4     | GLM Coding Pro (老客 ¥149) 忙时   | glm-5.3-flash     |  $21.98 |          67,491 |      57,045 |    $0.00038 |    2,595.3 |   $0.00571 |
+| #19  |    ▲ +30     | ChatGPT Pro 20x               | gpt-5.5           |    $200 |          18,737 |     512,868 |    $0.00039 |    2,564.3 |   $0.02081 |
+| #20  |     ▲ +9     | Claude Max 20x (9/14+)        | claude-opus-5     |    $200 |          33,436 |     469,554 |    $0.00043 |    2,347.8 |   $0.01274 |
+| #21  |     ▲ +9     | Claude Max 5x (9/14+)         | claude-opus-5     |    $100 |          33,436 |     234,777 |    $0.00043 |    2,347.8 |   $0.01274 |
+| #22  |     ▲ +6     | Claude Pro                    | claude-opus-4.8   |     $20 |          36,648 |      43,331 |    $0.00046 |    2,166.6 |   $0.01259 |
+| #23  |     ▲ +8     | Claude Max 20x (9/14+)        | claude-opus-4.8   |    $200 |          36,648 |     428,400 |    $0.00047 |    2,142.0 |   $0.01274 |
+| #24  |    ▼ -17     | Ollama Pro                    | deepseek-v4-flash |     $20 |         104,492 |      41,414 |    $0.00048 |    2,070.7 |   $0.00462 |
+| #25  |    ▼ -17     | Ollama Max                    | deepseek-v4-flash |    $100 |         104,492 |     207,070 |    $0.00048 |    2,070.7 |   $0.00462 |
+| #26  |    ▼ -11     | GLM Coding Lite (老客 ¥49) 中间值  | glm-5.3-flash     |   $7.23 |          67,491 |      14,254 |    $0.00051 |    1,971.5 |   $0.00751 |
+| #27  |    ▼ -11     | GLM Coding Max (老客 ¥469) 忙时   | glm-5.3-flash     |  $69.19 |          67,491 |     133,084 |    $0.00052 |    1,923.5 |   $0.00770 |
+| #28  |    ▲ +35     | ChatGPT Plus                  | gpt-5.6-sol       |     $20 |          17,645 |      34,911 |    $0.00057 |    1,745.5 |   $0.03247 |
+| #29  |    ▲ +35     | ChatGPT Pro 5x                | gpt-5.6-sol       |    $100 |          17,645 |     174,554 |    $0.00057 |    1,745.5 |   $0.03247 |
+| #30  |    ▼ -12     | Command Code GOAT             | glm-5.3-flash     |     $10 |          67,491 |      17,316 |    $0.00058 |    1,731.6 |   $0.00856 |
+| #31  |    ▼ -11     | GLM Coding Max (新客 ¥1078) 闲时  | glm-5.3-flash     | $159.03 |          67,491 |     266,184 |    $0.00060 |    1,673.8 |   $0.00885 |
+| #32  |    ▼ -13     | GLM Coding Pro (老客 ¥149) 闲时   | glm-5.3           |  $21.98 |          74,953 |      33,888 |    $0.00065 |    1,541.8 |   $0.00865 |
+| #33  |    ▼ -12     | GLM Coding Pro (新客 ¥538) 闲时   | glm-5.3-flash     |  $79.37 |          67,491 |     114,074 |    $0.00070 |    1,437.2 |   $0.01031 |
+| #34  |    ▼ -12     | GLM Coding Lite (老客 ¥49) 忙时   | glm-5.3-flash     |   $7.23 |          67,491 |       9,512 |    $0.00076 |    1,315.7 |   $0.01126 |
+| #35  |    ▼ -12     | Ollama Pro                    | glm-5.3-flash     |     $20 |          67,491 |      25,975 |    $0.00077 |    1,298.8 |   $0.01141 |
+| #36  |    ▼ -12     | Ollama Max                    | glm-5.3-flash     |    $100 |          67,491 |     129,877 |    $0.00077 |    1,298.8 |   $0.01141 |
+| #37  |    ▲ +33     | ChatGPT Plus                  | gpt-5.5           |     $20 |          18,737 |      25,644 |    $0.00078 |    1,282.2 |   $0.04162 |
+| #38  |    ▲ +33     | ChatGPT Pro 5x                | gpt-5.5           |    $100 |          18,737 |     128,217 |    $0.00078 |    1,282.2 |   $0.04163 |
+| #39  |    ▼ -12     | GLM Coding Max (新客 ¥1078) 中间值 | glm-5.3-flash     | $159.03 |          67,491 |     199,627 |    $0.00080 |    1,255.3 |   $0.01180 |
+| #40  |    ▼ -15     | GLM Coding Pro (老客 ¥149) 中间值  | glm-5.3           |  $21.98 |          74,953 |      25,416 |    $0.00086 |    1,156.3 |   $0.01154 |
+| #41  |    ▼ -15     | GLM Coding Max (老客 ¥469) 闲时   | glm-5.3           |  $69.19 |          74,953 |      79,063 |    $0.00088 |    1,142.7 |   $0.01168 |
+| #42  |    ▲ +14     | Cursor Ultra                  | grok-4.5          |    $200 |          34,250 |     225,898 |    $0.00089 |    1,129.5 |   $0.02585 |
+| #43  |    ▼ -11     | GLM Coding Lite (新客 ¥118) 闲时  | glm-5.3-flash     |  $17.41 |          67,491 |      19,010 |    $0.00092 |    1,091.9 |   $0.01357 |
+| #44  |    ▼ -11     | GLM Coding Pro (新客 ¥538) 中间值  | glm-5.3-flash     |  $79.37 |          67,491 |      85,552 |    $0.00093 |    1,077.9 |   $0.01375 |
+| #45  |     ▲ +1     | Kimi 会员 199                   | kimi-k2.7-code    |  $29.36 |          54,054 |      29,008 |    $0.00101 |      988.0 |   $0.01872 |
+| #46  |     ▼ -9     | GLM Coding Max (老客 ¥469) 中间值  | glm-5.3           |  $69.19 |          74,953 |      59,304 |    $0.00117 |      857.1 |   $0.01557 |
+| #47  |     ▲ +4     | Kimi 会员 699                   | kimi-k2.7-code    | $103.12 |          54,054 |      87,024 |    $0.00119 |      843.9 |   $0.02192 |
+| #48  |     ▼ -5     | GLM Coding Max (新客 ¥1078) 忙时  | glm-5.3-flash     | $159.03 |          67,491 |     133,084 |    $0.00120 |      836.9 |   $0.01771 |
+| #49  |     ▼ -5     | GLM Coding Lite (新客 ¥118) 中间值 | glm-5.3-flash     |  $17.41 |          67,491 |      14,254 |    $0.00122 |      818.7 |   $0.01810 |
+| #50  |     ▲ +7     | Cursor Ultra                  | grok-4.6          |    $200 |          48,586 |     159,243 |    $0.00126 |      796.2 |   $0.02585 |
+| #51  |    ▼ -10     | GLM Coding Lite (老客 ¥49) 闲时   | glm-5.3           |   $7.23 |          74,953 |       5,644 |    $0.00128 |      780.6 |   $0.01709 |
+| #52  |    ▼ -10     | GLM Coding Pro (老客 ¥149) 忙时   | glm-5.3           |  $21.98 |          74,953 |      16,944 |    $0.00130 |      770.9 |   $0.01731 |
+| #53  |     ▼ -5     | GLM Coding Pro (新客 ¥538) 忙时   | glm-5.3-flash     |  $79.37 |          67,491 |      57,045 |    $0.00139 |      718.7 |   $0.02061 |
+| #54  |     ▲ +7     | Cursor Pro+                   | grok-4.6          |     $60 |          48,586 |      42,465 |    $0.00141 |      707.7 |   $0.02908 |
+| #55  |    ▼ -20     | Ollama Pro                    | deepseek-v4-pro   |     $20 |         101,214 |      13,925 |    $0.00144 |      696.2 |   $0.01419 |
+| #56  |    ▼ -20     | Ollama Max                    | deepseek-v4-pro   |    $100 |         101,214 |      69,627 |    $0.00144 |      696.3 |   $0.01419 |
+| #57  |    ▼ -10     | Kimi 会员 199                   | kimi-k3           |  $29.36 |          75,383 |      19,248 |    $0.00153 |      655.6 |   $0.02023 |
+| #58  |     ▼ -5     | OpenCode Go                   | glm-5.3-flash     |     $10 |          67,491 |       6,494 |    $0.00154 |      649.4 |   $0.02282 |
+| #59  |     ▼ -7     | GLM Coding Lite (老客 ¥49) 中间值  | glm-5.3           |   $7.23 |          74,953 |       4,229 |    $0.00171 |      585.0 |   $0.02280 |
+| #60  |     ▼ -6     | GLM Coding Max (老客 ¥469) 忙时   | glm-5.3           |  $69.19 |          74,953 |      39,531 |    $0.00175 |      571.3 |   $0.02335 |
+| #61  |    ▲ +38     | Command Code GOAT             | gpt-5.6-sol       |     $10 |          17,645 |       5,667 |    $0.00177 |      566.7 |   $0.10000 |
+| #62  |     ▼ -7     | Kimi 会员 699                   | kimi-k3           | $103.12 |          75,383 |      57,745 |    $0.00179 |      560.0 |   $0.02369 |
+| #63  |     ▼ -4     | GLM Coding Lite (新客 ¥118) 忙时  | glm-5.3-flash     |  $17.41 |          67,491 |       9,512 |    $0.00183 |      546.4 |   $0.02711 |
+| #64  |     ▲ +3     | OpenCode Go                   | kimi-k2.7-code    |     $10 |          54,054 |       5,052 |    $0.00198 |      505.2 |   $0.03662 |
+| #65  |     ▲ +3     | Command Code GOAT             | kimi-k2.7-code    |     $10 |          54,054 |       5,052 |    $0.00198 |      505.2 |   $0.03662 |
+| #66  |     ▼ -8     | GLM Coding Max (新客 ¥1078) 闲时  | glm-5.3           | $159.03 |          74,953 |      79,063 |    $0.00201 |      497.2 |   $0.02684 |
+| #67  |    ▲ +16     | SuperGrok Heavy               | grok-4.5          |    $300 |          34,250 |     148,613 |    $0.00202 |      495.4 |   $0.05894 |
+| #68  |    ▲ +16     | SuperGrok                     | grok-4.5          |     $30 |          34,250 |      14,861 |    $0.00202 |      495.4 |   $0.05894 |
+| #69  |     ▲ +4     | Cursor Pro                    | grok-4.6          |     $20 |          48,586 |       9,674 |    $0.00207 |      483.7 |   $0.04255 |
+| #70  |     ▲ +4     | Command Code GOAT             | glm-5.2           |     $10 |          48,956 |       4,782 |    $0.00209 |      478.2 |   $0.04272 |
+| #71  |    ▼ -21     | Command Code GOAT             | deepseek-v4-pro   |     $10 |         101,214 |       4,642 |    $0.00215 |      464.2 |   $0.02129 |
+| #72  |    ▼ -10     | GLM Coding Pro (新客 ¥538) 闲时   | glm-5.3           |  $79.37 |          74,953 |      33,888 |    $0.00234 |      427.0 |   $0.03125 |
+| #73  |     ▲ +3     | SuperGrok Plus                | grok-4.6          |    $100 |          48,586 |      41,987 |    $0.00238 |      419.9 |   $0.04902 |
+| #74  |     ▲ +3     | OpenCode Go                   | glm-5.2           |     $10 |          48,956 |       4,100 |    $0.00244 |      410.0 |   $0.04983 |
+| #75  |      —       | Kimi 会员 99                    | kimi-k2.7-code    |  $14.60 |          54,054 |       5,809 |    $0.00251 |      397.9 |   $0.04651 |
+| #76  |    ▼ -11     | GLM Coding Lite (老客 ¥49) 忙时   | glm-5.3           |   $7.23 |          74,953 |       2,828 |    $0.00256 |      391.2 |   $0.03410 |
+| #77  |    ▼ -11     | GLM Coding Max (新客 ¥1078) 中间值 | glm-5.3           | $159.03 |          74,953 |      59,304 |    $0.00268 |      372.9 |   $0.03578 |
+| #78  |     ▲ +7     | SuperGrok                     | grok-4.6          |     $30 |          48,586 |      10,476 |    $0.00286 |      349.2 |   $0.05894 |
+| #79  |     ▲ +7     | SuperGrok Heavy               | grok-4.6          |    $300 |          48,586 |     104,763 |    $0.00286 |      349.2 |   $0.05894 |
+| #80  |    ▼ -20     | OpenCode Go                   | deepseek-v4-pro   |     $10 |         101,214 |       3,482 |    $0.00287 |      348.2 |   $0.02838 |
+| #81  |    ▼ -12     | GLM Coding Lite (新客 ¥118) 闲时  | glm-5.3           |  $17.41 |          74,953 |       5,644 |    $0.00309 |      324.2 |   $0.04115 |
+| #82  |    ▼ -10     | GLM Coding Pro (新客 ¥538) 中间值  | glm-5.3           |  $79.37 |          74,953 |      25,416 |    $0.00312 |      320.2 |   $0.04166 |
+| #83  |     ▲ +5     | Cursor Ultra (Fast)           | grok-4.6          |    $200 |          48,586 |      63,269 |    $0.00316 |      316.3 |   $0.06506 |
+| #84  |     ▲ +5     | SuperGrok Lite                | grok-4.6          |     $10 |          48,586 |       3,087 |    $0.00324 |      308.7 |   $0.06667 |
+| #85  |     ▼ -7     | Kimi 会员 99                    | kimi-k3           |  $14.60 |          75,383 |       3,847 |    $0.00380 |      263.5 |   $0.05036 |
+| #86  |    ▲ +14     | Claude Max 5x (9/14+)         | claude-fable-5    |    $100 |          35,970 |      25,674 |    $0.00390 |      256.7 |   $0.10828 |
+| #87  |     ▲ +3     | Ollama Max                    | kimi-k2.7-code    |    $100 |          54,054 |      25,266 |    $0.00396 |      252.7 |   $0.07322 |
+| #88  |     ▲ +3     | Ollama Pro                    | kimi-k2.7-code    |     $20 |          54,054 |       5,052 |    $0.00396 |      252.6 |   $0.07323 |
+| #89  |     ▼ -8     | GLM Coding Max (新客 ¥1078) 忙时  | glm-5.3           | $159.03 |          74,953 |      39,531 |    $0.00402 |      248.6 |   $0.05367 |
+| #90  |     ▼ -8     | GLM Coding Lite (新客 ¥118) 中间值 | glm-5.3           |  $17.41 |          74,953 |       4,229 |    $0.00412 |      242.9 |   $0.05491 |
+| #91  |    ▼ -12     | Command Code GOAT             | gemini-3.7-flash  |     $10 |          87,640 |       2,230 |    $0.00449 |      223.0 |   $0.05118 |
+| #92  |     ▼ -5     | GLM Coding Pro (新客 ¥538) 忙时   | glm-5.3           |  $79.37 |          74,953 |      16,944 |    $0.00468 |      213.5 |   $0.06249 |
+| #93  |     ▲ +2     | Ollama Pro                    | glm-5.2           |     $20 |          48,956 |       4,100 |    $0.00488 |      205.0 |   $0.09965 |
+| #94  |     ▲ +3     | Ollama Max                    | glm-5.2           |    $100 |          48,956 |      20,494 |    $0.00488 |      204.9 |   $0.09967 |
+| #95  |     ▼ -2     | Kimi 会员 49                    | kimi-k2.7-code    |   $7.23 |          54,054 |       1,443 |    $0.00501 |      199.6 |   $0.09267 |
+| #96  |     ▲ +9     | Claude Max 20x (9/14+)        | claude-fable-5    |    $200 |          35,970 |      33,575 |    $0.00596 |      167.9 |   $0.16560 |
+| #97  |     ▼ -5     | GLM Coding Lite (新客 ¥118) 忙时  | glm-5.3           |  $17.41 |          74,953 |       2,828 |    $0.00615 |      162.5 |   $0.08211 |
+| #98  |    ▼ -18     | Command Code GOAT             | gemini-3.8-flash  |     $10 |         120,488 |       1,622 |    $0.00617 |      162.2 |   $0.05118 |
+| #99  |     ▼ -3     | Ollama Pro                    | glm-5.3           |     $20 |          74,953 |       2,678 |    $0.00747 |      133.9 |   $0.09965 |
+| #100 |     ▼ -2     | Ollama Max                    | glm-5.3           |    $100 |          74,953 |      13,386 |    $0.00747 |      133.9 |   $0.09967 |
+| #101 |     ▼ -7     | Command Code GOAT             | muse-spark-1.2    |     $10 |          81,250 |       1,310 |    $0.00764 |      131.0 |   $0.09398 |
+| #102 |     ▲ +8     | Command Code GOAT             | grok-4.5          |     $10 |          34,250 |       1,060 |    $0.00944 |      106.0 |   $0.27548 |
+| #103 |     ▼ -2     | Ollama Max                    | kimi-k3           |    $100 |          75,383 |       9,718 |    $0.01029 |       97.2 |   $0.13650 |
+| #104 |     ▼ -2     | Ollama Pro                    | kimi-k3           |     $20 |          75,383 |       1,943 |    $0.01029 |       97.2 |   $0.13652 |
+| #105 |     ▼ -2     | Command Code GOAT             | glm-5.3           |     $10 |          74,953 |         893 |    $0.01120 |       89.3 |   $0.14948 |
+| #106 |     ▲ +5     | Command Code GOAT             | grok-4.6          |     $10 |          48,586 |         747 |    $0.01338 |       74.7 |   $0.27548 |
+| #107 |     ▼ -3     | Command Code GOAT             | qwen3.8-max       |     $10 |          89,729 |         724 |    $0.01380 |       72.4 |   $0.15385 |
+| #108 |     ▼ -2     | OpenCode Go                   | glm-5.3           |     $10 |          74,953 |         670 |    $0.01493 |       67.0 |   $0.19920 |
+| #109 |     ▼ -2     | Command Code GOAT             | kimi-k3           |     $10 |          75,383 |         647 |    $0.01545 |       64.7 |   $0.20492 |
+| #110 |     ▲ +2     | OpenCode Go                   | grok-4.6          |     $10 |          48,586 |         560 |    $0.01786 |       56.0 |   $0.36765 |
+| #111 |     ▼ -3     | OpenCode Go                   | qwen3.8-max       |     $10 |          89,729 |         543 |    $0.01843 |       54.3 |   $0.20534 |
+| #112 |     ▼ -3     | OpenCode Go                   | kimi-k3           |     $10 |          75,383 |         486 |    $0.02060 |       48.6 |   $0.27322 |
 
 ---
 
 ## 4. Key Takeaways & Ranking Shifts
 
 1. **The Verbosity Penalty**:
-   - Models with large raw token allowances like `gemini-3.8-flash` offer tens of billions of tokens, ranking high on raw $/MTok charts. However, at **128,364 output tokens/task**, its effective task cost drops behind more token-efficient models.
-   - Conversely, models like `gpt-5.6-luna` (**7,642 tokens/task**) and `gpt-5.6-terra` (**7,307 tokens/task**) show extreme token efficiency, providing tens of thousands of tasks per dollar.
+   - Models with large raw token allowances like `gemini-3.8-flash` offer tens of billions of tokens, ranking high on raw $/MTok charts. However, at **120,488 median output tokens/task** (Medium tier), its effective task cost falls behind far more token-efficient models.
+   - Conversely, `gpt-5.6-luna` (**7,918 tokens/task**) and `gpt-5.6-terra` (**11,453 tokens/task**) pair DeepSWE-grade competence with extreme token efficiency — `gpt-5.6-terra` plans climb up to **+39 spots** once verbosity is priced in, and Luna plans hold the entire top tier at **47,000 – 95,000 tasks per dollar**.
 
 2. **The Sweet Spot of Coding Workhorses**:
    - **ChatGPT Pro 20x / 5x / Plus (Luna & Terra)** achieve industry-leading task yields due to high monthly pools paired with low completion overhead.
-   - **Composer 2.5** on Cursor Ultra / Pro+ achieves a very balanced **17,347 tokens/task**, jumping into the top tier of developer efficiency at over **5,000 tasks per dollar**.
-   - **Sonnet 5** (**39,114 tokens/task**) and **Opus 5** (**45,272 tokens/task**) offer high quality at moderate token overhead, climbing past more verbose competitors.
+   - **GLM Coding Pro (`glm-5.3-flash`)** breaks into the top 10 at **67,491 tokens/task** on the strength of its enormous quota — despite mid-pack DeepSWE efficiency (63.4% Pass@1 at Max).
+   - **Sonnet 5** (**50,414 tokens/task**) and **Opus 5** (**33,436 tokens/task**) offer high quality at moderate token overhead, climbing past more verbose competitors.
+
+3. **Coverage Flip vs CursorBench**:
+   - DeepSWE covers **21 model families with subscription plans** (vs 11 under CursorBench 4.0): DeepSeek V4, Kimi K3 / K2.7 Code, GLM-5.2 / 5.3, Qwen3.8 Max, Claude Opus 4.8, GPT-5.5, Grok 4.5 and Muse Spark 1.2 all enter the ranking for the first time.
+   - **Composer 2.5** (Cursor) and **Muse Spark 1.3 / 1.3-contributor** have no DeepSWE evaluation yet and are now flagged `[Pending DeepSWE]` — plan rows switch from ranked to pending accordingly.
 
 ---
 
@@ -167,113 +271,176 @@ The column **Shift vs Raw** indicates the ranking change compared to the traditi
 ### Budget Band: $0 – $30 / month
 Tailored for individual developers, students, and freelancers:
 
-| Tier Rank | Plan Name                  | Served Model               | Fee/mo | Output Tok/Task | Tasks/Month | Cost / Task | Tasks / $1 |
-| :-------: | -------------------------- | -------------------------- | -----: | --------------: | ----------: | ----------: | ---------: |
-|     #1    | ChatGPT Plus               | gpt-5.6-luna               |    $20 |           7,642 |     982,858 |    $0.00002 |   49,142.9 |
-|     #2    | OpenCode Go                | muse-spark-1.3-contributor |    $10 |          27,255 |     458,631 |    $0.00002 |   45,863.1 |
-|     #3    | Command Code GOAT          | muse-spark-1.3-contributor |    $10 |          27,255 |     152,878 |    $0.00006 |   15,287.8 |
-|     #4    | Command Code GOAT          | gpt-5.6-luna               |    $10 |           7,642 |      93,470 |    $0.00011 |    9,347.0 |
-|     #5    | ChatGPT Plus               | gpt-5.6-terra              |    $20 |           7,307 |     164,390 |    $0.00012 |    8,219.5 |
-|     #6    | OpenCode Go                | gpt-5.6-luna               |    $10 |           7,642 |      70,100 |    $0.00014 |    7,009.9 |
-|     #7    | Claude Pro                 | claude-sonnet-5            |    $20 |          39,114 |     101,498 |    $0.00020 |    5,074.9 |
-|     #8    | Cursor Pro (Standard)      | composer-2.5               |    $20 |          17,347 |      69,660 |    $0.00029 |    3,483.0 |
-|     #9    | ChatGPT Plus               | gpt-5.6-sol                |    $20 |          10,111 |      60,924 |    $0.00033 |    3,046.2 |
-|    #10    | Cursor Pro (Composer Fast) | composer-2.5               |    $20 |          17,347 |      24,719 |    $0.00081 |    1,235.9 |
-|    #11    | Command Code GOAT          | gpt-5.6-sol                |    $10 |          10,111 |       9,890 |    $0.00101 |      989.0 |
-|    #12    | Cursor Pro                 | grok-4.6                   |    $20 |          24,893 |      18,881 |    $0.00106 |      944.0 |
-|    #13    | SuperGrok                  | grok-4.6                   |    $30 |          24,893 |      20,448 |    $0.00147 |      681.6 |
-|    #14    | SuperGrok Lite             | grok-4.6                   |    $10 |          24,893 |       6,026 |    $0.00166 |      602.6 |
-|    #15    | Command Code GOAT          | muse-spark-1.3             |    $10 |          27,255 |       3,904 |    $0.00256 |      390.4 |
-|    #16    | Command Code GOAT          | gemini-3.8-flash           |    $10 |         128,364 |       1,522 |    $0.00657 |      152.2 |
-|    #17    | Command Code GOAT          | grok-4.6                   |    $10 |          24,893 |       1,458 |    $0.00686 |      145.8 |
-|    #18    | OpenCode Go                | grok-4.6                   |    $10 |          24,893 |       1,093 |    $0.00915 |      109.3 |
+| Tier Rank | Plan Name                     | Served Model      | Fee/mo | Output Tok/Task | Tasks/Month | Cost / Task | Tasks / $1 |
+| :-------: | ----------------------------- | ----------------- | -----: | --------------: | ----------: | ----------: | ---------: |
+|     #1    | ChatGPT Plus                  | gpt-5.6-luna      |    $20 |           7,918 |     948,598 |    $0.00002 |   47,429.9 |
+|     #2    | Command Code GOAT             | gpt-5.6-luna      |    $10 |           7,918 |      90,212 |    $0.00011 |    9,021.2 |
+|     #3    | OpenCode Go                   | gpt-5.6-luna      |    $10 |           7,918 |      67,656 |    $0.00015 |    6,765.6 |
+|     #4    | ChatGPT Plus                  | gpt-5.6-terra     |    $20 |          11,453 |     104,881 |    $0.00019 |    5,244.0 |
+|     #5    | GLM Coding Pro (老客 ¥149) 闲时   | glm-5.3-flash     | $21.98 |          67,491 |     114,074 |    $0.00019 |    5,189.9 |
+|     #6    | Claude Pro                    | claude-sonnet-5   |    $20 |          50,414 |      78,748 |    $0.00025 |    3,937.4 |
+|     #7    | GLM Coding Pro (老客 ¥149) 中间值  | glm-5.3-flash     | $21.98 |          67,491 |      85,552 |    $0.00026 |    3,892.3 |
+|     #8    | GLM Coding Lite (老客 ¥49) 闲时   | glm-5.3-flash     |  $7.23 |          67,491 |      19,010 |    $0.00038 |    2,629.3 |
+|     #9    | GLM Coding Pro (老客 ¥149) 忙时   | glm-5.3-flash     | $21.98 |          67,491 |      57,045 |    $0.00038 |    2,595.3 |
+|    #10    | Claude Pro                    | claude-opus-4.8   |    $20 |          36,648 |      43,331 |    $0.00046 |    2,166.6 |
+|    #11    | Ollama Pro                    | deepseek-v4-flash |    $20 |         104,492 |      41,414 |    $0.00048 |    2,070.7 |
+|    #12    | GLM Coding Lite (老客 ¥49) 中间值  | glm-5.3-flash     |  $7.23 |          67,491 |      14,254 |    $0.00051 |    1,971.5 |
+|    #13    | ChatGPT Plus                  | gpt-5.6-sol       |    $20 |          17,645 |      34,911 |    $0.00057 |    1,745.5 |
+|    #14    | Command Code GOAT             | glm-5.3-flash     |    $10 |          67,491 |      17,316 |    $0.00058 |    1,731.6 |
+|    #15    | GLM Coding Pro (老客 ¥149) 闲时   | glm-5.3           | $21.98 |          74,953 |      33,888 |    $0.00065 |    1,541.8 |
+|    #16    | GLM Coding Lite (老客 ¥49) 忙时   | glm-5.3-flash     |  $7.23 |          67,491 |       9,512 |    $0.00076 |    1,315.7 |
+|    #17    | Ollama Pro                    | glm-5.3-flash     |    $20 |          67,491 |      25,975 |    $0.00077 |    1,298.8 |
+|    #18    | ChatGPT Plus                  | gpt-5.5           |    $20 |          18,737 |      25,644 |    $0.00078 |    1,282.2 |
+|    #19    | GLM Coding Pro (老客 ¥149) 中间值  | glm-5.3           | $21.98 |          74,953 |      25,416 |    $0.00086 |    1,156.3 |
+|    #20    | GLM Coding Lite (新客 ¥118) 闲时  | glm-5.3-flash     | $17.41 |          67,491 |      19,010 |    $0.00092 |    1,091.9 |
+|    #21    | Kimi 会员 199                   | kimi-k2.7-code    | $29.36 |          54,054 |      29,008 |    $0.00101 |      988.0 |
+|    #22    | GLM Coding Lite (新客 ¥118) 中间值 | glm-5.3-flash     | $17.41 |          67,491 |      14,254 |    $0.00122 |      818.7 |
+|    #23    | GLM Coding Lite (老客 ¥49) 闲时   | glm-5.3           |  $7.23 |          74,953 |       5,644 |    $0.00128 |      780.6 |
+|    #24    | GLM Coding Pro (老客 ¥149) 忙时   | glm-5.3           | $21.98 |          74,953 |      16,944 |    $0.00130 |      770.9 |
+|    #25    | Ollama Pro                    | deepseek-v4-pro   |    $20 |         101,214 |      13,925 |    $0.00144 |      696.2 |
+|    #26    | Kimi 会员 199                   | kimi-k3           | $29.36 |          75,383 |      19,248 |    $0.00153 |      655.6 |
+|    #27    | OpenCode Go                   | glm-5.3-flash     |    $10 |          67,491 |       6,494 |    $0.00154 |      649.4 |
+|    #28    | GLM Coding Lite (老客 ¥49) 中间值  | glm-5.3           |  $7.23 |          74,953 |       4,229 |    $0.00171 |      585.0 |
+|    #29    | Command Code GOAT             | gpt-5.6-sol       |    $10 |          17,645 |       5,667 |    $0.00177 |      566.7 |
+|    #30    | GLM Coding Lite (新客 ¥118) 忙时  | glm-5.3-flash     | $17.41 |          67,491 |       9,512 |    $0.00183 |      546.4 |
+|    #31    | OpenCode Go                   | kimi-k2.7-code    |    $10 |          54,054 |       5,052 |    $0.00198 |      505.2 |
+|    #32    | Command Code GOAT             | kimi-k2.7-code    |    $10 |          54,054 |       5,052 |    $0.00198 |      505.2 |
+|    #33    | SuperGrok                     | grok-4.5          |    $30 |          34,250 |      14,861 |    $0.00202 |      495.4 |
+|    #34    | Cursor Pro                    | grok-4.6          |    $20 |          48,586 |       9,674 |    $0.00207 |      483.7 |
+|    #35    | Command Code GOAT             | glm-5.2           |    $10 |          48,956 |       4,782 |    $0.00209 |      478.2 |
+|    #36    | Command Code GOAT             | deepseek-v4-pro   |    $10 |         101,214 |       4,642 |    $0.00215 |      464.2 |
+|    #37    | OpenCode Go                   | glm-5.2           |    $10 |          48,956 |       4,100 |    $0.00244 |      410.0 |
+|    #38    | Kimi 会员 99                    | kimi-k2.7-code    | $14.60 |          54,054 |       5,809 |    $0.00251 |      397.9 |
+|    #39    | GLM Coding Lite (老客 ¥49) 忙时   | glm-5.3           |  $7.23 |          74,953 |       2,828 |    $0.00256 |      391.2 |
+|    #40    | SuperGrok                     | grok-4.6          |    $30 |          48,586 |      10,476 |    $0.00286 |      349.2 |
+|    #41    | OpenCode Go                   | deepseek-v4-pro   |    $10 |         101,214 |       3,482 |    $0.00287 |      348.2 |
+|    #42    | GLM Coding Lite (新客 ¥118) 闲时  | glm-5.3           | $17.41 |          74,953 |       5,644 |    $0.00309 |      324.2 |
+|    #43    | SuperGrok Lite                | grok-4.6          |    $10 |          48,586 |       3,087 |    $0.00324 |      308.7 |
+|    #44    | Kimi 会员 99                    | kimi-k3           | $14.60 |          75,383 |       3,847 |    $0.00380 |      263.5 |
+|    #45    | Ollama Pro                    | kimi-k2.7-code    |    $20 |          54,054 |       5,052 |    $0.00396 |      252.6 |
+|    #46    | GLM Coding Lite (新客 ¥118) 中间值 | glm-5.3           | $17.41 |          74,953 |       4,229 |    $0.00412 |      242.9 |
+|    #47    | Command Code GOAT             | gemini-3.7-flash  |    $10 |          87,640 |       2,230 |    $0.00449 |      223.0 |
+|    #48    | Ollama Pro                    | glm-5.2           |    $20 |          48,956 |       4,100 |    $0.00488 |      205.0 |
+|    #49    | Kimi 会员 49                    | kimi-k2.7-code    |  $7.23 |          54,054 |       1,443 |    $0.00501 |      199.6 |
+|    #50    | GLM Coding Lite (新客 ¥118) 忙时  | glm-5.3           | $17.41 |          74,953 |       2,828 |    $0.00615 |      162.5 |
+|    #51    | Command Code GOAT             | gemini-3.8-flash  |    $10 |         120,488 |       1,622 |    $0.00617 |      162.2 |
+|    #52    | Ollama Pro                    | glm-5.3           |    $20 |          74,953 |       2,678 |    $0.00747 |      133.9 |
+|    #53    | Command Code GOAT             | muse-spark-1.2    |    $10 |          81,250 |       1,310 |    $0.00764 |      131.0 |
+|    #54    | Command Code GOAT             | grok-4.5          |    $10 |          34,250 |       1,060 |    $0.00944 |      106.0 |
+|    #55    | Ollama Pro                    | kimi-k3           |    $20 |          75,383 |       1,943 |    $0.01029 |       97.2 |
+|    #56    | Command Code GOAT             | glm-5.3           |    $10 |          74,953 |         893 |    $0.01120 |       89.3 |
+|    #57    | Command Code GOAT             | grok-4.6          |    $10 |          48,586 |         747 |    $0.01338 |       74.7 |
+|    #58    | Command Code GOAT             | qwen3.8-max       |    $10 |          89,729 |         724 |    $0.01380 |       72.4 |
+|    #59    | OpenCode Go                   | glm-5.3           |    $10 |          74,953 |         670 |    $0.01493 |       67.0 |
+|    #60    | Command Code GOAT             | kimi-k3           |    $10 |          75,383 |         647 |    $0.01545 |       64.7 |
+|    #61    | OpenCode Go                   | grok-4.6          |    $10 |          48,586 |         560 |    $0.01786 |       56.0 |
+|    #62    | OpenCode Go                   | qwen3.8-max       |    $10 |          89,729 |         543 |    $0.01843 |       54.3 |
+|    #63    | OpenCode Go                   | kimi-k3           |    $10 |          75,383 |         486 |    $0.02060 |       48.6 |
 
 ### Pro Band: >$30 and ≤$100 / month
 For professional software engineers and daily power users:
 
-| Tier Rank | Plan Name                   | Served Model    | Fee/mo | Output Tok/Task | Tasks/Month | Cost / Task | Tasks / $1 |
-| :-------: | --------------------------- | --------------- | -----: | --------------: | ----------: | ----------: | ---------: |
-|     #1    | ChatGPT Pro 5x              | gpt-5.6-luna    |   $100 |           7,642 |   4,914,420 |    $0.00002 |   49,144.2 |
-|     #2    | ChatGPT Pro 5x              | gpt-5.6-terra   |   $100 |           7,307 |     821,952 |    $0.00012 |    8,219.5 |
-|     #3    | Cursor Pro+ (Standard)      | composer-2.5    |    $60 |          17,347 |     305,799 |    $0.00020 |    5,096.7 |
-|     #4    | Claude Max 5x (9/14+)       | claude-sonnet-5 |   $100 |          39,114 |     501,738 |    $0.00020 |    5,017.4 |
-|     #5    | ChatGPT Pro 5x              | gpt-5.6-sol     |   $100 |          10,111 |     304,619 |    $0.00033 |    3,046.2 |
-|     #6    | Cursor Pro+ (Composer Fast) | composer-2.5    |    $60 |          17,347 |     108,509 |    $0.00055 |    1,808.5 |
-|     #7    | Claude Max 5x (9/14+)       | claude-opus-5   |   $100 |          45,272 |     173,396 |    $0.00058 |    1,734.0 |
-|     #8    | Cursor Pro+                 | grok-4.6        |    $60 |          24,893 |      82,883 |    $0.00072 |    1,381.4 |
-|     #9    | SuperGrok Plus              | grok-4.6        |   $100 |          24,893 |      81,951 |    $0.00122 |      819.5 |
-|    #10    | Claude Max 5x (9/14+)       | claude-fable-5  |   $100 |          45,411 |      20,336 |    $0.00492 |      203.4 |
+| Tier Rank | Plan Name                    | Served Model      | Fee/mo | Output Tok/Task | Tasks/Month | Cost / Task | Tasks / $1 |
+| :-------: | ---------------------------- | ----------------- | -----: | --------------: | ----------: | ----------: | ---------: |
+|     #1    | ChatGPT Pro 5x               | gpt-5.6-luna      |   $100 |           7,918 |   4,743,117 |    $0.00002 |   47,431.2 |
+|     #2    | ChatGPT Pro 5x               | gpt-5.6-terra     |   $100 |          11,453 |     524,404 |    $0.00019 |    5,244.0 |
+|     #3    | Claude Max 5x (9/14+)        | claude-sonnet-5   |   $100 |          50,414 |     389,277 |    $0.00026 |    3,892.8 |
+|     #4    | GLM Coding Max (老客 ¥469) 闲时  | glm-5.3-flash     | $69.19 |          67,491 |     266,184 |    $0.00026 |    3,847.1 |
+|     #5    | GLM Coding Max (老客 ¥469) 中间值 | glm-5.3-flash     | $69.19 |          67,491 |     199,627 |    $0.00035 |    2,885.2 |
+|     #6    | Claude Max 5x (9/14+)        | claude-opus-5     |   $100 |          33,436 |     234,777 |    $0.00043 |    2,347.8 |
+|     #7    | Ollama Max                   | deepseek-v4-flash |   $100 |         104,492 |     207,070 |    $0.00048 |    2,070.7 |
+|     #8    | GLM Coding Max (老客 ¥469) 忙时  | glm-5.3-flash     | $69.19 |          67,491 |     133,084 |    $0.00052 |    1,923.5 |
+|     #9    | ChatGPT Pro 5x               | gpt-5.6-sol       |   $100 |          17,645 |     174,554 |    $0.00057 |    1,745.5 |
+|    #10    | GLM Coding Pro (新客 ¥538) 闲时  | glm-5.3-flash     | $79.37 |          67,491 |     114,074 |    $0.00070 |    1,437.2 |
+|    #11    | Ollama Max                   | glm-5.3-flash     |   $100 |          67,491 |     129,877 |    $0.00077 |    1,298.8 |
+|    #12    | ChatGPT Pro 5x               | gpt-5.5           |   $100 |          18,737 |     128,217 |    $0.00078 |    1,282.2 |
+|    #13    | GLM Coding Max (老客 ¥469) 闲时  | glm-5.3           | $69.19 |          74,953 |      79,063 |    $0.00088 |    1,142.7 |
+|    #14    | GLM Coding Pro (新客 ¥538) 中间值 | glm-5.3-flash     | $79.37 |          67,491 |      85,552 |    $0.00093 |    1,077.9 |
+|    #15    | GLM Coding Max (老客 ¥469) 中间值 | glm-5.3           | $69.19 |          74,953 |      59,304 |    $0.00117 |      857.1 |
+|    #16    | GLM Coding Pro (新客 ¥538) 忙时  | glm-5.3-flash     | $79.37 |          67,491 |      57,045 |    $0.00139 |      718.7 |
+|    #17    | Cursor Pro+                  | grok-4.6          |    $60 |          48,586 |      42,465 |    $0.00141 |      707.7 |
+|    #18    | Ollama Max                   | deepseek-v4-pro   |   $100 |         101,214 |      69,627 |    $0.00144 |      696.3 |
+|    #19    | GLM Coding Max (老客 ¥469) 忙时  | glm-5.3           | $69.19 |          74,953 |      39,531 |    $0.00175 |      571.3 |
+|    #20    | GLM Coding Pro (新客 ¥538) 闲时  | glm-5.3           | $79.37 |          74,953 |      33,888 |    $0.00234 |      427.0 |
+|    #21    | SuperGrok Plus               | grok-4.6          |   $100 |          48,586 |      41,987 |    $0.00238 |      419.9 |
+|    #22    | GLM Coding Pro (新客 ¥538) 中间值 | glm-5.3           | $79.37 |          74,953 |      25,416 |    $0.00312 |      320.2 |
+|    #23    | Claude Max 5x (9/14+)        | claude-fable-5    |   $100 |          35,970 |      25,674 |    $0.00390 |      256.7 |
+|    #24    | Ollama Max                   | kimi-k2.7-code    |   $100 |          54,054 |      25,266 |    $0.00396 |      252.7 |
+|    #25    | GLM Coding Pro (新客 ¥538) 忙时  | glm-5.3           | $79.37 |          74,953 |      16,944 |    $0.00468 |      213.5 |
+|    #26    | Ollama Max                   | glm-5.2           |   $100 |          48,956 |      20,494 |    $0.00488 |      204.9 |
+|    #27    | Ollama Max                   | glm-5.3           |   $100 |          74,953 |      13,386 |    $0.00747 |      133.9 |
+|    #28    | Ollama Max                   | kimi-k3           |   $100 |          75,383 |       9,718 |    $0.01029 |       97.2 |
 
 ### Power & Enterprise Band: >$100 and ≤$300 / month
 For heavy agentic automation and team subscriptions:
 
-| Tier Rank | Plan Name                    | Served Model    | Fee/mo | Output Tok/Task | Tasks/Month | Cost / Task | Tasks / $1 |
-| :-------: | ---------------------------- | --------------- | -----: | --------------: | ----------: | ----------: | ---------: |
-|     #1    | ChatGPT Pro 20x              | gpt-5.6-luna    |   $200 |           7,642 |  19,657,420 |    $0.00001 |   98,287.1 |
-|     #2    | ChatGPT Pro 20x              | gpt-5.6-terra   |   $200 |           7,307 |   3,287,806 |    $0.00006 |   16,439.0 |
-|     #3    | ChatGPT Pro 20x              | gpt-5.6-sol     |   $200 |          10,111 |   1,218,475 |    $0.00016 |    6,092.4 |
-|     #4    | Cursor Ultra (Standard)      | composer-2.5    |   $200 |          17,347 |   1,146,746 |    $0.00017 |    5,733.7 |
-|     #5    | Claude Max 20x (9/14+)       | claude-sonnet-5 |   $200 |          39,114 |   1,003,477 |    $0.00020 |    5,017.4 |
-|     #6    | Cursor Ultra (Composer Fast) | composer-2.5    |   $200 |          17,347 |     406,912 |    $0.00049 |    2,034.6 |
-|     #7    | Claude Max 20x (9/14+)       | claude-opus-5   |   $200 |          45,272 |     346,793 |    $0.00058 |    1,734.0 |
-|     #8    | Cursor Ultra                 | grok-4.6        |   $200 |          24,893 |     310,810 |    $0.00064 |    1,554.1 |
-|     #9    | SuperGrok Heavy              | grok-4.6        |   $300 |          24,893 |     204,475 |    $0.00147 |      681.6 |
-|    #10    | Cursor Ultra (Fast)          | grok-4.6        |   $200 |          24,893 |     123,488 |    $0.00162 |      617.4 |
-|    #11    | Claude Max 20x (9/14+)       | claude-fable-5  |   $200 |          45,411 |      26,595 |    $0.00752 |      133.0 |
+| Tier Rank | Plan Name                     | Served Model    | Fee/mo  | Output Tok/Task | Tasks/Month | Cost / Task | Tasks / $1 |
+| :-------: | ----------------------------- | --------------- | ------: | --------------: | ----------: | ----------: | ---------: |
+|     #1    | ChatGPT Pro 20x               | gpt-5.6-luna    |    $200 |           7,918 |  18,972,215 |    $0.00001 |   94,861.1 |
+|     #2    | ChatGPT Pro 20x               | gpt-5.6-terra   |    $200 |          11,453 |   2,097,616 |    $0.00010 |   10,488.1 |
+|     #3    | Claude Max 20x (9/14+)        | claude-sonnet-5 |    $200 |          50,414 |     778,554 |    $0.00026 |    3,892.8 |
+|     #4    | ChatGPT Pro 20x               | gpt-5.6-sol     |    $200 |          17,645 |     698,215 |    $0.00029 |    3,491.1 |
+|     #5    | ChatGPT Pro 20x               | gpt-5.5         |    $200 |          18,737 |     512,868 |    $0.00039 |    2,564.3 |
+|     #6    | Claude Max 20x (9/14+)        | claude-opus-5   |    $200 |          33,436 |     469,554 |    $0.00043 |    2,347.8 |
+|     #7    | Claude Max 20x (9/14+)        | claude-opus-4.8 |    $200 |          36,648 |     428,400 |    $0.00047 |    2,142.0 |
+|     #8    | GLM Coding Max (新客 ¥1078) 闲时  | glm-5.3-flash   | $159.03 |          67,491 |     266,184 |    $0.00060 |    1,673.8 |
+|     #9    | GLM Coding Max (新客 ¥1078) 中间值 | glm-5.3-flash   | $159.03 |          67,491 |     199,627 |    $0.00080 |    1,255.3 |
+|    #10    | Cursor Ultra                  | grok-4.5        |    $200 |          34,250 |     225,898 |    $0.00089 |    1,129.5 |
+|    #11    | Kimi 会员 699                   | kimi-k2.7-code  | $103.12 |          54,054 |      87,024 |    $0.00119 |      843.9 |
+|    #12    | GLM Coding Max (新客 ¥1078) 忙时  | glm-5.3-flash   | $159.03 |          67,491 |     133,084 |    $0.00120 |      836.9 |
+|    #13    | Cursor Ultra                  | grok-4.6        |    $200 |          48,586 |     159,243 |    $0.00126 |      796.2 |
+|    #14    | Kimi 会员 699                   | kimi-k3         | $103.12 |          75,383 |      57,745 |    $0.00179 |      560.0 |
+|    #15    | GLM Coding Max (新客 ¥1078) 闲时  | glm-5.3         | $159.03 |          74,953 |      79,063 |    $0.00201 |      497.2 |
+|    #16    | SuperGrok Heavy               | grok-4.5        |    $300 |          34,250 |     148,613 |    $0.00202 |      495.4 |
+|    #17    | GLM Coding Max (新客 ¥1078) 中间值 | glm-5.3         | $159.03 |          74,953 |      59,304 |    $0.00268 |      372.9 |
+|    #18    | SuperGrok Heavy               | grok-4.6        |    $300 |          48,586 |     104,763 |    $0.00286 |      349.2 |
+|    #19    | Cursor Ultra (Fast)           | grok-4.6        |    $200 |          48,586 |      63,269 |    $0.00316 |      316.3 |
+|    #20    | GLM Coding Max (新客 ¥1078) 忙时  | glm-5.3         | $159.03 |          74,953 |      39,531 |    $0.00402 |      248.6 |
+|    #21    | Claude Max 20x (9/14+)        | claude-fable-5  |    $200 |          35,970 |      33,575 |    $0.00596 |      167.9 |
 
 ---
 
 ## 6. Unbenchmarked Models (Marked for Future Evaluation)
 
-The following models from the `real-api-pricing` dataset have **no CursorBench 4.0 evaluation** at all — meaning their output token consumption per task is unknown. Their ranking values are left empty (`null`) and flagged as **`[Pending CursorBench]`**:
+The following models from the `real-api-pricing` dataset have **no DeepSWE v1.1 evaluation** at all — meaning their output token consumption per task is unknown. Their ranking values are left empty (`null`) and flagged as **`[Pending DeepSWE]`**:
 
-> **Note**: API-only rows (e.g. "Claude Opus 5 API") for models that **are** in CursorBench are intentionally excluded from ranking because they carry no monthly token quota — not because the model itself is unevaluated.
+> **Note**: API-only rows (e.g. "Claude Opus 5 API") for models that **are** in DeepSWE are intentionally excluded from ranking because they carry no monthly token quota — not because the model itself is unevaluated.
 
-| Served Model                 | Plans Offering This Model                                                   | CursorBench Status       | Action Plan                                                    |
-| ---------------------------- | --------------------------------------------------------------------------- | :----------------------: | -------------------------------------------------------------- |
-| `claude-opus-4.8`            | Claude Max 20x (9/14+), Claude Pro                                          | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `deepseek-v4-flash`          | DeepSeek V4 Flash API 忙时, DeepSeek V4 Flash API 闲时, Ollama Max, Ollama Pro  | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `deepseek-v4-flash-fast`     | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `deepseek-v4-pro`            | Command Code GOAT, DeepSeek V4 Pro API 忙时, DeepSeek V4 Pro API 闲时, Ollam... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `deepseek-v4.1-flash`        | Command Code GOAT, DeepSeek V4.1 Flash API 忙时, DeepSeek V4.1 Flash API 闲... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `gemini-3.7-flash`           | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `glm-5.1`                    | Ollama Max, Ollama Pro, OpenCode Go                                         | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `glm-5.2`                    | Command Code GOAT, Ollama Max, Ollama Pro, OpenCode Go                      | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `glm-5.2-fast`               | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `glm-5.3`                    | Command Code GOAT, GLM Coding Lite (新客 ¥118) 中间值, GLM Coding Lite (新客 ¥1... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `glm-5.3-flash`              | Command Code GOAT, GLM Coding Lite (新客 ¥118) 中间值, GLM Coding Lite (新客 ¥1... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `gpt-5.5`                    | ChatGPT Plus, ChatGPT Pro 20x, ChatGPT Pro 5x                               | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `grok-4.5`                   | Command Code GOAT, Cursor Ultra, SuperGrok, SuperGrok Heavy                 | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `hy3`                        | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `hy4-preview`                | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `inkling`                    | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `inkling-small`              | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `kimi-k2.6`                  | OpenCode Go                                                                 | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `kimi-k2.7-code`             | Command Code GOAT, Kimi 会员 199, Kimi 会员 49, Kimi 会员 699, Kimi 会员 99, Oll... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `kimi-k2.7-code-highspeed`   | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `kimi-k3`                    | Command Code GOAT, Kimi 会员 199, Kimi 会员 699, Kimi 会员 99, Ollama Max, Oll... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `longcat-2.0`                | OpenCode Go                                                                 | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `mimo-v2.5`                  | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `mimo-v2.5-pro`              | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `minimax-m2.5`               | OpenCode Go                                                                 | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `minimax-m2.7`               | MiniMax Token Plan Plus, MiniMax Token Plan Plus (Global), Ollama Max, O... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `minimax-m3`                 | Command Code GOAT, MiniMax Token Plan Max, MiniMax Token Plan Max (Globa... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `muse-spark-1.2`             | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `muse-spark-1.2-contributor` | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `nemotron-3-ultra`           | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `omen-alpha`                 | OpenCode Go                                                                 | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `qwen3.6-plus`               | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `qwen3.7-max`                | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `qwen3.7-plus`               | Alibaba Cloud Coding Plan Pro, Command Code GOAT, OpenCode Go, 阿里云百炼 Cod... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `qwen3.8-27b`                | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `qwen3.8-flash`              | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `qwen3.8-max`                | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `qwen3.8-max-0902`           | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `step-3.5-flash`             | Command Code GOAT, Step Plan Max (¥699), Step Plan Mini (¥49), Step Plan... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `step-3.7-flash`             | Command Code GOAT, Step Plan Max (¥699), Step Plan Mini (¥49), Step Plan... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
+| Served Model                 | Plans Offering This Model                                                   | DeepSWE Status       | Action Plan                                                |
+| ---------------------------- | --------------------------------------------------------------------------- | :------------------: | ---------------------------------------------------------- |
+| `composer-2.5`               | Cursor Pro (Composer Fast), Cursor Pro (Standard), Cursor Pro+ (Composer... | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `deepseek-v4-flash-fast`     | Command Code GOAT                                                           | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `deepseek-v4.1-flash`        | Command Code GOAT, DeepSeek V4.1 Flash API 忙时, DeepSeek V4.1 Flash API 闲... | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `glm-5.1`                    | Ollama Max, Ollama Pro, OpenCode Go                                         | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `glm-5.2-fast`               | Command Code GOAT                                                           | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `hy3`                        | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `hy4-preview`                | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `inkling`                    | Command Code GOAT                                                           | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `inkling-small`              | Command Code GOAT                                                           | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `kimi-k2.6`                  | OpenCode Go                                                                 | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `kimi-k2.7-code-highspeed`   | Command Code GOAT                                                           | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `longcat-2.0`                | OpenCode Go                                                                 | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `mimo-v2.5`                  | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `mimo-v2.5-pro`              | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `minimax-m2.5`               | OpenCode Go                                                                 | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `minimax-m2.7`               | MiniMax Token Plan Plus, MiniMax Token Plan Plus (Global), Ollama Max, O... | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `minimax-m3`                 | Command Code GOAT, MiniMax Token Plan Max, MiniMax Token Plan Max (Globa... | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `muse-spark-1.2-contributor` | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `muse-spark-1.3`             | Command Code GOAT                                                           | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `muse-spark-1.3-contributor` | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `nemotron-3-ultra`           | Command Code GOAT                                                           | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `omen-alpha`                 | OpenCode Go                                                                 | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `qwen3.6-plus`               | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `qwen3.7-max`                | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `qwen3.7-plus`               | Alibaba Cloud Coding Plan Pro, Command Code GOAT, OpenCode Go, 阿里云百炼 Cod... | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `qwen3.8-27b`                | Command Code GOAT                                                           | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `qwen3.8-flash`              | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `qwen3.8-max-0902`           | Command Code GOAT                                                           | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `step-3.5-flash`             | Command Code GOAT, Step Plan Max (¥699), Step Plan Mini (¥49), Step Plan... | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
+| `step-3.7-flash`             | Command Code GOAT, Step Plan Max (¥699), Step Plan Mini (¥49), Step Plan... | ⚠️ [Pending DeepSWE] | Awaiting evaluation in DeepSWE or community saturation run |
 
 > [!IMPORTANT]
-> When CursorBench or community saturation benchmarks release completion token figures for DeepSeek, Kimi, GLM, Qwen, StepFun, or MiniMax, simply update `data/model-token-consumption.json` and re-run `python3 scripts/compute_task_ranking.py` to seamlessly integrate them into the ranking.
+> When DeepSWE or community saturation benchmarks release completion token figures for Composer, Muse Spark 1.3, DeepSeek V4.1, MiniMax, StepFun, Qwen3.7, or any other pending model, simply update `data/model-token-consumption.json` and re-run `python3 scripts/compute_task_ranking.py` to seamlessly integrate them into the ranking.
 
 ---
 
@@ -284,14 +451,14 @@ Everything has been structured so that the data pipeline is completely reproduci
 ```
 CodingSubRanks/
 ├── README.md                      # Primary comprehensive markdown report (this file)
-├── CREDITS.md                     # Formal attribution to FeiZhuLulu/real-api-pricing & Cursor
+├── CREDITS.md                     # Formal attribution to FeiZhuLulu/real-api-pricing & Datacurve
 ├── SOURCES.md                     # Data sources and methodology documentation
 ├── BUILD.md                       # Instructions to reproduce the calculations
 ├── LICENSE                        # MIT License
 ├── data/
 │   ├── adopted.csv                # Upstream subscription data (196 plan × model points)
-│   ├── cursorbench.json           # Raw extracted CursorBench 4.0 benchmark records
-│   ├── cursorbench.csv            # Tabular CursorBench 4.0 records
+│   ├── deepswe.json               # Raw DeepSWE v1.1 leaderboard artifact (70 configs)
+│   ├── deepswe-configs.json       # Normalized per-config records (tokens, score, cost, steps)
 │   ├── model-token-consumption.json # Canonical mapping with reasoning tiers & null placeholders
 │   └── conventions.json           # Currency rates and conversion conventions
 ├── derived/
@@ -300,19 +467,20 @@ CodingSubRanks/
 │   ├── unbenchmarked-models.json  # Catalog of models awaiting eval
 │   └── unbenchmarked-models.csv   # Tabular catalog of pending models
 ├── scripts/
-│   ├── extract_cursorbench.py     # Parser for CursorBench 4.0
+│   ├── extract_deepswe.py         # Fetcher/parser for DeepSWE v1.1 leaderboard artifact
 │   ├── build_model_consumption_map.py # Builder for canonical model mapping
 │   ├── compute_task_ranking.py    # Core ranking calculation engine
 │   ├── generate_markdown_report.py # Markdown table formatter
 │   └── build_readme.py            # Automated README generator
 └── web/
+    ├── index.html                 # Static showcase page (GitHub Pages)
     ├── schema.json                # JSON Schema data contract for web UI
     └── README.md                  # Web frontend staging documentation
 ```
 
 To regenerate the entire dataset and documentation:
 ```bash
-python3 scripts/extract_cursorbench.py
+python3 scripts/extract_deepswe.py
 python3 scripts/build_model_consumption_map.py
 python3 scripts/compute_task_ranking.py
 python3 scripts/build_readme.py

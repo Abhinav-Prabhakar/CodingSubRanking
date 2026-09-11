@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Compute task-adjusted coding subscription rankings using CursorBench output token consumption."""
+"""Compute task-adjusted coding subscription rankings using DeepSWE output token consumption."""
 
 import csv
 import json
@@ -40,7 +40,7 @@ def compute_task_rankings():
         raw_rank = raw_rank_map.get(key)
 
         m_info = model_map.get(model, {})
-        status = m_info.get("cursorbench_status", "pending")
+        status = m_info.get("deepswe_status", "pending")
 
         if status == "available" and m_tokens > 0 and p_usd > 0:
             default_tier = m_info.get("default_tier", "Medium")
@@ -75,9 +75,9 @@ def compute_task_rankings():
                 "price_usd": p_usd,
                 "served_model": model,
                 "benchmarked_model_name": m_info.get("benchmarked_name"),
-                "cursorbench_status": "available",
+                "benchmark_status": "available",
                 "default_tier": default_tier,
-                "cursorbench_score_pct": score_pct,
+                "benchmark_score_pct": score_pct,
                 "output_tokens_per_task": out_tokens,
                 "monthly_tokens": int(m_tokens),
                 "monthly_tasks": round(monthly_tasks, 1),
@@ -100,8 +100,8 @@ def compute_task_rankings():
                 "currency": r["currency"],
                 "price_usd": p_usd,
                 "served_model": model,
-                "cursorbench_status": "pending",
-                "cursorbench_note": "[Pending CursorBench]",
+                "benchmark_status": "pending",
+                "benchmark_note": "[Pending DeepSWE]",
                 "output_tokens_per_task": None,
                 "monthly_tokens": int(m_tokens) if m_tokens else None,
                 "monthly_tasks": None,
@@ -136,9 +136,9 @@ def compute_task_rankings():
     with open(out_json, "w", encoding="utf-8") as f:
         json.dump({
             "metadata": {
-                "benchmark": "CursorBench 4.0 (cursor.com/cursorbench)",
-                "metric": "Output token consumption (completion tokens / task)",
-                "default_reasoning_tier": "Medium / Standard",
+                "benchmark": "DeepSWE v1.1 (deepswe.datacurve.ai)",
+                "metric": "Output token consumption (median output tokens / task)",
+                "default_reasoning_tier": "Medium / nearest available",
                 "reference_data": "FeiZhuLulu/real-api-pricing",
                 "total_benchmarked_plans": len(benchmarked_points),
                 "total_unbenchmarked_plans": len(unbenchmarked_points)
@@ -150,7 +150,7 @@ def compute_task_rankings():
     # Save benchmarked CSV
     csv_fields = [
         "task_rank", "cohort_raw_rank", "rank_delta", "plan_name", "price_usd",
-        "served_model", "output_tokens_per_task", "cursorbench_score_pct",
+        "served_model", "output_tokens_per_task", "benchmark_score_pct",
         "monthly_tokens", "monthly_tasks", "cost_per_task_usd", "tasks_per_dollar",
         "raw_usd_per_mtok", "confidence", "plan_id"
     ]
@@ -168,7 +168,7 @@ def compute_task_rankings():
 
     unbench_csv = DERIVED_DIR / "unbenchmarked-models.csv"
     with open(unbench_csv, "w", encoding="utf-8", newline="") as f:
-        unbench_fields = ["plan_name", "price_usd", "served_model", "monthly_tokens", "raw_usd_per_mtok", "cursorbench_note", "confidence", "plan_id"]
+        unbench_fields = ["plan_name", "price_usd", "served_model", "monthly_tokens", "raw_usd_per_mtok", "benchmark_note", "confidence", "plan_id"]
         writer = csv.DictWriter(f, fieldnames=unbench_fields, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(unbenchmarked_points)
