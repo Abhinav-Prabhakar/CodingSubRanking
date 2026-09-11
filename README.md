@@ -37,7 +37,7 @@ To find the true purchasing power of an AI coding subscription, we adjust for ou
    *(What you actually pay per completed task)*
 
 3. **Tasks per Dollar Spent ($Tasks_{\$}$)**:
-   $$Tasks_{\$\$} = \frac{N_{\text{tasks}}}{P_{\text{monthly}}} = \frac{1}{Cost_{\text{task}}}$$
+   $$Tasks_{\$} = \frac{N_{\text{tasks}}}{P_{\text{monthly}}} = \frac{1}{Cost_{\text{task}}}$$
    *(The true efficiency metric: completed tasks delivered per dollar)*
 
 ---
@@ -225,14 +225,13 @@ For heavy agentic automation and team subscriptions:
 
 ## 6. Unbenchmarked Models (Marked for Future Evaluation)
 
-The following models from the `real-api-pricing` dataset are **not yet evaluated in CursorBench 4.0**. Their token consumption values are left empty (`null`) and flagged as **`[Pending CursorBench]`**:
+The following models from the `real-api-pricing` dataset have **no CursorBench 4.0 evaluation** at all — meaning their output token consumption per task is unknown. Their ranking values are left empty (`null`) and flagged as **`[Pending CursorBench]`**:
+
+> **Note**: API-only rows (e.g. "Claude Opus 5 API") for models that **are** in CursorBench are intentionally excluded from ranking because they carry no monthly token quota — not because the model itself is unevaluated.
 
 | Served Model                 | Plans Offering This Model                                                   | CursorBench Status       | Action Plan                                                    |
 | ---------------------------- | --------------------------------------------------------------------------- | :----------------------: | -------------------------------------------------------------- |
-| `claude-fable-5`             | Claude Fable 5 API                                                          | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
 | `claude-opus-4.8`            | Claude Max 20x (9/14+), Claude Pro                                          | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `claude-opus-5`              | Claude Opus 5 API                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `claude-sonnet-5`            | Claude Sonnet 5 API                                                         | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
 | `deepseek-v4-flash`          | DeepSeek V4 Flash API 忙时, DeepSeek V4 Flash API 闲时, Ollama Max, Ollama Pro  | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
 | `deepseek-v4-flash-fast`     | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
 | `deepseek-v4-pro`            | Command Code GOAT, DeepSeek V4 Pro API 忙时, DeepSeek V4 Pro API 闲时, Ollam... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
@@ -244,11 +243,7 @@ The following models from the `real-api-pricing` dataset are **not yet evaluated
 | `glm-5.3`                    | Command Code GOAT, GLM Coding Lite (新客 ¥118) 中间值, GLM Coding Lite (新客 ¥1... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
 | `glm-5.3-flash`              | Command Code GOAT, GLM Coding Lite (新客 ¥118) 中间值, GLM Coding Lite (新客 ¥1... | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
 | `gpt-5.5`                    | ChatGPT Plus, ChatGPT Pro 20x, ChatGPT Pro 5x                               | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `gpt-5.6-luna`               | GPT-5.6 Luna API                                                            | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `gpt-5.6-sol`                | GPT-5.6 Sol API                                                             | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `gpt-5.6-terra`              | GPT-5.6 Terra API                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
 | `grok-4.5`                   | Command Code GOAT, Cursor Ultra, SuperGrok, SuperGrok Heavy                 | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
-| `grok-4.6`                   | Grok 4.6 API (<200k)                                                        | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
 | `hy3`                        | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
 | `hy4-preview`                | Command Code GOAT, OpenCode Go                                              | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |
 | `inkling`                    | Command Code GOAT                                                           | ⚠️ [Pending CursorBench] | Awaiting evaluation in CursorBench or community saturation run |

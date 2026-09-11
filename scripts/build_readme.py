@@ -50,7 +50,7 @@ To find the true purchasing power of an AI coding subscription, we adjust for ou
    *(What you actually pay per completed task)*
 
 3. **Tasks per Dollar Spent ($Tasks_{{\\$}}$)**:
-   $$Tasks_{{\\$\\$}} = \\frac{{N_{{\\text{{tasks}}}}}}{{P_{{\\text{{monthly}}}}}} = \\frac{{1}}{{Cost_{{\\text{{task}}}}}}$$
+   $$Tasks_{{\\$}} = \\frac{{N_{{\\text{{tasks}}}}}}{{P_{{\\text{{monthly}}}}}} = \\frac{{1}}{{Cost_{{\\text{{task}}}}}}$$
    *(The true efficiency metric: completed tasks delivered per dollar)*
 
 ---
@@ -112,7 +112,9 @@ For heavy agentic automation and team subscriptions:
 
 ## 6. Unbenchmarked Models (Marked for Future Evaluation)
 
-The following models from the `real-api-pricing` dataset are **not yet evaluated in CursorBench 4.0**. Their token consumption values are left empty (`null`) and flagged as **`[Pending CursorBench]`**:
+The following models from the `real-api-pricing` dataset have **no CursorBench 4.0 evaluation** at all — meaning their output token consumption per task is unknown. Their ranking values are left empty (`null`) and flagged as **`[Pending CursorBench]`**:
+
+> **Note**: API-only rows (e.g. "Claude Opus 5 API") for models that **are** in CursorBench are intentionally excluded from ranking because they carry no monthly token quota — not because the model itself is unevaluated.
 
 {tables['unbenchmarked_table']}
 

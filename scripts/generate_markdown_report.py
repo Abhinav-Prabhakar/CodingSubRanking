@@ -131,10 +131,18 @@ def build_markdown_tables():
         band_tables[band_name] = format_table(b_rows, b_headers, b_align)
 
     # 4. Unbenchmarked Models Summary Table
-    # Group unbenchmarked by model and show plans
+    # Load model-token-consumption map to distinguish truly-pending models from
+    # API-only rows for benchmarked models (which have monthly_tokens=0 but the
+    # model IS in CursorBench — those should NOT appear in this table).
+    with open(DATA_DIR / "model-token-consumption.json", "r", encoding="utf-8") as f:
+        model_map = json.load(f)
+
+    # Only include rows whose served_model is genuinely pending (not benchmarked)
     unbench_by_model = {}
     for u in unbenchmarked:
         m = u["served_model"]
+        if model_map.get(m, {}).get("cursorbench_status", "pending") != "pending":
+            continue  # Skip API-only rows for CursorBench-benchmarked models
         if m not in unbench_by_model:
             unbench_by_model[m] = []
         unbench_by_model[m].append(u["plan_name"])
