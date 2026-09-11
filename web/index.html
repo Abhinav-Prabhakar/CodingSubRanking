@@ -412,6 +412,7 @@ td.cpt { font-weight: 600; }
 /* ---------- Reveal ---------- */
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity .65s ease, transform .65s ease; }
 .reveal.in { opacity: 1; transform: none; }
+.table-card, .controls { opacity: 1 !important; transform: none !important; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
@@ -605,7 +606,7 @@ td.cpt { font-weight: 600; }
       <h2 class="t-heading">DeepSWE v1.1 — consumption per task</h2>
       <p class="t-sub">All 70 evaluated configurations from Datacurve’s contamination-free, long-horizon engineering benchmark — 113 tasks, 91 repos, one harness for every model. These median token figures drive every ranking on this page.</p>
     </div>
-    <div class="card card-lift table-card reveal">
+    <div class="card card-lift table-card">
       <div class="table-scroll">
         <table id="bench-table" aria-label="DeepSWE v1.1 results by model configuration">
           <thead>
@@ -635,7 +636,7 @@ td.cpt { font-weight: 600; }
       <p class="t-sub">Ranked by effective cost per task — cheapest completed task first. <strong style="color:var(--color-ink)">Shift</strong> shows how each plan moves once verbosity is priced in.</p>
     </div>
 
-    <div class="controls reveal">
+    <div class="controls">
       <div class="ctrl-group">
         <span class="ctrl-label">Metric</span>
         <div class="pills" id="metric-pills" role="group" aria-label="Ranking metric">
@@ -663,7 +664,7 @@ td.cpt { font-weight: 600; }
       <span class="ctrl-note" id="effort-note">All evaluated reasoning effort tiers (Low to Max) displayed across all benchmarked plans — 260 plan × effort configurations.</span>
     </div>
 
-    <div class="card card-snow table-card reveal">
+    <div class="card card-snow table-card">
       <div class="table-pad"><div class="table-summary" id="table-summary"></div></div>
       <div class="table-scroll">
         <table aria-describedby="table-summary">
@@ -1352,7 +1353,8 @@ function renderTable() {
       `<td>${fmtMoney5(r.raw)}</td>`;
     frag.appendChild(tr);
   });
-  tbody.replaceChildren(frag);
+  tbody.innerHTML = "";
+  tbody.appendChild(frag);
 
   const metricTxt = isAnn
     ? (state.metric === "task"
@@ -1460,10 +1462,11 @@ function renderBands() {
     { key: "pro", label: isAnn ? "Pro · $30–$100 / mo eff." : "Pro · $30–$100 / mo", accent: "var(--color-signal-blue)", for: "Professional engineers & daily power users" },
     { key: "power", label: isAnn ? "Power · $100–$300 / mo eff." : "Power · $100–$300 / mo", accent: "var(--color-electric-magenta)", for: "Heavy agentic automation & team plans" }
   ];
-  const rows = buildModel("Medium", state.cycle);
+  const rows = buildModel(state.effort, state.cycle);
   $("#band-grid").innerHTML = bands.map(b => {
-    const list = rows.filter(r => inBand(r, b.key, state.cycle));
+    const list = rows.filter(r => inBand(r, b.key));
     const top5 = list.slice(0, 5);
+    if (!top5.length) return "";
     return `<div class="card card-snow band reveal" style="--accent:${b.accent}">
       <div class="b-range">${b.label}</div>
       <h3>${top5[0].p}</h3>
@@ -1506,7 +1509,7 @@ window.addEventListener("scroll", () => {
 /* ================= Reveal on scroll ================= */
 const revealIO = new IntersectionObserver(entries => {
   entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add("in"); revealIO.unobserve(en.target); } });
-}, { threshold: 0.12 });
+}, { threshold: 0.01, rootMargin: "60px 0px" });
 $$(".reveal").forEach(el => revealIO.observe(el));
 
 /* ================= Initial render ================= */
