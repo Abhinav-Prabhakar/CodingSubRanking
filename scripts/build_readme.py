@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 """Generate the comprehensive README.md for the repository."""
 
+import csv
+import json
 from pathlib import Path
 from generate_markdown_report import build_markdown_tables
 
@@ -10,6 +12,15 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def generate_readme():
     tables = build_markdown_tables()
+
+    with open(ROOT / "data" / "adopted.csv", "r", encoding="utf-8-sig") as f:
+        adopted_rows = list(csv.DictReader(f))
+    n_adopted = len(adopted_rows)
+    n_subs = sum(1 for r in adopted_rows if r["billing"] == "subscription")
+    n_metered = n_adopted - n_subs
+
+    with open(ROOT / "derived" / "task-ranking-all-efforts.json", "r", encoding="utf-8") as f:
+        n_all_efforts = json.load(f)["metadata"]["total_configurations"]
 
     readme_content = f"""# Task-Adjusted AI Coding Subscription Rankings
 
@@ -88,7 +99,7 @@ The column **Shift vs Raw** indicates the ranking change compared to the traditi
 {tables['main_ranking_table']}
 
 > [!NOTE]
-> **Looking for all reasoning effort configurations?** We evaluate and rank all **260 plan × effort combinations** across Low, Medium, High, Extra High, and Max tiers. See the complete export in [`derived/task-ranking-all-efforts.csv`](derived/task-ranking-all-efforts.csv) and [`derived/task-ranking-all-efforts.json`](derived/task-ranking-all-efforts.json), and explore all 260 combinations directly in the interactive web interface (`web/index.html`), which ranks all efforts by default.
+> **Looking for all reasoning effort configurations?** We evaluate and rank all **{n_all_efforts} plan × effort combinations** across Low, Medium, High, Extra High, and Max tiers. See the complete export in [`derived/task-ranking-all-efforts.csv`](derived/task-ranking-all-efforts.csv) and [`derived/task-ranking-all-efforts.json`](derived/task-ranking-all-efforts.json), and explore all {n_all_efforts} combinations directly in the interactive web interface (`web/index.html`), which ranks all efforts by default.
 
 ---
 
@@ -107,7 +118,7 @@ When paid annually, subscriptions with discounts become significantly more cost-
 
 1. **The Verbosity Penalty**:
    - Models with large raw token allowances like `gemini-3.8-flash` offer tens of billions of tokens, ranking high on raw $/MTok charts. However, at **120,488 median output tokens/task** (Medium tier), its effective task cost falls behind far more token-efficient models.
-   - Conversely, `gpt-5.6-luna` (**7,918 tokens/task**) and `gpt-5.6-terra` (**11,453 tokens/task**) pair DeepSWE-grade competence with extreme token efficiency — `gpt-5.6-terra` plans climb up to **+39 spots** once verbosity is priced in, and Luna plans hold the entire top tier at **47,000 – 95,000 tasks per dollar**.
+   - Conversely, `gpt-5.6-luna` (**7,918 tokens/task**) and `gpt-5.6-terra` (**11,453 tokens/task**) pair DeepSWE-grade competence with extreme token efficiency — `gpt-5.6-terra` plans climb up to **+41 spots** once verbosity is priced in, and Luna plans hold the entire top tier at **~6,200 – 95,000 tasks per dollar** depending on pool size.
 
 2. **The Sweet Spot of Coding Workhorses**:
    - **ChatGPT Pro 20x / 5x / Plus (Luna & Terra)** achieve industry-leading task yields due to high monthly pools paired with low completion overhead.
@@ -115,8 +126,8 @@ When paid annually, subscriptions with discounts become significantly more cost-
    - **Sonnet 5** (**50,414 tokens/task**) and **Opus 5** (**33,436 tokens/task**) offer high quality at moderate token overhead, climbing past more verbose competitors.
 
 3. **Coverage Flip vs CursorBench**:
-   - DeepSWE covers **21 model families with subscription plans** (vs 11 under CursorBench 4.0): DeepSeek V4, Kimi K3 / K2.7 Code, GLM-5.2 / 5.3, Qwen3.8 Max, Claude Opus 4.8, GPT-5.5, Grok 4.5 and Muse Spark 1.2 all enter the ranking for the first time.
-   - **Composer 2.5** (Cursor) and **Muse Spark 1.3 / 1.3-contributor** have no DeepSWE evaluation yet and are now flagged `[Pending DeepSWE]` — plan rows switch from ranked to pending accordingly.
+   - DeepSWE covers **22 model families with subscription plans** (vs 11 under CursorBench 4.0): DeepSeek V4, Kimi K3 / K2.7 Code, GLM-5.2 / 5.3, Qwen3.8 Max, Claude Opus 4.8 / Opus 5 / Fable 5, GPT-5.5 / 5.6 / 6 Astra, Gemini 3.1–3.8 Flash, Grok 4.5 / 4.6 and Muse Spark 1.2 all enter the ranking.
+   - New-model rows without a DeepSWE evaluation — **Claude Opus 5.5 / Fable 5.1, GPT-6 Sol, Grok 4.7, MiMo v2.5/v2.6, Step-5 Preview, DeepSeek V4.1 Flash, SWE-2** — are flagged `[Pending DeepSWE]`; their plan rows carry quota/pricing data but no task-adjusted rank until evaluated.
 
 ---
 
@@ -147,8 +158,13 @@ The following models from the `real-api-pricing` dataset have **no DeepSWE v1.1 
 
 {tables['unbenchmarked_table']}
 
+> [!NOTE]
+> One row is **unmetered rather than merely unbenchmarked**: `Devin Pro × SWE-2` is free (unbounded quota) as a promotion running until **2026-10-31** — its $/MTok is ≈$0 and it cannot be given a finite tasks/month figure. It is flagged `unmetered` in the derived outputs and must be re-verified after the promo ends.
+>
+> Rows whose `price_usd` is an **international USD sticker** rather than CNY÷FX: `kimi_*` and `mimo_token_*` plans are merged domestic/global points priced at the international tier ($19–$99 Kimi, $6–$100 MiMo); `price`/`currency` still record the domestic CNY charge.
+
 > [!IMPORTANT]
-> When DeepSWE or community saturation benchmarks release completion token figures for Composer, Muse Spark 1.3, DeepSeek V4.1, MiniMax, StepFun, Qwen3.7, or any other pending model, simply update `data/model-token-consumption.json` and re-run `python3 scripts/compute_task_ranking.py` to seamlessly integrate them into the ranking.
+> When DeepSWE or community saturation benchmarks release completion token figures for Claude Opus 5.5 / Fable 5.1, GPT-6 Sol, Grok 4.7, MiMo v2.6, Step-5 Preview, SWE-2, Composer 2.5, Muse Spark 1.3, or any other pending model, simply update `data/model-token-consumption.json` and re-run `python3 scripts/compute_task_ranking.py` to seamlessly integrate them into the ranking.
 
 ---
 
@@ -164,7 +180,7 @@ CodingSubRanks/
 ├── BUILD.md                       # Instructions to reproduce the calculations
 ├── LICENSE                        # MIT License
 ├── data/
-│   ├── adopted.csv                # Upstream subscription data (196 plan × model points)
+│   ├── adopted.csv                # Upstream subscription data ({n_adopted} plan × model points: {n_subs} subscription + {n_metered} metered API)
 │   ├── deepswe.json               # Raw DeepSWE v1.1 leaderboard artifact (70 configs)
 │   ├── deepswe-configs.json       # Normalized per-config records (tokens, score, cost, steps)
 │   ├── model-token-consumption.json # Canonical mapping with reasoning tiers & null placeholders

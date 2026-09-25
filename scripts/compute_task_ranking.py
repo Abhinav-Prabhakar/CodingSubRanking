@@ -74,8 +74,12 @@ def compute_task_rankings():
         rows = list(csv.DictReader(f))
 
     # Raw ranking by $/MTok for delta comparison
-    # Only consider subscriptions with price_usd > 0 and monthly_tokens > 0
-    valid_subs = [r for r in rows if float(r.get("monthly_tokens") or 0) > 0 and float(r.get("price_usd") or 0) > 0]
+    # Only consider metered subscriptions (price_usd > 0, monthly_tokens > 0, real price > 0);
+    # unmetered/promo rows (real_usd_per_mtok == 0) never enter the raw $/MTok ordering
+    valid_subs = [r for r in rows
+                  if float(r.get("monthly_tokens") or 0) > 0
+                  and float(r.get("price_usd") or 0) > 0
+                  and float(r.get("real_usd_per_mtok") or 0) > 0]
     valid_subs.sort(key=lambda x: float(x["real_usd_per_mtok"]))
     raw_rank_map = {f"{r['plan_id']}__{r['served_model']}": idx + 1 for idx, r in enumerate(valid_subs)}
 
@@ -93,8 +97,50 @@ def compute_task_rankings():
 
         m_info = model_map.get(model, {})
         status = m_info.get("deepswe_status", "pending")
+        unmetered = r.get("unmetered") == "true"
+        promo_until = r.get("promo_until") or None
+        extra_fields = {
+            "plan_name_en": r.get("plan_name_en", ""),
+            "plan_gen": r.get("plan_gen", ""),
+            "workload": r.get("workload", ""),
+            "unmetered": unmetered,
+            "promo_until": promo_until,
+        }
 
-        if status == "available" and m_tokens > 0 and p_usd > 0:
+        if unmetered:
+            # Token denominator is unbounded -> cost-per-task tends to $0, so the row is
+            # unrankable; surface it as a promo flag rather than "[Pending DeepSWE]".
+            entry = {
+                "plan_id": plan_id,
+                "plan_name": r["plan_name"],
+                "billing": r["billing"],
+                "price": float(r["price"]) if r.get("price") else 0,
+                "currency": r["currency"],
+                "price_usd": p_usd,
+                "annual_fee_usd": None,
+                "effective_monthly_fee_usd": None,
+                "annual_discount_pct": None,
+                "served_model": model,
+                "benchmark_status": "unmetered",
+                "benchmarked_model_name": m_info.get("benchmarked_name"),
+                "benchmark_note": f"[Unmetered until {promo_until}]" if promo_until else "[Unmetered]",
+                "benchmark_score_pct": m_info.get("default_score_pct"),
+                "output_tokens_per_task": m_info.get("default_output_tokens_per_task"),
+                "monthly_tokens": None,
+                "monthly_tasks": None,
+                "cost_per_task_usd": 0.0,
+                "tasks_per_dollar": None,
+                "cost_per_task_annual_usd": None,
+                "tasks_per_dollar_annual": None,
+                "raw_usd_per_mtok": 0.0,
+                "raw_token_rank": None,
+                "confidence": r.get("confidence", "medium"),
+                "chart_tier": r.get("chart_tier", "main"),
+                "source": r.get("source", ""),
+                **extra_fields,
+            }
+            unbenchmarked_points.append(entry)
+        elif status == "available" and m_tokens > 0 and p_usd > 0:
             default_tier = m_info.get("default_tier", "Medium")
             out_tokens = m_info.get("default_output_tokens_per_task")
             score_pct = m_info.get("default_score_pct")
@@ -154,7 +200,8 @@ def compute_task_rankings():
                 "confidence": r.get("confidence", "medium"),
                 "chart_tier": r.get("chart_tier", "main"),
                 "source": r.get("source", ""),
-                "tier_computations": tier_computations
+                "tier_computations": tier_computations,
+                **extra_fields,
             }
             benchmarked_points.append(entry)
         else:
@@ -183,7 +230,8 @@ def compute_task_rankings():
                 "raw_token_rank": raw_rank,
                 "confidence": r.get("confidence", "medium"),
                 "chart_tier": r.get("chart_tier", "main"),
-                "source": r.get("source", "")
+                "source": r.get("source", ""),
+                **extra_fields,
             }
             unbenchmarked_points.append(entry)
 
@@ -248,7 +296,12 @@ def compute_task_rankings():
                 "raw_usd_per_mtok": p["raw_usd_per_mtok"],
                 "confidence": p["confidence"],
                 "chart_tier": p["chart_tier"],
-                "source": p["source"]
+                "source": p["source"],
+                "plan_name_en": p["plan_name_en"],
+                "plan_gen": p["plan_gen"],
+                "workload": p["workload"],
+                "unmetered": p["unmetered"],
+                "promo_until": p["promo_until"],
             })
 
     # Rank all-efforts points by cost_per_task_usd
@@ -278,7 +331,7 @@ def compute_task_rankings():
                 "metric": "Output token consumption (median output tokens / task)",
                 "default_reasoning_tier": "Medium / nearest available",
                 "reference_data": "FeiZhuLulu/real-api-pricing",
-                "annual_pricing_rules": "12x monthly default; Claude Pro ($200/yr), SuperGrok ($300/yr), Ollama Pro ($200/yr), GLM Global USD ($56/mo Pro, 30% off annual), GLM CN new plans (20% off)",
+                "annual_pricing_rules": "12x monthly default; Claude Pro $200/yr, SuperGrok $300/yr, SuperGrok Heavy $3000/yr, Ollama Pro $200/yr, Cursor Pro/Pro+/Ultra 20% off, Kimi all tiers 20% off, GLM Global USD 30% off ($56/mo Pro), GLM CN 20% off, Aliyun/MiniMax/StepFun CN 20% off; MiMo 88折/annual-first-purchase deliberately NOT adopted upstream",
                 "total_benchmarked_plans": len(benchmarked_points),
                 "total_unbenchmarked_plans": len(unbenchmarked_points),
                 "total_all_efforts_configurations": len(all_efforts_points)
@@ -294,7 +347,8 @@ def compute_task_rankings():
         "served_model", "output_tokens_per_task", "benchmark_score_pct",
         "monthly_tokens", "monthly_tasks", "cost_per_task_usd", "tasks_per_dollar",
         "cost_per_task_annual_usd", "tasks_per_dollar_annual",
-        "raw_usd_per_mtok", "confidence", "plan_id"
+        "raw_usd_per_mtok", "confidence", "plan_id",
+        "plan_name_en", "plan_gen", "workload", "unmetered", "promo_until",
     ]
     out_csv = DERIVED_DIR / "task-ranking.csv"
     with open(out_csv, "w", encoding="utf-8", newline="") as f:
@@ -323,7 +377,8 @@ def compute_task_rankings():
         "served_model", "effort_tier", "output_tokens_per_task", "benchmark_score_pct",
         "monthly_tokens", "monthly_tasks", "cost_per_task_usd", "tasks_per_dollar",
         "cost_per_task_annual_usd", "tasks_per_dollar_annual",
-        "raw_usd_per_mtok", "confidence", "plan_id"
+        "raw_usd_per_mtok", "confidence", "plan_id",
+        "plan_name_en", "plan_gen", "workload", "unmetered", "promo_until",
     ]
     out_all_csv = DERIVED_DIR / "task-ranking-all-efforts.csv"
     with open(out_all_csv, "w", encoding="utf-8", newline="") as f:
@@ -339,7 +394,8 @@ def compute_task_rankings():
 
     unbench_csv = DERIVED_DIR / "unbenchmarked-models.csv"
     with open(unbench_csv, "w", encoding="utf-8", newline="") as f:
-        unbench_fields = ["plan_name", "price_usd", "effective_monthly_fee_usd", "annual_fee_usd", "annual_discount_pct", "served_model", "monthly_tokens", "raw_usd_per_mtok", "benchmark_note", "confidence", "plan_id"]
+        unbench_fields = ["plan_name", "price_usd", "effective_monthly_fee_usd", "annual_fee_usd", "annual_discount_pct", "served_model", "monthly_tokens", "raw_usd_per_mtok", "benchmark_note", "confidence", "plan_id",
+                          "plan_name_en", "plan_gen", "workload", "unmetered", "promo_until"]
         writer = csv.DictWriter(f, fieldnames=unbench_fields, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(unbenchmarked_points)
